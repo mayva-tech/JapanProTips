@@ -1,0 +1,152 @@
+﻿import type { Metadata } from "next";
+import { ESimConversionBlock, HotelConversionBlock } from "@/components/conversion";
+import { TrackedCtaLink } from "@/components/TrackedCtaLink";
+
+export const metadata: Metadata = {
+  title: "Start Here",
+  description:
+    "Step-by-step Japan trip planning—independent engineer-written checklist: SIM, trains, lodging, payments. Practical order, minimal overwhelm.",
+};
+
+const ctaClass =
+  "inline-block bg-maroon text-white font-sans font-bold text-sm tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150";
+
+const GUIDE_HREFS = {
+  sim: "/guides/sim-card-japan",
+  transport: "/guides/getting-around-japan",
+  stay: "/guides/where-to-stay-japan",
+  money: "/guides/money-payments-japan",
+} as const;
+
+export default function StartHerePage() {
+  return (
+    <main className="bg-cream min-h-screen font-sans">
+      <div className="max-w-3xl mx-auto px-6 pt-14 pb-20">
+        <section className="pb-14">
+          <h1
+            className="font-display text-dark tracking-wide leading-tight mb-5"
+            style={{ fontSize: "clamp(36px, 6vw, 56px)" }}
+          >
+            {`Start here if you're planning a trip to Japan`}
+          </h1>
+          <p className="font-serif text-muted text-lg leading-relaxed max-w-xl">
+            This is the simplest way to plan your trip without getting
+            overwhelmed.
+          </p>
+          <p className="font-sans text-muted text-xs font-bold tracking-widest uppercase mt-5 max-w-xl">
+            Independent. Engineer based in Japan—not a travel agency.
+          </p>
+        </section>
+
+        <div className="border-t-2 border-dark mb-14" />
+
+        <section className="mb-16">
+          <h2
+            className="font-display text-dark tracking-wide mb-3"
+            style={{ fontSize: "clamp(28px, 4vw, 40px)" }}
+          >
+            Follow this order
+          </h2>
+          <p className="font-serif text-muted text-base leading-relaxed mb-12 max-w-xl">
+            {`Don't try to plan everything at once. Do this step by step:`}
+          </p>
+
+          <ol className="space-y-0 list-none pl-0">
+            <li className="border-t border-tan pt-10 first:border-t-0 first:pt-0">
+              <h3 className="font-sans font-bold text-dark text-base mb-3 tracking-wide">
+                1. SIM / Internet
+              </h3>
+              <p className="font-serif text-muted text-base leading-relaxed mb-6 max-w-xl">
+                Your phone is your map, translator, and train guide. If this
+                doesn&apos;t work, everything becomes harder. If you skip this,
+                your trip becomes harder immediately.
+              </p>
+              <ESimConversionBlock className="max-w-xl" />
+            </li>
+
+            <li className="border-t border-tan pt-10">
+              <h3 className="font-sans font-bold text-dark text-base mb-3 tracking-wide">
+                {`2. Understand How You'll Get Around`}
+              </h3>
+              <p className="font-serif text-muted text-base leading-relaxed mb-6 max-w-xl">
+                Japan&apos;s train system is efficient, but confusing at first.
+                You don&apos;t need to understand everything, just the basics.
+              </p>
+              <TrackedCtaLink href={GUIDE_HREFS.transport} label="transport" className={ctaClass}>
+                How to get around Japan (trains & apps) →
+              </TrackedCtaLink>
+              <TrackedCtaLink
+                href="/guides/japan-trains"
+                label="transport"
+                className="block font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4"
+              >
+                How to use trains in Japan →
+              </TrackedCtaLink>
+              <TrackedCtaLink
+                href="/guides/japan-airport-to-city"
+                label="transport"
+                className="block font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4"
+              >
+                Airport to hotel in Japan (Narita, Haneda, Kansai) →
+              </TrackedCtaLink>
+            </li>
+
+            <li className="border-t border-tan pt-10">
+              <h3 className="font-sans font-bold text-dark text-base mb-3 tracking-wide">
+                3. Decide where you&apos;re staying
+              </h3>
+              <p className="font-serif text-muted text-base leading-relaxed mb-6 max-w-xl">
+                Location matters more than the hotel itself. Being near the
+                right station will save you time and stress.
+              </p>
+              <HotelConversionBlock className="max-w-xl" />
+              <TrackedCtaLink href={GUIDE_HREFS.stay} label="hotel" className={`${ctaClass} mt-6 inline-block`}>
+                Where to stay in Japan (Tokyo, Osaka, Kyoto) →
+              </TrackedCtaLink>
+            </li>
+
+            <li className="border-t border-tan pt-10">
+              <h3 className="font-sans font-bold text-dark text-base mb-3 tracking-wide">
+                4. Money, Cards, and Cash in Japan
+              </h3>
+              <p className="font-serif text-muted text-base leading-relaxed mb-6 max-w-xl">
+                Cash vs card confuses many first-time visitors, but it gets
+                easy fast. Use a simple mix of card, cash, and IC card so you
+                never get stuck.
+              </p>
+              <TrackedCtaLink href={GUIDE_HREFS.money} label="budget" className={ctaClass}>
+                Money, cards & cash in Japan →
+              </TrackedCtaLink>
+              <TrackedCtaLink
+                href="/guides/japan-itinerary"
+                label="transport"
+                className="block font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4"
+              >
+                Japan itinerary for first-time visitors →
+              </TrackedCtaLink>
+            </li>
+          </ol>
+        </section>
+
+        <div className="border-t border-tan mb-16" />
+
+        <section className="mb-16">
+          <div className="bg-dark px-8 py-10">
+            <h2
+              className="font-display text-cream tracking-wide mb-5"
+              style={{ fontSize: "clamp(24px, 3vw, 36px)" }}
+            >
+              Most people overcomplicate this
+            </h2>
+            <p className="font-serif text-[#aab4be] text-base leading-relaxed max-w-xl">
+              You don&apos;t need 10 tabs, 5 apps, and a perfect itinerary. Get
+              the basics right first, then adjust as you go.
+            </p>
+          </div>
+        </section>
+
+        <div className="border-t border-tan mb-14" />
+      </div>
+    </main>
+  );
+}
