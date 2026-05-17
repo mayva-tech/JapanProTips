@@ -37,6 +37,7 @@ const STATIC_PATHS = [
   "/guides/shinjuku-vs-shibuya",
   "/guides/where-to-stay-japan",
   "/guides/japan-itinerary",
+  "/guides/japan-packing-list",
   "/guides/getting-around-japan",
   "/guides/money-payments-japan",
 ];
