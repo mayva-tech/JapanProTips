@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 
@@ -14,19 +14,19 @@ export default function GettingAroundJapanGuidePage() {
     <GuideArticleShell
       title={
         <>
-          <p className="font-display text-rust text-xl tracking-widest mb-2">
+          <p className="font-display text-rust text-2xl tracking-widest mb-2">
             START HERE ///
           </p>
           <h1
             className="font-display text-dark tracking-wide leading-tight mb-8"
-            style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
+            style={{ fontSize: "clamp(32px, 4.5vw, 48px)" }}
           >
             {`2. Understand How You'll Get Around`}
           </h1>
         </>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+        <div className="article-body space-y-4 max-w-2xl">
           <p>
             {`Japan's train maps look busy. That is normal. You do not need to learn the whole network. Learn a few habits and follow your phone.`}
           </p>
@@ -37,16 +37,16 @@ export default function GettingAroundJapanGuidePage() {
           <div className="border-t-2 border-dark" />
 
           <div>
-            <h2 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+            <h2 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
               The Only 3 Things You Need to Know
             </h2>
 
             <div className="space-y-8 mt-8 max-w-xl">
               <div>
-                <h3 className="font-sans font-bold text-dark text-base mb-3">
+                <h3 className="font-sans font-bold text-dark text-lg mb-3">
                   Trains are the default
                 </h3>
-                <p className="font-serif text-muted text-base leading-relaxed">
+                <p className="article-body">
                   Trains carry almost everyone for airport runs, moving inside a
                   city, and city-to-city travel. You will use them constantly.
                   Tokyo and Osaka both rely on rail more than taxis or rental cars
@@ -56,10 +56,10 @@ export default function GettingAroundJapanGuidePage() {
               </div>
 
               <div>
-                <h3 className="font-sans font-bold text-dark text-base mb-3">
+                <h3 className="font-sans font-bold text-dark text-lg mb-3">
                   Train types: Local, Rapid, Express
                 </h3>
-                <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-4">
+                <ul className="article-body list-none space-y-3.5 pl-0 mb-4">
                   <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                     <strong className="font-sans font-bold text-dark">Local</strong>{" "}
                     stops at every station along the route. Slowest, hardest to get
@@ -75,7 +75,7 @@ export default function GettingAroundJapanGuidePage() {
                     going far along that line.
                   </li>
                 </ul>
-                <p className="font-serif text-muted text-base leading-relaxed">
+                <p className="article-body">
                   If you are unsure which train to board, take{" "}
                   <strong className="font-sans font-bold text-dark">Local</strong>.
                   You may add a few minutes, but you are less likely to skip your
@@ -84,10 +84,10 @@ export default function GettingAroundJapanGuidePage() {
               </div>
 
               <div>
-                <h3 className="font-sans font-bold text-dark text-base mb-3">
+                <h3 className="font-sans font-bold text-dark text-lg mb-3">
                   IC cards (Suica / PASMO)
                 </h3>
-                <p className="font-serif text-muted text-base leading-relaxed">
+                <p className="article-body">
                   An IC card stores money. Tap the reader when you enter the paid
                   area and tap again when you exit. The system deducts the correct
                   fare. You do not need to buy a paper ticket for each trip.
@@ -100,10 +100,10 @@ export default function GettingAroundJapanGuidePage() {
           </div>
 
           <div>
-            <h2 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+            <h2 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
               {`JR vs Metro (Don't Overthink This)`}
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-xl">
+            <div className="article-body space-y-4 max-w-xl">
               <p>
                 <strong className="font-sans font-bold text-dark">JR</strong> runs
                 many intercity and regional lines, including the Yamanote loop in
@@ -121,10 +121,10 @@ export default function GettingAroundJapanGuidePage() {
           </div>
 
           <div>
-            <h2 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+            <h2 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
               What to Actually Use
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-xl">
+            <div className="article-body space-y-4 max-w-xl">
               <p>
                 Use{" "}
                 <strong className="font-sans font-bold text-dark">Google Maps</strong>{" "}
@@ -158,10 +158,10 @@ export default function GettingAroundJapanGuidePage() {
       afterComparison={
         <div className="space-y-10">
           <div>
-            <h2 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+            <h2 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
               Situations That Matter
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 max-w-xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 <strong className="font-sans font-bold text-dark">Rush hour:</strong>{" "}
                 Trains fill up. Allow extra time. Move with the flow when boarding
@@ -183,10 +183,10 @@ export default function GettingAroundJapanGuidePage() {
           </div>
 
           <div>
-            <h2 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+            <h2 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
               Reality Check
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-xl">
+            <div className="article-body space-y-4 max-w-xl">
               <p>
                 People expect they must &quot;understand Tokyo before they can ride
                 trains.&quot; In practice you need a process, not a geography
@@ -205,10 +205,10 @@ export default function GettingAroundJapanGuidePage() {
           </div>
 
           <div>
-            <h2 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+            <h2 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
               Bottom Line
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 max-w-xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Use trains for most trips.
               </li>

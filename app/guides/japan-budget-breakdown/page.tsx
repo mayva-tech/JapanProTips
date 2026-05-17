@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -19,13 +19,13 @@ export default function JapanBudgetBreakdownPage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           How Much Does a Japan Trip Cost in 2026 (Real Breakdown)
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             People underestimate Japan in two directions. Some think it is cheap
             everywhere because konbini exists. Some think it is luxury-only because
@@ -41,14 +41,14 @@ export default function JapanBudgetBreakdownPage() {
       beforeComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Daily Budget Overview
           </h2>
-          <p className="font-serif text-muted text-base leading-relaxed mb-6">
+          <p className="article-body mb-6">
             “Per day” here means everything typical in a day: sleep, eat, move,
             small misc. It is not hotel-only math.
           </p>
-          <ul className="font-serif text-muted list-none pl-0 space-y-4 leading-relaxed">
+          <ul className="font-serif text-muted list-none pl-0 space-y-4">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               <span className="font-sans font-bold text-dark">Budget traveler:</span>{" "}
               about ¥12,000 to ¥18,000 per day. Capsule or dorm, konbini and
@@ -71,10 +71,10 @@ export default function JapanBudgetBreakdownPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Accommodation Costs
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-4 leading-relaxed">
+          <ul className="font-serif text-muted list-none pl-0 space-y-4">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               <span className="font-sans font-bold text-dark">Capsule:</span> often
               ¥3,500 to ¥7,000 per night in Tokyo if you book early. Weekends and
@@ -92,10 +92,10 @@ export default function JapanBudgetBreakdownPage() {
               cleaning fees and strict building rules.
             </li>
           </ul>
-          <p className="font-serif text-muted text-base leading-relaxed mt-6">
+          <p className="article-body mt-6">
             <Link
               href="/guides/where-to-stay-tokyo"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Where to stay in Tokyo (areas) →
             </Link>
@@ -103,10 +103,10 @@ export default function JapanBudgetBreakdownPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Food Costs
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+          <ul className="article-body list-none space-y-3.5 pl-0">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               <span className="font-sans font-bold text-dark">Convenience store:</span>{" "}
               ¥500 to ¥900 for a simple hot meal or sandwich plus drink if you are
@@ -131,10 +131,10 @@ export default function JapanBudgetBreakdownPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Transportation Costs
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Short metro hops in central Tokyo are often around ¥180 to ¥220 per
               ride depending on distance. IC does not make it cheaper, it just
@@ -155,10 +155,10 @@ export default function JapanBudgetBreakdownPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Internet Costs
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               <span className="font-sans font-bold text-dark">eSIM:</span> often the
               cheapest and least annoying for one person. Think on the order of a
@@ -177,32 +177,32 @@ export default function JapanBudgetBreakdownPage() {
       afterComparison={
         <>
         <div className={conversionBox}>
-          <h3 className="font-sans font-bold text-xs tracking-widest uppercase text-dark mb-2">
+          <h3 className="font-sans font-bold text-sm tracking-widest uppercase text-dark mb-2">
             Sort data before you price the rest of the trip
           </h3>
-          <p className="font-serif text-muted text-sm leading-relaxed mb-4">
+          <p className="article-body-sm mb-4">
             Bad internet makes you burn money on taxis and wrong tickets because
             you cannot verify a route calmly. Fix connectivity first, then refine
             food and hotel class.
           </p>
           <Link
             href="/guides/sim-card-japan"
-            className="font-sans text-sm font-bold text-rust hover:text-maroon transition-colors duration-150"
+            className="font-sans text-base font-bold text-rust hover:text-maroon transition-colors duration-150"
           >
             Best SIM and eSIM for Japan →
           </Link>
         </div>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Sample 5-Day Budget (Real Numbers)
           </h2>
-          <p className="font-serif text-muted text-base leading-relaxed mb-4">
+          <p className="article-body mb-4">
             One person, Tokyo only, mid-range posture: business hotel, mix of
             konbini and restaurants, metro only, one modest paid activity block, no
             shopping spree, eSIM not pocket WiFi.
           </p>
-          <ul className="font-serif text-muted list-none pl-0 space-y-2 leading-relaxed mb-4">
+          <ul className="article-body list-none space-y-3 pl-0 mb-4">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Hotel 5 nights at ¥14,000: ¥70,000
             </li>
@@ -219,17 +219,17 @@ export default function JapanBudgetBreakdownPage() {
               Museums or one ticketed thing: ¥6,000
             </li>
           </ul>
-          <p className="font-sans font-bold text-dark text-base">
+          <p className="font-sans font-bold text-dark text-lg">
             Rough subtotal: about ¥116,000 for five days, before flights and
             shopping.
           </p>
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Ways to Save Money
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+          <ul className="article-body list-none space-y-3.5 pl-0">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Use convenience stores for breakfast and late snacks. Quality is
               higher than the price suggests.
@@ -249,10 +249,10 @@ export default function JapanBudgetBreakdownPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Final Estimated Total
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               For a week in Tokyo without flights, a sane spread for many first
               timers is about ¥80,000 on the tight end up to roughly ¥220,000 on
@@ -267,7 +267,7 @@ export default function JapanBudgetBreakdownPage() {
             <p>
               <Link
                 href="/guides/money-payments-japan"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Money, cards, and cash in Japan →
               </Link>
@@ -276,14 +276,14 @@ export default function JapanBudgetBreakdownPage() {
         </section>
 
         <section className="mb-12 max-w-2xl border-t border-tan pt-10">
-          <h2 className="font-display text-dark tracking-wide text-2xl mb-4">
+          <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             Related guides
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+          <ul className="article-body list-none space-y-3.5 pl-0">
             <li>
               <Link
                 href="/guides/where-to-stay-tokyo"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Where to stay in Tokyo →
               </Link>
@@ -291,7 +291,7 @@ export default function JapanBudgetBreakdownPage() {
             <li>
               <Link
                 href="/guides/japan-transportation"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Japan transportation hub →
               </Link>
@@ -299,7 +299,7 @@ export default function JapanBudgetBreakdownPage() {
             <li>
               <Link
                 href="/guides/japan-living-cost"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Monthly cost of living if you move here →
               </Link>
@@ -315,9 +315,9 @@ export default function JapanBudgetBreakdownPage() {
         <div className="border-t border-tan pt-8 mt-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
           >
-            JapanProTips homepage <span className="text-base">‹‹‹</span>
+            JapanProTips homepage <span className="text-lg">‹‹‹</span>
           </Link>
         </div>
         </>

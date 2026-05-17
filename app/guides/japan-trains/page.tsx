@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -16,19 +16,19 @@ export default function JapanTrainsPage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           How to Use Trains in Japan Without Getting Lost
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+        <div className="article-body space-y-4 max-w-2xl">
           <p>Japan trains look confusing at first.</p>
           <p>You do not need to understand the entire system.</p>
           <p>You only need a simple system that works every day.</p>
           <Link
             href="/guides/japan-airport-to-city"
-            className="inline-block font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 pt-2"
+            className="inline-block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 pt-2"
           >
             From airport to hotel →
           </Link>
@@ -37,10 +37,10 @@ export default function JapanTrainsPage() {
       beforeComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Quick Answer
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-6 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Use Google Maps or NAVITIME
               </li>
@@ -56,17 +56,17 @@ export default function JapanTrainsPage() {
             </ul>
             <Link
               href="/guides/sim-card-japan"
-              className="inline-block bg-maroon text-white font-sans font-bold text-sm tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150"
+              className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150"
             >
               Get your SIM sorted →
             </Link>
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               What You Actually Need to Know
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+            <div className="article-body space-y-4 max-w-2xl">
               <p>
                 <strong className="font-sans font-bold text-dark">
                   Train line name:
@@ -101,10 +101,10 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Local, Rapid, and Express
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-6 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Local stops at every station
               </li>
@@ -115,16 +115,16 @@ export default function JapanTrainsPage() {
                 Express skips more stations
               </li>
             </ul>
-            <p className="font-sans font-bold text-dark text-base max-w-2xl">
+            <p className="font-sans font-bold text-dark text-lg max-w-2xl">
               If you are unsure, take Local.
             </p>
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               JR vs Metro
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+            <div className="article-body space-y-4 max-w-2xl">
               <p>JR is the major rail network.</p>
               <p>Metro or Subway is the city train system.</p>
               <p>Private railways also exist and are common.</p>
@@ -139,10 +139,10 @@ export default function JapanTrainsPage() {
       afterComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               How to Ride a Train Step by Step
             </h2>
-            <ol className="font-serif text-muted list-decimal pl-6 space-y-2 leading-relaxed max-w-2xl">
+            <ol className="article-body list-decimal space-y-3 pl-6 max-w-2xl">
               <li>Search destination in Google Maps or NAVITIME</li>
               <li>Check line name</li>
               <li>Check platform number</li>
@@ -155,10 +155,10 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               IC Cards
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+            <div className="article-body space-y-4 max-w-2xl">
               <p>
                 The main options are Suica, PASMO, and ICOCA. Any of these works
                 for most visitors.
@@ -181,13 +181,13 @@ export default function JapanTrainsPage() {
               <p className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-6 pt-2">
                 <Link
                   href="/guides/suica-vs-pasmo"
-                  className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+                  className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
                 >
                   Suica vs PASMO →
                 </Link>
                 <Link
                   href="/guides/japan-train-mistakes"
-                  className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+                  className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
                 >
                   Common train mistakes →
                 </Link>
@@ -196,10 +196,10 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Common Mistakes
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Boarding the wrong train type
               </li>
@@ -222,10 +222,10 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Rush Hour and Last Train
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+            <div className="article-body space-y-4 max-w-2xl">
               <p>Rush hour is crowded, especially in large cities.</p>
               <p>Avoid moving large luggage during peak commuting hours.</p>
               <p>Last trains are usually around midnight.</p>
@@ -234,10 +234,10 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Shinkansen Is Different
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+            <div className="article-body space-y-4 max-w-2xl">
               <p>The Shinkansen is for long-distance travel.</p>
               <p>It usually needs a separate ticket.</p>
               <p>
@@ -248,10 +248,10 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Reality Check
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+            <div className="article-body space-y-4 max-w-2xl">
               <p>You will probably make one small mistake.</p>
               <p>That is fine.</p>
               <p>Trains come often, so recovery is easy.</p>
@@ -260,10 +260,10 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Bottom Line
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Use maps
               </li>
@@ -290,9 +290,9 @@ export default function JapanTrainsPage() {
           <div className="border-t border-tan pt-8 mt-6">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
-              JapanProTips homepage <span className="text-base">‹‹‹</span>
+              JapanProTips homepage <span className="text-lg">‹‹‹</span>
             </Link>
           </div>
         </>

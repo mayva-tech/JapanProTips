@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -16,13 +16,13 @@ export default function SuicaPasmoGuidePage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Suica and PASMO Explained (2026 Guide for Tourists)
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             Suica and PASMO get treated like a personality test online. In
             practice they are the same idea: stored money on a chip you tap on a
@@ -36,7 +36,7 @@ export default function SuicaPasmoGuidePage() {
           <p>
             <Link
               href="/guides/suica-vs-pasmo"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Suica vs PASMO: quick pick guide →
             </Link>
@@ -46,10 +46,10 @@ export default function SuicaPasmoGuidePage() {
       beforeComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             What is a Suica or PASMO Card
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               Both are IC transit cards issued under Japan&apos;s nationwide IC
               standard. You charge yen onto the card (or digital wallet pass),
@@ -66,10 +66,10 @@ export default function SuicaPasmoGuidePage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Do You Still Need One in 2026
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               You still need a tap that spends stored value or a compatible
               wallet pass. You do not automatically need a green piece of plastic.
@@ -89,10 +89,10 @@ export default function SuicaPasmoGuidePage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Mobile Suica (iPhone Users)
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               On supported iPhones, you add Suica or PASMO in Apple Wallet like any
               other transit card. You fund it from a card in Wallet, then tap
@@ -113,10 +113,10 @@ export default function SuicaPasmoGuidePage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Android Situation
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               Android support depends on device model, region Google Pay setup, and
               what the wallet actually offers for Japan transit. Some travelers get
@@ -135,10 +135,10 @@ export default function SuicaPasmoGuidePage() {
       afterComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Where You Can Use It
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               <span className="font-sans font-bold text-dark">Trains and metros:</span>{" "}
               tap in and out inside the IC network. Long JR legs sometimes need
@@ -159,10 +159,10 @@ export default function SuicaPasmoGuidePage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             When You Do NOT Need It
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               Very short Tokyo stays where you only use airport limousine, taxi,
               and hotel shuttle can work without IC. You pay more in money and less
@@ -183,10 +183,10 @@ export default function SuicaPasmoGuidePage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Alternatives
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               <span className="font-sans font-bold text-dark">Paper tickets:</span>{" "}
               fine for a single airport run or one Shinkansen leg. Annoying as a
@@ -201,10 +201,10 @@ export default function SuicaPasmoGuidePage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Final Recommendation
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               If you have a supported iPhone: set up mobile Suica or PASMO before
               you land, load a sensible balance, tap the first gate calm and
@@ -223,14 +223,14 @@ export default function SuicaPasmoGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl border-t border-tan pt-10">
-          <h2 className="font-display text-dark tracking-wide text-2xl mb-4">
+          <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             Related guides
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+          <ul className="article-body list-none space-y-3.5 pl-0">
             <li>
               <Link
                 href="/guides/japan-transportation"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Japan transportation hub →
               </Link>
@@ -238,7 +238,7 @@ export default function SuicaPasmoGuidePage() {
             <li>
               <Link
                 href="/guides/japan-airport-first-steps"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 First 60 minutes at Narita or Haneda →
               </Link>
@@ -254,9 +254,9 @@ export default function SuicaPasmoGuidePage() {
         <div className="border-t border-tan pt-8 mt-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
           >
-            JapanProTips homepage <span className="text-base">‹‹‹</span>
+            JapanProTips homepage <span className="text-lg">‹‹‹</span>
           </Link>
         </div>
         </>

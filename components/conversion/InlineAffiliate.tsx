@@ -21,9 +21,9 @@ function isExternalHref(href: string) {
 const wrapClass =
   "not-prose my-4 max-w-full rounded-lg border border-[#d4c9b0] bg-white px-4 py-3 shadow-sm";
 const copyClass =
-  "font-serif text-sm leading-relaxed text-muted";
+  "article-body-sm";
 const btnClass =
-  "inline-flex w-full shrink-0 items-center justify-center rounded-md bg-maroon px-4 py-2 font-sans text-xs font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust sm:w-auto";
+  "inline-flex w-full shrink-0 items-center justify-center rounded-md bg-maroon px-4 py-2 font-sans text-sm font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust sm:w-auto";
 
 /**
  * Compact offer block for guides. Place between block elements, not nested inside a paragraph.

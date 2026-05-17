@@ -10,9 +10,7 @@ export type ComparisonRow = {
   pros: string;
   bestFor: string;
   link: string;
-  /** Label for the row CTA; defaults to "Open" */
   buttonText?: string;
-  /** GA4 click label; defaults from `link` via `conversionLabelForHref`. */
   gtagLabel?: ConversionGtagLabel;
 };
 
@@ -26,11 +24,9 @@ function isExternalHref(href: string) {
 }
 
 const cellTh =
-  "border-b border-[#d4c9b0] bg-cream px-4 py-3 text-left font-sans text-xs font-bold uppercase tracking-wider text-dark";
+  "border-b border-paper-edge bg-paper-elevated px-4 py-3 text-left font-sans text-kicker font-black uppercase text-ink";
 const cellTd =
-  "border-b border-[#e8e0d0] px-4 py-3 align-top font-serif text-sm leading-relaxed text-muted";
-const btnClass =
-  "inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-lg bg-maroon px-4 py-2 font-sans text-xs font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust";
+  "border-b border-paper-edge/60 px-4 py-3 align-top font-serif text-body text-muted";
 
 function RowButton({
   href,
@@ -42,6 +38,8 @@ function RowButton({
   gtagLabel: ConversionGtagLabel;
 }) {
   const onClick = () => trackGtagClick(gtagLabel);
+  const className =
+    "inline-flex shrink-0 items-center justify-center whitespace-nowrap bg-maroon px-4 py-2 font-sans text-kicker font-black uppercase text-white transition-colors duration-150 hover:bg-rust";
 
   if (isExternalHref(href)) {
     return (
@@ -49,7 +47,7 @@ function RowButton({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={btnClass}
+        className={className}
         onClick={onClick}
       >
         {label}
@@ -57,7 +55,7 @@ function RowButton({
     );
   }
   return (
-    <Link href={href} className={btnClass} onClick={onClick}>
+    <Link href={href} className={className} onClick={onClick}>
       {label}
     </Link>
   );
@@ -66,7 +64,7 @@ function RowButton({
 export function ComparisonTable({ items, className = "" }: ComparisonTableProps) {
   return (
     <div
-      className={`overflow-x-auto rounded-xl border border-[#d4c9b0] bg-white shadow-sm [-webkit-overflow-scrolling:touch] ${className}`.trim()}
+      className={`overflow-x-auto border border-paper-edge bg-paper-card shadow-editorial [-webkit-overflow-scrolling:touch] ${className}`.trim()}
     >
       <table className="w-full min-w-[640px] border-collapse text-left">
         <thead>
@@ -80,11 +78,9 @@ export function ComparisonTable({ items, className = "" }: ComparisonTableProps)
         </thead>
         <tbody>
           {items.map((row, index) => (
-            <tr key={`${row.link}-${index}`} className="hover:bg-cream/60">
-              <td className={`${cellTd} font-sans font-bold text-dark`}>
-                {row.name}
-              </td>
-              <td className={`${cellTd} font-sans text-dark`}>{row.price}</td>
+            <tr key={`${row.link}-${index}`} className="hover:bg-paper-elevated/80">
+              <td className={`${cellTd} font-bold text-ink`}>{row.name}</td>
+              <td className={`${cellTd} text-ink`}>{row.price}</td>
               <td className={cellTd}>{row.pros}</td>
               <td className={cellTd}>{row.bestFor}</td>
               <td className={`${cellTd} text-right`}>

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -16,13 +16,13 @@ export default function NaritaToTokyoPage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Narita to Tokyo: Best Way to Get to the City
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             Narita is far from central Tokyo. The good news is you only need to
             pick one main option and follow signs.
@@ -31,7 +31,7 @@ export default function NaritaToTokyoPage() {
           <p>
             <Link
               href="/guides/haneda-to-tokyo"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Flying into Haneda instead? Haneda to Tokyo guide →
             </Link>
@@ -39,7 +39,7 @@ export default function NaritaToTokyoPage() {
           <p>
             <Link
               href="/guides/japan-airport-to-city"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Full Japan airport to hotel guide (Narita, Haneda, Kansai) →
             </Link>
@@ -49,10 +49,10 @@ export default function NaritaToTokyoPage() {
       beforeComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Quick Answer
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Shinjuku, Shibuya, Tokyo Station: Narita Express
               </li>
@@ -69,11 +69,11 @@ export default function NaritaToTokyoPage() {
       afterComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Comparison
             </h2>
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[560px] border-collapse border border-[#d4c9b0] bg-white font-sans text-sm text-dark">
+              <table className="w-full min-w-[560px] border-collapse border border-[#d4c9b0] bg-white font-sans text-base text-dark">
                 <thead>
                   <tr className="border-b border-[#d4c9b0] bg-cream">
                     <th className="text-left font-bold uppercase tracking-widest px-4 py-3 border-r border-[#d4c9b0]">
@@ -145,10 +145,10 @@ export default function NaritaToTokyoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Narita Express
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-3 max-w-2xl">
+            <div className="article-body space-y-3 max-w-2xl">
               <p>
                 Good default when you are heading to Shinjuku, Shibuya, or Tokyo
                 Station and you want one comfortable train with space for bags.
@@ -158,10 +158,10 @@ export default function NaritaToTokyoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Keisei Skyliner
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-3 max-w-2xl">
+            <div className="article-body space-y-3 max-w-2xl">
               <p>
                 Strong when Ueno is your first stop or you plan a short transfer from
                 the Ueno / Nippori side of the city.
@@ -171,10 +171,10 @@ export default function NaritaToTokyoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Airport bus
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-3 max-w-2xl">
+            <div className="article-body space-y-3 max-w-2xl">
               <p>
                 Worth considering when you do not want stairs and train transfers with
                 two large suitcases.
@@ -184,20 +184,20 @@ export default function NaritaToTokyoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Taxi
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-3 max-w-2xl">
+            <div className="article-body space-y-3 max-w-2xl">
               <p>All the way to central Tokyo is pricey from Narita.</p>
               <p>Reasonable use case: late arrival or a short taxi after a train to the nearest station.</p>
             </div>
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Common Mistakes
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Picking the cheapest route without checking transfers
               </li>
@@ -211,10 +211,10 @@ export default function NaritaToTokyoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Bottom Line
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Match train vs bus to your hotel station and luggage
               </li>

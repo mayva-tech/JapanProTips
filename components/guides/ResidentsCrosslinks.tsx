@@ -39,9 +39,9 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
 ];
 
 const linkClass =
-  "font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150";
+  "font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150";
 const startCtaClass =
-  "inline-block border-2 border-dark bg-cream px-8 py-4 font-sans text-sm font-bold uppercase tracking-widest text-dark transition-colors duration-150 hover:bg-dark hover:text-cream";
+  "inline-block border-2 border-dark bg-cream px-8 py-4 font-sans text-base font-bold uppercase tracking-widest text-dark transition-colors duration-150 hover:bg-dark hover:text-cream";
 
 type ResidentsCrosslinksProps = {
   /** Current article path; other guides are listed. Omit on hub to list all guides. */
@@ -62,7 +62,7 @@ export function ResidentsCrosslinks({ currentHref }: ResidentsCrosslinksProps) {
     >
       <h2
         id="residents-crosslinks-heading"
-        className="font-display text-dark tracking-wide text-3xl mb-6"
+        className="font-display text-dark tracking-wide text-4xl mb-6"
       >
         {heading}
       </h2>
@@ -77,7 +77,7 @@ export function ResidentsCrosslinks({ currentHref }: ResidentsCrosslinksProps) {
           </TrackedCtaLink>
         </p>
       ) : null}
-      <ul className="font-serif text-muted list-none space-y-3 pl-0 leading-relaxed max-w-2xl">
+      <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
         {guides.map((g) => (
           <li key={g.href}>
             <TrackedCtaLink

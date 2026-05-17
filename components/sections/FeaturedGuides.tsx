@@ -60,17 +60,17 @@ export function FeaturedGuides() {
     <section className="border-b border-stone-200 py-12">
       <Container>
         <SectionLabel>Featured guides</SectionLabel>
-        <p className="mb-5 text-sm text-stone-500">
+        <p className="mb-5 text-base text-stone-500">
           The guides most people need first.
         </p>
         <div className="flex flex-col gap-3">
           {guides.map((guide) => (
             <Card key={guide.slug}>
               <Pill color={guide.categoryColor}>{guide.category}</Pill>
-              <h3 className="mt-2 text-sm font-medium leading-snug text-stone-900">
+              <h3 className="mt-2 text-base font-medium leading-snug text-stone-900">
                 {guide.title}
               </h3>
-              <p className="mb-3 mt-1 text-sm text-stone-500">
+              <p className="mb-3 mt-1 text-base text-stone-500">
                 {guide.description}
               </p>
               <Button href={guide.slug} gtagLabel={conversionLabelForHref(guide.slug)}>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { Bebas_Neue, Lora, Source_Sans_3 } from "next/font/google";
+import { Barlow, Vollkorn } from "next/font/google";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { MicrosoftClarity } from "@/components/MicrosoftClarity";
 import { Navbar } from "@/components/Navbar";
@@ -14,23 +14,19 @@ import {
 } from "@/lib/site";
 import "./globals.css";
 
-const bebasNeue = Bebas_Neue({
-  weight: "400",
+/** AoM: UI, nav, labels, buttons */
+const barlow = Barlow({
   subsets: ["latin"],
-  variable: "--font-display",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-sans",
 });
 
-const lora = Lora({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-serif",
-});
-
-const sourceSans = Source_Sans_3({
+/** AoM: article headings, body copy, deck */
+const vollkorn = Vollkorn({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  variable: "--font-sans",
+  style: ["normal", "italic"],
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -67,7 +63,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable} ${lora.variable} ${sourceSans.variable} antialiased`}
+        className={`${barlow.variable} ${vollkorn.variable} antialiased`}
       >
         <GoogleAnalytics />
         <Suspense fallback={null}>

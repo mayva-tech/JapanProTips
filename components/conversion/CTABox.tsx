@@ -19,7 +19,7 @@ function isExternalHref(href: string) {
 const cardClass =
   "rounded-xl border border-[#d4c9b0] bg-white px-6 py-6 shadow-sm";
 const btnClass =
-  "inline-flex w-full items-center justify-center rounded-lg bg-maroon px-6 py-3.5 font-sans text-sm font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust sm:w-auto sm:min-w-[200px]";
+  "inline-flex w-full items-center justify-center rounded-lg bg-maroon px-6 py-3.5 font-sans text-base font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust sm:w-auto sm:min-w-[200px]";
 
 export function CTABox({
   title,
@@ -31,10 +31,10 @@ export function CTABox({
 }: CTABoxProps) {
   return (
     <div className={`${cardClass} ${className}`.trim()}>
-      <h3 className="font-sans text-xs font-bold uppercase tracking-widest text-dark">
+      <h3 className="font-sans text-sm font-bold uppercase tracking-widest text-dark">
         {title}
       </h3>
-      <p className="mt-3 font-serif text-base leading-relaxed text-muted">
+      <p className="article-body mt-3">
         {description}
       </p>
       <div className="mt-5 sm:inline-block sm:w-auto">

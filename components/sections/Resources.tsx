@@ -59,15 +59,15 @@ export function Resources() {
           {resources.map((r) => (
             <div key={r.title} className="rounded-lg bg-stone-100 p-3">
               <Pill color={r.pillColor}>{r.pill}</Pill>
-              <p className="mt-2 text-xs font-medium leading-snug text-stone-900">
+              <p className="mt-2 text-sm font-medium leading-snug text-stone-900">
                 {r.title}
               </p>
-              <p className="mb-3 mt-0.5 text-xs text-stone-500">
+              <p className="mb-3 mt-0.5 text-sm text-stone-500">
                 {r.description}
               </p>
               <Button
                 href={r.href}
-                className="px-3 py-1.5 text-xs"
+                className="px-3 py-1.5 text-sm"
                 gtagLabel={conversionLabelForHref(r.href)}
               >
                 {r.cta}

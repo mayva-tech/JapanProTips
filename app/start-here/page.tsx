@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { ESimConversionBlock, HotelConversionBlock } from "@/components/conversion";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const ctaClass =
-  "inline-block bg-maroon text-white font-sans font-bold text-sm tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150";
+  "inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150";
 
 const GUIDE_HREFS = {
   sim: "/guides/sim-card-japan",
@@ -25,15 +25,15 @@ export default function StartHerePage() {
         <section className="pb-14">
           <h1
             className="font-display text-dark tracking-wide leading-tight mb-5"
-            style={{ fontSize: "clamp(36px, 6vw, 56px)" }}
+            style={{ fontSize: "clamp(40px, 6.5vw, 60px)" }}
           >
             {`Start here if you're planning a trip to Japan`}
           </h1>
-          <p className="font-serif text-muted text-lg leading-relaxed max-w-xl">
+          <p className="article-body text-xl max-w-xl">
             This is the simplest way to plan your trip without getting
             overwhelmed.
           </p>
-          <p className="font-sans text-muted text-xs font-bold tracking-widest uppercase mt-5 max-w-xl">
+          <p className="font-sans text-muted text-sm font-bold tracking-widest uppercase mt-5 max-w-xl">
             Independent. Engineer based in Japan—not a travel agency.
           </p>
         </section>
@@ -43,20 +43,20 @@ export default function StartHerePage() {
         <section className="mb-16">
           <h2
             className="font-display text-dark tracking-wide mb-3"
-            style={{ fontSize: "clamp(28px, 4vw, 40px)" }}
+            style={{ fontSize: "clamp(32px, 4.5vw, 44px)" }}
           >
             Follow this order
           </h2>
-          <p className="font-serif text-muted text-base leading-relaxed mb-12 max-w-xl">
+          <p className="article-body mb-12 max-w-xl">
             {`Don't try to plan everything at once. Do this step by step:`}
           </p>
 
           <ol className="space-y-0 list-none pl-0">
             <li className="border-t border-tan pt-10 first:border-t-0 first:pt-0">
-              <h3 className="font-sans font-bold text-dark text-base mb-3 tracking-wide">
+              <h3 className="font-sans font-bold text-dark text-lg mb-3 tracking-wide">
                 1. SIM / Internet
               </h3>
-              <p className="font-serif text-muted text-base leading-relaxed mb-6 max-w-xl">
+              <p className="article-body mb-6 max-w-xl">
                 Your phone is your map, translator, and train guide. If this
                 doesn&apos;t work, everything becomes harder. If you skip this,
                 your trip becomes harder immediately.
@@ -65,10 +65,10 @@ export default function StartHerePage() {
             </li>
 
             <li className="border-t border-tan pt-10">
-              <h3 className="font-sans font-bold text-dark text-base mb-3 tracking-wide">
+              <h3 className="font-sans font-bold text-dark text-lg mb-3 tracking-wide">
                 {`2. Understand How You'll Get Around`}
               </h3>
-              <p className="font-serif text-muted text-base leading-relaxed mb-6 max-w-xl">
+              <p className="article-body mb-6 max-w-xl">
                 Japan&apos;s train system is efficient, but confusing at first.
                 You don&apos;t need to understand everything, just the basics.
               </p>
@@ -78,24 +78,24 @@ export default function StartHerePage() {
               <TrackedCtaLink
                 href="/guides/japan-trains"
                 label="transport"
-                className="block font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4"
+                className="block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4"
               >
                 How to use trains in Japan →
               </TrackedCtaLink>
               <TrackedCtaLink
                 href="/guides/japan-airport-to-city"
                 label="transport"
-                className="block font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4"
+                className="block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4"
               >
                 Airport to hotel in Japan (Narita, Haneda, Kansai) →
               </TrackedCtaLink>
             </li>
 
             <li className="border-t border-tan pt-10">
-              <h3 className="font-sans font-bold text-dark text-base mb-3 tracking-wide">
+              <h3 className="font-sans font-bold text-dark text-lg mb-3 tracking-wide">
                 3. Decide where you&apos;re staying
               </h3>
-              <p className="font-serif text-muted text-base leading-relaxed mb-6 max-w-xl">
+              <p className="article-body mb-6 max-w-xl">
                 Location matters more than the hotel itself. Being near the
                 right station will save you time and stress.
               </p>
@@ -106,10 +106,10 @@ export default function StartHerePage() {
             </li>
 
             <li className="border-t border-tan pt-10">
-              <h3 className="font-sans font-bold text-dark text-base mb-3 tracking-wide">
+              <h3 className="font-sans font-bold text-dark text-lg mb-3 tracking-wide">
                 4. Money, Cards, and Cash in Japan
               </h3>
-              <p className="font-serif text-muted text-base leading-relaxed mb-6 max-w-xl">
+              <p className="article-body mb-6 max-w-xl">
                 Cash vs card confuses many first-time visitors, but it gets
                 easy fast. Use a simple mix of card, cash, and IC card so you
                 never get stuck.
@@ -120,7 +120,7 @@ export default function StartHerePage() {
               <TrackedCtaLink
                 href="/guides/japan-itinerary"
                 label="transport"
-                className="block font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4"
+                className="block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4"
               >
                 Japan itinerary for first-time visitors →
               </TrackedCtaLink>
@@ -134,11 +134,11 @@ export default function StartHerePage() {
           <div className="bg-dark px-8 py-10">
             <h2
               className="font-display text-cream tracking-wide mb-5"
-              style={{ fontSize: "clamp(24px, 3vw, 36px)" }}
+              style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
             >
               Most people overcomplicate this
             </h2>
-            <p className="font-serif text-[#aab4be] text-base leading-relaxed max-w-xl">
+            <p className="article-body-sm text-[#aab4be] max-w-xl">
               You don&apos;t need 10 tabs, 5 apps, and a perfect itinerary. Get
               the basics right first, then adjust as you go.
             </p>

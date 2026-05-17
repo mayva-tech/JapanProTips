@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -15,13 +15,13 @@ export default function DoYouNeedSimJapanPage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Do You Need a SIM Card in Japan?
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+        <div className="article-body space-y-4 max-w-2xl">
           <p>
             A lot of people ask if they need a SIM for Japan. The question sounds
             small, but it affects every day of the trip.
@@ -34,10 +34,10 @@ export default function DoYouNeedSimJapanPage() {
       beforeComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Quick Answer
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Yes, you need internet in Japan
               </li>
@@ -50,15 +50,15 @@ export default function DoYouNeedSimJapanPage() {
             </ul>
             <Link
               href="/guides/sim-card-japan"
-              className="inline-block bg-maroon text-white font-sans font-bold text-sm tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150"
+              className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150"
             >
               Compare SIM paths for your trip →
             </Link>
-            <ul className="font-serif text-muted list-none pl-0 space-y-2 leading-relaxed mt-6 max-w-2xl">
+            <ul className="article-body list-none space-y-3 pl-0 mt-6 max-w-2xl">
               <li>
                 <Link
                   href="/guides/esim-vs-pocket-wifi-japan"
-                  className="font-sans font-bold text-sm text-rust hover:text-maroon transition-colors duration-150"
+                  className="font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150"
                 >
                   eSIM vs pocket WiFi →
                 </Link>
@@ -66,7 +66,7 @@ export default function DoYouNeedSimJapanPage() {
               <li>
                 <Link
                   href="/guides/airalo-vs-ubigi-japan"
-                  className="font-sans font-bold text-sm text-rust hover:text-maroon transition-colors duration-150"
+                  className="font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150"
                 >
                   Airalo vs Ubigi →
                 </Link>
@@ -75,10 +75,10 @@ export default function DoYouNeedSimJapanPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               When You Need a SIM
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 First-time visitors
               </li>
@@ -95,10 +95,10 @@ export default function DoYouNeedSimJapanPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               When You Might Not Need One
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Traveling with someone who has internet
               </li>
@@ -115,20 +115,20 @@ export default function DoYouNeedSimJapanPage() {
       afterComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Reality Check
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+            <div className="article-body space-y-4 max-w-2xl">
               <p>You can survive without it.</p>
               <p>But it makes everything harder.</p>
             </div>
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Bottom Line
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Get a SIM
               </li>

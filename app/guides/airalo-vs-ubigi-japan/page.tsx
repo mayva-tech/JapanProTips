@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -15,7 +15,7 @@ const AIRALO_URL = "https://www.airalo.com/";
 const UBIGI_URL = "https://www.ubigi.com/";
 
 const outboundCta =
-  "font-sans font-bold text-rust text-sm tracking-wide hover:text-maroon transition-colors duration-150 border-b-2 border-rust hover:border-maroon pb-0.5";
+  "font-sans font-bold text-rust text-base tracking-wide hover:text-maroon transition-colors duration-150 border-b-2 border-rust hover:border-maroon pb-0.5";
 
 export default function AiraloVsUbigiJapanPage() {
   return (
@@ -24,13 +24,13 @@ export default function AiraloVsUbigiJapanPage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Airalo vs Ubigi Japan (Which eSIM Is Better in 2026?)
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+        <div className="article-body space-y-4 max-w-2xl">
           <p>Both Airalo and Ubigi work in Japan.</p>
           <p>
             Choice depends on simple factors: setup speed, stability preference,
@@ -40,13 +40,13 @@ export default function AiraloVsUbigiJapanPage() {
           <div className="flex flex-col gap-2 pt-2">
             <Link
               href="/guides/esim-vs-pocket-wifi-japan"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
             >
               eSIM vs pocket WiFi →
             </Link>
             <Link
               href="/guides/do-you-need-sim-japan"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
             >
               Do you need a SIM in Japan? →
             </Link>
@@ -56,10 +56,10 @@ export default function AiraloVsUbigiJapanPage() {
       beforeComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Quick Answer (Don&apos;t Overthink It)
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-6 max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Best overall: Airalo (simplest setup)
             </li>
@@ -70,7 +70,7 @@ export default function AiraloVsUbigiJapanPage() {
               Most travelers: Airalo is enough
             </li>
           </ul>
-          <p className="font-sans font-bold text-dark text-base mb-6 max-w-2xl">
+          <p className="font-sans font-bold text-dark text-lg mb-6 max-w-2xl">
             If you just want something that works, use Airalo.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
@@ -93,11 +93,11 @@ export default function AiraloVsUbigiJapanPage() {
       afterComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Comparison (Simple and Practical)
           </h2>
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[520px] border-collapse border border-[#d4c9b0] bg-white font-sans text-sm text-dark">
+            <table className="w-full min-w-[520px] border-collapse border border-[#d4c9b0] bg-white font-sans text-base text-dark">
               <thead>
                 <tr className="border-b border-[#d4c9b0] bg-cream">
                   <th className="text-left font-bold uppercase tracking-widest px-4 py-3 border-r border-[#d4c9b0]">
@@ -168,33 +168,33 @@ export default function AiraloVsUbigiJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             What Actually Matters
           </h2>
           <div className="space-y-8 max-w-2xl">
             <div>
-              <h3 className="font-sans font-bold text-dark text-base mb-3">
+              <h3 className="font-sans font-bold text-dark text-lg mb-3">
                 Setup
               </h3>
-              <div className="font-serif text-muted text-base leading-relaxed space-y-3">
+              <div className="article-body space-y-3">
                 <p>Airalo is faster and easier.</p>
                 <p>Ubigi may need extra steps.</p>
               </div>
             </div>
             <div>
-              <h3 className="font-sans font-bold text-dark text-base mb-3">
+              <h3 className="font-sans font-bold text-dark text-lg mb-3">
                 Speed and reliability
               </h3>
-              <div className="font-serif text-muted text-base leading-relaxed space-y-3">
+              <div className="article-body space-y-3">
                 <p>Both are good in cities.</p>
                 <p>Ubigi is slightly more stable in some cases.</p>
               </div>
             </div>
             <div>
-              <h3 className="font-sans font-bold text-dark text-base mb-3">
+              <h3 className="font-sans font-bold text-dark text-lg mb-3">
                 Pricing
               </h3>
-              <div className="font-serif text-muted text-base leading-relaxed space-y-3">
+              <div className="article-body space-y-3">
                 <p>Similar overall.</p>
                 <p>Differences are small.</p>
               </div>
@@ -203,10 +203,10 @@ export default function AiraloVsUbigiJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Common Mistakes
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Overanalyzing small differences
             </li>
@@ -220,10 +220,10 @@ export default function AiraloVsUbigiJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             What You Should Actually Choose
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               First-time traveler: Airalo
             </li>
@@ -237,10 +237,10 @@ export default function AiraloVsUbigiJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Reality Check
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>Both options work.</p>
             <p>Differences are small.</p>
             <p>Your experience won&apos;t change much.</p>
@@ -248,10 +248,10 @@ export default function AiraloVsUbigiJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Bottom Line
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-8 max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Use Airalo if unsure
             </li>

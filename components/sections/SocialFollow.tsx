@@ -35,7 +35,7 @@ export function SocialFollow() {
     <section className="border-b border-stone-200 py-12">
       <Container>
         <SectionLabel>Follow along</SectionLabel>
-        <p className="mb-5 text-sm text-stone-500">
+        <p className="mb-5 text-base text-stone-500">
           The content lives across a few places. Find what works for you.
         </p>
         <div className="divide-y divide-stone-100">
@@ -45,8 +45,8 @@ export function SocialFollow() {
               className="flex items-center justify-between py-4"
             >
               <div>
-                <p className="text-sm font-medium text-stone-900">{ch.name}</p>
-                <p className="text-xs text-stone-400">{ch.description}</p>
+                <p className="text-base font-medium text-stone-900">{ch.name}</p>
+                <p className="text-sm text-stone-400">{ch.description}</p>
               </div>
               <Button
                 href={ch.href}

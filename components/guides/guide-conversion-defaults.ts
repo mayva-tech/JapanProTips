@@ -20,7 +20,7 @@ export const DEFAULT_GUIDE_COMPARISON_ROWS: ComparisonRow[] = [
   },
   {
     name: "Residents hub",
-    price: "—",
+    price: "N/A",
     pros: "Bank, bills, IC, and phone plans after you move",
     bestFor: "Long-stay visas and working holidays",
     link: "/residents",

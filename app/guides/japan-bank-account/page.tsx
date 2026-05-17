@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -17,13 +17,13 @@ export default function JapanBankAccountGuidePage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           How to Open a Bank Account in Japan as a Foreigner
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+        <div className="article-body space-y-4 max-w-2xl">
           <p>
             You need a bank account for salary, rent auto-debit, utilities, and
             daily life. Japan still runs on bank transfers more than outsiders
@@ -39,10 +39,10 @@ export default function JapanBankAccountGuidePage() {
       beforeComparison={
         <>
           <section className="mb-12 max-w-2xl">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Required documents
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+            <ul className="article-body list-none space-y-3.5 pl-0">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Residence card (在留カード) with a valid period of stay
               </li>
@@ -62,17 +62,17 @@ export default function JapanBankAccountGuidePage() {
                 for status context
               </li>
             </ul>
-            <p className="font-serif text-muted text-base leading-relaxed mt-6">
+            <p className="article-body mt-6">
               Rules shift by bank and by branch interpretation. Treat any English PDF
               from a blog as a hint, not a contract.
             </p>
           </section>
 
           <section className="mb-12 max-w-2xl">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Which banks accept foreigners
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+            <div className="article-body space-y-4">
               <p>
                 <span className="font-sans font-bold text-dark">Japan Post Bank (ゆうちょ):</span>{" "}
                 Still the usual first recommendation for new residents who need a
@@ -103,10 +103,10 @@ export default function JapanBankAccountGuidePage() {
       afterComparison={
         <>
           <section className="mb-12 max-w-2xl">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Timeline reality
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+            <div className="article-body space-y-4">
               <p>
                 First visit: paperwork, copies, queue. You rarely walk out with full
                 app access the same hour unless the branch is quiet and your file is
@@ -125,10 +125,10 @@ export default function JapanBankAccountGuidePage() {
           </section>
 
           <section className="mb-12 max-w-2xl">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Common rejection reasons
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+            <ul className="article-body list-none space-y-3.5 pl-0">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Short remaining period of stay on the residence card
               </li>
@@ -150,10 +150,10 @@ export default function JapanBankAccountGuidePage() {
           </section>
 
           <section className="mb-12 max-w-2xl">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Final recommendation
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+            <div className="article-body space-y-4">
               <p>
                 Bring every document in original plus copies. Go early in the day.
                 Start with Japan Post Bank unless you already know a major bank will
@@ -167,7 +167,7 @@ export default function JapanBankAccountGuidePage() {
               <p>
                 <Link
                   href="/residents/open-bank-account-japan"
-                  className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                  className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
                 >
                   Full resident guide: open a bank account in Japan →
                 </Link>
@@ -175,7 +175,7 @@ export default function JapanBankAccountGuidePage() {
               <p>
                 <Link
                   href="/guides/money-payments-japan"
-                  className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                  className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
                 >
                   Money, cards, and cash in Japan →
                 </Link>
@@ -191,9 +191,9 @@ export default function JapanBankAccountGuidePage() {
           <div className="border-t border-tan pt-8 mt-6">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
-              JapanProTips homepage <span className="text-base">‹‹‹</span>
+              JapanProTips homepage <span className="text-lg">‹‹‹</span>
             </Link>
           </div>
         </>

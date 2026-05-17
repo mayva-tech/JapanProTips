@@ -8,7 +8,7 @@ export type ServiceBlockProps = {
 };
 
 const linkClassName =
-  "font-sans text-sm font-bold text-muted hover:text-rust transition-colors duration-150";
+  "font-sans text-base font-bold text-muted hover:text-rust transition-colors duration-150";
 
 function isExternalHref(href: string) {
   return /^https?:\/\//i.test(href);
@@ -22,10 +22,10 @@ export function ServiceBlock({
 }: ServiceBlockProps) {
   return (
     <div className="border border-[#d4c9b0] bg-white px-6 py-5">
-      <h3 className="font-sans font-bold text-xs tracking-widest uppercase text-dark mb-2">
+      <h3 className="font-sans font-bold text-sm tracking-widest uppercase text-dark mb-2">
         {title}
       </h3>
-      <p className="font-serif text-muted text-sm leading-relaxed mb-4">
+      <p className="article-body-sm mb-4">
         {description}
       </p>
       {isExternalHref(href) ? (

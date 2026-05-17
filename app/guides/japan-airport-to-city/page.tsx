@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -16,14 +16,14 @@ export default function JapanAirportToCityPage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           How to Get from the Airport to Your Hotel in Japan (Narita, Haneda,
           Kansai)
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>After landing, this is your first real challenge.</p>
           <p>Airport transport options look confusing when you are tired.</p>
           <p>It is straightforward once you know the main choices.</p>
@@ -32,10 +32,10 @@ export default function JapanAirportToCityPage() {
       beforeComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Quick Answer (Don&apos;t Overthink It)
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-6 max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Tokyo (Narita): Use Narita Express or Keisei Skyliner
             </li>
@@ -49,33 +49,33 @@ export default function JapanAirportToCityPage() {
           <div className="flex flex-col gap-2 mb-6 max-w-2xl">
             <Link
               href="/guides/narita-to-tokyo"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
             >
               Narita to Tokyo (detailed) →
             </Link>
             <Link
               href="/guides/haneda-to-tokyo"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
             >
               Haneda to Tokyo (detailed) →
             </Link>
           </div>
-          <p className="font-sans font-bold text-dark text-base max-w-2xl">
+          <p className="font-sans font-bold text-dark text-lg max-w-2xl">
             Follow Google Maps. It already knows the best route.
           </p>
           <Link
             href="/guides/japan-trains"
-            className="inline-block font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-5"
+            className="inline-block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-5"
           >
             Navigate Japan trains on day one →
           </Link>
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Before You Leave the Airport
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-6 max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Get your IC card (Suica / PASMO)
             </li>
@@ -91,23 +91,23 @@ export default function JapanAirportToCityPage() {
           </ul>
           <Link
             href="/guides/sim-card-japan"
-            className="inline-block bg-maroon text-white font-sans font-bold text-sm tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150"
+            className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150"
           >
             Get your SIM ready before arrival →
           </Link>
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-6">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-6">
             Narita Airport → Tokyo
           </h2>
 
           <div className="space-y-6 max-w-2xl">
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Narita Express (NEX)
               </h3>
-              <ul className="font-serif text-muted list-none pl-0 space-y-2 leading-relaxed">
+              <ul className="article-body list-none space-y-3 pl-0">
                 <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                   Direct to major stations (Tokyo, Shinjuku, Shibuya)
                 </li>
@@ -121,10 +121,10 @@ export default function JapanAirportToCityPage() {
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Keisei Skyliner
               </h3>
-              <ul className="font-serif text-muted list-none pl-0 space-y-2 leading-relaxed">
+              <ul className="article-body list-none space-y-3 pl-0">
                 <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                   Faster to Ueno area
                 </li>
@@ -138,10 +138,10 @@ export default function JapanAirportToCityPage() {
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Bus (Airport Limousine)
               </h3>
-              <ul className="font-serif text-muted list-none pl-0 space-y-2 leading-relaxed">
+              <ul className="article-body list-none space-y-3 pl-0">
                 <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                   Direct to some hotels
                 </li>
@@ -154,10 +154,10 @@ export default function JapanAirportToCityPage() {
               </ul>
             </div>
           </div>
-          <p className="font-serif text-muted text-base leading-relaxed mt-6 max-w-2xl">
+          <p className="article-body mt-6 max-w-2xl">
             <Link
               href="/guides/narita-to-tokyo"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Narita to Tokyo: best way to your hotel →
             </Link>
@@ -168,16 +168,16 @@ export default function JapanAirportToCityPage() {
       afterComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-6">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-6">
             Haneda Airport → Tokyo
           </h2>
 
           <div className="space-y-6 max-w-2xl">
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Train (Keikyu / Tokyo Monorail)
               </h3>
-              <ul className="font-serif text-muted list-none pl-0 space-y-2 leading-relaxed">
+              <ul className="article-body list-none space-y-3 pl-0">
                 <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                   Fast and cheap
                 </li>
@@ -188,10 +188,10 @@ export default function JapanAirportToCityPage() {
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Taxi
               </h3>
-              <ul className="font-serif text-muted list-none pl-0 space-y-2 leading-relaxed">
+              <ul className="article-body list-none space-y-3 pl-0">
                 <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                   Expensive but possible
                 </li>
@@ -201,10 +201,10 @@ export default function JapanAirportToCityPage() {
               </ul>
             </div>
           </div>
-          <p className="font-serif text-muted text-base leading-relaxed mt-6 max-w-2xl">
+          <p className="article-body mt-6 max-w-2xl">
             <Link
               href="/guides/haneda-to-tokyo"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Haneda to Tokyo: best way to your hotel →
             </Link>
@@ -212,34 +212,34 @@ export default function JapanAirportToCityPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-6">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-6">
             Kansai Airport → Osaka
           </h2>
 
           <div className="space-y-6 max-w-2xl">
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Nankai Airport Express
               </h3>
-              <p className="font-serif text-muted text-base leading-relaxed">
+              <p className="article-body">
                 Best for Namba area.
               </p>
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 JR Haruka
               </h3>
-              <p className="font-serif text-muted text-base leading-relaxed">
+              <p className="article-body">
                 Best for Osaka and Kyoto.
               </p>
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Bus
               </h3>
-              <p className="font-serif text-muted text-base leading-relaxed">
+              <p className="article-body">
                 Direct to some hotels.
               </p>
             </div>
@@ -247,10 +247,10 @@ export default function JapanAirportToCityPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             What Option Should You Choose?
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               With luggage: Narita Express or bus
             </li>
@@ -267,10 +267,10 @@ export default function JapanAirportToCityPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Common Mistakes
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Not setting up SIM before arrival
             </li>
@@ -287,10 +287,10 @@ export default function JapanAirportToCityPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Reality Check
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>Airports in Japan are well organized.</p>
             <p>Signs are clear and in English.</p>
             <p>Staff can help if needed.</p>
@@ -299,10 +299,10 @@ export default function JapanAirportToCityPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Bottom Line
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-8 max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Use train for most cases
             </li>
@@ -327,9 +327,9 @@ export default function JapanAirportToCityPage() {
         <div className="border-t border-tan pt-8 mt-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
           >
-            JapanProTips homepage <span className="text-base">‹‹‹</span>
+            JapanProTips homepage <span className="text-lg">‹‹‹</span>
           </Link>
         </div>
         </>

@@ -4,25 +4,25 @@ import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
 
 export function Navbar() {
   return (
-    <header className="border-b-2 border-dark bg-cream">
-      <div className="max-w-4xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-4">
-        <span className="font-display text-dark tracking-wide text-xl">
-          JAPAN PRO TIPS
-        </span>
-        <nav className="flex items-center gap-8">
-          <Link
-            href="/"
-            className="font-sans font-bold text-sm tracking-widest uppercase text-dark hover:text-rust transition-colors duration-150"
-          >
+    <header className="border-b border-paper-edge bg-paper/95 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 px-6 py-4">
+        <Link
+          href="/"
+          className="font-sans text-lead font-black uppercase tracking-[0.05em] text-maroon"
+        >
+          JapanProTips
+        </Link>
+        <nav className="flex items-center gap-6 sm:gap-8">
+          <Link href="/" className="editorial-nav-link">
             Home
           </Link>
-          <TrackedStartHereLink className="font-sans font-bold text-sm tracking-widest uppercase text-dark hover:text-rust transition-colors duration-150">
+          <TrackedStartHereLink className="editorial-nav-link">
             Start Here
           </TrackedStartHereLink>
           <TrackedCtaLink
             href="/guides/sim-card-japan"
             label="esim"
-            className="font-sans font-bold text-sm tracking-widest uppercase text-dark hover:text-rust transition-colors duration-150"
+            className="editorial-nav-link"
           >
             SIM Guide
           </TrackedCtaLink>

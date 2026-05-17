@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 
@@ -15,13 +15,13 @@ export default function SuicaVsPasmoPage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Suica vs PASMO: Which IC Card Should You Use in Japan?
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             Suica and PASMO are both rechargeable IC cards you tap on gates and
             readers. For a trip, you do not need to stress the brand.
@@ -35,10 +35,10 @@ export default function SuicaVsPasmoPage() {
       beforeComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Quick Answer
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 They work almost the same
               </li>
@@ -55,11 +55,11 @@ export default function SuicaVsPasmoPage() {
       afterComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Comparison
             </h2>
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[560px] border-collapse border border-[#d4c9b0] bg-white font-sans text-sm text-dark">
+              <table className="w-full min-w-[560px] border-collapse border border-[#d4c9b0] bg-white font-sans text-base text-dark">
                 <thead>
                   <tr className="border-b border-[#d4c9b0] bg-cream">
                     <th className="text-left font-bold uppercase tracking-widest px-4 py-3 border-r border-[#d4c9b0]">
@@ -120,10 +120,10 @@ export default function SuicaVsPasmoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               What Suica is
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-3 max-w-2xl">
+            <div className="article-body space-y-3 max-w-2xl">
               <p>
                 Suica is JR East&apos;s IC card brand. You load yen onto it, then tap in
                 and out at compatible gates and pay at many convenience stores and
@@ -134,10 +134,10 @@ export default function SuicaVsPasmoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               What PASMO is
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-3 max-w-2xl">
+            <div className="article-body space-y-3 max-w-2xl">
               <p>
                 PASMO is the Tokyo area private railways and subway IC brand. Function
                 is the same as Suica for travel and small purchases on the same network.
@@ -147,10 +147,10 @@ export default function SuicaVsPasmoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Where they work
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-3 max-w-2xl">
+            <div className="article-body space-y-3 max-w-2xl">
               <p>
                 In practice, both cards work on JR, subways, and most local buses in the
                 major interoperable regions. Nationwide coverage has grown, but always
@@ -164,10 +164,10 @@ export default function SuicaVsPasmoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Common Mistakes
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Treating Suica and PASMO as different systems for everyday Tokyo travel
               </li>
@@ -181,10 +181,10 @@ export default function SuicaVsPasmoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Bottom Line
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 One IC card in your hand or phone is enough for most visitors
               </li>

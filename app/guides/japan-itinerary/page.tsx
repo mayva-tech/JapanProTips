@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -16,13 +16,13 @@ export default function JapanItineraryPage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Japan Itinerary (7, 10, and 14 Days for First-Time Visitors)
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             Most first-time Japan itineraries are packed too tightly and break
             down by day three.
@@ -36,7 +36,7 @@ export default function JapanItineraryPage() {
           </p>
           <Link
             href="/guides/japan-airport-to-city"
-            className="inline-block font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 pt-2"
+            className="inline-block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 pt-2"
           >
             Landing soon? Here&apos;s how to get to your hotel →
           </Link>
@@ -45,10 +45,10 @@ export default function JapanItineraryPage() {
       beforeComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Quick Answer (Don&apos;t Overplan)
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-2 leading-relaxed mb-6 max-w-2xl">
+          <ul className="article-body list-none space-y-3 pl-0 mb-6 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               7 days: Tokyo + Kyoto or Osaka
             </li>
@@ -60,22 +60,22 @@ export default function JapanItineraryPage() {
               trips)
             </li>
           </ul>
-          <p className="font-sans font-bold text-dark text-base mb-6">
+          <p className="font-sans font-bold text-dark text-lg mb-6">
             Do not try to see everything in one trip.
           </p>
           <Link
             href="/guides/where-to-stay-tokyo"
-            className="inline-block bg-maroon text-white font-sans font-bold text-sm tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150"
+            className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150"
           >
             Where to stay in Tokyo (best areas) →
           </Link>
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             How to Plan Your Route (Simple Rule)
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>Fly into Tokyo, then move west to Kyoto and Osaka.</p>
             <p>
               For the end of the trip, either return to Tokyo or fly out from
@@ -87,7 +87,7 @@ export default function JapanItineraryPage() {
             </p>
             <Link
               href="/guides/japan-trains"
-              className="block font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 pt-1"
+              className="block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 pt-1"
             >
               Navigate Japan trains on day one →
             </Link>
@@ -95,36 +95,36 @@ export default function JapanItineraryPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-6">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-6">
             7-Day Itinerary (Simple and Realistic)
           </h2>
 
           <div className="space-y-6 max-w-2xl">
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Day 1-3: Tokyo
               </h3>
-              <p className="font-serif text-muted text-base leading-relaxed">
+              <p className="article-body">
                 Arrive, adjust to time zone, and focus on key areas. Keep each
                 day compact.
               </p>
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Day 4-6: Kyoto or Osaka
               </h3>
-              <p className="font-serif text-muted text-base leading-relaxed">
+              <p className="article-body">
                 Pick one base for culture and food. Do not split too much in a
                 short trip.
               </p>
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Day 7: Return / departure
               </h3>
-              <p className="font-serif text-muted text-base leading-relaxed">
+              <p className="article-body">
                 Leave room for transfer time and airport logistics.
               </p>
             </div>
@@ -135,78 +135,78 @@ export default function JapanItineraryPage() {
       afterComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-6">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-6">
             10-Day Itinerary (Better Balance)
           </h2>
 
           <div className="space-y-6 max-w-2xl">
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Day 1-4: Tokyo
               </h3>
             </div>
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Day 5-7: Kyoto
               </h3>
             </div>
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Day 8-9: Osaka
               </h3>
             </div>
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Day 10: Departure
               </h3>
             </div>
           </div>
 
-          <p className="font-serif text-muted text-base leading-relaxed mt-6 max-w-2xl">
+          <p className="article-body mt-6 max-w-2xl">
             This gives a better pace with less rushing and more usable time in
             each city.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-6">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-6">
             14-Day Itinerary (Best Experience)
           </h2>
 
           <div className="space-y-6 max-w-2xl">
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Day 1-5: Tokyo
               </h3>
             </div>
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Day 6-9: Kyoto
               </h3>
             </div>
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Day 10-12: Osaka
               </h3>
             </div>
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-2">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-2">
                 Day 13-14: Optional trips (Nara, Hiroshima, or rest days)
               </h3>
             </div>
           </div>
 
-          <p className="font-serif text-muted text-base leading-relaxed mt-6 max-w-2xl">
+          <p className="article-body mt-6 max-w-2xl">
             Two weeks gives flexibility, lighter days, and a much better overall
             experience.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Common Mistakes
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Trying to visit too many cities
             </li>
@@ -223,10 +223,10 @@ export default function JapanItineraryPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Where This Connects (Important)
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>You still need three basics in place:</p>
             <ul className="list-none pl-0 space-y-2">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
@@ -260,10 +260,10 @@ export default function JapanItineraryPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Reality Check
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>You will not see everything.</p>
             <p>Japan rewards slower travel.</p>
             <p>A simple plan performs better than an overloaded one.</p>
@@ -271,10 +271,10 @@ export default function JapanItineraryPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Bottom Line
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-8 max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Keep it simple
             </li>
@@ -298,9 +298,9 @@ export default function JapanItineraryPage() {
         <div className="border-t border-tan pt-8 mt-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
           >
-            JapanProTips homepage <span className="text-base">‹‹‹</span>
+            JapanProTips homepage <span className="text-lg">‹‹‹</span>
           </Link>
         </div>
         </>

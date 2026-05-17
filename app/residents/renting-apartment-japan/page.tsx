@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceBlock } from "@/components/ServiceBlock";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
@@ -16,12 +16,12 @@ export default function RentingApartmentJapanPage() {
       <article className="max-w-3xl mx-auto px-6 pt-12 pb-16">
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Renting an Apartment in Japan (What Foreigners Need to Know)
         </h1>
 
-        <div className="font-serif text-muted text-base leading-relaxed mb-12 max-w-2xl space-y-4">
+        <div className="article-body mb-12 max-w-2xl space-y-4">
           <p>
             Renting in Japan is strict and complex. The process rewards people who
             read the fee table twice and show up with clean paperwork.
@@ -46,10 +46,10 @@ export default function RentingApartmentJapanPage() {
         </div>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Quick Answer
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Expect upfront costs
             </li>
@@ -63,10 +63,10 @@ export default function RentingApartmentJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Upfront Costs
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Deposit
             </li>
@@ -80,10 +80,10 @@ export default function RentingApartmentJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Requirements
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Residence status
             </li>
@@ -97,10 +97,10 @@ export default function RentingApartmentJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Common Problems
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Rejection
             </li>
@@ -114,10 +114,10 @@ export default function RentingApartmentJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             What Actually Works
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Use foreigner-friendly agents
             </li>
@@ -128,14 +128,14 @@ export default function RentingApartmentJapanPage() {
         </section>
 
         <div className="mb-12 max-w-2xl space-y-4">
-          <p className="font-serif text-muted text-base leading-relaxed mb-2">
+          <p className="article-body mb-2">
             If you want a room without fighting the rental market alone, do this:
           </p>
-          <p className="font-serif text-muted text-sm leading-relaxed mb-4 max-w-2xl">
+          <p className="article-body-sm mb-4 max-w-2xl">
             Starting a few weeks before your move date usually means more
             inventory to choose from.
           </p>
-          <p className="font-serif text-xs text-muted/70 leading-relaxed max-w-2xl mb-3">
+          <p className="article-body-sm text-sm text-muted/70 max-w-2xl mb-3">
             Based on real use in Japan.
           </p>
           <ServiceBlock
@@ -153,10 +153,10 @@ export default function RentingApartmentJapanPage() {
         </div>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Reality Check
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               It is not easy, but possible
             </li>
@@ -164,10 +164,10 @@ export default function RentingApartmentJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Bottom Line
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Expect costs
             </li>

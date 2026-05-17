@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -17,13 +17,13 @@ export default function JapanPhonePlansGuidePage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Best Phone Plans in Japan (Cheap vs Big Carriers)
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             This page is for people who live in Japan or stay long enough to care
             about a monthly bill, not airport tourist SIMs. The split is simple:
@@ -39,10 +39,10 @@ export default function JapanPhonePlansGuidePage() {
       beforeComparison={
         <>
         <section className="mb-12 max-w-2xl border border-[#d4c9b0] bg-white px-6 py-5">
-          <p className="font-serif text-muted text-sm leading-relaxed mb-3">
+          <p className="article-body-sm mb-3">
             Related on this site:
           </p>
-          <ul className="font-serif text-muted list-none pl-0 space-y-2 text-sm leading-relaxed">
+          <ul className="font-serif text-muted list-none pl-0 space-y-2 text-base">
             <li>
               <Link
                 href="/residents/sim-card-japan-residents"
@@ -63,10 +63,10 @@ export default function JapanPhonePlansGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Rakuten Mobile
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Rakuten Mobile built its own network and prices aggressively. Plans
               often look like the cheapest way to carry a lot of data, especially if
@@ -82,10 +82,10 @@ export default function JapanPhonePlansGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             UQ mobile
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               UQ mobile sits in KDDI&apos;s family next to au. Think mid-tier
               pricing with au-class radio in most places, plus retail presence and
@@ -100,10 +100,10 @@ export default function JapanPhonePlansGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             IIJmio
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               IIJmio is a long-running MVNO brand with modest monthly prices and
               multiple plan shapes. Many products let you pick docomo-line or
@@ -122,15 +122,15 @@ export default function JapanPhonePlansGuidePage() {
       afterComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Cost comparison
           </h2>
-          <p className="font-serif text-muted text-base leading-relaxed mb-4">
+          <p className="article-body mb-4">
             Single smartphone line, before handset installment and campaign
             discounts. Rounded to how people compare plans in conversation, not
             accounting tax line by line.
           </p>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+          <ul className="article-body list-none space-y-3.5 pl-0">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               <span className="font-sans font-bold text-dark">Big three retail</span>{" "}
               (docomo, SoftBank, au flagship counters): often roughly ¥7,000 to
@@ -154,7 +154,7 @@ export default function JapanPhonePlansGuidePage() {
               with the cheapest tiers for people who live on Wi-Fi.
             </li>
           </ul>
-          <p className="font-serif text-muted text-base leading-relaxed mt-6">
+          <p className="article-body mt-6">
             If two quotes differ by a few hundred yen, ignore that noise. Compare
             cancellation rules, handset lock-in, and whether the price explodes
             after month 12.
@@ -162,10 +162,10 @@ export default function JapanPhonePlansGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Contract vs prepaid
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               <span className="font-sans font-bold text-dark">Postpaid contract</span>{" "}
               is the default for residents: MNP porting, billed monthly, credit
@@ -196,10 +196,10 @@ export default function JapanPhonePlansGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Recommendation
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+          <ul className="article-body list-none space-y-3.5 pl-0">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               <span className="font-sans font-bold text-dark">Minimize monthly cost</span>{" "}
               and you tolerate app-first support: start with{" "}
@@ -227,7 +227,7 @@ export default function JapanPhonePlansGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl border border-[#d4c9b0] bg-white px-6 py-5">
-          <p className="font-serif text-muted text-sm leading-relaxed">
+          <p className="article-body-sm">
             After you land on a carrier, bank auto-debit and address paperwork still
             need to match what you told immigration. The residents hub collects
             those guides in one place.
@@ -235,7 +235,7 @@ export default function JapanPhonePlansGuidePage() {
           <p className="mt-4">
             <Link
               href="/residents"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Residents hub →
             </Link>
@@ -250,9 +250,9 @@ export default function JapanPhonePlansGuidePage() {
         <div className="border-t border-tan pt-8 mt-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
           >
-            JapanProTips homepage <span className="text-base">‹‹‹</span>
+            JapanProTips homepage <span className="text-lg">‹‹‹</span>
           </Link>
         </div>
         </>

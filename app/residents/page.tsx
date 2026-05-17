@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const ctaClass =
-  "inline-block bg-maroon text-white font-sans font-bold text-sm tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150";
+  "inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150";
 
 const linkClass =
   "font-sans font-bold text-rust hover:text-maroon transition-colors duration-150";
@@ -42,12 +42,12 @@ export default function ResidentsPage() {
       <article className="max-w-3xl mx-auto px-6 pt-12 pb-16">
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Living in Japan: Practical Guides for Daily Life
         </h1>
 
-        <div className="font-serif text-muted text-base leading-relaxed mb-14 max-w-2xl space-y-4">
+        <div className="article-body mb-14 max-w-2xl space-y-4">
           <p>This section is for people who already live in Japan.</p>
           <p>
             It focuses on daily life, paperwork rhythms, and how things actually
@@ -58,10 +58,10 @@ export default function ResidentsPage() {
         <div className="border-t-2 border-dark mb-12" />
 
         <section className="mb-14">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Start Here
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl mb-8">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl mb-8">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Setting up life basics
             </li>
@@ -69,7 +69,7 @@ export default function ResidentsPage() {
               Bank, phone, transport
             </li>
           </ul>
-          <ul className="font-serif text-muted list-none pl-0 space-y-2 leading-relaxed max-w-2xl mb-8 text-sm">
+          <ul className="article-body list-none space-y-3 pl-0 max-w-2xl mb-8 text-base">
             <li>
               <TrackedResidentLink href="/residents/open-bank-account-japan" className={linkClass}>
                 Open a bank account →
@@ -97,10 +97,10 @@ export default function ResidentsPage() {
         </section>
 
         <section className="mb-14">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Daily Life
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Paying bills
             </li>
@@ -111,7 +111,7 @@ export default function ResidentsPage() {
               Shopping
             </li>
           </ul>
-          <ul className="font-serif text-muted list-none pl-0 space-y-2 leading-relaxed max-w-2xl mt-4 text-sm">
+          <ul className="article-body list-none space-y-3 pl-0 max-w-2xl mt-4 text-base">
             <li>
               <TrackedResidentLink href="/guides/japan-living-cost" className={linkClass}>
                 Monthly cost of living (rent, food, transport) →
@@ -131,10 +131,10 @@ export default function ResidentsPage() {
         </section>
 
         <section className="mb-14">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Work and Systems
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Contracts
             </li>
@@ -145,7 +145,7 @@ export default function ResidentsPage() {
               Bureaucracy
             </li>
           </ul>
-          <ul className="font-serif text-muted list-none pl-0 space-y-2 leading-relaxed max-w-2xl mt-4 text-sm">
+          <ul className="article-body list-none space-y-3 pl-0 max-w-2xl mt-4 text-base">
             <li>
               <TrackedResidentLink href="/guides/part-time-jobs-japan" className={linkClass}>
                 Part-time jobs in Japan (konbini, restaurants, English) →
@@ -160,10 +160,10 @@ export default function ResidentsPage() {
         </section>
 
         <section className="mb-14">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Reality
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Japan is efficient but rigid
             </li>

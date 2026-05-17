@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 
@@ -15,13 +15,13 @@ export default function BestAreaTokyoFirstTimePage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Best Area to Stay in Tokyo for First-Time Visitors
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             Tokyo is huge, but first trips usually need one thing above all: easy trains
             to the places you already plan to visit.
@@ -35,10 +35,10 @@ export default function BestAreaTokyoFirstTimePage() {
       beforeComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Quick Answer
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Best overall: Shinjuku
               </li>
@@ -58,11 +58,11 @@ export default function BestAreaTokyoFirstTimePage() {
       afterComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Comparison
             </h2>
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[560px] border-collapse border border-[#d4c9b0] bg-white font-sans text-sm text-dark">
+              <table className="w-full min-w-[560px] border-collapse border border-[#d4c9b0] bg-white font-sans text-base text-dark">
                 <thead>
                   <tr className="border-b border-[#d4c9b0] bg-cream">
                     <th className="text-left font-bold uppercase tracking-widest px-4 py-3 border-r border-[#d4c9b0]">
@@ -134,10 +134,10 @@ export default function BestAreaTokyoFirstTimePage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Why station access matters
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-3 max-w-2xl">
+            <div className="article-body space-y-3 max-w-2xl">
               <p>
                 You will ride trains every day. A hotel ten minutes from a major hub beats
                 a cheap room twenty minutes from the nearest useful line.
@@ -150,12 +150,12 @@ export default function BestAreaTokyoFirstTimePage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Area breakdown
             </h2>
-            <div className="font-serif text-muted text-base leading-relaxed space-y-8 max-w-2xl">
+            <div className="article-body space-y-8 max-w-2xl">
               <div>
-                <h3 className="font-display text-dark text-xl tracking-wide mb-2">
+                <h3 className="font-display text-dark text-2xl tracking-wide mb-2">
                   Shinjuku
                 </h3>
                 <p>
@@ -164,7 +164,7 @@ export default function BestAreaTokyoFirstTimePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-dark text-xl tracking-wide mb-2">
+                <h3 className="font-display text-dark text-2xl tracking-wide mb-2">
                   Shibuya
                 </h3>
                 <p>
@@ -173,14 +173,14 @@ export default function BestAreaTokyoFirstTimePage() {
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-dark text-xl tracking-wide mb-2">Ueno</h3>
+                <h3 className="font-display text-dark text-2xl tracking-wide mb-2">Ueno</h3>
                 <p>
                   Sensible when budget matters and you still want a real station complex,
                   park space, and quick hops toward eastern highlights.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-dark text-xl tracking-wide mb-2">
+                <h3 className="font-display text-dark text-2xl tracking-wide mb-2">
                   Tokyo Station and Ginza
                 </h3>
                 <p>
@@ -192,10 +192,10 @@ export default function BestAreaTokyoFirstTimePage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Common Mistakes
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Booking &quot;Tokyo&quot; without checking which station is actually closest
               </li>
@@ -210,10 +210,10 @@ export default function BestAreaTokyoFirstTimePage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
               Bottom Line
             </h2>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Start from Shinjuku unless you have a clear reason for another base
               </li>

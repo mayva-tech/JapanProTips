@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -19,14 +19,14 @@ export default function JapanAirportFirstStepsPage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Landing in Japan: What to Do in Your First 60 Minutes (Narita and
           Haneda)
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             The first hour after landing is not glamorous. You are tired, lines
             move in bursts, and every kiosk wants you to make a decision before
@@ -41,7 +41,7 @@ export default function JapanAirportFirstStepsPage() {
           <p>
             <Link
               href="/guides/japan-airport-to-city"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Airport to hotel (Narita, Haneda, Kansai) →
             </Link>
@@ -51,10 +51,10 @@ export default function JapanAirportFirstStepsPage() {
       beforeComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Step 1: Immigration (What Actually Happens)
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               You join a queue, move forward in chunks, then scan fingerprints and
               face where instructed. Officers are usually efficient. They are not
@@ -74,10 +74,10 @@ export default function JapanAirportFirstStepsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Step 2: Baggage Claim and Customs
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               Follow the monitors to your belt. Bags can take a while even when
               immigration felt quick. That is normal.
@@ -98,10 +98,10 @@ export default function JapanAirportFirstStepsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Step 3: Get Internet Immediately
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               Airport WiFi helps for five minutes. It is not a substitute for
               mobile data when you are trying to buy a train ticket, message your
@@ -125,27 +125,27 @@ export default function JapanAirportFirstStepsPage() {
       afterComparison={
         <>
         <div className={conversionBox}>
-          <h3 className="font-sans font-bold text-xs tracking-widest uppercase text-dark mb-2">
+          <h3 className="font-sans font-bold text-sm tracking-widest uppercase text-dark mb-2">
             Recommended: Get an eSIM before landing
           </h3>
-          <p className="font-serif text-muted text-sm leading-relaxed mb-4">
+          <p className="article-body-sm mb-4">
             If your phone supports eSIM, set it up before you land. Most travelers
             do fine with Airalo or Ubigi for Japan. You skip the kiosk line and
             you are online before you reach the train gates.
           </p>
           <Link
             href="/guides/sim-card-japan"
-            className="font-sans text-sm font-bold text-rust hover:text-maroon transition-colors duration-150"
+            className="font-sans text-base font-bold text-rust hover:text-maroon transition-colors duration-150"
           >
             Best SIM and eSIM options for Japan →
           </Link>
         </div>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Step 4: Get a Transport Card (Suica or PASMO)
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               You do not need a plastic card on day one if you use Apple Pay or
               Google Pay with a mobile Suica-style setup. Plenty of visitors never
@@ -161,7 +161,7 @@ export default function JapanAirportFirstStepsPage() {
             <p>
               <Link
                 href="/guides/suica-vs-pasmo"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Suica vs PASMO: what to pick →
               </Link>
@@ -170,10 +170,10 @@ export default function JapanAirportFirstStepsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Step 5: How to Get to Tokyo (Train vs Taxi)
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               <span className="font-sans font-bold text-dark">Narita:</span>{" "}
               Narita Express (N&apos;EX) is simple if your hotel is near a major JR
@@ -195,13 +195,13 @@ export default function JapanAirportFirstStepsPage() {
             <p className="space-y-2">
               <Link
                 href="/guides/narita-to-tokyo"
-                className="block font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Narita to Tokyo (routes and picks) →
               </Link>
               <Link
                 href="/guides/haneda-to-tokyo"
-                className="block font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Haneda to Tokyo (routes and picks) →
               </Link>
@@ -210,10 +210,10 @@ export default function JapanAirportFirstStepsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Common Mistakes at the Airport
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Buying an overpriced tourist SIM because the counter is the first
               thing you see after customs
@@ -230,10 +230,10 @@ export default function JapanAirportFirstStepsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Quick Checklist Before You Leave the Airport
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Data works (run a quick map load)
             </li>
@@ -250,17 +250,17 @@ export default function JapanAirportFirstStepsPage() {
         </section>
 
         <section className="mb-12 max-w-2xl border-t border-tan pt-10">
-          <h2 className="font-display text-dark tracking-wide text-2xl mb-4">
+          <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             Next: plan the trip in the right order
           </h2>
-          <p className="font-serif text-muted text-base leading-relaxed mb-6">
+          <p className="article-body mb-6">
             Airports are only the opening scene. If you want a straight checklist
             that covers SIM, trains, where to stay, and money without SEO noise,
             use the hub page and work down the list.
           </p>
           <Link
             href="/start-here"
-            className="inline-block bg-maroon text-white font-sans font-bold text-sm tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150"
+            className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150"
           >
             Start here: trip planning checklist →
           </Link>

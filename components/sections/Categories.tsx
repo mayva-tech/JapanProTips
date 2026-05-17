@@ -48,10 +48,10 @@ export function Categories() {
           {categories.map((cat) => (
             <Card key={cat.title} accent={cat.accent}>
               <Pill color={cat.pillColor}>{cat.pill}</Pill>
-              <h2 className="mt-2 text-base font-medium text-stone-900">
+              <h2 className="mt-2 text-lg font-medium text-stone-900">
                 {cat.title}
               </h2>
-              <p className="mb-3 mt-1 text-sm text-stone-500">
+              <p className="mb-3 mt-1 text-base text-stone-500">
                 {cat.description}
               </p>
               <Button href={cat.href} gtagLabel={conversionLabelForHref(cat.href)}>

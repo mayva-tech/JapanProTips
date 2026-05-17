@@ -22,7 +22,7 @@ export function Button({
   gtagLabel,
 }: ButtonProps) {
   const base =
-    "inline-block text-sm font-medium px-4 py-2 rounded-md transition-colors";
+    "inline-block text-base font-medium px-4 py-2 rounded-md transition-colors";
   const variants = {
     primary: "bg-stone-900 text-stone-50 hover:bg-stone-700",
     outline: "border border-stone-300 text-stone-800 hover:bg-stone-100",

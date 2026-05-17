@@ -1,4 +1,4 @@
-﻿import { ESimConversionBlock, HotelConversionBlock, StartHereFunnelBlock } from "@/components/conversion";
+import { ESimConversionBlock, HotelConversionBlock, StartHereFunnelBlock } from "@/components/conversion";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -72,14 +72,14 @@ export default function TouristsPage() {
       <section className="border-b border-stone-200 py-16">
         <Container>
           <SectionLabel>Visiting Japan</SectionLabel>
-          <h1 className="mb-4 text-3xl font-medium leading-snug tracking-tight text-stone-900 sm:text-4xl">
+          <h1 className="mb-4 text-4xl font-medium leading-snug tracking-tight text-stone-900 sm:text-5xl">
             Going to Japan? Start here before you waste money.
           </h1>
-          <p className="mb-3 max-w-lg text-base leading-relaxed text-stone-500">
+          <p className="mb-3 max-w-lg text-body text-stone-500">
             Practical guides for transport, SIM cards, money, and first-time
             mistakes.
           </p>
-          <p className="mb-8 max-w-lg text-xs font-semibold uppercase tracking-widest text-stone-500">
+          <p className="mb-8 max-w-lg text-sm font-semibold uppercase tracking-widest text-stone-500">
             Independent. Engineer based in Japan—not a travel agency.
           </p>
           <Button href="/start-here" variant="primary" gtagLabel="start_here">
@@ -101,16 +101,16 @@ export default function TouristsPage() {
       <section className="border-b border-stone-200 py-12">
         <Container>
           <SectionLabel>Tourist guides</SectionLabel>
-          <p className="mb-5 text-sm text-stone-500">
+          <p className="mb-5 text-base text-stone-500">
             The guides first-time visitors actually need.
           </p>
           <div className="flex flex-col gap-3">
             <Card>
               <Pill color="coral">Connectivity</Pill>
-              <h3 className="mt-2 text-sm font-medium leading-snug text-stone-900">
+              <h3 className="mt-2 text-base font-medium leading-snug text-stone-900">
                 Getting a SIM card in Japan without overpaying
               </h3>
-              <p className="mb-3 mt-1 text-sm text-stone-500">
+              <p className="mb-3 mt-1 text-base text-stone-500">
                 What to buy, where to get it, and why the airport kiosk is a
                 trap.
               </p>
@@ -120,10 +120,10 @@ export default function TouristsPage() {
             </Card>
             <Card>
               <Pill color="coral">Transport</Pill>
-              <h3 className="mt-2 text-sm font-medium leading-snug text-stone-900">
+              <h3 className="mt-2 text-base font-medium leading-snug text-stone-900">
                 IC cards, JR Pass, and when not to buy one
               </h3>
-              <p className="mb-3 mt-1 text-sm text-stone-500">
+              <p className="mb-3 mt-1 text-base text-stone-500">
                 The JR Pass is not always worth it. Here&apos;s the math and
                 when it makes sense.
               </p>
@@ -133,10 +133,10 @@ export default function TouristsPage() {
             </Card>
             <Card>
               <Pill color="coral">Money</Pill>
-              <h3 className="mt-2 text-sm font-medium leading-snug text-stone-900">
+              <h3 className="mt-2 text-base font-medium leading-snug text-stone-900">
                 How much money you actually need for Japan
               </h3>
-              <p className="mb-3 mt-1 text-sm text-stone-500">
+              <p className="mb-3 mt-1 text-base text-stone-500">
                 Japan is cheaper than most expect and more cash-heavy than most
                 prepare for.
               </p>
@@ -155,10 +155,10 @@ export default function TouristsPage() {
       <section className="bg-stone-100 py-16">
         <Container>
           <SectionLabel>Before you land</SectionLabel>
-          <h2 className="mb-3 text-xl font-medium leading-snug text-stone-900">
+          <h2 className="mb-3 text-2xl font-medium leading-snug text-stone-900">
             Plan smarter before you land.
           </h2>
-          <p className="mb-6 text-sm leading-relaxed text-stone-500">
+          <p className="article-body-sm mb-6 text-stone-500">
             The Start Here guide covers the ten things worth knowing before you
             do anything else, whether tourist or resident.
           </p>

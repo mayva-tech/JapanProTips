@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -17,13 +17,13 @@ export default function RentingApartmentJapanGuidePage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Renting an Apartment in Japan (Key Money and Reality)
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             Japanese rental math is not “first month plus deposit.” It is a stack
             of named fees that can add up to several months of rent before you
@@ -39,10 +39,10 @@ export default function RentingApartmentJapanGuidePage() {
       beforeComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Key money explanation
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               <span className="font-sans font-bold text-dark">Key money (礼金, reikin)</span>{" "}
               is a non-refundable payment to the landlord at signing. Think of it
@@ -64,10 +64,10 @@ export default function RentingApartmentJapanGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Guarantor system
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Many leases want a{" "}
               <span className="font-sans font-bold text-dark">連帯保証人</span>, a
@@ -91,14 +91,14 @@ export default function RentingApartmentJapanGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Initial costs breakdown
           </h2>
-          <p className="font-serif text-muted text-base leading-relaxed mb-4">
+          <p className="article-body mb-4">
             Exact numbers depend on the listing. This is the usual stack you should
             mentally model before you celebrate a “cheap” rent.
           </p>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+          <ul className="article-body list-none space-y-3.5 pl-0">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               First month rent (often prorated if mid-month)
             </li>
@@ -120,7 +120,7 @@ export default function RentingApartmentJapanGuidePage() {
               Guarantor company setup and renewal fees
             </li>
           </ul>
-          <p className="font-serif text-muted text-base leading-relaxed mt-6">
+          <p className="article-body mt-6">
             Running total of four to six months of rent in cash and transfer is not
             rare for a standard lease. Share houses and foreigner-focused operators
             often compress this stack. Read their PDF anyway.
@@ -131,10 +131,10 @@ export default function RentingApartmentJapanGuidePage() {
       afterComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Foreigner-friendly agencies
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Mainstream Japanese agencies can work if your Japanese is strong and
               your paperwork is boringly complete. Many new residents instead start
@@ -155,7 +155,7 @@ export default function RentingApartmentJapanGuidePage() {
                 href="https://www.sakura-house.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Sakura House (external) →
               </a>
@@ -165,7 +165,7 @@ export default function RentingApartmentJapanGuidePage() {
                 href="https://www.oakhouse.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Oakhouse (external) →
               </a>
@@ -178,10 +178,10 @@ export default function RentingApartmentJapanGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Mistakes to avoid
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+          <ul className="article-body list-none space-y-3.5 pl-0">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Comparing headline rent without summing move-in costs
             </li>
@@ -200,10 +200,10 @@ export default function RentingApartmentJapanGuidePage() {
               send large move-in amounts
             </li>
           </ul>
-          <p className="font-serif text-muted text-base leading-relaxed mt-6">
+          <p className="article-body mt-6">
             <Link
               href="/guides/japan-bank-account"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Open a bank account in Japan (guide) →
             </Link>
@@ -211,14 +211,14 @@ export default function RentingApartmentJapanGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl border border-[#d4c9b0] bg-white px-6 py-5">
-          <p className="font-serif text-muted text-sm leading-relaxed">
+          <p className="article-body-sm">
             For a longer resident-focused version of this topic with the same tone,
             see the dedicated residents article linked below.
           </p>
           <p className="mt-4">
             <Link
               href="/residents/renting-apartment-japan"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Renting an apartment (residents hub article) →
             </Link>
@@ -233,9 +233,9 @@ export default function RentingApartmentJapanGuidePage() {
         <div className="border-t border-tan pt-8 mt-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
           >
-            JapanProTips homepage <span className="text-base">‹‹‹</span>
+            JapanProTips homepage <span className="text-lg">‹‹‹</span>
           </Link>
         </div>
         </>

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -17,13 +17,13 @@ export default function JapanLivingCostGuidePage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Monthly Cost of Living in Japan (Real Numbers)
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             Trip budgets and resident budgets are different animals. This page is
             monthly math for a single adult paying their own rent in Japan, in yen
@@ -39,22 +39,22 @@ export default function JapanLivingCostGuidePage() {
       beforeComparison={
         <>
         <section className="mb-12 max-w-2xl border border-[#d4c9b0] bg-white px-6 py-5">
-          <p className="font-serif text-muted text-sm leading-relaxed mb-3">
+          <p className="article-body-sm mb-3">
             Visiting instead of moving? Use the trip-focused breakdown.
           </p>
           <Link
             href="/guides/japan-budget-breakdown"
-            className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+            className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
           >
             Japan trip cost in 2026 (per day) →
           </Link>
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Rent
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Rent is the line item that drowns everything else in Tokyo and
               Osaka&apos;s popular wards. A clean 1R or 1K within a sane commute of
@@ -76,7 +76,7 @@ export default function JapanLivingCostGuidePage() {
             <p>
               <Link
                 href="/guides/renting-apartment-japan"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Renting an apartment in Japan (guide) →
               </Link>
@@ -85,16 +85,16 @@ export default function JapanLivingCostGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Food
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Supermarkets after 7 p.m., frozen vegetables, and rice at home keep
               the floor low. Eating out at chains even a few times per week moves
               the needle fast.
             </p>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+            <ul className="article-body list-none space-y-3.5 pl-0">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 <span className="font-sans font-bold text-dark">Frugal cook-at-home:</span>{" "}
                 about <span className="font-sans font-bold text-dark">¥35,000 to ¥50,000</span>{" "}
@@ -116,10 +116,10 @@ export default function JapanLivingCostGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Transport
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Commuters usually buy a{" "}
               <span className="font-sans font-bold text-dark">Teiki pass</span> for
@@ -136,7 +136,7 @@ export default function JapanLivingCostGuidePage() {
             <p>
               <Link
                 href="/guides/getting-around-japan"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Getting around Japan (guide) →
               </Link>
@@ -148,10 +148,10 @@ export default function JapanLivingCostGuidePage() {
       afterComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Utilities
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               For a small apartment, think in blocks:{" "}
               <span className="font-sans font-bold text-dark">electric</span> swings
@@ -163,7 +163,7 @@ export default function JapanLivingCostGuidePage() {
               <span className="font-sans font-bold text-dark">internet</span> and{" "}
               <span className="font-sans font-bold text-dark">mobile</span>.
             </p>
-            <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+            <ul className="article-body list-none space-y-3.5 pl-0">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 <span className="font-sans font-bold text-dark">Electric + gas + water:</span>{" "}
                 often about <span className="font-sans font-bold text-dark">¥12,000 to ¥22,000</span>{" "}
@@ -184,7 +184,7 @@ export default function JapanLivingCostGuidePage() {
             <p>
               <Link
                 href="/residents/pay-bills-japan"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Pay bills in Japan (resident guide) →
               </Link>
@@ -193,17 +193,17 @@ export default function JapanLivingCostGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Real monthly estimate
           </h2>
-          <p className="font-serif text-muted text-base leading-relaxed mb-6">
+          <p className="article-body mb-6">
             Below adds rent, food, commuter-class transport, utilities block
             (electric, gas, water, internet, phone), and a small{" "}
             <span className="font-sans font-bold text-dark">misc</span> bucket for
             drugstore, haircuts, and replacement socks. It still excludes tuition,
             debt service, travel abroad, and dependents.
           </p>
-          <ul className="font-serif text-muted list-none pl-0 space-y-5 leading-relaxed">
+          <ul className="font-serif text-muted list-none pl-0 space-y-5">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               <span className="font-sans font-bold text-dark">Tokyo, tight but honest:</span>{" "}
               rent near <span className="font-sans font-bold text-dark">¥65,000</span>, food{" "}
@@ -231,7 +231,7 @@ export default function JapanLivingCostGuidePage() {
               when you still eat out sometimes and run AC.
             </li>
           </ul>
-          <p className="font-serif text-muted text-base leading-relaxed mt-6">
+          <p className="article-body mt-6">
             National health and pension are not optional long term. When you are
             employed, withheld amounts change the take-home you feel. Budget from
             gross and you will lie to yourself.
@@ -239,14 +239,14 @@ export default function JapanLivingCostGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl border border-[#d4c9b0] bg-white px-6 py-5">
-          <p className="font-serif text-muted text-sm leading-relaxed">
+          <p className="article-body-sm">
             Bank account, phone plan, and apartment search all touch the same
             monthly spreadsheet.
           </p>
           <p className="mt-4">
             <Link
               href="/residents"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Residents hub →
             </Link>
@@ -261,9 +261,9 @@ export default function JapanLivingCostGuidePage() {
         <div className="border-t border-tan pt-8 mt-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
           >
-            JapanProTips homepage <span className="text-base">‹‹‹</span>
+            JapanProTips homepage <span className="text-lg">‹‹‹</span>
           </Link>
         </div>
         </>

@@ -24,8 +24,7 @@ function isExternalHref(href: string) {
 const TOP_THRESHOLD = 64;
 const SCROLL_DELTA = 6;
 
-const btnClass =
-  "inline-flex w-full shrink-0 items-center justify-center rounded-lg bg-maroon px-5 py-3 text-center font-sans text-xs font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust sm:w-auto sm:min-w-[140px]";
+const btnClass = "editorial-btn-primary w-full shrink-0 py-3 text-sm sm:w-auto sm:min-w-[140px]";
 
 export function StickyCTA({
   href,
@@ -88,12 +87,12 @@ export function StickyCTA({
     >
       <div
         inert={open ? undefined : true}
-        className={`pointer-events-auto border-t border-[#d4c9b0] bg-cream/95 px-4 py-3 shadow-[0_-8px_24px_rgba(0,0,0,0.08)] backdrop-blur-sm transition-transform duration-300 ease-out pb-[max(0.75rem,env(safe-area-inset-bottom))] ${
+        className={`pointer-events-auto border-t border-paper-edge bg-paper/95 px-4 py-3 shadow-editorial backdrop-blur-sm transition-transform duration-300 ease-out pb-[max(0.75rem,env(safe-area-inset-bottom))] ${
           open ? "translate-y-0" : "translate-y-full"
         }`}
       >
         <div className="mx-auto flex max-w-lg flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-          <p className="font-sans text-sm font-bold leading-snug text-dark">
+          <p className="font-sans text-body font-bold leading-snug text-ink">
             {text}
           </p>
           {cta}

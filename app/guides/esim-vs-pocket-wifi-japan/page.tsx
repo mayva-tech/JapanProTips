@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -19,13 +19,13 @@ export default function EsimVsPocketWifiJapanPage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           eSIM vs Pocket WiFi in Japan (Which Should You Choose)
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             Internet in Japan is not a luxury add-on. It is how you buy the right
             train ticket, read the platform screen, message your hotel, and not
@@ -39,13 +39,13 @@ export default function EsimVsPocketWifiJapanPage() {
           <div className="flex flex-col gap-2 pt-2">
             <Link
               href="/guides/japan-airport-first-steps"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
             >
               First 60 minutes at Narita or Haneda →
             </Link>
             <Link
               href="/guides/airalo-vs-ubigi-japan"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
             >
               Airalo vs Ubigi for Japan →
             </Link>
@@ -55,10 +55,10 @@ export default function EsimVsPocketWifiJapanPage() {
       beforeComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             What is eSIM
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               An eSIM is a digital SIM profile you install on a compatible phone. You
               buy a Japan data plan from an app or website, scan or tap through the
@@ -74,10 +74,10 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             What is Pocket WiFi
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Pocket WiFi is a battery-powered hotspot with a Japanese SIM inside.
               It creates a WiFi network your phone, laptop, and second phone can all
@@ -93,10 +93,10 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Speed Comparison
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Both eSIM plans and decent pocket WiFi units usually land on the same
               major domestic networks in practice. Speed is rarely the deciding
@@ -112,10 +112,10 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Price Comparison
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               For one person on a normal trip, eSIM is usually cheaper all-in when
               you include time and pickup hassle. You pay the app, you are done.
@@ -130,10 +130,10 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Battery and Convenience
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               eSIM does not add a second battery to worry about. Your phone battery
               is still your phone battery, but you are not babysitting a hotspot.
@@ -148,10 +148,10 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Best for Solo Travelers
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               If your phone supports eSIM and you are traveling alone, default to
               eSIM. It is fewer objects, fewer counters, fewer return deadlines.
@@ -165,10 +165,10 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Best for Groups
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               If three or four people need working maps at the same time, one
               pocket WiFi can be simpler than buying and troubleshooting four
@@ -187,10 +187,10 @@ export default function EsimVsPocketWifiJapanPage() {
       afterComparison={
         <>
         <div className={conversionBox}>
-          <h3 className="font-sans font-bold text-xs tracking-widest uppercase text-dark mb-2">
+          <h3 className="font-sans font-bold text-sm tracking-widest uppercase text-dark mb-2">
             Pick a plan before you land
           </h3>
-          <p className="font-serif text-muted text-sm leading-relaxed mb-4">
+          <p className="article-body-sm mb-4">
             Most travelers who can use eSIM do fine with{" "}
             <span className="font-sans font-bold text-dark">Airalo</span> or{" "}
             <span className="font-sans font-bold text-dark">Ubigi</span> for Japan
@@ -199,17 +199,17 @@ export default function EsimVsPocketWifiJapanPage() {
           </p>
           <Link
             href="/guides/sim-card-japan"
-            className="font-sans text-sm font-bold text-rust hover:text-maroon transition-colors duration-150"
+            className="font-sans text-base font-bold text-rust hover:text-maroon transition-colors duration-150"
           >
             Best SIM and eSIM for Japan (full guide) →
           </Link>
         </div>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Common Mistakes
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+          <ul className="article-body list-none space-y-3.5 pl-0">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Renting pocket WiFi at the airport blindly because the counter is the
               first thing you see after customs. You pay for convenience you did not
@@ -227,10 +227,10 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Final Recommendation (Simple)
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Solo or couple, modern phone: eSIM first. Group with multiple phones
               that all need data together: pocket WiFi can win on simplicity and
@@ -252,9 +252,9 @@ export default function EsimVsPocketWifiJapanPage() {
         <div className="border-t border-tan pt-8 mt-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
           >
-            JapanProTips homepage <span className="text-base">‹‹‹</span>
+            JapanProTips homepage <span className="text-lg">‹‹‹</span>
           </Link>
         </div>
         </>

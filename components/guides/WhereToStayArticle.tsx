@@ -2,21 +2,21 @@ import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
 
 const ctaClass =
-  "inline-block bg-maroon text-white font-sans font-bold text-sm tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150";
+  "inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150";
 
 /** Content from “Pick the Right City First” through “What to Look For”. */
 export function WhereToStayArticleBeforeComparison() {
   return (
     <>
       <div>
-        <h3 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+        <h3 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
           Pick the Right City First
         </h3>
-        <p className="font-serif text-muted text-base leading-relaxed mb-4">
+        <p className="article-body mb-4">
           Most first trips narrow to Tokyo, Osaka, or Kyoto. Use this as a
           starting frame, not a rule.
         </p>
-        <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+        <ul className="article-body list-none space-y-3.5 pl-0">
           <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
             <strong className="font-sans font-bold text-dark">Tokyo:</strong>{" "}
             Maximum convenience, dense transport, strong default base for a first
@@ -36,10 +36,10 @@ export function WhereToStayArticleBeforeComparison() {
       </div>
 
       <div>
-        <h3 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+        <h3 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
           Then Pick the Right Area (This Matters More)
         </h3>
-        <p className="font-serif text-muted text-base leading-relaxed">
+        <p className="article-body">
           The neighborhood inside the city beats the city name on your booking.
           A bad area in a great city still wastes time every day. A good pocket
           near the right line beats a fancy address on the wrong side of town.
@@ -47,10 +47,10 @@ export function WhereToStayArticleBeforeComparison() {
       </div>
 
       <div>
-        <h3 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+        <h3 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
           What to Look For
         </h3>
-        <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+        <ul className="article-body list-none space-y-3.5 pl-0">
           <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
             Near a major train station, not a 15-minute bus ride away.
           </li>
@@ -76,13 +76,13 @@ export function WhereToStayArticleAfterComparison() {
   return (
     <>
       <div>
-        <h3 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+        <h3 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
           Best Areas (Keep It Simple)
         </h3>
-        <p className="font-sans font-bold text-dark text-sm mb-2 tracking-wide uppercase">
+        <p className="font-sans font-bold text-dark text-base mb-2 tracking-wide uppercase">
           Tokyo
         </p>
-        <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-8">
+        <ul className="article-body list-none space-y-3.5 pl-0 mb-8">
           <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
             <strong className="font-sans font-bold text-dark">Shinjuku:</strong>{" "}
             Strong all-around pick, major hub, easy connections.
@@ -100,29 +100,29 @@ export function WhereToStayArticleAfterComparison() {
           <TrackedCtaLink
             href="/guides/where-to-stay-tokyo"
             label="hotel"
-            className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+            className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
           >
             Where to stay in Tokyo (full guide) →
           </TrackedCtaLink>
           <TrackedCtaLink
             href="/guides/best-area-tokyo-first-time"
             label="hotel"
-            className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+            className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
           >
             Best area in Tokyo for first timers →
           </TrackedCtaLink>
           <TrackedCtaLink
             href="/guides/shinjuku-vs-shibuya"
             label="hotel"
-            className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+            className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
           >
             Shinjuku vs Shibuya →
           </TrackedCtaLink>
         </div>
-        <p className="font-sans font-bold text-dark text-sm mb-2 tracking-wide uppercase">
+        <p className="font-sans font-bold text-dark text-base mb-2 tracking-wide uppercase">
           Osaka
         </p>
-        <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed mb-8">
+        <ul className="article-body list-none space-y-3.5 pl-0 mb-8">
           <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
             <strong className="font-sans font-bold text-dark">Namba:</strong>{" "}
             Food, central, easy tourist flow.
@@ -134,10 +134,10 @@ export function WhereToStayArticleAfterComparison() {
             Shopping and walking distance to plenty of options.
           </li>
         </ul>
-        <p className="font-sans font-bold text-dark text-sm mb-2 tracking-wide uppercase">
+        <p className="font-sans font-bold text-dark text-base mb-2 tracking-wide uppercase">
           Kyoto
         </p>
-        <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+        <ul className="article-body list-none space-y-3.5 pl-0">
           <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
             <strong className="font-sans font-bold text-dark">
               Kawaramachi:
@@ -154,29 +154,29 @@ export function WhereToStayArticleAfterComparison() {
       </div>
 
       <div>
-        <h3 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+        <h3 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
           Hotel vs Airbnb
         </h3>
-        <p className="font-serif text-muted text-base leading-relaxed mb-4">
+        <p className="article-body mb-4">
           <strong className="font-sans font-bold text-dark">Hotels:</strong>{" "}
           Straight check-in, front desks that speak tourist logistics, easy
           luggage forwarding, simple for short stays.
         </p>
-        <p className="font-serif text-muted text-base leading-relaxed mb-4">
+        <p className="article-body mb-4">
           <strong className="font-sans font-bold text-dark">Airbnb:</strong> More
           space, can win on price for groups, more steps on rules, keys, and
           trash.
         </p>
-        <p className="font-sans font-bold text-dark text-base">
+        <p className="font-sans font-bold text-dark text-lg">
           First trip: default to a hotel unless you have a clear reason not to.
         </p>
       </div>
 
       <div>
-        <h3 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+        <h3 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
           Big Mistakes to Avoid
         </h3>
-        <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+        <ul className="article-body list-none space-y-3.5 pl-0">
           <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
             Booking far from stations to save a small amount per night.
           </li>
@@ -190,10 +190,10 @@ export function WhereToStayArticleAfterComparison() {
       </div>
 
       <div>
-        <h3 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+        <h3 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
           Reality Check
         </h3>
-        <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+        <div className="article-body space-y-4">
           <p>
             You do not need a perfect neighborhood. Japan&apos;s trains cover a
             lot of bad guesses.
@@ -206,10 +206,10 @@ export function WhereToStayArticleAfterComparison() {
       </div>
 
       <div>
-        <h3 className="font-display text-dark tracking-wide mb-4 text-xl sm:text-2xl">
+        <h3 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
           Bottom Line
         </h3>
-        <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+        <ul className="article-body list-none space-y-3.5 pl-0">
           <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
             Choose city, then area near a major station.
           </li>
@@ -234,12 +234,12 @@ export function WhereToStayArticle() {
     <section className="space-y-10 max-w-xl">
       <h2
         className="font-display text-dark tracking-wide"
-        style={{ fontSize: "clamp(28px, 4vw, 40px)" }}
+        style={{ fontSize: "clamp(32px, 4.5vw, 44px)" }}
       >
         {`3. Decide Where You're Staying`}
       </h2>
 
-      <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+      <div className="article-body space-y-4">
         <p>
           Maps and neighborhood lists make this feel harder than it is. Pick a
           city, then pick an area near a strong station. That decision drives

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -17,13 +17,13 @@ export default function PartTimeJobsJapanGuidePage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Best Part-Time Jobs in Japan for Foreigners
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             Part-time work (アルバイト, baito) is how a lot of students and
             residents pay rent without burning their visa. The jobs below are the
@@ -41,10 +41,10 @@ export default function PartTimeJobsJapanGuidePage() {
       beforeComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Convenience store
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Lawson, 7-Eleven, FamilyMart, and the rest always need night and
               weekend coverage. Training is standardized. Japanese level can be
@@ -61,10 +61,10 @@ export default function PartTimeJobsJapanGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Restaurants
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Kitchen and hall staff hiring is constant in chains. Izakaya and
               ramen shops can be faster paced and noisier than konbini, with more
@@ -83,10 +83,10 @@ export default function PartTimeJobsJapanGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             English teaching
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4">
+          <div className="article-body space-y-4">
             <p>
               Conversation cafes, eikaiwa chains, and private tutoring exist on a
               wide spectrum. Some roles want a degree plus teaching experience.
@@ -109,15 +109,15 @@ export default function PartTimeJobsJapanGuidePage() {
       afterComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Expected pay
           </h2>
-          <p className="font-serif text-muted text-base leading-relaxed mb-4">
+          <p className="article-body mb-4">
             Prefecture minimum wage sets the floor. Tokyo and other major cities sit
             higher than rural prefectures. Numbers below are rough hourly bands for
             typical baito, not overtime, not every shop.
           </p>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+          <ul className="article-body list-none space-y-3.5 pl-0">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               <span className="font-sans font-bold text-dark">Convenience store:</span>{" "}
               often around ¥1,100 to ¥1,300 in Tokyo in the mid-2020s range, before
@@ -134,17 +134,17 @@ export default function PartTimeJobsJapanGuidePage() {
               the slot is peak time.
             </li>
           </ul>
-          <p className="font-serif text-muted text-base leading-relaxed mt-6">
+          <p className="article-body mt-6">
             Always read the posted wage on the contract. If the shop pays “training
             hourly” below minimum for weeks, walk away.
           </p>
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Requirements
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+          <ul className="article-body list-none space-y-3.5 pl-0">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               <span className="font-sans font-bold text-dark">Visa:</span> permission
               to work, or a visa status that already includes work (check your
@@ -179,14 +179,14 @@ export default function PartTimeJobsJapanGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl border border-[#d4c9b0] bg-white px-6 py-5">
-          <p className="font-serif text-muted text-sm leading-relaxed">
+          <p className="article-body-sm">
             If you are building life admin in parallel, the residents hub collects
             bank, bills, phone, and housing guides in one place.
           </p>
           <p className="mt-4">
             <Link
               href="/residents"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Residents hub →
             </Link>
@@ -201,9 +201,9 @@ export default function PartTimeJobsJapanGuidePage() {
         <div className="border-t border-tan pt-8 mt-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
           >
-            JapanProTips homepage <span className="text-base">‹‹‹</span>
+            JapanProTips homepage <span className="text-lg">‹‹‹</span>
           </Link>
         </div>
         </>

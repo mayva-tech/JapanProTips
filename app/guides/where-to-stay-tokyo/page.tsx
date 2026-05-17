@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -20,13 +20,13 @@ export default function WhereToStayTokyoPage() {
       title={
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Where to Stay in Tokyo (Best Areas for First-Time Visitors)
         </h1>
       }
       intro={
-        <div className="font-serif text-muted text-base leading-relaxed max-w-2xl space-y-4">
+        <div className="article-body max-w-2xl space-y-4">
           <p>
             Tokyo is huge on a map and huge in real life. Trains fix a lot, but
             they do not erase distance. The wrong base means extra transfers,
@@ -40,7 +40,7 @@ export default function WhereToStayTokyoPage() {
           <p>
             <Link
               href="/guides/shinjuku-vs-shibuya"
-              className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
               Shinjuku vs Shibuya (side by side) →
             </Link>
@@ -50,16 +50,16 @@ export default function WhereToStayTokyoPage() {
       beforeComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-6">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-6">
             Best Areas for First-Time Visitors
           </h2>
 
           <div className="space-y-10 max-w-2xl">
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-3">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-3">
                 Shinjuku
               </h3>
-              <div className="font-serif text-muted text-base leading-relaxed space-y-3">
+              <div className="article-body space-y-3">
                 <p>
                   <span className="font-sans font-bold text-dark">Pros:</span>{" "}
                   Serious transport hub (JR and metro), late food, dense
@@ -76,10 +76,10 @@ export default function WhereToStayTokyoPage() {
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-3">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-3">
                 Shibuya
               </h3>
-              <div className="font-serif text-muted text-base leading-relaxed space-y-3">
+              <div className="article-body space-y-3">
                 <p>
                   <span className="font-sans font-bold text-dark">Pros:</span>{" "}
                   Modern center, strong nightlife, easy energy if you like busy
@@ -96,10 +96,10 @@ export default function WhereToStayTokyoPage() {
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-3">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-3">
                 Asakusa
               </h3>
-              <div className="font-serif text-muted text-base leading-relaxed space-y-3">
+              <div className="article-body space-y-3">
                 <p>
                   <span className="font-sans font-bold text-dark">Pros:</span>{" "}
                   Often cheaper, more traditional street feel, slower pace than
@@ -115,10 +115,10 @@ export default function WhereToStayTokyoPage() {
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-2xl mb-3">
+              <h3 className="font-display text-dark tracking-wide text-3xl mb-3">
                 Ueno
               </h3>
-              <div className="font-serif text-muted text-base leading-relaxed space-y-3">
+              <div className="article-body space-y-3">
                 <p>
                   <span className="font-sans font-bold text-dark">Pros:</span>{" "}
                   Budget-friendly hotels, strong train access, park and museum
@@ -137,10 +137,10 @@ export default function WhereToStayTokyoPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             If You Only Stay 3 to 5 Days
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               Pick one base, two at most if you have a real reason (split trip
               with a side leg). Moving hotels mid-week burns half a day in
@@ -154,10 +154,10 @@ export default function WhereToStayTokyoPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Where NOT to Stay (For First Trip)
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               Far suburbs look cheap on a booking site. They cost you every
               morning and night: extra legs on commuter lines, crowded rush
@@ -179,10 +179,10 @@ export default function WhereToStayTokyoPage() {
       afterComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Hotel vs Airbnb in Japan
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               <span className="font-sans font-bold text-dark">Hotels:</span>{" "}
               Straightforward check-in, front desk when something breaks, clearer
@@ -202,10 +202,10 @@ export default function WhereToStayTokyoPage() {
         </section>
 
         <div className={conversionBox}>
-          <h3 className="font-sans font-bold text-xs tracking-widest uppercase text-dark mb-2">
+          <h3 className="font-sans font-bold text-sm tracking-widest uppercase text-dark mb-2">
             Find Hotels in Tokyo
           </h3>
-          <p className="font-serif text-muted text-sm leading-relaxed mb-4">
+          <p className="article-body-sm mb-4">
             Use{" "}
             <a
               href="https://www.agoda.com/"
@@ -228,7 +228,7 @@ export default function WhereToStayTokyoPage() {
             alone. “Near Shinjuku” can mean fifteen minutes through underpasses
             you do not want on night one.
           </p>
-          <p className="font-serif text-muted text-sm leading-relaxed">
+          <p className="article-body-sm">
             Filter for major hubs you already picked (Shinjuku, Shibuya, Ueno,
             Asakusa). Read the map pin. Check the last train reality if you go out
             late.
@@ -236,10 +236,10 @@ export default function WhereToStayTokyoPage() {
         </div>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Final Recommendation (Simple)
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-4 max-w-2xl">
+          <div className="article-body space-y-4 max-w-2xl">
             <p>
               If you refuse to overthink it: stay in Shinjuku near the station,
               accept some crowds, and spend your planning energy on trains and day
@@ -257,14 +257,14 @@ export default function WhereToStayTokyoPage() {
         </section>
 
         <section className="mb-12 max-w-2xl border-t border-tan pt-10">
-          <h2 className="font-display text-dark tracking-wide text-2xl mb-4">
+          <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             Related planning
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed">
+          <ul className="article-body list-none space-y-3.5 pl-0">
             <li>
               <Link
                 href="/guides/japan-transportation"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Japan transportation (how to move without drama) →
               </Link>
@@ -272,7 +272,7 @@ export default function WhereToStayTokyoPage() {
             <li>
               <Link
                 href="/guides/japan-budget-breakdown"
-                className="font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Japan budget breakdown (rough numbers, no fantasy) →
               </Link>
@@ -288,9 +288,9 @@ export default function WhereToStayTokyoPage() {
         <div className="border-t border-tan pt-8 mt-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-sm tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
           >
-            JapanProTips homepage <span className="text-base">‹‹‹</span>
+            JapanProTips homepage <span className="text-lg">‹‹‹</span>
           </Link>
         </div>
         </>

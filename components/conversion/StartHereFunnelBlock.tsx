@@ -10,20 +10,12 @@ const BULLETS = [
   "Where to stay",
 ] as const;
 
-const cardClass =
-  "rounded-xl border border-[#d4c9b0] bg-white px-6 py-6 shadow-sm";
-const btnClass =
-  "inline-flex w-full items-center justify-center rounded-lg bg-maroon px-6 py-3.5 font-sans text-sm font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust sm:w-auto sm:min-w-[240px]";
-
 export type StartHereFunnelBlockProps = {
   className?: string;
   href?: string;
   buttonText?: string;
 };
 
-/**
- * Funnels first-time visitors to the Start Here checklist.
- */
 export function StartHereFunnelBlock({
   className = "",
   href = "/guides/start-here-japan",
@@ -33,20 +25,17 @@ export function StartHereFunnelBlock({
     href === "/start-here" || href === "/guides/start-here-japan";
 
   return (
-    <div className={`${cardClass} ${className}`.trim()}>
-      <h2 className="font-display text-dark tracking-wide text-2xl leading-tight sm:text-3xl">
-        New to Japan?
-      </h2>
-      <div className="mt-4 max-w-2xl space-y-3 font-serif text-base leading-relaxed text-muted">
+    <div className={`editorial-cta-block ${className}`.trim()}>
+      <p className="editorial-kicker mb-3">First trip</p>
+      <h2 className="editorial-heading mb-4 text-ink">New to Japan?</h2>
+      <div className="article-body max-w-2xl space-y-3">
         <p>
           If this is your first trip, don&apos;t figure everything out the hard
           way.
         </p>
-        <p className="font-sans font-bold text-dark">
-          Start with the complete guide:
-        </p>
+        <p className="font-bold text-ink">Start with the complete guide:</p>
       </div>
-      <ul className="mt-3 max-w-2xl list-none space-y-2 pl-0 font-serif leading-relaxed text-muted">
+      <ul className="article-body mt-3 max-w-2xl list-none space-y-2.5 pl-0">
         {BULLETS.map((line) => (
           <li
             key={line}
@@ -56,10 +45,10 @@ export function StartHereFunnelBlock({
           </li>
         ))}
       </ul>
-      <div className="mt-6 sm:inline-block sm:w-auto">
+      <div className="mt-8">
         <Link
           href={href}
-          className={btnClass}
+          className="editorial-btn-primary"
           onClick={() => {
             if (trackStartHere) trackGtagClick("start_here");
           }}

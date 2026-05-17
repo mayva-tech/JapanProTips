@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceBlock } from "@/components/ServiceBlock";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
@@ -16,12 +16,12 @@ export default function SimCardJapanResidentsPage() {
       <article className="max-w-3xl mx-auto px-6 pt-12 pb-16">
         <h1
           className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
         >
           Best SIM Card for Residents in Japan (Long-Term Options)
         </h1>
 
-        <div className="font-serif text-muted text-base leading-relaxed mb-12 max-w-2xl space-y-4">
+        <div className="article-body mb-12 max-w-2xl space-y-4">
           <p>
             Tourist SIM advice does not apply to residents. Short-trip products
             optimize for easy pickup and fixed days. Living here means contracts,
@@ -40,10 +40,10 @@ export default function SimCardJapanResidentsPage() {
         </div>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Quick Answer
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Short-term → prepaid SIM
             </li>
@@ -54,12 +54,12 @@ export default function SimCardJapanResidentsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Options
           </h2>
-          <div className="font-serif text-muted text-base leading-relaxed space-y-6 max-w-2xl">
+          <div className="article-body space-y-6 max-w-2xl">
             <div>
-              <h3 className="font-display text-dark text-xl tracking-wide mb-2">
+              <h3 className="font-display text-dark text-2xl tracking-wide mb-2">
                 Major carriers (Docomo, SoftBank, AU)
               </h3>
               <p>
@@ -69,7 +69,7 @@ export default function SimCardJapanResidentsPage() {
               </p>
             </div>
             <div>
-              <h3 className="font-display text-dark text-xl tracking-wide mb-2">
+              <h3 className="font-display text-dark text-2xl tracking-wide mb-2">
                 MVNO (cheap alternatives)
               </h3>
               <p>
@@ -79,7 +79,7 @@ export default function SimCardJapanResidentsPage() {
               </p>
             </div>
             <div>
-              <h3 className="font-display text-dark text-xl tracking-wide mb-2">
+              <h3 className="font-display text-dark text-2xl tracking-wide mb-2">
                 eSIM options
               </h3>
               <p>
@@ -92,10 +92,10 @@ export default function SimCardJapanResidentsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             What Actually Matters
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Contract length
             </li>
@@ -109,7 +109,7 @@ export default function SimCardJapanResidentsPage() {
         </section>
 
         <div className="mb-12 max-w-2xl">
-          <p className="font-serif text-muted text-sm leading-relaxed mb-4">
+          <p className="article-body-sm mb-4">
             Porting or canceling gets harder after a contract starts, so read
             terms before you sign.
           </p>
@@ -122,10 +122,10 @@ export default function SimCardJapanResidentsPage() {
         </div>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Common Mistakes
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Choosing cheap but unreliable plans
             </li>
@@ -139,10 +139,10 @@ export default function SimCardJapanResidentsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Reality Check
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Japan mobile plans are confusing
             </li>
@@ -153,10 +153,10 @@ export default function SimCardJapanResidentsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-3xl mb-5">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
             Bottom Line
           </h2>
-          <ul className="font-serif text-muted list-none pl-0 space-y-3 leading-relaxed max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               MVNO for budget
             </li>
