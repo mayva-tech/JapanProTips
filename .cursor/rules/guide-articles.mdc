@@ -1,0 +1,48 @@
+---
+description: How to add or edit tourist and resident guide pages
+globs: app/guides/**/*.{tsx,ts},app/residents/**/*.{tsx,ts}
+alwaysApply: false
+---
+
+# Guide article patterns
+
+## Tourist guides (default)
+
+Use `GuideArticleShell` with slots:
+
+- `title` — usually custom `<h1>` with `font-display`, clamp font size
+- `intro` — `article-body` paragraphs in `max-w-2xl`
+- `beforeComparison` / `afterComparison` — main sections
+- `comparisonItems={null}` when the page has its own comparison table
+- End `afterComparison` with `GuideEndCta` (`parentHref`, `parentLabel`)
+
+Shell auto-inserts: `ESimConversionBlock`, optional `ComparisonTable`, `HotelConversionBlock`, `StartHereFunnelBlock`.
+
+## Residents
+
+- No `GuideArticleShell`; use `<main className="bg-cream">` + `<article className="max-w-3xl">`
+- Add crosslinks via `ResidentsCrosslinks`; update `RESIDENT_GUIDE_LINKS` in that file
+
+## SEO per page
+
+```tsx
+export const metadata: Metadata = {
+  title: "Short page title",
+  description: "One sentence for search.",
+};
+```
+
+Root layout adds `| JapanProTips` via title template.
+
+## Publishing checklist for a new guide
+
+1. `app/guides/<slug>/page.tsx` (or `app/residents/...`)
+2. `app/sitemap.ts` — add path to `STATIC_PATHS`
+3. `lib/tourist-guides.ts` — card in the right section (tourist guides)
+4. Hub/search update automatically from tourist sections; verify `lib/guide-search-index.ts` if needed
+
+## Reuse before inventing
+
+- `Callout` (`components/editorial/Callout.tsx`) for tips/warnings
+- `InlineAffiliate`, `TrackedCtaLink`, `TrackedOutboundSimLink` for links
+- `EDITORIAL_COPY.trustLine` from `@/lib/editorial-copy`

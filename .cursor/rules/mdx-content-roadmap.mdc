@@ -1,0 +1,30 @@
+---
+description: Gradual MDX adoption plan; do not bulk-migrate existing guides
+globs: content/**/*,lib/content/**/*,lib/mdx/**/*,components/mdx/**/*
+alwaysApply: false
+---
+
+# MDX roadmap (approved direction)
+
+## Status
+
+- All guides are hand-written TSX today; **no MDX dependencies installed**
+- Safe to add MDX incrementally; static `app/guides/<slug>/page.tsx` routes always beat a future `[slug]` dynamic route
+
+## Preferred approach when user asks for MDX
+
+1. Add `content/guides/<slug>.mdx` with frontmatter (`title`, `description`, flags)
+2. New articles only first; thin `page.tsx` or later `app/guides/[slug]` for MDX-only slugs
+3. Keep `GuideArticleShell` + conversion blocks in TSX initially; MDX for prose body
+4. Wrappers: `TipBox` / `InfoBox` → `Callout`; `AffiliateBlock` → `InlineAffiliate`
+5. Stack option: `next-mdx-remote/rsc` + `gray-matter` (content folder outside `app/`)
+
+## Do not without explicit approval
+
+- Replace all 37 existing guide pages at once
+- Change global UI or conversion placement site-wide
+- Auto-publish hub cards without updating `lib/tourist-guides.ts` and `app/sitemap.ts`
+
+## Tailwind
+
+If MDX uses raw classes in markdown, add `./content/**/*.{md,mdx}` to `tailwind.config.ts` `content` array.

@@ -1,0 +1,32 @@
+---
+description: JapanProTips project identity, stack, and global constraints
+alwaysApply: true
+---
+
+# JapanProTips project memory
+
+## Product
+
+- **Site:** JapanProTips (`https://japanprotips.com`)
+- **Audience:** Tourists and residents in Japan; practical guides, not a travel agency
+- **Repo package name:** `japanprotips` (Next.js 15, React 18, Tailwind 3, TypeScript)
+
+## Structure
+
+- `app/guides/<slug>/page.tsx` — tourist guides (~37 routes), shared `app/guides/layout.tsx` (sticky eSIM CTA)
+- `app/residents/<slug>/page.tsx` — resident guides (custom layout, no `GuideArticleShell`)
+- `app/tourists/page.tsx` — hub; cards from `lib/tourist-guides.ts`
+- `components/guides/GuideArticleShell.tsx` — conversion shell for most guides
+- `components/conversion/` — eSIM, hotel, comparison table, affiliates
+- `lib/site.ts`, `lib/editorial-copy.ts`, `lib/guide-search-index.ts`
+
+## Do unless the user explicitly asks otherwise
+
+- Match existing editorial patterns (cream/paper, Vollkorn + Barlow, `article-body` class)
+- Keep changes scoped; no drive-by refactors or full site rebuilds
+- Only commit or push when the user requests it
+
+## Do not assume
+
+- MDX is not set up yet; do not bulk-migrate guides without a phased plan (see `mdx-content-roadmap` rule)
+- No dynamic `app/guides/[slug]` route yet; each guide is its own folder

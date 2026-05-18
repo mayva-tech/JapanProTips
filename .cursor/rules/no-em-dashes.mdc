@@ -1,0 +1,20 @@
+---
+description: Ban em dashes and en dashes in user-facing copy
+globs: app/**/*.{tsx,ts},components/**/*.{tsx,ts},lib/**/*.{ts}
+alwaysApply: true
+---
+
+# Punctuation: no em dashes or en dashes
+
+Do not use em dashes (`—`, U+2014) or en dashes (`–`, U+2013) in any user-facing text (UI, metadata, alt text, buttons, tables).
+
+Use instead:
+- **Comma** for appositives: `Japan, not a travel agency`
+- **Period** for separate sentences: `Plan your trip first. Each guide opens in one click.`
+- **Colon** for titles or labels: `Japan Itinerary (7 Days): First-Time Guide`
+- **Hyphen** for numeric ranges: `3-7 days`, `$$-$$$`
+- **"N/A"** or **"Varies"** for empty table cells, never `—`
+
+Shared trust line: import from `@/lib/editorial-copy` (`EDITORIAL_COPY.trustLine`).
+
+Code comments should also avoid em/en dashes; use commas or periods.
