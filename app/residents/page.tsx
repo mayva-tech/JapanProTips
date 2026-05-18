@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
@@ -120,6 +120,11 @@ export default function ResidentsPage() {
             <li>
               <TrackedResidentLink href="/residents/pay-bills-japan" className={linkClass}>
                 Pay bills in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-health-insurance" className={linkClass}>
+                National Health Insurance (NHI) for residents →
               </TrackedResidentLink>
             </li>
             <li>

@@ -25,6 +25,10 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
     label: "Find a foreigner-friendly apartment →",
   },
   {
+    href: "/residents/japan-health-insurance",
+    label: "National Health Insurance (NHI) in Japan →",
+  },
+  {
     href: "/guides/part-time-jobs-japan",
     label: "Part-time jobs in Japan for foreigners →",
   },
