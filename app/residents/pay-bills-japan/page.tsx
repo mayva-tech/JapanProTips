@@ -28,6 +28,16 @@ export default function PayBillsJapanPage() {
             normal adult life here.
           </p>
           <p>
+            New to move-in setup? Start with the{" "}
+            <Link
+              href="/residents/japan-utilities-guide"
+              className="font-sans font-bold text-rust hover:text-maroon transition-colors duration-150"
+            >
+              utilities guide for foreign residents
+            </Link>
+            , then use this page for payment methods.
+          </p>
+          <p>
             Auto-debit needs a{" "}
             <Link
               href="/residents/open-bank-account-japan"
@@ -35,7 +45,14 @@ export default function PayBillsJapanPage() {
             >
               Japanese bank account
             </Link>{" "}
-            first.
+            first. For PayPay, Suica, and wallet apps, see the{" "}
+            <Link
+              href="/residents/japan-mobile-payment-guide"
+              className="font-sans font-bold text-rust hover:text-maroon transition-colors duration-150"
+            >
+              mobile payments guide
+            </Link>
+            .
           </p>
         </div>
 

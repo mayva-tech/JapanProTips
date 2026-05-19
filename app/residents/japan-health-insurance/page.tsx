@@ -150,7 +150,7 @@ export default function JapanHealthInsurancePage() {
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Bank account info if you want to set automatic withdrawal for
                 premiums (see{" "}
-                <Link href="/guides/japan-bank-account" className={linkClass}>
+                <Link href="/residents/japan-bank-account" className={linkClass}>
                   bank account setup
                 </Link>
                 , or{" "}
@@ -187,7 +187,7 @@ export default function JapanHealthInsurancePage() {
               You typically pay monthly or in installments per the slip or direct
               debit. Many people align payment with their Japanese bank account and
               municipal notices. Budget alongside rent and utilities using{" "}
-              <Link href="/guides/japan-living-cost" className={linkClass}>
+              <Link href="/residents/japan-living-cost" className={linkClass}>
                 living cost benchmarks
               </Link>{" "}
               so NHI is not a surprise line item.
@@ -309,7 +309,7 @@ export default function JapanHealthInsurancePage() {
                 shakai hoken. If you pick up multiple jobs, eligibility can get
                 fiddly. When in doubt, ask the city hall desk after any contract
                 change. For work context, see{" "}
-                <Link href="/guides/part-time-jobs-japan" className={linkClass}>
+                <Link href="/residents/part-time-jobs-japan" className={linkClass}>
                   part-time jobs in Japan for foreigners
                 </Link>
                 .
@@ -482,17 +482,17 @@ export default function JapanHealthInsurancePage() {
           </h2>
           <ul className="article-body list-none space-y-3 pl-0 max-w-2xl text-base">
             <li>
-              <Link href="/guides/japan-bank-account" className={linkClass}>
+              <Link href="/residents/japan-bank-account" className={linkClass}>
                 Open and use a Japan bank account (payments and auto-debit) →
               </Link>
             </li>
             <li>
-              <Link href="/guides/japan-living-cost" className={linkClass}>
+              <Link href="/residents/japan-living-cost" className={linkClass}>
                 Monthly cost of living in Japan →
               </Link>
             </li>
             <li>
-              <Link href="/guides/part-time-jobs-japan" className={linkClass}>
+              <Link href="/residents/part-time-jobs-japan" className={linkClass}>
                 Part-time jobs in Japan for foreigners →
               </Link>
             </li>
@@ -505,7 +505,7 @@ export default function JapanHealthInsurancePage() {
               </Link>
             </li>
             <li>
-              <Link href="/guides/japan-phone-plans" className={linkClass}>
+              <Link href="/residents/japan-phone-plans" className={linkClass}>
                 Phone plans in Japan →
               </Link>
             </li>

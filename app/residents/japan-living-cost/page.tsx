@@ -75,7 +75,7 @@ export default function JapanLivingCostGuidePage() {
             </p>
             <p>
               <Link
-                href="/guides/renting-apartment-japan"
+                href="/residents/renting-apartment-japan"
                 className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Renting an apartment in Japan (guide) →
@@ -92,7 +92,14 @@ export default function JapanLivingCostGuidePage() {
             <p>
               Supermarkets after 7 p.m., frozen vegetables, and rice at home keep
               the floor low. Eating out at chains even a few times per week moves
-              the needle fast.
+              the needle fast. See the{" "}
+              <Link
+                href="/residents/japan-grocery-shopping-guide"
+                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              >
+                grocery shopping guide
+              </Link>{" "}
+              for chains, discounts, and weekly budgets.
             </p>
             <ul className="article-body list-none space-y-3.5 pl-0">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">

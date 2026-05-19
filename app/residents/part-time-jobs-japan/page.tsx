@@ -159,7 +159,7 @@ export default function PartTimeJobsJapanGuidePage() {
               <span className="font-sans font-bold text-dark">Bank account:</span>{" "}
               many employers pay transfer only. Sort{" "}
               <Link
-                href="/guides/japan-bank-account"
+                href="/residents/japan-bank-account"
                 className="font-sans font-bold text-rust hover:text-maroon transition-colors duration-150"
               >
                 banking
@@ -180,6 +180,23 @@ export default function PartTimeJobsJapanGuidePage() {
 
         <section className="mb-12 max-w-2xl border border-[#d4c9b0] bg-white px-6 py-5">
           <p className="article-body-sm">
+            Ready for full-time hiring, resumes, and interviews? See the{" "}
+            <Link
+              href="/residents/japan-job-hunting-guide"
+              className="font-sans font-bold text-rust hover:text-maroon transition-colors duration-150"
+            >
+              job hunting guide for foreign residents
+            </Link>
+            . After you start, read{" "}
+            <Link
+              href="/residents/japan-work-culture-guide"
+              className="font-sans font-bold text-rust hover:text-maroon transition-colors duration-150"
+            >
+              Japanese work culture for foreign employees
+            </Link>
+            .
+          </p>
+          <p className="article-body-sm mt-4">
             If you are building life admin in parallel, the residents hub collects
             bank, bills, phone, and housing guides in one place.
           </p>

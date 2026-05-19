@@ -71,6 +71,31 @@ export default function ResidentsPage() {
           </ul>
           <ul className="article-body list-none space-y-3 pl-0 max-w-2xl mb-8 text-base">
             <li>
+              <TrackedResidentLink href="/residents/japan-residence-registration" className={linkClass}>
+                Residence registration at the ward office →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-my-number-card" className={linkClass}>
+                My Number Card for foreign residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-city-hall-guide" className={linkClass}>
+                City hall and ward office procedures →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-renewing-visa-guide" className={linkClass}>
+                Renewing your visa and residence status →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-address-system" className={linkClass}>
+                How Japanese addresses work →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/open-bank-account-japan" className={linkClass}>
                 Open a bank account →
               </TrackedResidentLink>
@@ -81,8 +106,33 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
-              <TrackedResidentLink href="/guides/japan-phone-plans" className={linkClass}>
+              <TrackedResidentLink href="/residents/japan-internet-setup" className={linkClass}>
+                Home internet and Wi-Fi setup →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-phone-plans" className={linkClass}>
                 Phone plans: Rakuten, UQ, IIJmio vs big carriers →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-bank-account" className={linkClass}>
+                Bank accounts for foreign residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-credit-cards" className={linkClass}>
+                Credit cards for foreign residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-mobile-payment-guide" className={linkClass}>
+                Mobile payments (PayPay, Apple Pay, Suica) →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/send-money-from-japan" className={linkClass}>
+                Send money internationally from Japan →
               </TrackedResidentLink>
             </li>
             <li>
@@ -90,10 +140,46 @@ export default function ResidentsPage() {
                 Tap trains and konbini with an IC card →
               </TrackedResidentLink>
             </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-driving-license" className={linkClass}>
+                Convert a foreign driver&apos;s license →
+              </TrackedResidentLink>
+            </li>
           </ul>
-          <TrackedResidentLink href="/guides/money-payments-japan" className={ctaClass}>
-            Figure out money, cards, and cash in Japan →
+          <TrackedResidentLink href="/tourists" className={ctaClass}>
+            Visitor guides: money, cards, and cash →
           </TrackedResidentLink>
+        </section>
+
+        <section className="mb-14">
+          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            Families
+          </h2>
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
+            <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
+              Schools and enrollment
+            </li>
+            <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
+              Language and daily rhythm
+            </li>
+          </ul>
+          <ul className="article-body list-none space-y-3 pl-0 max-w-2xl mt-4 mb-14 text-base">
+            <li>
+              <TrackedResidentLink href="/residents/japan-school-system" className={linkClass}>
+                Japanese school system for foreign families →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-furniture-appliances" className={linkClass}>
+                Furniture and appliances for your apartment →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-secondhand-shopping-guide" className={linkClass}>
+                Secondhand shopping in Japan (recycle shops, Mercari) →
+              </TrackedResidentLink>
+            </li>
+          </ul>
         </section>
 
         <section className="mb-14">
@@ -113,8 +199,13 @@ export default function ResidentsPage() {
           </ul>
           <ul className="article-body list-none space-y-3 pl-0 max-w-2xl mt-4 text-base">
             <li>
-              <TrackedResidentLink href="/guides/japan-living-cost" className={linkClass}>
+              <TrackedResidentLink href="/residents/japan-living-cost" className={linkClass}>
                 Monthly cost of living (rent, food, transport) →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-grocery-shopping-guide" className={linkClass}>
+                Grocery shopping in Japan for foreign residents →
               </TrackedResidentLink>
             </li>
             <li>
@@ -123,13 +214,43 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-utilities-guide" className={linkClass}>
+                Utilities in Japan (electricity, gas, water) →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-garbage-rules" className={linkClass}>
+                Japan garbage rules and sorting →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-health-insurance" className={linkClass}>
                 National Health Insurance (NHI) for residents →
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-clinics-hospitals" className={linkClass}>
+                Clinics and hospitals in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-emergency-guide" className={linkClass}>
+                Emergency numbers and disaster safety →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-pension-system" className={linkClass}>
+                Japan pension system for foreign residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/ic-card-japan" className={linkClass}>
                 IC cards for trains and shops →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-bike-rules" className={linkClass}>
+                Bicycle rules and parking in Japan →
               </TrackedResidentLink>
             </li>
           </ul>
@@ -144,7 +265,7 @@ export default function ResidentsPage() {
               Contracts
             </li>
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-              Taxes
+              Taxes and pension
             </li>
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Bureaucracy
@@ -152,13 +273,43 @@ export default function ResidentsPage() {
           </ul>
           <ul className="article-body list-none space-y-3 pl-0 max-w-2xl mt-4 text-base">
             <li>
-              <TrackedResidentLink href="/guides/part-time-jobs-japan" className={linkClass}>
+              <TrackedResidentLink href="/residents/part-time-jobs-japan" className={linkClass}>
                 Part-time jobs in Japan (konbini, restaurants, English) →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-job-hunting-guide" className={linkClass}>
+                Finding jobs in Japan as a foreign resident →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-work-culture-guide" className={linkClass}>
+                Japanese work culture for foreign employees →
               </TrackedResidentLink>
             </li>
             <li>
               <TrackedResidentLink href="/residents/renting-apartment-japan" className={linkClass}>
                 Find a foreigner-friendly apartment →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-guarantor-system" className={linkClass}>
+                Japan apartment guarantor system explained →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-moving-out-guide" className={linkClass}>
+                Moving out of an apartment in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-pension-system" className={linkClass}>
+                Japan pension system (kokumin and kosei nenkin) →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-taxes-guide" className={linkClass}>
+                Japanese taxes for foreign residents →
               </TrackedResidentLink>
             </li>
           </ul>
@@ -181,8 +332,8 @@ export default function ResidentsPage() {
         <ResidentsCrosslinks />
 
         <div className="border-t border-tan pt-10 mt-14">
-          <TrackedResidentLink href="/guides/getting-around-japan" className={ctaClass}>
-            Get comfortable on trains and apps →
+          <TrackedResidentLink href="/residents/ic-card-japan" className={ctaClass}>
+            IC cards and everyday train basics →
           </TrackedResidentLink>
         </div>
       </article>

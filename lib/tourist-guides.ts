@@ -1,5 +1,9 @@
 import type { GuideCardSection } from "@/lib/guide-card-item";
 import { IMAGES } from "@/lib/images";
+import { VISITOR_GUIDE_COUNT } from "@/lib/tourist-guide-slugs";
+
+/** Every live visitor guide under /guides (see lib/tourist-guide-slugs.ts). */
+export const TOURIST_GUIDE_CARD_COUNT = VISITOR_GUIDE_COUNT;
 
 export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
   {
@@ -23,6 +27,26 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         href: "/guides/japan-tourist-mistakes",
         imageSrc: IMAGES.hero.primary,
         imageAlt: "Travelers reflecting on Japan trip planning",
+        gtagLabel: "start_here",
+      },
+      {
+        category: "Start here",
+        title: "What Tourists Should NOT Do in Japan",
+        description:
+          "Calm cultural etiquette: trains, trash, temples, onsen, photos, and what locals actually care about vs what tourists overthink.",
+        href: "/guides/japan-cultural-mistakes",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Travelers navigating a quiet Japan train platform",
+        gtagLabel: "start_here",
+      },
+      {
+        category: "Planning",
+        title: "Do You Need Travel Insurance for Japan?",
+        description:
+          "Medical costs, what policies cover, typhoons and delays, credit card limits, and who can skip the premium tier.",
+        href: "/guides/japan-travel-insurance",
+        imageSrc: IMAGES.hero.airport,
+        imageAlt: "Traveler reviewing trip documents before Japan",
         gtagLabel: "start_here",
       },
       {
@@ -59,10 +83,40 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         category: "Daily life",
         title: "How Restaurants Work in Japan",
         description:
-          "Ticket machines, tablets, payments, solo dining, ramen and izakaya etiquette, allergies, and realistic budgets.",
+          "A practical first-time visitor guide to ordering, seating, payments, restaurant etiquette, and common mistakes in Japan.",
         href: "/guides/japan-restaurant-guide",
         imageSrc: IMAGES.hero.primary,
         imageAlt: "Dining counter and menu planning in Japan",
+        gtagLabel: "start_here",
+      },
+      {
+        category: "Daily life",
+        title: "Japanese Breakfasts, Cafes, and Morning Culture",
+        description:
+          "Traditional breakfasts, konbini mornings, kissaten, Komeda morning sets, bakeries, coffee culture, and quiet etiquette for first-time visitors.",
+        href: "/guides/japan-breakfast-cafe-guide",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Morning coffee and toast at a Japanese cafe",
+        gtagLabel: "start_here",
+      },
+      {
+        category: "Daily life",
+        title: "Japanese Onsen Etiquette for First-Time Visitors",
+        description:
+          "Hot spring basics: washing steps, nudity, tattoo rules, ryokan baths, rotenburo, what to bring, and calm first-visit tips.",
+        href: "/guides/japan-onsen-guide",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Steam rising from an outdoor onsen in Japan",
+        gtagLabel: "start_here",
+      },
+      {
+        category: "Daily life",
+        title: "Japan Nightlife Explained for First-Time Visitors",
+        description:
+          "Izakayas, karaoke, last train, taxis, drinking etiquette, Shinjuku and Dotonbori, scams to avoid, and realistic night budgets.",
+        href: "/guides/japan-nightlife-guide",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Neon street nightlife district in Japan at night",
         gtagLabel: "start_here",
       },
       {
@@ -73,6 +127,16 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         href: "/guides/japan-weather-by-month",
         imageSrc: IMAGES.diagrams.map,
         imageAlt: "Japan regional map for weather planning",
+        gtagLabel: "start_here",
+      },
+      {
+        category: "Weather",
+        title: "Japan Rainy Season Guide for Tourists",
+        description:
+          "Tsuyu timing by region, humidity, packing, indoor plans, typhoon vs rainy season, crowds, and how to enjoy June travel.",
+        href: "/guides/japan-rainy-season-guide",
+        imageSrc: IMAGES.diagrams.map,
+        imageAlt: "Traveler with umbrella during Japan rainy season",
         gtagLabel: "start_here",
       },
     ],
@@ -108,6 +172,26 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         href: "/guides/japan-luggage-shipping",
         imageSrc: IMAGES.hero.primary,
         imageAlt: "Traveler with luggage planning Japan delivery",
+        gtagLabel: "transport",
+      },
+      {
+        category: "Transport",
+        title: "How Coin Lockers Work in Japan",
+        description:
+          "Locker sizes, IC payment, Tokyo Station tips, pricing, oversized luggage, vs forwarding, and what to do when banks are full.",
+        href: "/guides/japan-coin-lockers",
+        imageSrc: IMAGES.diagrams.airport,
+        imageAlt: "Coin lockers at a Japan train station",
+        gtagLabel: "transport",
+      },
+      {
+        category: "Airport",
+        title: "How to Use the Post Office in Japan",
+        description:
+          "Postcards, stamps, Yu-Pack and EMS, international parcels, Yamato vs Japan Post, forms, and mistakes tourists make at the counter.",
+        href: "/guides/japan-post-office-guide",
+        imageSrc: IMAGES.hero.airport,
+        imageAlt: "Traveler at a Japan Post office counter",
         gtagLabel: "transport",
       },
       {
@@ -206,6 +290,26 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
       },
       {
         category: "Transport",
+        title: "JR Pass: Is It Still Worth It in 2026?",
+        description:
+          "After the price hike: when the pass still wins, Nozomi limits, regional passes, and realistic yen math for Tokyo and Golden Route trips.",
+        href: "/guides/jr-pass-worth-it",
+        imageSrc: IMAGES.hero.shinkansen,
+        imageAlt: "Shinkansen at a Japan station",
+        gtagLabel: "transport",
+      },
+      {
+        category: "Transport",
+        title: "How to Use the Shinkansen (Bullet Train)",
+        description:
+          "First-timer guide: Nozomi vs Hikari, reserved seats, tickets, gates, platforms, luggage, ekiben, and a Tokyo to Kyoto walkthrough.",
+        href: "/guides/shinkansen-guide",
+        imageSrc: IMAGES.hero.shinkansen,
+        imageAlt: "Shinkansen bullet train at a platform in Japan",
+        gtagLabel: "transport",
+      },
+      {
+        category: "Transport",
         title: "Japan Transportation Overview",
         description: "Trains, IC cards, and apps for visitors in one place.",
         href: "/guides/japan-transportation",
@@ -257,11 +361,41 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
       },
       {
         category: "Money",
+        title: "Cash vs Card in Japan: What Tourists Need",
+        description:
+          "2026 payment reality: where cash still matters, cards and IC daily use, ATMs, mobile pay, how much yen to carry, and wallet setup.",
+        href: "/guides/japan-cash-vs-card",
+        imageSrc: IMAGES.hero.suica,
+        imageAlt: "Tourist wallet with yen cash and payment cards in Japan",
+        gtagLabel: "budget",
+      },
+      {
+        category: "Money",
         title: "Japan Trip Cost Breakdown",
         description: "Real yen ranges for food, trains, and lodging in 2026.",
         href: "/guides/japan-budget-breakdown",
         imageSrc: IMAGES.hero.suica,
         imageAlt: "Japan travel budget planning",
+        gtagLabel: "budget",
+      },
+      {
+        category: "Money",
+        title: "Tax-Free Shopping in Japan",
+        description:
+          "Who qualifies, ¥5,000 minimums, sealed consumables, passport steps, and mistakes tourists make at tax-free counters.",
+        href: "/guides/japan-tax-free-shopping",
+        imageSrc: IMAGES.hero.suica,
+        imageAlt: "Tax-free shopping counter in a Japan store",
+        gtagLabel: "budget",
+      },
+      {
+        category: "Money",
+        title: "Anime, Manga, and Figure Shopping in Japan",
+        description:
+          "Akihabara, Nakano, Ikebukuro, Animate, Mandarake, figures, tax-free, pricing, shipping, and collector mistakes tourists make.",
+        href: "/guides/japan-anime-shopping-guide",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Anime merchandise displays in a Tokyo shopping district",
         gtagLabel: "budget",
       },
       {
@@ -272,6 +406,36 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         href: "/guides/japan-convenience-store-guide",
         imageSrc: IMAGES.hero.primary,
         imageAlt: "Japan convenience store shelves",
+        gtagLabel: "budget",
+      },
+      {
+        category: "Daily life",
+        title: "Best Convenience Store Food to Try in Japan",
+        description:
+          "Onigiri, egg sandwiches, fried chicken, bento, microwave tips, budget meals, seasonal konbini picks, and what locals buy.",
+        href: "/guides/japan-conbini-food-guide",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Prepared food shelves at a Japanese convenience store",
+        gtagLabel: "budget",
+      },
+      {
+        category: "Daily life",
+        title: "Japanese Vending Machines Explained",
+        description:
+          "Drinks, hot vs cold buttons, Suica taps, realistic prices, weird machines, and trash habits for first-time visitors.",
+        href: "/guides/japan-vending-machines",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Row of vending machines on a street in Japan",
+        gtagLabel: "budget",
+      },
+      {
+        category: "Daily life",
+        title: "Japan Drugstores and Pharmacies",
+        description:
+          "Matsumoto Kiyoshi, OTC medicine rules, skincare shopping, tax-free counters, and mistakes tourists make before buying pills.",
+        href: "/guides/japan-drugstore-guide",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Japanese drugstore shelves with skincare and medicine",
         gtagLabel: "budget",
       },
     ],
@@ -343,3 +507,12 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
 export const ALL_TOURIST_GUIDES = TOURIST_GUIDE_SECTIONS.flatMap(
   (section) => section.items,
 );
+
+if (
+  process.env.NODE_ENV !== "production" &&
+  ALL_TOURIST_GUIDES.length !== VISITOR_GUIDE_COUNT
+) {
+  throw new Error(
+    `tourist-guides.ts has ${ALL_TOURIST_GUIDES.length} cards; expected ${VISITOR_GUIDE_COUNT} visitor guides`,
+  );
+}

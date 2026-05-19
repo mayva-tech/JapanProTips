@@ -13,7 +13,7 @@ alwaysApply: true
 
 ## Structure
 
-- `app/guides/<slug>/page.tsx` — tourist guides (~37 routes), shared `app/guides/layout.tsx` (sticky eSIM CTA)
+- `app/guides/<slug>/page.tsx` — visitor guides indexed in `lib/tourist-guides.ts` (plus internal MDX tests; resident guides live under `/residents`), shared `app/guides/layout.tsx` (sticky eSIM CTA)
 - `app/residents/<slug>/page.tsx` — resident guides (custom layout, no `GuideArticleShell`)
 - `app/tourists/page.tsx` — hub; cards from `lib/tourist-guides.ts`
 - `components/guides/GuideArticleShell.tsx` — conversion shell for most guides

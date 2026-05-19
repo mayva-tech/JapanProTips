@@ -298,7 +298,7 @@ export default function JapanBudgetBreakdownPage() {
             </li>
             <li>
               <Link
-                href="/guides/japan-living-cost"
+                href="/residents/japan-living-cost"
                 className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
                 Monthly cost of living if you move here →

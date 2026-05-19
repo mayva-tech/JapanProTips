@@ -27,6 +27,16 @@ export default function RentingApartmentJapanPage() {
             read the fee table twice and show up with clean paperwork.
           </p>
           <p>
+            Most leases need a{" "}
+            <Link
+              href="/residents/japan-guarantor-system"
+              className="font-sans font-bold text-rust hover:text-maroon transition-colors duration-150"
+            >
+              rent guarantor (保証会社)
+            </Link>
+            . Read that guide before you budget move-in costs.
+          </p>
+          <p>
             You will need a bank account and steady{" "}
             <Link
               href="/residents/pay-bills-japan"

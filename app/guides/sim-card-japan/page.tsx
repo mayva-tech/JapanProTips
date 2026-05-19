@@ -89,7 +89,7 @@ export default function SimCardJapanGuidePage() {
             </li>
             <li>
               <Link
-                href="/guides/japan-phone-plans"
+                href="/residents/japan-phone-plans"
                 className="font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150"
               >
                 Phone plans for residents (Rakuten, UQ, IIJmio) →

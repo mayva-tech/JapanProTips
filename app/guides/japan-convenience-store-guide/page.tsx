@@ -622,6 +622,16 @@ function FooterContent() {
         <H2>Related guides</H2>
         <ul className="article-body list-none space-y-3 pl-0 max-w-2xl">
           <li>
+            <Link href="/guides/japan-vending-machines" className={linkClass}>
+              Japanese vending machines explained
+            </Link>
+          </li>
+          <li>
+            <Link href="/guides/japan-drugstore-guide" className={linkClass}>
+              Japan drugstores and pharmacies
+            </Link>
+          </li>
+          <li>
             <Link href="/guides/money-payments-japan" className={linkClass}>
               Money, cards, and cash in Japan
             </Link>
@@ -647,7 +657,7 @@ function FooterContent() {
             </Link>
           </li>
           <li>
-            <Link href="/guides/japan-living-cost" className={linkClass}>
+            <Link href="/residents/japan-living-cost" className={linkClass}>
               Japan living costs overview
             </Link>
           </li>

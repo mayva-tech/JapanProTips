@@ -117,7 +117,7 @@ export default function SimCardJapanResidentsPage() {
             title="Looking for a long-term mobile plan?"
             description="Rakuten Mobile, UQ mobile, IIJmio, and how cheap stacks up against the big three."
             linkText="Japan phone plans (cheap vs carriers) →"
-            href="/guides/japan-phone-plans"
+            href="/residents/japan-phone-plans"
           />
         </div>
 
