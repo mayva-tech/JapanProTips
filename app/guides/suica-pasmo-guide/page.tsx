@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { OperationalWarning, WhatPeopleMiss } from "@/components/editorial/field-notes";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
@@ -88,6 +89,14 @@ export default function SuicaPasmoGuidePage() {
           </div>
         </section>
 
+        <OperationalWarning noteId="suica-plastic-stock-plan-b">
+          <p>
+            Plastic IC stock and sales rules change with supply noise. Treat a
+            physical card as a win if you can buy it, not as the only plan before
+            you leave the airport. Have a phone-wallet or credit-tap backup in mind.
+          </p>
+        </OperationalWarning>
+
         <section className="mb-12">
           <h2 className="editorial-heading mb-4">
             Mobile Suica (iPhone Users)
@@ -130,6 +139,15 @@ export default function SuicaPasmoGuidePage() {
             </p>
           </div>
         </section>
+
+        <WhatPeopleMiss noteId="suica-ic-vs-extras">
+          <p>
+            IC covers the tap at the gate. It does not replace limited express
+            surcharges, reserved Shinkansen seats, or green car upgrades you buy
+            separately. If a staff member waves you over, assume something about the
+            ticket stack does not match the seat you are in.
+          </p>
+        </WhatPeopleMiss>
         </>
       }
       afterComparison={

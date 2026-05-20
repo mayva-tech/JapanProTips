@@ -49,10 +49,62 @@ export function trackAffiliateRecommendationClick(
   trackGtagClick(affiliateRecommendationGtagLabel(box, linkId, href));
 }
 
+/**
+ * Target slug for tool analytics: `/tools/foo` → `foo`, `/tools` → `tools`.
+ */
+export function toolSlugFromToolsHref(href: string): string {
+  const normalized = href.trim().replace(/\/$/, "");
+  if (normalized === "/tools") return "tools";
+  const match = normalized.match(/^\/tools\/([^/?#]+)$/);
+  return match?.[1] ?? "unknown";
+}
+
+/** GA4 `click` label for internal tool hub and cross-tool navigation. */
+export function toolClickGtagLabel(
+  sourceSlug: string,
+  targetHref: string,
+): string {
+  return `tool_click:${sourceSlug}:${toolSlugFromToolsHref(targetHref)}`;
+}
+
+export function trackToolClick(sourceSlug: string, targetHref: string): void {
+  trackGtagClick(toolClickGtagLabel(sourceSlug, targetHref));
+}
+
+/** GA4 label for resident funnel starter-path taps (hub, guides, resources). */
+export function residentStarterPathGtagLabel(
+  sourceSlug: string,
+  targetHref: string,
+): string {
+  return `resident_starter:${sourceSlug}:${slugFromGuideHref(targetHref)}`;
+}
+
+export function trackResidentStarterPathClick(
+  sourceSlug: string,
+  targetHref: string,
+): void {
+  trackGtagClick(residentStarterPathGtagLabel(sourceSlug, targetHref));
+}
+
+/** GA4 label for editorial recommendation catalog taps. */
+export function recommendationClickGtagLabel(
+  context: string,
+  recommendationId: string,
+): string {
+  return `recommendation_click:${context}:${recommendationId}`;
+}
+
+export function trackRecommendationClick(
+  context: string,
+  recommendationId: string,
+): void {
+  trackGtagClick(recommendationClickGtagLabel(context, recommendationId));
+}
+
 /** Slug segment from an internal guide URL (`/guides/foo` → `foo`). */
 export function slugFromGuideHref(href: string): string {
   const normalized = href.trim().replace(/\/$/, "");
-  const match = normalized.match(/^\/(?:guides|residents)\/([^/]+)$/);
+  const match = normalized.match(/^\/(?:guides|residents|resources)\/([^/]+)$/);
   if (match?.[1]) {
     return match[1];
   }

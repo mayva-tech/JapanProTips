@@ -3,9 +3,11 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
+import { DownloadChecklistBox } from "@/components/DownloadChecklistBox";
 import { NextStepGuides } from "@/components/NextStepGuides";
-import { RecommendedGearBox } from "@/components/RecommendedGearBox";
-import { resolveAffiliateLink } from "@/lib/affiliate-links";
+import { SeasonalNote, TouristMistakeNote } from "@/components/editorial/field-notes";
+import { RecommendationGrid } from "@/components/recommendations";
 
 export const metadata: Metadata = {
   title: "Japan Packing List for Every Season",
@@ -90,46 +92,33 @@ export default function JapanPackingListPage() {
       }
       beforeComparison={
         <>
-          <RecommendedGearBox
-            title="Recommended gear for packing a Japan trip"
-            intro="These are practical items that solve common problems travelers run into when packing for Japan's walking-heavy, train-first trips."
-            items={[
-              {
-                name: "Packing cubes",
-                reason:
-                  "Keeps outfits sorted in tight hotel drawers and makes repacking between cities faster.",
-                linkId: "gear-packing-cubes",
-                href: resolveAffiliateLink("gear-packing-cubes"),
-              },
-              {
-                name: "Comfortable walking shoes",
-                reason:
-                  "You will log high step counts on pavement and station stairs. Cushioned shoes matter more than dress shoes.",
-                linkId: "gear-walking-shoes",
-                href: resolveAffiliateLink("gear-walking-shoes"),
-              },
-              {
-                name: "Lightweight daypack",
-                reason:
-                  "Folds small for temple days and train hops when your main bag stays at the hotel.",
-                linkId: "gear-lightweight-daypack",
-                href: resolveAffiliateLink("gear-lightweight-daypack"),
-              },
-              {
-                name: "Portable power bank",
-                reason:
-                  "Maps, tickets, and translation apps drain batteries on long transit days.",
-                linkId: "gear-portable-power-bank",
-                href: resolveAffiliateLink("gear-portable-power-bank"),
-              },
-              {
-                name: "Travel laundry sheets",
-                reason:
-                  "Hand-wash socks and base layers in a sink when you want fewer outfits in the bag.",
-                linkId: "gear-travel-laundry-sheets",
-                href: resolveAffiliateLink("gear-travel-laundry-sheets"),
-              },
-            ]}
+          <div className="mb-12 max-w-full">
+            <ToolRecommendationStrip
+              headingId="packing-tools-strip"
+              title="Plan the bag with the tools"
+              deck="Build a checklist from your trip profile, then sanity check customs-sensitive items. Both stay high level: you still read official rules before you fly."
+              tools={[
+                {
+                  label: "Japan Packing Generator",
+                  description:
+                    "Month, trip length, cities, laundry, activities, and rain: grouped checklist you can copy or share.",
+                  href: "/tools/japan-packing-generator",
+                },
+                {
+                  label: "Can I Bring This to Japan?",
+                  description:
+                    "Plain-language flags for medicine, food, plants, vapes, power banks, cash, and more.",
+                  href: "/tools/can-i-bring-this-to-japan",
+                },
+              ]}
+            />
+          </div>
+
+          <RecommendationGrid
+            placement="japan-packing-list"
+            context="japan-packing-list"
+            title="Practical gear for packing a Japan trip"
+            intro="If you want the simplest options before you fly, these solve the problems we see most on walking-heavy, train-first trips."
           />
 
           <section className="mb-12">
@@ -170,6 +159,13 @@ export default function JapanPackingListPage() {
                 especially in Tokyo, so a lean bag feels better on day five.
               </li>
             </ol>
+            <TouristMistakeNote noteId="packing-fantasy-wardrobe">
+              <p>
+                The expensive mistake is a fantasy wardrobe for a walking trip.
+                If you have not worn it on a 20,000 step day at home, it is not
+                going to feel better on cobbles and station stairs.
+              </p>
+            </TouristMistakeNote>
           </section>
 
           <section className="mb-12">
@@ -310,6 +306,13 @@ export default function JapanPackingListPage() {
                 documents and electronics dry.
               </p>
             </div>
+            <SeasonalNote noteId="packing-tsuyu-dry-core">
+              <p>
+                Tsuyu is as much humidity management as rain. Dry bags for passports
+                and a quick dry shirt beat a heavy coat you peel off every time you
+                step indoors into AC.
+              </p>
+            </SeasonalNote>
             <CheckList
               items={[
                 "Packable rain jacket that breathes better than a thick parka",
@@ -552,6 +555,8 @@ export default function JapanPackingListPage() {
               </li>
             </ul>
           </section>
+
+          <DownloadChecklistBox downloadId="japan-packing-checklist" />
 
           <NextStepGuides guideId="japan-packing-list" />
 

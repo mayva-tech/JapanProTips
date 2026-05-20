@@ -1,15 +1,14 @@
 import type { ReactNode } from "react";
+import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { TrackedAffiliateRecommendationLink } from "@/components/TrackedAffiliateRecommendationLink";
 import type { AffiliateLinkId } from "@/lib/affiliate-links";
 import { getRecommendedGearPreset } from "@/lib/recommended-gear-presets";
 
 export { AFFILIATE_LINK_PLACEHOLDER } from "@/lib/affiliate-links";
+export { RECOMMENDATION_AFFILIATE_DISCLOSURE } from "@/lib/editorial-copy";
 
 export const RECOMMENDED_GEAR_DEFAULT_INTRO =
   "These are practical items that solve common problems travelers run into in Japan.";
-
-export const RECOMMENDED_GEAR_AFFILIATE_DISCLOSURE =
-  "Some links may be affiliate links. This does not change the price you pay.";
 
 export type RecommendedGearItem = {
   name: string;
@@ -28,6 +27,8 @@ export type RecommendedGearBoxProps = {
   gearId?: string;
   note?: ReactNode;
   className?: string;
+  /** Set false when another block nearby already shows the shared disclosure. */
+  showDisclosure?: boolean;
 };
 
 const MIN_ITEMS = 4;
@@ -46,6 +47,7 @@ export function RecommendedGearBox({
   gearId,
   note,
   className = "",
+  showDisclosure = true,
 }: RecommendedGearBoxProps) {
   const resolvedItems =
     items ?? (gearId ? getRecommendedGearPreset(gearId) : undefined) ?? [];
@@ -92,9 +94,7 @@ export function RecommendedGearBox({
         <p className="article-body-sm mt-5 text-muted">{note}</p>
       ) : null}
 
-      <p className="article-body-sm mt-4 text-muted/80">
-        {RECOMMENDED_GEAR_AFFILIATE_DISCLOSURE}
-      </p>
+      {showDisclosure ? <AffiliateDisclosure /> : null}
     </aside>
   );
 }

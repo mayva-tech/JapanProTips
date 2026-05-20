@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "audit:affiliate": "node scripts/audit-affiliate-links.mjs",
-    "audit:next-steps": "node scripts/audit-next-step-guides.mjs"
+    "audit:next-steps": "node scripts/audit-next-step-guides.mjs",
+    "audit:checklists": "node scripts/audit-checklists.mjs",
+    "audit:conversion": "node scripts/audit-conversion.mjs",
+    "audit:field-notes": "node scripts/audit-field-notes.mjs",
+    "generate:checklist-pdfs": "npx tsx scripts/generate-checklist-pdfs.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -22,14 +26,17 @@
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8.57.1",
     "eslint-config-next": "^15.0.0",
+    "pdf-lib": "^1.17.1",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
+    "tsx": "^4.22.3",
     "typescript": "^5"
   }
 }

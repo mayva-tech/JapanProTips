@@ -236,6 +236,43 @@
     @apply editorial-kicker mb-2 block;
   }
 
+  /* Field Note editorial blocks (distinct from TipBox / InfoBox callouts) */
+  .field-note {
+    @apply border-l-[3px];
+  }
+
+  .field-note--field {
+    @apply border-l-maroon/70;
+  }
+
+  .field-note--reality-check {
+    @apply border-l-maroon;
+  }
+
+  .field-note--local-habit {
+    @apply border-l-tan;
+  }
+
+  .field-note--what-people-miss {
+    @apply border-l-ink/35;
+  }
+
+  .field-note--operational-warning {
+    @apply border-l-rust bg-[#f5f0e8];
+  }
+
+  .field-note--seasonal {
+    @apply border-l-tan bg-paper-card/80;
+  }
+
+  .field-note--tourist-mistake {
+    @apply border-l-rust/80 bg-[#ebe4d8];
+  }
+
+  .field-note--resident-learned {
+    @apply border-l-muted/50;
+  }
+
   .hero-text-strip {
     @apply inline-block rounded-md bg-black/40 px-4 py-2 backdrop-blur-sm;
   }

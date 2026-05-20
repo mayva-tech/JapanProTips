@@ -130,6 +130,28 @@ const EXTRA_ENTRIES: GuideSearchEntry[] = [
     section: "Trip planning",
     keywords: ["tourist", "visitor", "all", "guides", "list", "browse", "travel"],
   },
+  {
+    title: "Moving to Japan Checklist",
+    description:
+      "First-month checklist for new residents: arrival, ward office, bank, phone, utilities, insurance, and printable PDF.",
+    href: "/resources/moving-to-japan-checklist",
+    category: "Resources",
+    section: "Moving to Japan",
+    keywords: [
+      "moving",
+      "japan",
+      "checklist",
+      "resident",
+      "expat",
+      "first",
+      "month",
+      "30",
+      "days",
+      "pdf",
+      "download",
+      "move",
+    ],
+  },
 ];
 
 function buildIndex(): GuideSearchEntry[] {

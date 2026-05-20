@@ -7,3 +7,7 @@ export const EDITORIAL_COPY = {
   trustLineWritten:
     "Independent. Written by an engineer based in Japan, not a travel agency.",
 } as const;
+
+/** Shared affiliate disclosure for gear, service, recommendation, and inline offer UI. */
+export const RECOMMENDATION_AFFILIATE_DISCLOSURE =
+  "Some recommendations may use affiliate links. We only include items or services that solve practical travel or resident problems.";

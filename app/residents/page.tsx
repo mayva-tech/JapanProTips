@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
+import { ResidentStarterPath } from "@/components/guides/ResidentStarterPath";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
 import { conversionLabelForHref } from "@/lib/gtag-events";
 
@@ -53,6 +54,8 @@ export default function ResidentsPage() {
             work. It is not trip planning or sightseeing content.
           </p>
         </div>
+
+        <ResidentStarterPath sourceSlug="residents-hub" variant="hub" />
 
         <div className="border-t-2 border-dark mb-12" />
 

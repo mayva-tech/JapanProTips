@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LocalTip, OperationalWarning } from "@/components/editorial/field-notes";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
@@ -137,6 +138,14 @@ export default function WhereToStayTokyoPage() {
           </div>
         </section>
 
+        <OperationalWarning noteId="where-tokyo-station-pin">
+          <p>
+            Neighborhood names lie by omission. Ten minutes from Shinjuku Station
+            can mean ten minutes of underpasses you do not want on night one with
+            jet lag. Filter maps by walking minutes to a named exit, not vibes.
+          </p>
+        </OperationalWarning>
+
         <section className="mb-12">
           <h2 className="editorial-heading mb-4">
             If You Only Stay 3 to 5 Days
@@ -237,6 +246,14 @@ export default function WhereToStayTokyoPage() {
             late.
           </p>
         </div>
+
+        <LocalTip noteId="where-tokyo-last-train">
+          <p>
+            Locals pick bases where a missed last train is a cheap taxi or a short
+            walk, not a suburban odyssey. If you like late izakaya nights, pin
+            yourself closer to that line than to a postcard view.
+          </p>
+        </LocalTip>
 
         <section className="mb-12">
           <h2 className="editorial-heading mb-4">

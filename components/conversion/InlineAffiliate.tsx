@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import type { ConversionGtagLabel } from "@/lib/gtag-events";
+import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
+import type { ConversionGtagLabel } from "@/lib/gtag-events";
 
 export type InlineAffiliateProps = {
   /** Short line of copy (use instead of children for simple text) */
@@ -12,6 +13,8 @@ export type InlineAffiliateProps = {
   className?: string;
   /** When set, fires GA4 `click` with this label on CTA tap. */
   gtagLabel?: ConversionGtagLabel;
+  /** Default false. Set true for standalone offers; skip when a box nearby already discloses. */
+  showDisclosure?: boolean;
 };
 
 function isExternalHref(href: string) {
@@ -35,6 +38,7 @@ export function InlineAffiliate({
   link,
   className = "",
   gtagLabel,
+  showDisclosure = false,
 }: InlineAffiliateProps) {
   const body = children ?? text;
   if (body == null) return null;
@@ -74,6 +78,7 @@ export function InlineAffiliate({
         <span className={copyClass}>{body}</span>
         {cta}
       </div>
+      {showDisclosure ? <AffiliateDisclosure className="mt-3" /> : null}
     </aside>
   );
 }

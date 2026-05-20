@@ -40,9 +40,16 @@ export default function AffiliateAuditPage() {
         Developer only
       </p>
       <h1 className="editorial-heading mb-2 text-3xl">Affiliate link audit</h1>
-      <p className="article-body-sm mb-6 text-muted">
-        Scans gear and service presets plus inline guide usage. Not available in
-        production builds.
+      <p className="article-body-sm mb-4 text-muted">
+        Scans gear and service presets, recommendation catalog, and inline guide
+        usage. See{" "}
+        <code className="text-dark">docs/affiliate-readiness-checklist.md</code>.
+        Not available in production builds.
+      </p>
+      <p className="article-body-sm mb-6">
+        <Link href="/dev/conversion-observability" className="text-rust hover:text-maroon">
+          Conversion observability map →
+        </Link>
       </p>
 
       <div className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -116,8 +123,87 @@ export default function AffiliateAuditPage() {
               ))}
             </ul>
           </div>
+          <div className="rounded-lg border border-[#d4c9b0] bg-white px-4 py-3 sm:col-span-2">
+            <h3 className="font-sans text-xs font-bold uppercase tracking-widest text-muted mb-2">
+              Recommendation grids
+            </h3>
+            <ul className="article-body-sm list-none space-y-1 pl-0">
+              {report.routesByBox.recommendation.map((route) => (
+                <li key={route}>
+                  <Link href={route} className="text-rust hover:text-maroon">
+                    {route}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
+
+      {report.recommendationRows.length > 0 ? (
+        <section className="mb-10">
+          <h2 className="editorial-heading mb-3 text-xl">
+            Recommendation catalog
+          </h2>
+          <p className="article-body-sm mb-4 text-muted">
+            Live affiliate URLs drive outbound title links. Missing URLs should
+            show guide fallbacks on the site, not placeholder buy buttons.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[720px] border-collapse border border-[#d4c9b0] bg-white text-left font-sans text-sm">
+              <thead>
+                <tr className="border-b border-[#d4c9b0] bg-cream">
+                  <th className="px-3 py-2 font-bold uppercase tracking-widest">
+                    ID
+                  </th>
+                  <th className="px-3 py-2 font-bold uppercase tracking-widest">
+                    Affiliate key
+                  </th>
+                  <th className="px-3 py-2 font-bold uppercase tracking-widest">
+                    Status
+                  </th>
+                  <th className="px-3 py-2 font-bold uppercase tracking-widest">
+                    Fallback guide
+                  </th>
+                  <th className="px-3 py-2 font-bold uppercase tracking-widest">
+                    Placements
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {report.recommendationRows.map((row) => (
+                  <tr key={row.recommendationId} className="border-b border-[#d4c9b0]">
+                    <td className="px-3 py-2 font-mono text-xs">
+                      {row.recommendationId}
+                    </td>
+                    <td className="px-3 py-2 font-mono text-xs text-muted">
+                      {row.affiliateLinkId ?? "N/A"}
+                    </td>
+                    <td className="px-3 py-2">
+                      <StatusBadge status={row.status} />
+                    </td>
+                    <td className="px-3 py-2 text-muted">
+                      {row.fallbackGuideHref ? (
+                        <Link
+                          href={row.fallbackGuideHref}
+                          className="text-rust hover:text-maroon"
+                        >
+                          {row.fallbackGuideHref}
+                        </Link>
+                      ) : (
+                        "N/A"
+                      )}
+                    </td>
+                    <td className="px-3 py-2 text-muted">
+                      {row.placements.join(", ")}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ) : null}
 
       {missingUsed.length > 0 ? (
         <section className="mb-10">

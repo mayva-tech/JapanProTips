@@ -110,6 +110,7 @@ const STATIC_PATHS = [
   "/residents/japan-social-life-guide",
   "/residents/japan-customer-service-culture-guide",
   "/resources/moving-to-japan-checklist",
+  "/tools",
   "/guides/start-here-japan",
   "/guides/sim-card-japan",
   "/guides/japan-public-wifi",
@@ -124,6 +125,11 @@ const STATIC_PATHS = [
   "/guides/japan-jetlag-survival",
   "/guides/japan-transportation",
   "/guides/japan-budget-breakdown",
+  "/tools/japan-trip-budget-calculator",
+  "/tools/japan-packing-generator",
+  "/tools/can-i-bring-this-to-japan",
+  "/tools/japanese-address-formatter",
+  "/tools/japan-monthly-cost-calculator",
   "/guides/japan-tax-free-shopping",
   "/guides/japan-anime-shopping-guide",
   "/guides/japan-convenience-store-guide",
@@ -177,6 +183,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}${path}`,
     lastModified: now,
     changeFrequency: path === "/" ? "weekly" : "monthly",
-    priority: path === "/" ? 1 : path.startsWith("/guides/") ? 0.8 : 0.7,
+    priority:
+      path === "/"
+        ? 1
+        : path === "/tools"
+          ? 0.8
+          : path.startsWith("/guides/")
+            ? 0.8
+            : path.startsWith("/tools/")
+              ? 0.75
+              : 0.7,
   }));
 }

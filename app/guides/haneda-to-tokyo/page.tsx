@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { OperationalWarning, RealityCheck } from "@/components/editorial/field-notes";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
@@ -60,6 +61,13 @@ export default function HanedaToTokyoPage() {
                 Taxi only late night or heavy luggage
               </li>
             </ul>
+            <RealityCheck noteId="haneda-close-but-stairs">
+              <p>
+                Haneda is close on a map, which is when people undercount stairs,
+                wrong-terminal walks, and platform changes with jet lag. Add buffer
+                if you are meeting someone curbside on a tight clock.
+              </p>
+            </RealityCheck>
           </section>
         </>
       }
@@ -140,6 +148,14 @@ export default function HanedaToTokyoPage() {
               </table>
             </div>
           </section>
+
+          <OperationalWarning noteId="haneda-keikyu-peak-crowd">
+            <p>
+              Keikyu can feel fine on paper and still be a shoulder-to-shoulder
+              ride at peak. If you are guarding a roller bag, stand where you can
+              see the door map and avoid blocking the rush lane at each stop.
+            </p>
+          </OperationalWarning>
 
           <section className="mb-12">
             <h2 className="editorial-heading mb-4">

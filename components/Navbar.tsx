@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
+import { TrackedToolLink } from "@/components/tools/TrackedToolLink";
 
 export function Navbar() {
   return (
@@ -12,13 +13,20 @@ export function Navbar() {
         >
           JapanProTips
         </Link>
-        <nav className="flex items-center gap-6 sm:gap-8">
+        <nav className="flex flex-wrap items-center gap-5 sm:gap-8">
           <Link href="/" className="editorial-nav-link">
             Home
           </Link>
           <TrackedStartHereLink className="editorial-nav-link">
             Start Here
           </TrackedStartHereLink>
+          <TrackedToolLink
+            href="/tools"
+            sourceSlug="nav"
+            className="editorial-nav-link"
+          >
+            Tools
+          </TrackedToolLink>
           <TrackedCtaLink
             href="/guides/sim-card-japan"
             label="esim"

@@ -2,6 +2,17 @@ import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import { isValidElement } from "react";
 import Link from "next/link";
 import { MdxPinchZoomTable } from "./MdxPinchZoomTable";
+import {
+  FieldNote,
+  LocalTip,
+  OperationalWarning,
+  RealityCheck,
+  ResidentLearnedNote,
+  SeasonalNote,
+  TouristMistakeNote,
+  WhatPeopleMiss,
+} from "@/components/editorial/field-notes";
+import { DownloadChecklistBox } from "@/components/DownloadChecklistBox";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RecommendedGearBox } from "@/components/RecommendedGearBox";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
@@ -216,4 +227,13 @@ export const mdxGuideComponents = {
   RecommendedGearBox,
   RecommendedServicesBox,
   NextStepGuides,
+  DownloadChecklistBox,
+  FieldNote,
+  LocalTip,
+  OperationalWarning,
+  RealityCheck,
+  ResidentLearnedNote,
+  SeasonalNote,
+  TouristMistakeNote,
+  WhatPeopleMiss,
 };

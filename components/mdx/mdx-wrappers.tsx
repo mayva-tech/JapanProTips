@@ -36,6 +36,7 @@ type AffiliateBlockProps = {
   link: string;
   gtagLabel?: ConversionGtagLabel;
   children?: ReactNode;
+  showDisclosure?: boolean;
 };
 
 export function AffiliateBlock({
@@ -44,6 +45,7 @@ export function AffiliateBlock({
   link,
   gtagLabel,
   children,
+  showDisclosure = true,
 }: AffiliateBlockProps) {
   return (
     <InlineAffiliate
@@ -52,6 +54,7 @@ export function AffiliateBlock({
       link={link}
       gtagLabel={gtagLabel}
       className="max-w-2xl"
+      showDisclosure={showDisclosure}
     >
       {children}
     </InlineAffiliate>

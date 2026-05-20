@@ -3,6 +3,7 @@ import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
+import { LocalTip, RealityCheck } from "@/components/editorial/field-notes";
 
 export const metadata: Metadata = {
   title: "Do You Need a SIM Card in Japan?",
@@ -48,6 +49,13 @@ export default function DoYouNeedSimJapanPage() {
                 It affects maps, trains, payments
               </li>
             </ul>
+            <RealityCheck noteId="do-you-need-sim-quick">
+              <p>
+                Free WiFi at hotels and stations is a backup, not a plan. Ticket
+                gates, translation, and split groups all assume your phone can
+                reach the internet when you need it.
+              </p>
+            </RealityCheck>
             <Link
               href="/guides/sim-card-japan"
               className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150"
@@ -93,6 +101,14 @@ export default function DoYouNeedSimJapanPage() {
               </li>
             </ul>
           </section>
+
+          <LocalTip noteId="do-you-need-sim-patterns">
+            <p>
+              Locals still carry data everywhere. Visitors who try to &quot;save
+              money&quot; by staying offline often burn more time asking staff to
+              repeat directions than they save in yen.
+            </p>
+          </LocalTip>
 
           <section className="mb-12">
             <h2 className="editorial-heading mb-4">

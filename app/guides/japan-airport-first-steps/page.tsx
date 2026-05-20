@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
 import { RecommendedGearBox } from "@/components/RecommendedGearBox";
 import { resolveAffiliateLink } from "@/lib/affiliate-links";
+import { DownloadChecklistBox } from "@/components/DownloadChecklistBox";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
+import { OperationalWarning, RealityCheck } from "@/components/editorial/field-notes";
 
 export const metadata: Metadata = {
   title:
@@ -53,6 +56,28 @@ export default function JapanAirportFirstStepsPage() {
       }
       beforeComparison={
         <>
+        <div className="mb-12 max-w-full">
+          <ToolRecommendationStrip
+            headingId="airport-tools-strip"
+            title="Before you zip the bag"
+            deck="Customs-sensitive items and a printable-style packing list pair well with an airport run-through. Use these when you are still at home, not in the queue."
+            tools={[
+              {
+                label: "Can I Bring This to Japan?",
+                description:
+                  "High level guidance on meds, food, plants, vapes, alcohol, power banks, and cash.",
+                href: "/tools/can-i-bring-this-to-japan",
+              },
+              {
+                label: "Japan Packing Generator",
+                description:
+                  "Checklist from your month, length, cities, laundry, activities, and rain concern.",
+                href: "/tools/japan-packing-generator",
+              },
+            ]}
+          />
+        </div>
+
         <RecommendedGearBox
           title="Recommended gear for your first hour in Japan"
           intro="These are practical items that solve common problems travelers run into right after landing: dead phones, scattered documents, and long walks to trains."
@@ -118,6 +143,14 @@ export default function JapanAirportFirstStepsPage() {
           </div>
         </section>
 
+        <OperationalWarning noteId="airport-first-immigration-buffer">
+          <p>
+            Do not book a Shinkansen or domestic flight in the same hour you land.
+            Immigration, bags, and SIM setup eat real time. Your first win is
+            leaving the airport calmly, not beating a clock you never saw in person.
+          </p>
+        </OperationalWarning>
+
         <section className="mb-12">
           <h2 className="editorial-heading mb-4">
             Step 2: Baggage Claim and Customs
@@ -165,6 +198,14 @@ export default function JapanAirportFirstStepsPage() {
             </p>
           </div>
         </section>
+
+        <RealityCheck noteId="airport-first-data-choice">
+          <p>
+            Airport counters work, but you pay with time and attention. If your
+            phone supports eSIM, most travelers settle data on WiFi, then walk to
+            trains without joining another queue.
+          </p>
+        </RealityCheck>
         </>
       }
       afterComparison={
@@ -312,6 +353,8 @@ export default function JapanAirportFirstStepsPage() {
             Start here: trip planning checklist →
           </Link>
         </section>
+
+        <DownloadChecklistBox downloadId="japan-arrival-checklist" />
 
         <NextStepGuides guideId="japan-airport-first-steps" />
 

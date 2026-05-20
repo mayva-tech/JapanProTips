@@ -2,22 +2,23 @@
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
+import { RecommendationGrid } from "@/components/recommendations";
 import { RecommendedGearBox } from "@/components/RecommendedGearBox";
 import { resolveAffiliateLink } from "@/lib/affiliate-links";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
+import { EditorialEsimProviderLinks } from "@/components/conversion/EditorialEsimProviderLinks";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
-import { TrackedOutboundSimLink } from "@/components/TrackedOutboundSimLink";
+import { RealityCheck, TouristMistakeNote } from "@/components/editorial/field-notes";
+import { EDITORIAL_COPY } from "@/lib/editorial-copy";
 
 export const metadata: Metadata = {
   title:
-    "Best SIM Card for Japan (2026) – eSIM vs Pocket WiFi (What Actually Works)",
+    "Best SIM Card for Japan (2026): eSIM vs Pocket WiFi (What Actually Works)",
   description:
     "Choosing a SIM for Japan? Here\u2019s what actually works. eSIM, pocket WiFi, and physical SIM compared with real recommendations for your trip.",
 };
-
-const AIRALO_URL = "https://www.airalo.com/";
-const UBIGI_URL = "https://www.ubigi.com/";
 
 const productCtaClass =
   "font-sans font-bold text-rust text-base tracking-wide hover:text-maroon transition-colors duration-150 border-b-2 border-rust hover:border-maroon pb-0.5";
@@ -58,13 +59,37 @@ export default function SimCardJapanGuidePage() {
             Tested across Tokyo, Osaka, and rural areas.
           </p>
           <p className="font-sans text-muted text-sm font-bold tracking-widest uppercase pt-1">
-            Independent. Engineer based in Japan—not a travel agency.
+            {EDITORIAL_COPY.trustLine}
           </p>
         </div>
       }
       beforeComparison={
         <>
+        <div className="mb-12 max-w-full">
+          <ToolRecommendationStrip
+            headingId="sim-tools-strip"
+            title="While you budget the trip"
+            deck="Data is one line item. The calculator keeps hotels, food, trains, and pocket yen in the same rough band so SIM cost sits in context."
+            tools={[
+              {
+                label: "Japan Trip Budget Calculator",
+                description:
+                  "Estimate hotels, food, transport, shopping, buffer, and suggested cash for the group.",
+                href: "/tools/japan-trip-budget-calculator",
+              },
+            ]}
+          />
+        </div>
+
         <div className="border-t-2 border-dark mb-10" />
+
+        <RecommendationGrid
+          placement="sim-card-japan"
+          context="sim-card-japan"
+          title="Power and plugs for travel days"
+          intro="Staying online is only useful if your phone stays charged and your charger fits Japanese outlets."
+          showDisclosure={false}
+        />
 
         <RecommendedGearBox
           title="Recommended gear for staying connected in Japan"
@@ -76,13 +101,6 @@ export default function SimCardJapanGuidePage() {
                 "Most smooth data setup starts with a phone that supports eSIM and is unlocked for travel.",
               linkId: "gear-esim-phone-check",
               href: resolveAffiliateLink("gear-esim-phone-check"),
-            },
-            {
-              name: "Portable power bank",
-              reason:
-                "Navigation, QR tickets, and translation apps drain battery faster than at home.",
-              linkId: "gear-portable-power-bank",
-              href: resolveAffiliateLink("gear-portable-power-bank"),
             },
             {
               name: "Phone crossbody strap or lanyard",
@@ -169,7 +187,7 @@ export default function SimCardJapanGuidePage() {
             </p>
             <p>
               <span className="font-sans font-bold text-dark">
-                Best for short trips (3–7 days):
+                Best for short trips (3-7 days):
               </span>{" "}
               eSIM (Airalo or Ubigi)
             </p>
@@ -184,6 +202,14 @@ export default function SimCardJapanGuidePage() {
               Buying at the airport unless you have no other choice
             </p>
           </div>
+          <RealityCheck noteId="sim-japan-activate-before-gate">
+            <p>
+              Install and activate your Japan plan on airport WiFi before you walk
+              toward train gates. Ticket machines and IC top-ups are easier with a
+              live connection, and staff lines move faster when you are not
+              debugging roaming on the spot.
+            </p>
+          </RealityCheck>
           <p className="font-sans font-bold text-dark mt-6">
             If your phone supports eSIM, this is the simplest and best option. No
             reason to use anything else.
@@ -198,24 +224,15 @@ export default function SimCardJapanGuidePage() {
           <p className="article-body-sm text-sm text-muted/70 mt-2 mb-2">
             Based on real use in Japan.
           </p>
-          <ul className="mt-3 space-y-3 list-none pl-0 font-serif text-muted">
-            <li>
-              <TrackedOutboundSimLink
-                href={AIRALO_URL}
-                className={productCtaClass}
-              >
-                Airalo eSIM →
-              </TrackedOutboundSimLink>
-            </li>
-            <li>
-              <TrackedOutboundSimLink
-                href={UBIGI_URL}
-                className={productCtaClass}
-              >
-                Ubigi eSIM →
-              </TrackedOutboundSimLink>
-            </li>
-          </ul>
+          <p className="article-body-sm text-sm text-muted/80 mb-2">
+            Provider homepages for quick setup. Compare plans in our side-by-side
+            guide before you buy.
+          </p>
+          <EditorialEsimProviderLinks
+            items={[{ providerId: "airalo" }, { providerId: "ubigi" }]}
+            linkClassName={productCtaClass}
+            className="mt-3 font-serif text-muted"
+          />
           <TrackedCtaLink
             href="/guides/airalo-vs-ubigi-japan"
             label="esim"
@@ -228,7 +245,7 @@ export default function SimCardJapanGuidePage() {
       }
       afterComparison={
         <>
-        <RecommendedServicesBox serviceId="sim-card-japan" />
+        <RecommendedServicesBox serviceId="sim-card-japan" showDisclosure={false} />
 
         {/* Comparison */}
         <section className="mb-12">
@@ -281,7 +298,7 @@ export default function SimCardJapanGuidePage() {
                     Delivery/pickup
                   </td>
                   <td className="px-4 py-3 border-r border-[#d4c9b0]">
-                    $$–$$$
+                    $$-$$$
                   </td>
                   <td className="px-4 py-3 border-r border-[#d4c9b0]">
                     Fast
@@ -426,6 +443,14 @@ export default function SimCardJapanGuidePage() {
           </div>
         </section>
 
+        <TouristMistakeNote noteId="sim-japan-unlimited-marketing">
+          <p>
+            Treat &quot;unlimited&quot; as marketing until you read the throttle
+            rules. Heavy maps use is fine. Hotspotting a laptop, 4K uploads, or
+            tethering all day is where plans quietly clamp speed.
+          </p>
+        </TouristMistakeNote>
+
         {/* Common mistakes */}
         <section className="mb-12 max-w-2xl">
           <h2
@@ -569,29 +594,15 @@ export default function SimCardJapanGuidePage() {
             <p className="font-sans font-bold text-sm text-tan mb-4 tracking-wide">
               Recommended options
             </p>
-            <ul className="space-y-5 list-none pl-0">
-              <li>
-                <p className="font-sans font-bold text-sm tracking-widest uppercase text-tan mb-2">
-                  Best overall
-                </p>
-                <TrackedOutboundSimLink
-                  href={AIRALO_URL}
-                  className={productCtaClass}
-                >
-                  Airalo eSIM →
-                </TrackedOutboundSimLink>
-              </li>
-              <li>
-                <p className="font-sans font-bold text-sm tracking-widest uppercase text-tan mb-2">
-                  Alternative
-                </p>
-                <TrackedOutboundSimLink
-                  href={UBIGI_URL}
-                  className={productCtaClass}
-                >
-                  Ubigi eSIM →
-                </TrackedOutboundSimLink>
-              </li>
+            <EditorialEsimProviderLinks
+              layout="labeled"
+              linkClassName={productCtaClass}
+              items={[
+                { providerId: "airalo", label: "Best overall" },
+                { providerId: "ubigi", label: "Alternative" },
+              ]}
+            />
+            <ul className="space-y-5 list-none pl-0 mt-5">
               <li>
                 <p className="font-sans font-bold text-sm tracking-widest uppercase text-tan mb-2">
                   If you need physical

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { OperationalWarning, RealityCheck } from "@/components/editorial/field-notes";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
@@ -70,6 +71,13 @@ export default function JapanAirportToCityPage() {
           >
             Navigate Japan trains on day one →
           </Link>
+          <OperationalWarning noteId="airport-to-city-maps-need-data">
+            <p>
+              Maps only help after your phone has data or a downloaded offline pack.
+              Screenshot your hotel kanji block and the nearest exit name while you
+              still have airport WiFi, not while you are guessing at a turnstile.
+            </p>
+          </OperationalWarning>
         </section>
 
         <section className="mb-12">
@@ -96,6 +104,13 @@ export default function JapanAirportToCityPage() {
           >
             Get your SIM ready before arrival →
           </Link>
+          <RealityCheck noteId="airport-to-city-order-of-ops">
+            <p>
+              Data beats everything else in this checklist. IC and cash help, but
+              they do not fix a hotel address you cannot load or translate at the
+              gate. Get connectivity stable, then optimize the rest in line.
+            </p>
+          </RealityCheck>
         </section>
 
         <RecommendedServicesBox serviceId="japan-airport-to-city" />

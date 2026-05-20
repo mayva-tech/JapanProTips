@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 
 export const metadata: Metadata = {
@@ -40,6 +41,22 @@ export default function JapanBudgetBreakdownPage() {
       }
       beforeComparison={
         <>
+          <div className="mb-12 max-w-full">
+            <ToolRecommendationStrip
+              headingId="budget-tools-strip"
+              title="Try the numbers in the calculator"
+              deck="Turn this article into a rough yen band for your own trip length, style, and cities. It is the same editorial lens, just interactive."
+              tools={[
+                {
+                  label: "Japan Trip Budget Calculator",
+                  description:
+                    "Estimate hotels, food, transport, shopping, emergency buffer, and suggested cash from your inputs.",
+                  href: "/tools/japan-trip-budget-calculator",
+                },
+              ]}
+            />
+          </div>
+
         <section className="mb-12 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Daily Budget Overview

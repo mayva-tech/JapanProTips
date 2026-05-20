@@ -4,19 +4,25 @@ import {
   AFFILIATE_LINK_IDS,
   AFFILIATE_LINK_PLACEHOLDER,
   affiliateLinks,
+  getAffiliateUrlOrNull,
   type AffiliateLinkId,
 } from "@/lib/affiliate-links";
+import {
+  RECOMMENDATION_CATALOG,
+  RECOMMENDATION_PLACEMENTS,
+  RECOMMENDATION_PLACEMENT_ROUTES,
+} from "@/lib/recommendations";
 import { recommendedGearPresetItems } from "@/lib/recommended-gear-presets";
 import { recommendedServicePresetItems } from "@/lib/recommended-service-presets";
 
-export type AffiliateBoxKind = "gear" | "service";
+export type AffiliateBoxKind = "gear" | "service" | "recommendation";
 
 export type AffiliateUsage = {
   linkId: string;
   box: AffiliateBoxKind;
   route: string;
   itemName: string;
-  source: "preset" | "inline";
+  source: "preset" | "inline" | "recommendation-catalog";
   file?: string;
 };
 
@@ -46,10 +52,27 @@ export type AffiliateAuditReport = {
   rows: AffiliateLinkAuditRow[];
   unusedRegistered: string[];
   unknownLinkIds: string[];
-  routesByBox: { gear: string[]; service: string[] };
+  routesByBox: { gear: string[]; service: string[]; recommendation: string[] };
+  recommendationRows: RecommendationCatalogAuditRow[];
 };
 
-const SCAN_ROOTS = ["app/guides", "content/guides"] as const;
+export type RecommendationCatalogAuditRow = {
+  recommendationId: string;
+  title: string;
+  affiliateLinkId: string | null;
+  url: string | null;
+  status: AffiliateLinkAuditRow["status"];
+  placements: string[];
+  fallbackGuideHref: string | null;
+};
+
+const SCAN_ROOTS = [
+  "app/guides",
+  "content/guides",
+  "app/residents",
+  "app/tools",
+  "app/resources",
+] as const;
 
 const LINK_ID_PATTERNS = [
   { re: /linkId:\s*["']([a-z0-9-]+)["']/g, box: "gear" as const },
@@ -67,12 +90,12 @@ function linkStatus(linkId: string): AffiliateLinkAuditRow["status"] {
   if (!isRegisteredLinkId(linkId)) {
     return "missing";
   }
+  if (getAffiliateUrlOrNull(linkId)) {
+    return "live";
+  }
   const raw = affiliateLinks[linkId];
   if (raw === "") {
     return "empty";
-  }
-  if (raw?.trim()) {
-    return "live";
   }
   return "missing";
 }
@@ -81,8 +104,7 @@ function resolvedUrl(linkId: string): string | null {
   if (!isRegisteredLinkId(linkId)) {
     return null;
   }
-  const url = affiliateLinks[linkId]?.trim();
-  return url || null;
+  return getAffiliateUrlOrNull(linkId);
 }
 
 function routeFromGuideFile(filePath: string): string | null {
@@ -90,6 +112,20 @@ function routeFromGuideFile(filePath: string): string | null {
   const appMatch = normalized.match(/app\/guides\/([^/]+)\/page\.tsx$/);
   if (appMatch) {
     return `/guides/${appMatch[1]}`;
+  }
+  const residentMatch = normalized.match(/app\/residents\/([^/]+)\/page\.tsx$/);
+  if (residentMatch) {
+    return `/residents/${residentMatch[1]}`;
+  }
+  const toolMatch = normalized.match(/app\/tools\/([^/]+)\/page\.tsx$/);
+  if (toolMatch) {
+    return `/tools/${toolMatch[1]}`;
+  }
+  const resourceMatch = normalized.match(
+    /app\/resources\/([^/]+)\/page\.tsx$/,
+  );
+  if (resourceMatch) {
+    return `/resources/${resourceMatch[1]}`;
   }
   const mdxMatch = normalized.match(/content\/guides\/([^/]+)\.mdx$/);
   if (mdxMatch) {
@@ -170,6 +206,71 @@ function collectPresetUsages(): AffiliateUsage[] {
   return usages;
 }
 
+function collectRecommendationCatalogUsages(): AffiliateUsage[] {
+  const usages: AffiliateUsage[] = [];
+  const placementById = new Map<string, string[]>();
+
+  for (const [placement, ids] of Object.entries(RECOMMENDATION_PLACEMENTS)) {
+    for (const id of ids) {
+      const list = placementById.get(id) ?? [];
+      list.push(placement);
+      placementById.set(id, list);
+    }
+  }
+
+  for (const entry of Object.values(RECOMMENDATION_CATALOG)) {
+    if (!entry.enabled || !entry.affiliateLinkId) {
+      continue;
+    }
+    const placements = placementById.get(entry.id) ?? [];
+    for (const placement of placements) {
+      const route =
+        RECOMMENDATION_PLACEMENT_ROUTES[
+          placement as keyof typeof RECOMMENDATION_PLACEMENT_ROUTES
+        ] ?? `/unknown/${placement}`;
+
+      usages.push({
+        linkId: entry.affiliateLinkId,
+        box: "recommendation",
+        route,
+        itemName: entry.title,
+        source: "recommendation-catalog",
+        file: "lib/recommendations.ts",
+      });
+    }
+  }
+
+  return usages;
+}
+
+function buildRecommendationCatalogRows(): RecommendationCatalogAuditRow[] {
+  const placementById = new Map<string, string[]>();
+  for (const [placement, ids] of Object.entries(RECOMMENDATION_PLACEMENTS)) {
+    for (const id of ids) {
+      const list = placementById.get(id) ?? [];
+      list.push(placement);
+      placementById.set(id, list);
+    }
+  }
+
+  return Object.values(RECOMMENDATION_CATALOG)
+    .filter((e) => e.enabled)
+    .map((entry) => {
+      const linkId = entry.affiliateLinkId ?? null;
+      const status = linkId ? linkStatus(linkId) : "missing";
+      return {
+        recommendationId: entry.id,
+        title: entry.title,
+        affiliateLinkId: linkId,
+        url: linkId ? resolvedUrl(linkId) : null,
+        status,
+        placements: placementById.get(entry.id) ?? [],
+        fallbackGuideHref: entry.fallbackGuideHref ?? null,
+      };
+    })
+    .sort((a, b) => a.recommendationId.localeCompare(b.recommendationId));
+}
+
 function collectInlineUsages(): AffiliateUsage[] {
   const usages: AffiliateUsage[] = [];
 
@@ -218,6 +319,7 @@ export function runAffiliateAudit(): AffiliateAuditReport {
   const allUsages = dedupeUsages([
     ...collectPresetUsages(),
     ...collectInlineUsages(),
+    ...collectRecommendationCatalogUsages(),
   ]);
 
   const byLinkId = new Map<string, AffiliateUsage[]>();
@@ -264,6 +366,11 @@ export function runAffiliateAudit(): AffiliateAuditReport {
     service: [
       ...new Set(allUsages.filter((u) => u.box === "service").map((u) => u.route)),
     ].sort(),
+    recommendation: [
+      ...new Set(
+        allUsages.filter((u) => u.box === "recommendation").map((u) => u.route),
+      ),
+    ].sort(),
   };
 
   return {
@@ -283,6 +390,7 @@ export function runAffiliateAudit(): AffiliateAuditReport {
     unusedRegistered: [...unusedRegistered],
     unknownLinkIds,
     routesByBox,
+    recommendationRows: buildRecommendationCatalogRows(),
   };
 }
 

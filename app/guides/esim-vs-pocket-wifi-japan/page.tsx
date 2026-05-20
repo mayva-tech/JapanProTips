@@ -3,6 +3,7 @@ import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
+import { RealityCheck, TouristMistakeNote } from "@/components/editorial/field-notes";
 
 export const metadata: Metadata = {
   title:
@@ -73,6 +74,14 @@ export default function EsimVsPocketWifiJapanPage() {
           </div>
         </section>
 
+        <RealityCheck noteId="esim-vs-pocket-esim-flow">
+          <p>
+            eSIM installs need a stable WiFi moment and a few quiet minutes. Doing
+            it in the arrivals hall is fine, but doing it at home or at the gate
+            before you board removes most panic taps.
+          </p>
+        </RealityCheck>
+
         <section className="mb-12 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             What is Pocket WiFi
@@ -91,6 +100,15 @@ export default function EsimVsPocketWifiJapanPage() {
             </p>
           </div>
         </section>
+
+        <TouristMistakeNote noteId="esim-vs-pocket-return-friction">
+          <p>
+            Pocket WiFi fails in the boring steps: pickup line length, locker code
+            confusion, dead battery at noon, and return envelope timing on your
+            last morning. Count those minutes before you romanticize sharing one
+            brick across four phones.
+          </p>
+        </TouristMistakeNote>
 
         <section className="mb-12 max-w-2xl">
           <h2 className="editorial-heading mb-4">

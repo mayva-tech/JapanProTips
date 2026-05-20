@@ -3,6 +3,7 @@ import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RecommendedGearBox } from "@/components/RecommendedGearBox";
+import { LocalTip, OperationalWarning } from "@/components/editorial/field-notes";
 
 export const metadata: Metadata = {
   title:
@@ -83,6 +84,14 @@ export default function GettingAroundJapanGuidePage() {
                   You may add a few minutes, but you are less likely to skip your
                   stop by accident.
                 </p>
+                <OperationalWarning noteId="getting-around-train-type">
+                  <p>
+                    Express saves minutes only when it stops at your station. If
+                    the app names a train type you do not see on the departure
+                    board, pause and read the kanji line name again before you
+                    commit.
+                  </p>
+                </OperationalWarning>
               </div>
 
               <div>
@@ -106,6 +115,14 @@ export default function GettingAroundJapanGuidePage() {
             title="Recommended gear for getting around Japan"
             intro="These are practical items that solve common walking, navigation, and station problems on train-heavy days."
           />
+
+          <LocalTip noteId="getting-around-ic-recharge">
+            <p>
+              Locals top up IC at machines when balance drops near a few hundred
+              yen, not at zero. Gates fail open with an embarrassing beep when you
+              forget, usually during a transfer crush.
+            </p>
+          </LocalTip>
 
           <div>
             <h2 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">

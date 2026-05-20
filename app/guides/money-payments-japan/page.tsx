@@ -3,6 +3,7 @@ import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
+import { OperationalWarning, WhatPeopleMiss } from "@/components/editorial/field-notes";
 
 export const metadata: Metadata = {
   title:
@@ -46,6 +47,13 @@ export default function MoneyPaymentsJapanPage() {
               Many places accept cards, but not all places do. Smaller
               restaurants, local shops, and some temples can still be cash-only.
             </p>
+            <WhatPeopleMiss noteId="money-payments-cashless-myth">
+              <p>
+                &quot;Japan is cashless&quot; is only true in slices of city life.
+                The gap shows up at small dinner spots, lockers, and rural transit
+                machines, usually when you are already hungry or late.
+              </p>
+            </WhatPeopleMiss>
           </div>
 
           <div>
@@ -104,6 +112,13 @@ export default function MoneyPaymentsJapanPage() {
                 Both usually accept foreign cards and provide English menus.
               </li>
             </ul>
+            <OperationalWarning noteId="money-payments-atm-hours">
+              <p>
+                Post office ATMs can close with the branch. Test your card at a
+                7-Eleven ATM on day one, not after dinner when the only open option
+                is a machine that does not like your PIN format.
+              </p>
+            </OperationalWarning>
           </div>
         </div>
       }

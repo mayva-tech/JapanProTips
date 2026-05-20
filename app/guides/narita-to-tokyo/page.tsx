@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { OperationalWarning, WhatPeopleMiss } from "@/components/editorial/field-notes";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
@@ -63,6 +64,13 @@ export default function NaritaToTokyoPage() {
                 Heavy luggage: Airport bus
               </li>
             </ul>
+            <OperationalWarning noteId="narita-quick-answer-commit">
+              <p>
+                Once you buy a Skyliner or Narita Express style ticket, you are
+                mentally locked in. Confirm your hotel&apos;s nearest station name
+                on a map before you stand in line, not after you are holding paper.
+              </p>
+            </OperationalWarning>
           </section>
         </>
       }
@@ -143,6 +151,14 @@ export default function NaritaToTokyoPage() {
               </table>
             </div>
           </section>
+
+          <WhatPeopleMiss noteId="narita-last-mile-transfer">
+            <p>
+              Fast airport trains often dump you one metro ride away from the
+              hotel door. The pain is not the Narita leg, it is the last transfer
+              with bags when you are already tired. Budget time for that walk.
+            </p>
+          </WhatPeopleMiss>
 
           <section className="mb-12">
             <h2 className="editorial-heading mb-4">

@@ -17,6 +17,14 @@ interface Resource {
 
 const resources: Resource[] = [
   {
+    title: "Moving to Japan checklist",
+    description: "First month for new residents. PDF included.",
+    pill: "Free",
+    pillColor: "free",
+    cta: "Open the moving checklist →",
+    href: "/resources/moving-to-japan-checklist",
+  },
+  {
     title: "Trip planning checklist",
     description: "PDF. Nothing left off.",
     pill: "Free",

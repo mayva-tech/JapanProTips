@@ -116,12 +116,11 @@ External links in recommendation boxes go through `components/TrackedAffiliateRe
 
 ## 7. Confirm affiliate disclosure visibility
 
-Both boxes include disclosure copy inside the component (not only in site-wide footer).
+Gear, service, recommendation, and standalone inline offer blocks include disclosure inside the component (not only in a site-wide footer). Copy lives in `lib/editorial-copy.ts` as `RECOMMENDATION_AFFILIATE_DISCLOSURE` and renders via `AffiliateDisclosure`.
 
 | Component | Disclosure text |
 | --- | --- |
-| `RecommendedGearBox` | “Some links may be affiliate links. This does not change the price you pay.” |
-| `RecommendedServicesBox` | Same |
+| All monetization boxes | “Some recommendations may use affiliate links. We only include items or services that solve practical travel or resident problems.” |
 
 - [ ] Disclosure is visible on **mobile** and **desktop** without scrolling inside the box.
 - [ ] Disclosure is readable (contrast, font size) on cream/paper background.

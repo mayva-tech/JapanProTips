@@ -3,8 +3,9 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
 import { NextStepGuides } from "@/components/NextStepGuides";
-import { RecommendedGearBox } from "@/components/RecommendedGearBox";
+import { RecommendationGrid } from "@/components/recommendations";
 
 export const metadata: Metadata = {
   title: "Japan Weather by Month (What to Expect Before You Go)",
@@ -61,7 +62,26 @@ export default function JapanWeatherByMonthPage() {
         </h1>
       }
       intro={<Intro />}
-      beforeComparison={<MainMonths />}
+      beforeComparison={
+        <>
+          <div className="mb-12 max-w-full">
+            <ToolRecommendationStrip
+              headingId="weather-tools-strip"
+              title="Turn weather into a packing list"
+              deck="Once you know what the month usually feels like, plug the same trip shape into the generator for grouped items you can copy or share."
+              tools={[
+                {
+                  label: "Japan Packing Generator",
+                  description:
+                    "Month, trip length, cities, laundry, activities, and rain in one checklist.",
+                  href: "/tools/japan-packing-generator",
+                },
+              ]}
+            />
+          </div>
+          <MainMonths />
+        </>
+      }
       afterComparison={<FooterSections />}
     />
   );
@@ -149,10 +169,11 @@ function MainMonths() {
         </div>
       </section>
 
-      <RecommendedGearBox
-        gearId="japan-weather-by-month"
-        title="Recommended gear for Japan weather by season"
-        intro="These are practical items that solve common heat, rain, and walking problems tied to each season."
+      <RecommendationGrid
+        placement="japan-weather-by-month"
+        context="japan-weather-by-month"
+        title="Gear that matches Japan weather swings"
+        intro="Useful during rainy season, humid summers, and long train days. None of this is required, but each item fixes a common annoyance."
       />
 
       <MonthJanuary />

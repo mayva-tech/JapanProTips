@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { DownloadChecklistBox } from "@/components/DownloadChecklistBox";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
+import { OperationalWarning, WhatPeopleMiss } from "@/components/editorial/field-notes";
 
 export const metadata: Metadata = {
   title:
@@ -55,6 +57,14 @@ export default function JapanTrainsPage() {
                 If unsure, ask station staff
               </li>
             </ul>
+            <OperationalWarning noteId="japan-trains-quick-answer">
+              <p>
+                Your app shows a line name, time, and platform. If any one of
+                those three disagrees with the yellow departure board, trust the
+                board first, then ask staff. Wrong platform is the fastest way to
+                board the right line going the wrong direction.
+              </p>
+            </OperationalWarning>
             <Link
               href="/guides/sim-card-japan"
               className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150"
@@ -137,6 +147,14 @@ export default function JapanTrainsPage() {
               </p>
             </div>
           </section>
+
+          <WhatPeopleMiss noteId="japan-trains-jr-metro">
+            <p>
+              JR, metro, and private lines can share a station but use different
+              ticket logic. Missing that split is how people tap through the wrong
+              gate and then assume the IC card is broken.
+            </p>
+          </WhatPeopleMiss>
         </>
       }
       afterComparison={
@@ -284,6 +302,8 @@ export default function JapanTrainsPage() {
               </li>
             </ul>
           </section>
+
+          <DownloadChecklistBox downloadId="japan-train-cheat-sheet" />
 
           <NextStepGuides guideId="japan-trains" />
 

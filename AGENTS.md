@@ -25,3 +25,7 @@ Not implemented yet. Follow `.cursor/rules/mdx-content-roadmap.mdc` when adding 
 | Tourist index data | `lib/tourist-guides.ts` |
 | Sitemap | `app/sitemap.ts` |
 | Site constants | `lib/site.ts` |
+| Downloadable checklists | `lib/downloadable-checklists.ts`, `lib/checklist-pdf-spec.ts`, `public/downloads/*.pdf` |
+| Regenerate checklist PDFs | `npm run generate:checklist-pdfs` (needs network for fonts) |
+| Field Note blocks (MDX + TSX) | `components/editorial/field-notes/`, `lib/field-notes.ts` |
+| Field Note coverage audit | `npm run audit:field-notes`, `lib/field-note-audit.ts`, `/dev/field-note-audit` |

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { TrackedAffiliateRecommendationLink } from "@/components/TrackedAffiliateRecommendationLink";
 import type { AffiliateLinkId } from "@/lib/affiliate-links";
 import {
@@ -6,11 +7,10 @@ import {
   getRecommendedServicePresetMeta,
 } from "@/lib/recommended-service-presets";
 
+export { RECOMMENDATION_AFFILIATE_DISCLOSURE } from "@/lib/editorial-copy";
+
 export const RECOMMENDED_SERVICES_DEFAULT_INTRO =
   "These are practical services that solve common setup or travel problems in Japan.";
-
-export const RECOMMENDED_SERVICES_AFFILIATE_DISCLOSURE =
-  "Some links may be affiliate links. This does not change the price you pay.";
 
 export type RecommendedServiceItem = {
   name: string;
@@ -33,6 +33,8 @@ export type RecommendedServicesBoxProps = {
   serviceId?: string;
   note?: ReactNode;
   className?: string;
+  /** Set false when another block nearby already shows the shared disclosure. */
+  showDisclosure?: boolean;
 };
 
 const MIN_SERVICES = 3;
@@ -54,6 +56,7 @@ export function RecommendedServicesBox({
   serviceId,
   note,
   className = "",
+  showDisclosure = true,
 }: RecommendedServicesBoxProps) {
   const presetMeta = serviceId ? getRecommendedServicePresetMeta(serviceId) : undefined;
   const resolvedTitle = title ?? presetMeta?.title;
@@ -129,9 +132,7 @@ export function RecommendedServicesBox({
         <p className="article-body-sm mt-5 text-muted">{note}</p>
       ) : null}
 
-      <p className="article-body-sm mt-4 text-muted/80">
-        {RECOMMENDED_SERVICES_AFFILIATE_DISCLOSURE}
-      </p>
+      {showDisclosure ? <AffiliateDisclosure /> : null}
     </aside>
   );
 }

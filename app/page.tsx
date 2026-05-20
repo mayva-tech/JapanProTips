@@ -3,7 +3,11 @@ import { FunnelCard } from "@/components/editorial/FunnelCard";
 import { HomeHero } from "@/components/editorial/HomeHero";
 import { ImportantGuidesCarousel } from "@/components/editorial/ImportantGuidesCarousel";
 import { GuideSearch } from "@/components/editorial/GuideSearch";
+import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
+import { TrackedToolLink } from "@/components/tools/TrackedToolLink";
 import { buildGuideSearchIndex } from "@/lib/guide-search-index.server";
+import { SITE_TOOLS, toRecommendationCard } from "@/lib/site-tools";
+import { HomeResidentCta } from "@/components/editorial/HomeResidentCta";
 import { PopularStartHereGuides } from "@/components/editorial/PopularStartHereGuides";
 import { SectionLabel } from "@/components/editorial/SectionLabel";
 import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
@@ -20,6 +24,29 @@ export default function HomePage() {
   return (
     <main className="min-h-screen font-sans">
       <HomeHero />
+
+      <section className="border-b border-paper-edge bg-paper-elevated py-10 sm:py-12">
+        <div className="mx-auto max-w-6xl px-6">
+          <ToolRecommendationStrip
+            headingId="home-japan-travel-tools"
+            title="Japan Travel Tools"
+            deck="Practical calculators and checkers for planning Japan without guessing."
+            tools={SITE_TOOLS.map(toRecommendationCard)}
+            analyticsSourceSlug="home"
+          />
+          <p className="mt-5 text-center sm:text-left">
+            <TrackedToolLink
+              href="/tools"
+              sourceSlug="home"
+              className="font-sans text-sm font-bold uppercase tracking-widest text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+            >
+              Browse all tools →
+            </TrackedToolLink>
+          </p>
+        </div>
+      </section>
+
+      <HomeResidentCta />
 
       <GuideSearch entries={guideSearchIndex} />
 

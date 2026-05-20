@@ -130,11 +130,16 @@ export default function NextStepAuditPage() {
         <h1 className="editorial-heading text-3xl">Next Step guides audit</h1>
         <PassBadge passed={report.passed} />
       </div>
-      <p className="article-body-sm mb-6 text-muted">
+      <p className="article-body-sm mb-4 text-muted">
         Scans <code className="text-dark">lib/next-step-guide-presets.ts</code>{" "}
         and article usage in <code className="text-dark">app/**</code> and{" "}
         <code className="text-dark">content/**</code>. Not available in
         production builds.
+      </p>
+      <p className="article-body-sm mb-6">
+        <Link href="/dev/conversion-observability" className="text-rust hover:text-maroon">
+          Conversion observability map →
+        </Link>
       </p>
 
       <div className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
