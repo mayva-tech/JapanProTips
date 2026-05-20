@@ -51,6 +51,24 @@ export const RESIDENT_TSX_SEARCH_ENTRIES: GuideSearchEntry[] = [
     ],
   },
   {
+    title: "Japan Mistakes New Residents Make",
+    description:
+      "Operational mistakes after moving: move-in cash, ward office, insurance, bills, cards, garbage, leases, and recovery steps for month one.",
+    href: "/residents/japan-mistakes-new-residents",
+    category: "Residents",
+    section: RESIDENT_SLUG_SECTION["japan-mistakes-new-residents"] ?? "Daily Life",
+    keywords: [
+      "mistakes",
+      "moving",
+      "resident",
+      "new",
+      "apartment",
+      "bills",
+      "ward office",
+      "insurance",
+    ],
+  },
+  {
     title: "Monthly Cost of Living in Japan (Real Numbers)",
     description:
       "Rent, food, transport, and utilities in yen for life in Japan, plus realistic monthly totals for Tokyo and how the bill changes outside the capital.",

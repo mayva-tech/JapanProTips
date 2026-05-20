@@ -981,6 +981,58 @@ export const nextStepGuidePresetItems: Record<string, NextStepGuideItem[]> = {
       label: "Resident setup",
     },
   ],
+  "japan-mistakes-first-time-visitors": [
+    {
+      title: "SIM and eSIM in Japan",
+      href: "/guides/sim-card-japan",
+      reason: "Fix the most common day-one mistake: no live data after landing.",
+      label: "Next",
+    },
+    {
+      title: "Japan packing list",
+      href: "/guides/japan-packing-list",
+      reason: "Trim bag weight before stairs and rainy-season humidity hit.",
+      label: "Related",
+    },
+    {
+      title: "Money mistakes in Japan",
+      href: "/guides/japan-money-mistakes",
+      reason: "Cash, cards, and IC habits that quietly drain trip budgets.",
+      label: "Related",
+    },
+    {
+      title: "Trip budget calculator",
+      href: "/tools/japan-trip-budget-calculator",
+      reason: "Turn rough daily spend into yen bands before you lock hotels.",
+      label: "Tool",
+    },
+  ],
+  "japan-money-mistakes": [
+    {
+      title: "Money and payments in Japan",
+      href: "/guides/money-payments-japan",
+      reason: "Baseline payment reality before you rely on one card brand.",
+      label: "Next",
+    },
+    {
+      title: "Japan budget breakdown",
+      href: "/guides/japan-budget-breakdown",
+      reason: "Yen ranges for food, trains, and lodging to sanity-check the calculator.",
+      label: "Related",
+    },
+    {
+      title: "Airport first steps",
+      href: "/guides/japan-airport-first-steps",
+      reason: "Cash and IC setup order that works right after customs.",
+      label: "Related",
+    },
+    {
+      title: "Trip budget calculator",
+      href: "/tools/japan-trip-budget-calculator",
+      reason: "Model trip cost with your real nights and cities.",
+      label: "Tool",
+    },
+  ],
 };
 
 export function getNextStepGuidePreset(

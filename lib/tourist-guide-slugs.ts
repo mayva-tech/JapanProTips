@@ -5,6 +5,8 @@
 export const VISITOR_GUIDE_SLUGS = [
   "start-here-japan",
   "japan-tourist-mistakes",
+  "japan-mistakes-first-time-visitors",
+  "japan-money-mistakes",
   "japan-cultural-mistakes",
   "japan-escalator-rules",
   "japan-travel-insurance",

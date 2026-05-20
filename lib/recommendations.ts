@@ -214,6 +214,11 @@ export const RECOMMENDATION_PLACEMENTS = {
   "japan-packing-generator": ["packing-cubes", "foldable-duffel"],
   "japan-trip-budget-calculator": ["wise-travel-card-note", "ic-card-holder"],
   "renting-apartment-japan": ["document-organizer"],
+  "japan-mistakes-first-time-visitors": [
+    "travel-umbrella",
+    "packing-cubes",
+    "power-bank-20000",
+  ],
 } as const satisfies Record<string, string[]>;
 
 export type RecommendationPlacementKey = keyof typeof RECOMMENDATION_PLACEMENTS;
@@ -228,6 +233,8 @@ export const RECOMMENDATION_PLACEMENT_ROUTES: Record<
   "japan-packing-generator": "/tools/japan-packing-generator",
   "japan-trip-budget-calculator": "/tools/japan-trip-budget-calculator",
   "renting-apartment-japan": "/residents/renting-apartment-japan",
+  "japan-mistakes-first-time-visitors":
+    "/guides/japan-mistakes-first-time-visitors",
 };
 
 export type ResolvedRecommendation = RecommendationDefinition & {

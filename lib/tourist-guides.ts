@@ -31,6 +31,16 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
       },
       {
         category: "Start here",
+        title: "Japan Mistakes First-Time Visitors Make",
+        description:
+          "Operational trip errors: data, cash, packing, weather, trains, hotels, customs, and pacing, with recovery steps.",
+        href: "/guides/japan-mistakes-first-time-visitors",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Traveler checking phone at a Japan train station",
+        gtagLabel: "start_here",
+      },
+      {
+        category: "Start here",
         title: "What Tourists Should NOT Do in Japan",
         description:
           "Calm cultural etiquette: trains, trash, temples, onsen, photos, and what locals actually care about vs what tourists overthink.",
@@ -456,6 +466,16 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         href: "/guides/japan-budget-breakdown",
         imageSrc: IMAGES.hero.suica,
         imageAlt: "Japan travel budget planning",
+        gtagLabel: "budget",
+      },
+      {
+        category: "Money",
+        title: "Money Mistakes Travelers Make in Japan",
+        description:
+          "Cash, cards, ATMs, IC balance, lockers, taxis, and budgeting errors with practical fixes.",
+        href: "/guides/japan-money-mistakes",
+        imageSrc: IMAGES.hero.suica,
+        imageAlt: "Traveler paying at a shop in Japan",
         gtagLabel: "budget",
       },
       {

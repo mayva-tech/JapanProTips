@@ -261,6 +261,11 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-mistakes-new-residents" className={linkClass}>
+                Japan mistakes new residents make →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-savings-budgeting-guide" className={linkClass}>
                 Saving money and budgeting in Japan →
               </TrackedResidentLink>
