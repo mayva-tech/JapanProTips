@@ -35,6 +35,13 @@ export default function JapanHealthInsurancePage() {
             source of truth for your ward or city, and keep your card in your wallet
             like a second ID.
           </p>
+          <p>
+            For what you actually pay at clinics and pharmacies, see the{" "}
+            <Link href="/residents/japan-healthcare-cost-guide" className={linkClass}>
+              healthcare costs guide
+            </Link>
+            .
+          </p>
         </div>
 
         <section className="mb-12">

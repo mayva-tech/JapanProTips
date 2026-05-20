@@ -40,7 +40,9 @@ export function GuideArticleShell({
 
   return (
     <main className="bg-cream min-h-screen font-sans">
-      <article className={`${maxWidthClass} mx-auto px-6 pt-12 pb-16`}>
+      <article
+        className={`${maxWidthClass} mx-auto min-w-0 px-6 pt-12 pb-16`}
+      >
         {title}
 
         <div className="mb-10 max-w-2xl">{intro}</div>

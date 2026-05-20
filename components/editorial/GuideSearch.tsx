@@ -2,11 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useId, useMemo, useState } from "react";
-import {
-  GUIDE_SEARCH_COUNT,
-  searchGuides,
-  type GuideSearchEntry,
-} from "@/lib/guide-search-index";
+import { searchGuides, type GuideSearchEntry } from "@/lib/guide-search-index";
 import { conversionLabelForHref, trackGtagClick } from "@/lib/gtag-events";
 
 function SearchResultItem({ entry }: { entry: GuideSearchEntry }) {
@@ -32,12 +28,19 @@ function SearchResultItem({ entry }: { entry: GuideSearchEntry }) {
   );
 }
 
-export function GuideSearch() {
+type GuideSearchProps = {
+  entries: GuideSearchEntry[];
+};
+
+export function GuideSearch({ entries }: GuideSearchProps) {
   const inputId = useId();
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
 
-  const results = useMemo(() => searchGuides(query, 8), [query]);
+  const results = useMemo(
+    () => searchGuides(query, entries, 8),
+    [query, entries],
+  );
 
   const showResults = focused && query.trim().length >= 2;
   const hasQuery = query.trim().length >= 2;
@@ -58,9 +61,9 @@ export function GuideSearch() {
         </label>
         <h2 className="editorial-heading mb-3 text-ink">Search by topic</h2>
         <p className="article-body mb-5">
-          Type a word like SIM, Kyoto, train, or airport. Search covers{" "}
-          {GUIDE_SEARCH_COUNT} guides and opens the full article when you tap a
-          result.
+          Type a word like SIM, rent, delivery, train, or visa. Search covers{" "}
+          {entries.length} tourist and resident guides and opens the full article
+          when you tap a result.
         </p>
 
         <div className="relative">
@@ -73,7 +76,7 @@ export function GuideSearch() {
             onBlur={() => {
               window.setTimeout(() => setFocused(false), 150);
             }}
-            placeholder="e.g. packing, haneda, suica, where to stay"
+            placeholder="e.g. sim, rent, yamato, nhi, shinkansen"
             autoComplete="off"
             className="w-full border border-paper-edge bg-paper-card px-4 py-3.5 font-serif text-body text-ink shadow-editorial outline-none transition-colors placeholder:text-muted/60 focus:border-maroon/50 focus:ring-2 focus:ring-maroon/20"
           />
@@ -93,12 +96,19 @@ export function GuideSearch() {
 
         {showResults && noResults ? (
           <p className="article-body mt-4 rounded-md border border-paper-edge bg-paper-elevated px-4 py-3 text-muted">
-            No guides match that word. Try SIM, train, Kyoto, weather, or{" "}
+            No guides match that word. Try SIM, rent, delivery, allergy, or{" "}
             <Link
               href="/tourists"
               className="font-sans font-bold text-rust hover:text-maroon"
             >
-              browse all tourist guides
+              tourist guides
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="/residents"
+              className="font-sans font-bold text-rust hover:text-maroon"
+            >
+              resident guides
             </Link>
             .
           </p>

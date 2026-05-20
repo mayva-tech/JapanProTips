@@ -37,6 +37,16 @@ export default function RentingApartmentJapanPage() {
             . Read that guide before you budget move-in costs.
           </p>
           <p>
+            Compare areas and commutes first:{" "}
+            <Link
+              href="/residents/japan-neighborhood-guide"
+              className="font-sans font-bold text-rust hover:text-maroon transition-colors duration-150"
+            >
+              neighborhood guide for foreign residents
+            </Link>
+            .
+          </p>
+          <p>
             You will need a bank account and steady{" "}
             <Link
               href="/residents/pay-bills-japan"

@@ -96,8 +96,28 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-mail-documents-guide" className={linkClass}>
+                Important mail and official documents in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-household-paperwork-guide" className={linkClass}>
+                Managing household paperwork in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/open-bank-account-japan" className={linkClass}>
                 Open a bank account →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-bank-holidays-business-hours-guide" className={linkClass}>
+                Business hours, closures, and holidays in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-banking-apps-guide" className={linkClass}>
+                Banking apps and online banking in Japan →
               </TrackedResidentLink>
             </li>
             <li>
@@ -128,6 +148,16 @@ export default function ResidentsPage() {
             <li>
               <TrackedResidentLink href="/residents/japan-mobile-payment-guide" className={linkClass}>
                 Mobile payments (PayPay, Apple Pay, Suica) →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-receipts-points-membership-cards-guide" className={linkClass}>
+                Receipts, point cards, and membership systems →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-phone-scams-fraud-guide" className={linkClass}>
+                Phone scams, fraud, and consumer traps →
               </TrackedResidentLink>
             </li>
             <li>
@@ -170,6 +200,11 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-daycare-childcare-guide" className={linkClass}>
+                Daycare and childcare in Japan for foreign parents →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-furniture-appliances" className={linkClass}>
                 Furniture and appliances for your apartment →
               </TrackedResidentLink>
@@ -177,6 +212,21 @@ export default function ResidentsPage() {
             <li>
               <TrackedResidentLink href="/residents/japan-secondhand-shopping-guide" className={linkClass}>
                 Secondhand shopping in Japan (recycle shops, Mercari) →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-100yen-shop-guide" className={linkClass}>
+                100 yen shops: what residents eventually buy →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-clothing-shopping-guide" className={linkClass}>
+                Buying clothes in Japan as a foreign resident →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-pet-ownership-guide" className={linkClass}>
+                Owning pets in Japan as a foreign resident →
               </TrackedResidentLink>
             </li>
           </ul>
@@ -204,8 +254,53 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-savings-budgeting-guide" className={linkClass}>
+                Saving money and budgeting in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-grocery-shopping-guide" className={linkClass}>
                 Grocery shopping in Japan for foreign residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-self-checkout-guide" className={linkClass}>
+                Self-checkout and everyday machines in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-drugstore-lifestyle-guide" className={linkClass}>
+                Japanese drugstores explained for foreign residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-seasonal-food-guide" className={linkClass}>
+                Seasonal food culture in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-weekend-routine-guide" className={linkClass}>
+                Weekend life in Japan for foreign residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-home-cooking-guide" className={linkClass}>
+                Cooking at home in Japan for foreign residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-microwave-frozen-food-guide" className={linkClass}>
+                Microwaves, frozen food, and quick meals →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-online-shopping-guide" className={linkClass}>
+                Online shopping in Japan for foreign residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-package-delivery-guide" className={linkClass}>
+                Package deliveries in Japan for residents →
               </TrackedResidentLink>
             </li>
             <li>
@@ -214,8 +309,68 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-convenience-services-guide" className={linkClass}>
+                Convenience store services for residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-utilities-guide" className={linkClass}>
                 Utilities in Japan (electricity, gas, water) →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-air-conditioner-guide" className={linkClass}>
+                Air conditioners and climate control in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-weather-living-guide" className={linkClass}>
+                Living through Japan seasons as a resident →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-micro-seasons-guide" className={linkClass}>
+                Small seasonal changes residents notice in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-seasonal-home-products-guide" className={linkClass}>
+                Seasonal home products residents eventually buy →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-household-cleaning-guide" className={linkClass}>
+                Cleaning and apartment maintenance in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-seasonal-allergies-guide" className={linkClass}>
+                Seasonal allergies and hay fever in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-rainy-day-lifestyle-guide" className={linkClass}>
+                Rainy day life in Japan for residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-holidays-long-weekends-guide" className={linkClass}>
+                Japanese holidays and long weekends explained →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-friendship-social-life-guide" className={linkClass}>
+                Making friends and social life in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-customer-service-culture-guide" className={linkClass}>
+                Customer service culture in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-mental-health-adjustment-guide" className={linkClass}>
+                Mental health and culture adjustment in Japan →
               </TrackedResidentLink>
             </li>
             <li>
@@ -224,8 +379,23 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-trash-recycling-guide" className={linkClass}>
+                Trash and recycling in Japan for residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-furniture-disposal-guide" className={linkClass}>
+                Furniture and large trash disposal in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-health-insurance" className={linkClass}>
                 National Health Insurance (NHI) for residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-healthcare-cost-guide" className={linkClass}>
+                Healthcare costs in Japan for foreign residents →
               </TrackedResidentLink>
             </li>
             <li>
@@ -236,6 +406,11 @@ export default function ResidentsPage() {
             <li>
               <TrackedResidentLink href="/residents/japan-emergency-guide" className={linkClass}>
                 Emergency numbers and disaster safety →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-natural-disasters-home-prep-guide" className={linkClass}>
+                Preparing your home for earthquakes and typhoons →
               </TrackedResidentLink>
             </li>
             <li>
@@ -251,6 +426,41 @@ export default function ResidentsPage() {
             <li>
               <TrackedResidentLink href="/residents/japan-bike-rules" className={linkClass}>
                 Bicycle rules and parking in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-bike-commuting-guide" className={linkClass}>
+                Cycling and bike commuting in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-station-life-guide" className={linkClass}>
+                Daily train station life in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-vending-machine-guide" className={linkClass}>
+                Vending machine culture in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-waiting-in-line-guide" className={linkClass}>
+                Lines, queues, and waiting culture in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-lost-and-found-guide" className={linkClass}>
+                Lost and found in Japan for foreign residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-gym-fitness-guide" className={linkClass}>
+                Gyms, fitness, and staying active in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-public-bath-sauna-guide" className={linkClass}>
+                Public baths, saunas, and relaxation culture in Japan →
               </TrackedResidentLink>
             </li>
           </ul>
@@ -288,8 +498,83 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-time-management-lifestyle-guide" className={linkClass}>
+                Time, punctuality, and daily scheduling in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-morning-routine-guide" className={linkClass}>
+                Morning life and daily routines in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-night-routine-guide" className={linkClass}>
+                Nighttime life and evening routines in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-language-learning-guide" className={linkClass}>
+                Learning Japanese while living in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/renting-apartment-japan" className={linkClass}>
                 Find a foreigner-friendly apartment →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-shared-house-guide" className={linkClass}>
+                Living in a shared house in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-apartment-viewing-guide" className={linkClass}>
+                Apartment viewings: what to check before renting →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-furnished-vs-unfurnished-guide" className={linkClass}>
+                Furnished vs unfurnished apartments in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-small-apartment-living-guide" className={linkClass}>
+                Living in small apartments in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-apartment-lighting-guide" className={linkClass}>
+                Apartment lighting and home atmosphere →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-house-slippers-guide" className={linkClass}>
+                Shoes, slippers, and indoor footwear culture →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-balcony-living-guide" className={linkClass}>
+                Balconies, laundry, and outdoor apartment space →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-noise-neighbor-etiquette-guide" className={linkClass}>
+                Noise, neighbors, and apartment etiquette →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-apartment-sounds-guide" className={linkClass}>
+                Everyday apartment sounds residents notice →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-neighborhood-guide" className={linkClass}>
+                Choosing the right neighborhood in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-local-neighborhood-shops-guide" className={linkClass}>
+                Small neighborhood shops residents eventually use →
               </TrackedResidentLink>
             </li>
             <li>
@@ -298,8 +583,18 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-pet-ownership-guide" className={linkClass}>
+                Owning pets in Japan as a foreign resident →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-moving-out-guide" className={linkClass}>
                 Moving out of an apartment in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-moving-companies-guide" className={linkClass}>
+                Moving apartments: companies, costs, and timeline →
               </TrackedResidentLink>
             </li>
             <li>

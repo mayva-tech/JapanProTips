@@ -1,5 +1,7 @@
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import { isValidElement } from "react";
 import Link from "next/link";
+import { MdxPinchZoomTable } from "./MdxPinchZoomTable";
 import {
   AffiliateBlock,
   InfoBox,
@@ -9,6 +11,24 @@ import {
 
 const inlineLinkClass =
   "font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150";
+
+function getPlainText(node: ReactNode): string {
+  if (typeof node === "string" || typeof node === "number") {
+    return String(node);
+  }
+  if (Array.isArray(node)) {
+    return node.map(getPlainText).join("");
+  }
+  if (isValidElement<{ children?: ReactNode }>(node) && node.props.children) {
+    return getPlainText(node.props.children);
+  }
+  return "";
+}
+
+function isFaqSectionHeading(children: ReactNode): boolean {
+  const text = getPlainText(children).trim().toLowerCase();
+  return text === "faq" || text === "frequently asked questions";
+}
 
 function MdxLink({
   href,
@@ -46,8 +66,10 @@ function MdxHeading2({
   children,
   ...props
 }: ComponentPropsWithoutRef<"h2">) {
+  const isFaq = isFaqSectionHeading(children);
   return (
     <h2
+      id={isFaq ? "faq" : undefined}
       className="font-display text-dark tracking-wide text-4xl mb-5"
       {...props}
     >
@@ -127,17 +149,8 @@ function MdxStrong({
   );
 }
 
-function MdxTable({ children, ...props }: ComponentPropsWithoutRef<"table">) {
-  return (
-    <div className="overflow-x-auto mb-0 max-w-full">
-      <table
-        className="w-full min-w-[560px] border-collapse border border-[#d4c9b0] bg-white font-sans text-base text-dark"
-        {...props}
-      >
-        {children}
-      </table>
-    </div>
-  );
+function MdxTable({ children }: ComponentPropsWithoutRef<"table">) {
+  return <MdxPinchZoomTable>{children}</MdxPinchZoomTable>;
 }
 
 function MdxThead({ children, ...props }: ComponentPropsWithoutRef<"thead">) {
@@ -170,7 +183,7 @@ function MdxTr({ children, ...props }: ComponentPropsWithoutRef<"tr">) {
 function MdxTh({ children, ...props }: ComponentPropsWithoutRef<"th">) {
   return (
     <th
-      className="text-left font-bold uppercase tracking-widest px-4 py-3 border-r border-[#d4c9b0] last:border-r-0"
+      className="break-words text-left font-bold uppercase tracking-wide px-2 py-2 text-xs border-r border-[#d4c9b0] last:border-r-0 sm:tracking-widest sm:px-4 sm:py-3 sm:text-sm"
       {...props}
     >
       {children}
@@ -181,7 +194,7 @@ function MdxTh({ children, ...props }: ComponentPropsWithoutRef<"th">) {
 function MdxTd({ children, ...props }: ComponentPropsWithoutRef<"td">) {
   return (
     <td
-      className="px-4 py-3 border-r border-[#d4c9b0] last:border-r-0 [&:first-child]:font-bold [&:first-child]:text-dark"
+      className="break-words px-2 py-2 text-sm border-r border-[#d4c9b0] last:border-r-0 sm:px-4 sm:py-3 sm:text-base [&:first-child]:font-bold [&:first-child]:text-dark"
       {...props}
     >
       {children}

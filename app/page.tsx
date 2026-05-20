@@ -3,6 +3,7 @@ import { FunnelCard } from "@/components/editorial/FunnelCard";
 import { HomeHero } from "@/components/editorial/HomeHero";
 import { ImportantGuidesCarousel } from "@/components/editorial/ImportantGuidesCarousel";
 import { GuideSearch } from "@/components/editorial/GuideSearch";
+import { buildGuideSearchIndex } from "@/lib/guide-search-index.server";
 import { PopularStartHereGuides } from "@/components/editorial/PopularStartHereGuides";
 import { SectionLabel } from "@/components/editorial/SectionLabel";
 import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
@@ -14,11 +15,13 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const guideSearchIndex = buildGuideSearchIndex();
+
   return (
     <main className="min-h-screen font-sans">
       <HomeHero />
 
-      <GuideSearch />
+      <GuideSearch entries={guideSearchIndex} />
 
       <PopularStartHereGuides />
 

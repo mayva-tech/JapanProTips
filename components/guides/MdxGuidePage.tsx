@@ -59,7 +59,7 @@ export async function MdxGuidePage({
     const residentHref = `/residents/${slug}`;
     return (
       <main className="bg-cream min-h-screen font-sans">
-        <article className="max-w-3xl mx-auto px-6 pt-12 pb-16">
+        <article className="mx-auto min-w-0 max-w-3xl px-6 pt-12 pb-16">
           {title}
           {intro ? <div className="mb-12">{intro}</div> : null}
           <MdxGuideContent source={beforeComparison} />

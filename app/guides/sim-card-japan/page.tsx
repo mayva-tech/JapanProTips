@@ -578,7 +578,7 @@ export default function SimCardJapanGuidePage() {
           </h2>
           <dl className="space-y-8">
             <div>
-              <dt className="font-sans font-bold text-dark text-lg mb-2">
+              <dt className="font-sans font-bold text-maroon text-lg mb-2">
                 Can I use my SIM card in Japan?
               </dt>
               <dd className="article-body m-0">
@@ -587,7 +587,7 @@ export default function SimCardJapanGuidePage() {
               </dd>
             </div>
             <div>
-              <dt className="font-sans font-bold text-dark text-lg mb-2">
+              <dt className="font-sans font-bold text-maroon text-lg mb-2">
                 Is eSIM better than pocket WiFi?
               </dt>
               <dd className="article-body m-0">
@@ -602,7 +602,7 @@ export default function SimCardJapanGuidePage() {
               </dd>
             </div>
             <div>
-              <dt className="font-sans font-bold text-dark text-lg mb-2">
+              <dt className="font-sans font-bold text-maroon text-lg mb-2">
                 What happens if I run out of data?
               </dt>
               <dd className="article-body m-0">
@@ -610,7 +610,7 @@ export default function SimCardJapanGuidePage() {
               </dd>
             </div>
             <div>
-              <dt className="font-sans font-bold text-dark text-lg mb-2">
+              <dt className="font-sans font-bold text-maroon text-lg mb-2">
                 Can I buy a SIM at the airport?
               </dt>
               <dd className="article-body m-0">

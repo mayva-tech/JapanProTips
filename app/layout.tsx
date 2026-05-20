@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Suspense } from "react";
 import { Barlow, Vollkorn } from "next/font/google";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
@@ -28,6 +28,14 @@ const vollkorn = Vollkorn({
   style: ["normal", "italic"],
   variable: "--font-serif",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

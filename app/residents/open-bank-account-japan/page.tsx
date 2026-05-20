@@ -41,6 +41,16 @@ export default function OpenBankAccountJapanPage() {
             </Link>{" "}
             through it.
           </p>
+          <p>
+            After the account is open, set up the app and furikomi transfers:{" "}
+            <Link
+              href="/residents/japan-banking-apps-guide"
+              className="font-sans font-bold text-rust hover:text-maroon transition-colors duration-150"
+            >
+              banking apps and online banking guide
+            </Link>
+            .
+          </p>
         </div>
 
         <section className="mb-12">
