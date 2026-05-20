@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
+import { RecommendedGearBox } from "@/components/RecommendedGearBox";
 
 export const metadata: Metadata = {
   title:
@@ -98,6 +100,12 @@ export default function GettingAroundJapanGuidePage() {
               </div>
             </div>
           </div>
+
+          <RecommendedGearBox
+            gearId="getting-around-japan"
+            title="Recommended gear for getting around Japan"
+            intro="These are practical items that solve common walking, navigation, and station problems on train-heavy days."
+          />
 
           <div>
             <h2 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
@@ -220,6 +228,8 @@ export default function GettingAroundJapanGuidePage() {
               </li>
             </ul>
           </div>
+
+          <NextStepGuides guideId="getting-around-japan" />
 
           <GuideEndCta
             parentHref="/guides/japan-itinerary"

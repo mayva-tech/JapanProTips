@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
 
 export const metadata: Metadata = {
   title: "Suica vs PASMO: Which IC Card Should You Use in Japan?",
@@ -192,6 +193,8 @@ export default function SuicaVsPasmoPage() {
               </li>
             </ul>
           </section>
+
+          <NextStepGuides guideId="suica-vs-pasmo" />
 
           <GuideEndCta
             parentHref="/guides/japan-trains"

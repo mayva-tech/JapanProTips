@@ -1,4 +1,4 @@
-import type { GuideSearchEntry } from "@/lib/guide-search";
+﻿import type { GuideSearchEntry } from "@/lib/guide-search";
 import { RESIDENT_SLUG_SECTION } from "@/lib/resident-guide-sections";
 
 /** Resident guides that still use TSX page bodies (no content/residents MDX yet). */
@@ -65,25 +65,6 @@ export const RESIDENT_TSX_SEARCH_ENTRIES: GuideSearchEntry[] = [
       "tokyo",
       "yen",
       "monthly",
-      "resident",
-    ],
-  },
-  {
-    title: "Best Phone Plans in Japan (Cheap vs Big Carriers)",
-    description:
-      "Rakuten Mobile, UQ mobile, and IIJmio compared: monthly cost bands, contract vs prepaid, when cheap MVNOs win, and when to pay the big three.",
-    href: "/residents/japan-phone-plans",
-    category: "Residents",
-    section: RESIDENT_SLUG_SECTION["japan-phone-plans"] ?? "Start Here",
-    keywords: [
-      "phone",
-      "plan",
-      "rakuten",
-      "uq",
-      "iijmio",
-      "mvno",
-      "carrier",
-      "sim",
       "resident",
     ],
   },

@@ -2,6 +2,9 @@ import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import { isValidElement } from "react";
 import Link from "next/link";
 import { MdxPinchZoomTable } from "./MdxPinchZoomTable";
+import { NextStepGuides } from "@/components/NextStepGuides";
+import { RecommendedGearBox } from "@/components/RecommendedGearBox";
+import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 import {
   AffiliateBlock,
   InfoBox,
@@ -210,4 +213,7 @@ export const mdxGuideComponents = {
   InfoBox,
   AffiliateBlock,
   RelatedGuides,
+  RecommendedGearBox,
+  RecommendedServicesBox,
+  NextStepGuides,
 };

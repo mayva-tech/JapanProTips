@@ -1,13 +1,5 @@
-import { MdxGuidePage } from "@/components/guides/MdxGuidePage";
-import { createMdxGuideMetadata } from "@/lib/content/mdx-guide-route";
+import { permanentRedirect } from "next/navigation";
 
-const SLUG = "japan-clinics-hospitals";
-const COLLECTION = "residents" as const;
-
-export const generateMetadata = () => createMdxGuideMetadata(SLUG, COLLECTION);
-
-export default function JapanClinicsHospitalsPage() {
-  return (
-    <MdxGuidePage slug={SLUG} collection={COLLECTION} layout="resident" />
-  );
+export default function JapanClinicsHospitalsRedirect() {
+  permanentRedirect("/residents/clinics-vs-hospitals-in-japan");
 }

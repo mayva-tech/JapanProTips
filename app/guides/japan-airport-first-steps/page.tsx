@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { RecommendedGearBox } from "@/components/RecommendedGearBox";
+import { resolveAffiliateLink } from "@/lib/affiliate-links";
+import { NextStepGuides } from "@/components/NextStepGuides";
+import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 
 export const metadata: Metadata = {
   title:
@@ -49,6 +53,48 @@ export default function JapanAirportFirstStepsPage() {
       }
       beforeComparison={
         <>
+        <RecommendedGearBox
+          title="Recommended gear for your first hour in Japan"
+          intro="These are practical items that solve common problems travelers run into right after landing: dead phones, scattered documents, and long walks to trains."
+          items={[
+            {
+              name: "Portable power bank",
+              reason:
+                "Immigration queues and setup apps drain battery before you reach a hotel outlet.",
+              linkId: "gear-portable-power-bank",
+              href: resolveAffiliateLink("gear-portable-power-bank"),
+            },
+            {
+              name: "Travel document organizer",
+              reason:
+                "Keeps passport, arrival forms, and hotel printouts in one place while you juggle bags.",
+              linkId: "gear-travel-document-organizer",
+              href: resolveAffiliateLink("gear-travel-document-organizer"),
+            },
+            {
+              name: "Compression socks",
+              reason:
+                "Helpful on long flights before you start walking station corridors the same day.",
+              linkId: "gear-compression-socks",
+              href: resolveAffiliateLink("gear-compression-socks"),
+            },
+            {
+              name: "Small crossbody or neck pouch",
+              reason:
+                "Frees your hands for luggage carts, ticket machines, and IC card taps at gates.",
+              linkId: "gear-crossbody-pouch",
+              href: resolveAffiliateLink("gear-crossbody-pouch"),
+            },
+            {
+              name: "Reusable water bottle",
+              reason:
+                "Airport shops are pricey; vending machines are everywhere once you are in the city.",
+              linkId: "gear-reusable-water-bottle",
+              href: resolveAffiliateLink("gear-reusable-water-bottle"),
+            },
+          ]}
+        />
+
         <section className="mb-12">
           <h2 className="editorial-heading mb-4">
             Step 1: Immigration (What Actually Happens)
@@ -208,6 +254,8 @@ export default function JapanAirportFirstStepsPage() {
           </div>
         </section>
 
+        <RecommendedServicesBox serviceId="japan-airport-first-steps" />
+
         <section className="mb-12">
           <h2 className="editorial-heading mb-4">
             Common Mistakes at the Airport
@@ -264,6 +312,8 @@ export default function JapanAirportFirstStepsPage() {
             Start here: trip planning checklist →
           </Link>
         </section>
+
+        <NextStepGuides guideId="japan-airport-first-steps" />
 
         <GuideEndCta
           parentHref="/guides/japan-airport-to-city"

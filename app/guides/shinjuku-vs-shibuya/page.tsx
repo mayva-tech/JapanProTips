@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
 
 export const metadata: Metadata = {
   title: "Shinjuku vs Shibuya: Where to Stay in Tokyo?",
@@ -199,6 +200,8 @@ export default function ShinjukuVsShibuyaPage() {
               </li>
             </ul>
           </section>
+
+          <NextStepGuides guideId="shinjuku-vs-shibuya" />
 
           <GuideEndCta
             parentHref="/guides/where-to-stay-tokyo"

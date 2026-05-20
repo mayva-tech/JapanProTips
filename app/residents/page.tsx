@@ -95,7 +95,7 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
-              <TrackedResidentLink href="/residents/japan-mail-documents-guide" className={linkClass}>
+              <TrackedResidentLink href="/residents/japan-official-mail-guide" className={linkClass}>
                 Important mail and official documents in Japan →
               </TrackedResidentLink>
             </li>
@@ -120,17 +120,22 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-bank-transfers-furikomi" className={linkClass}>
+                Furikomi: Japanese bank transfers explained →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/sim-card-japan-residents" className={linkClass}>
                 Choose a long-term SIM as a resident →
               </TrackedResidentLink>
             </li>
             <li>
-              <TrackedResidentLink href="/residents/japan-internet-setup" className={linkClass}>
+              <TrackedResidentLink href="/residents/japan-apartment-internet" className={linkClass}>
                 Home internet and Wi-Fi setup →
               </TrackedResidentLink>
             </li>
             <li>
-              <TrackedResidentLink href="/residents/japan-phone-plans" className={linkClass}>
+              <TrackedResidentLink href="/residents/japan-mobile-phone-plans" className={linkClass}>
                 Phone plans: Rakuten, UQ, IIJmio vs big carriers →
               </TrackedResidentLink>
             </li>
@@ -263,6 +268,11 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-beginner-grocery-list" className={linkClass}>
+                Your first grocery list in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-self-checkout-guide" className={linkClass}>
                 Self-checkout and everyday machines in Japan →
               </TrackedResidentLink>
@@ -298,6 +308,11 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-amazon-rakuten-yahoo" className={linkClass}>
+                Amazon Japan vs Rakuten vs Yahoo Shopping →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-package-delivery-guide" className={linkClass}>
                 Package deliveries in Japan for residents →
               </TrackedResidentLink>
@@ -313,7 +328,7 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
-              <TrackedResidentLink href="/residents/japan-utilities-guide" className={linkClass}>
+              <TrackedResidentLink href="/residents/japan-utilities-setup" className={linkClass}>
                 Utilities in Japan (electricity, gas, water) →
               </TrackedResidentLink>
             </li>
@@ -328,6 +343,11 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-first-winter" className={linkClass}>
+                Your first winter living in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-micro-seasons-guide" className={linkClass}>
                 Small seasonal changes residents notice in Japan →
               </TrackedResidentLink>
@@ -335,6 +355,11 @@ export default function ResidentsPage() {
             <li>
               <TrackedResidentLink href="/residents/japan-seasonal-home-products-guide" className={linkClass}>
                 Seasonal home products residents eventually buy →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/japan-household-items" className={linkClass}>
+                Household items foreign residents always buy →
               </TrackedResidentLink>
             </li>
             <li>
@@ -358,7 +383,7 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
-              <TrackedResidentLink href="/residents/japan-friendship-social-life-guide" className={linkClass}>
+              <TrackedResidentLink href="/residents/japan-social-life-guide" className={linkClass}>
                 Making friends and social life in Japan →
               </TrackedResidentLink>
             </li>
@@ -393,12 +418,12 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
-              <TrackedResidentLink href="/residents/japan-healthcare-cost-guide" className={linkClass}>
+              <TrackedResidentLink href="/residents/japan-healthcare-costs" className={linkClass}>
                 Healthcare costs in Japan for foreign residents →
               </TrackedResidentLink>
             </li>
             <li>
-              <TrackedResidentLink href="/residents/japan-clinics-hospitals" className={linkClass}>
+              <TrackedResidentLink href="/residents/clinics-vs-hospitals-in-japan" className={linkClass}>
                 Clinics and hospitals in Japan →
               </TrackedResidentLink>
             </li>
@@ -492,6 +517,11 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-work-contracts" className={linkClass}>
+                Japanese work contracts for foreign residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-work-culture-guide" className={linkClass}>
                 Japanese work culture for foreign employees →
               </TrackedResidentLink>
@@ -532,7 +562,12 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
-              <TrackedResidentLink href="/residents/japan-furnished-vs-unfurnished-guide" className={linkClass}>
+              <TrackedResidentLink href="/residents/japan-room-measurements" className={linkClass}>
+                Japanese room sizes, tatami, and layout terms →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/furnished-vs-unfurnished-apartments-in-japan" className={linkClass}>
                 Furnished vs unfurnished apartments in Japan →
               </TrackedResidentLink>
             </li>
@@ -562,6 +597,11 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-noise-complaints" className={linkClass}>
+                Noise complaints in Japan apartments →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-apartment-sounds-guide" className={linkClass}>
                 Everyday apartment sounds residents notice →
               </TrackedResidentLink>
@@ -579,6 +619,11 @@ export default function ResidentsPage() {
             <li>
               <TrackedResidentLink href="/residents/japan-guarantor-system" className={linkClass}>
                 Japan apartment guarantor system explained →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/apartment-rejections-in-japan" className={linkClass}>
+                Why foreign residents get rejected for apartments →
               </TrackedResidentLink>
             </li>
             <li>

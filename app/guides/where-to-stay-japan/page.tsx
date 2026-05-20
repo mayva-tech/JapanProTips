@@ -6,6 +6,7 @@ import {
 } from "@/components/guides/WhereToStayArticle";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
 
 export const metadata: Metadata = {
   title:
@@ -54,6 +55,8 @@ export default function WhereToStayJapanPage() {
           <section className="space-y-10 max-w-xl">
             <WhereToStayArticleAfterComparison />
           </section>
+
+          <NextStepGuides guideId="where-to-stay-japan" />
 
           <GuideEndCta
             parentHref="/guides/japan-itinerary"

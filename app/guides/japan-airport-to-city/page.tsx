@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
+import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 
 export const metadata: Metadata = {
   title:
@@ -95,6 +97,8 @@ export default function JapanAirportToCityPage() {
             Get your SIM ready before arrival →
           </Link>
         </section>
+
+        <RecommendedServicesBox serviceId="japan-airport-to-city" />
 
         <section className="mb-12">
           <h2 className="editorial-heading mb-4">
@@ -317,6 +321,8 @@ export default function JapanAirportToCityPage() {
           </ul>
 
         </section>
+
+        <NextStepGuides guideId="japan-airport-to-city" />
 
         <GuideEndCta
           parentHref="/guides/japan-itinerary"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceBlock } from "@/components/ServiceBlock";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
+import { NextStepGuides } from "@/components/NextStepGuides";
 
 export const metadata: Metadata = {
   title:
@@ -198,6 +199,8 @@ export default function RentingApartmentJapanPage() {
             </li>
           </ul>
         </section>
+
+        <NextStepGuides guideId="renting-apartment-japan" />
 
         <ResidentsCrosslinks currentHref="/residents/renting-apartment-japan" />
       </article>

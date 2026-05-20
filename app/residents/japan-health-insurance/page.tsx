@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
 
@@ -36,7 +36,7 @@ export default function JapanHealthInsurancePage() {
           </p>
           <p>
             For what you actually pay at clinics and pharmacies, see the{" "}
-            <Link href="/residents/japan-healthcare-cost-guide" className={linkClass}>
+            <Link href="/residents/japan-healthcare-costs" className={linkClass}>
               healthcare costs guide
             </Link>
             .
@@ -511,7 +511,7 @@ export default function JapanHealthInsurancePage() {
               </Link>
             </li>
             <li>
-              <Link href="/residents/japan-phone-plans" className={linkClass}>
+              <Link href="/residents/japan-mobile-phone-plans" className={linkClass}>
                 Phone plans in Japan →
               </Link>
             </li>

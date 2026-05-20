@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
 
 export const metadata: Metadata = {
   title: "Where to Stay in Kyoto for First-Time Visitors",
@@ -475,6 +476,8 @@ function FooterContent() {
           </li>
         </ul>
       </section>
+
+      <NextStepGuides guideId="where-to-stay-kyoto" />
 
       <GuideEndCta
         parentHref="/guides/where-to-stay-japan"

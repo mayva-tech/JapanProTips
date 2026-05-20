@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceBlock } from "@/components/ServiceBlock";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
@@ -29,7 +29,7 @@ export default function PayBillsJapanPage() {
           <p>
             New to move-in setup? Start with the{" "}
             <Link
-              href="/residents/japan-utilities-guide"
+              href="/residents/japan-utilities-setup"
               className="font-sans font-bold text-rust hover:text-maroon transition-colors duration-150"
             >
               utilities guide for foreign residents

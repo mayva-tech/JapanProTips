@@ -3,6 +3,9 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
+import { RecommendedGearBox } from "@/components/RecommendedGearBox";
+import { resolveAffiliateLink } from "@/lib/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Japan Packing List for Every Season",
@@ -87,6 +90,48 @@ export default function JapanPackingListPage() {
       }
       beforeComparison={
         <>
+          <RecommendedGearBox
+            title="Recommended gear for packing a Japan trip"
+            intro="These are practical items that solve common problems travelers run into when packing for Japan's walking-heavy, train-first trips."
+            items={[
+              {
+                name: "Packing cubes",
+                reason:
+                  "Keeps outfits sorted in tight hotel drawers and makes repacking between cities faster.",
+                linkId: "gear-packing-cubes",
+                href: resolveAffiliateLink("gear-packing-cubes"),
+              },
+              {
+                name: "Comfortable walking shoes",
+                reason:
+                  "You will log high step counts on pavement and station stairs. Cushioned shoes matter more than dress shoes.",
+                linkId: "gear-walking-shoes",
+                href: resolveAffiliateLink("gear-walking-shoes"),
+              },
+              {
+                name: "Lightweight daypack",
+                reason:
+                  "Folds small for temple days and train hops when your main bag stays at the hotel.",
+                linkId: "gear-lightweight-daypack",
+                href: resolveAffiliateLink("gear-lightweight-daypack"),
+              },
+              {
+                name: "Portable power bank",
+                reason:
+                  "Maps, tickets, and translation apps drain batteries on long transit days.",
+                linkId: "gear-portable-power-bank",
+                href: resolveAffiliateLink("gear-portable-power-bank"),
+              },
+              {
+                name: "Travel laundry sheets",
+                reason:
+                  "Hand-wash socks and base layers in a sink when you want fewer outfits in the bag.",
+                linkId: "gear-travel-laundry-sheets",
+                href: resolveAffiliateLink("gear-travel-laundry-sheets"),
+              },
+            ]}
+          />
+
           <section className="mb-12">
             <H2>Quick rules before you pack</H2>
             <ol className="article-body list-decimal space-y-3 pl-6 max-w-2xl">
@@ -507,6 +552,8 @@ export default function JapanPackingListPage() {
               </li>
             </ul>
           </section>
+
+          <NextStepGuides guideId="japan-packing-list" />
 
           <GuideEndCta
             parentHref="/start-here"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
 
 export const metadata: Metadata = {
   title: "Do You Need a SIM Card in Japan?",
@@ -136,6 +137,8 @@ export default function DoYouNeedSimJapanPage() {
               </li>
             </ul>
           </section>
+
+          <NextStepGuides guideId="do-you-need-sim-japan" />
 
           <GuideEndCta
             parentHref="/guides/sim-card-japan"

@@ -1,7 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { RecommendedGearBox } from "@/components/RecommendedGearBox";
+import { resolveAffiliateLink } from "@/lib/affiliate-links";
+import { NextStepGuides } from "@/components/NextStepGuides";
+import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 import { TrackedOutboundSimLink } from "@/components/TrackedOutboundSimLink";
 
@@ -62,6 +66,48 @@ export default function SimCardJapanGuidePage() {
         <>
         <div className="border-t-2 border-dark mb-10" />
 
+        <RecommendedGearBox
+          title="Recommended gear for staying connected in Japan"
+          intro="These are practical items that solve common problems travelers run into with phones, data setup, and long days on transit."
+          items={[
+            {
+              name: "eSIM-compatible phone (check before you fly)",
+              reason:
+                "Most smooth data setup starts with a phone that supports eSIM and is unlocked for travel.",
+              linkId: "gear-esim-phone-check",
+              href: resolveAffiliateLink("gear-esim-phone-check"),
+            },
+            {
+              name: "Portable power bank",
+              reason:
+                "Navigation, QR tickets, and translation apps drain battery faster than at home.",
+              linkId: "gear-portable-power-bank",
+              href: resolveAffiliateLink("gear-portable-power-bank"),
+            },
+            {
+              name: "Phone crossbody strap or lanyard",
+              reason:
+                "Keeps your phone secure when both hands are on luggage and ticket gates.",
+              linkId: "gear-phone-strap",
+              href: resolveAffiliateLink("gear-phone-strap"),
+            },
+            {
+              name: "Spare charging cable",
+              reason:
+                "Borrowed hotel cables fail at the worst time. A short backup cable fits any bag.",
+              linkId: "gear-spare-charging-cable",
+              href: resolveAffiliateLink("gear-spare-charging-cable"),
+            },
+            {
+              name: "Waterproof phone pouch",
+              reason:
+                "Rainy season and sudden showers are common. A pouch protects maps when umbrellas fail.",
+              linkId: "gear-waterproof-phone-pouch",
+              href: resolveAffiliateLink("gear-waterproof-phone-pouch"),
+            },
+          ]}
+        />
+
         <section className="mb-12 max-w-2xl">
           <h2
             className="font-display text-dark tracking-wide mb-4"
@@ -88,7 +134,7 @@ export default function SimCardJapanGuidePage() {
             </li>
             <li>
               <Link
-                href="/residents/japan-phone-plans"
+                href="/residents/japan-mobile-phone-plans"
                 className="font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150"
               >
                 Phone plans for residents (Rakuten, UQ, IIJmio) →
@@ -182,6 +228,8 @@ export default function SimCardJapanGuidePage() {
       }
       afterComparison={
         <>
+        <RecommendedServicesBox serviceId="sim-card-japan" />
+
         {/* Comparison */}
         <section className="mb-12">
           <h2
@@ -619,6 +667,8 @@ export default function SimCardJapanGuidePage() {
             </div>
           </dl>
         </section>
+
+        <NextStepGuides guideId="sim-card-japan" />
 
         <GuideEndCta
           parentHref="/guides/japan-itinerary"

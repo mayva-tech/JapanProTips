@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
 
 export const metadata: Metadata = {
   title:
@@ -242,6 +243,8 @@ export default function EsimVsPocketWifiJapanPage() {
             </p>
           </div>
         </section>
+
+        <NextStepGuides guideId="esim-vs-pocket-wifi-japan" />
 
         <GuideEndCta
           parentHref="/guides/japan-airport-first-steps"

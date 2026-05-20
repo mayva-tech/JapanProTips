@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
 import { TrackedOutboundSimLink } from "@/components/TrackedOutboundSimLink";
 
 export const metadata: Metadata = {
@@ -262,6 +263,8 @@ export default function AiraloVsUbigiJapanPage() {
             </li>
           </ul>
         </section>
+
+        <NextStepGuides guideId="airalo-vs-ubigi-japan" />
 
         <GuideEndCta
           parentHref="/guides/sim-card-japan"

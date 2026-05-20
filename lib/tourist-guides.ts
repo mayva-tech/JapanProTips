@@ -40,6 +40,16 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         gtagLabel: "start_here",
       },
       {
+        category: "Daily life",
+        title: "Japan Escalator Rules (Tokyo vs Osaka)",
+        description:
+          "Stand left or right? Regional differences, rush hour flow, luggage, safety signs, and how to avoid blocking commuters.",
+        href: "/guides/japan-escalator-rules",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Commuters on an escalator at a Japan train station",
+        gtagLabel: "start_here",
+      },
+      {
         category: "Planning",
         title: "Do You Need Travel Insurance for Japan?",
         description:
@@ -60,6 +70,16 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         gtagLabel: "start_here",
       },
       {
+        category: "Planning",
+        title: "Japan Travel Fatigue and Burnout",
+        description:
+          "Why trips exhaust you: walking, trains, overstimulation, packed plans, and how to pace Tokyo, Kyoto, and Osaka without crashing mid-trip.",
+        href: "/guides/japan-travel-fatigue",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Traveler resting on a bench after a long day in Japan",
+        gtagLabel: "start_here",
+      },
+      {
         category: "Packing",
         title: "Japan Packing List by Season",
         description:
@@ -67,6 +87,16 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         href: "/guides/japan-packing-list",
         imageSrc: IMAGES.hero.primary,
         imageAlt: "Traveler with luggage in Japan",
+        gtagLabel: "start_here",
+      },
+      {
+        category: "Daily life",
+        title: "Laundry in Japan for Travelers",
+        description:
+          "Coin laundries, hotel washers, detergent labels, drying in humidity, and mistakes that leave you with damp clothes.",
+        href: "/guides/japan-laundry-guide",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Traveler using a coin laundry in Japan",
         gtagLabel: "start_here",
       },
       {
@@ -87,6 +117,16 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         href: "/guides/japan-restaurant-guide",
         imageSrc: IMAGES.hero.primary,
         imageAlt: "Dining counter and menu planning in Japan",
+        gtagLabel: "start_here",
+      },
+      {
+        category: "Daily life",
+        title: "Food Allergies in Japan: What to Know",
+        description:
+          "Hidden ingredients, dashi and soy sauce, allergy cards, konbini labels, restaurant communication, and calmer strategies for allergy-sensitive travelers.",
+        href: "/guides/japan-food-allergy-guide",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Traveler reading food labels in a Japan convenience store",
         gtagLabel: "start_here",
       },
       {
@@ -152,6 +192,16 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         href: "/guides/japan-airport-first-steps",
         imageSrc: IMAGES.hero.airport,
         imageAlt: "Japan airport arrivals hall",
+        gtagLabel: "transport",
+      },
+      {
+        category: "Airport",
+        title: "How to Beat Jet Lag in Japan",
+        description:
+          "Recover after long flights: first-day pacing, konbini kit, sleep timing, station fatigue, and mistakes that waste your first three days.",
+        href: "/guides/japan-jetlag-survival",
+        imageSrc: IMAGES.hero.airport,
+        imageAlt: "Tired traveler arriving at a Japan airport",
         gtagLabel: "transport",
       },
       {
@@ -238,12 +288,32 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         gtagLabel: "esim",
       },
       {
+        category: "Apps",
+        title: "How to Use Google Maps in Japan",
+        description:
+          "Station exits, underground transfers, walking times, offline backup, and mistakes that waste train time in Tokyo.",
+        href: "/guides/using-google-maps-in-japan",
+        imageSrc: IMAGES.guides.maps,
+        imageAlt: "Traveler checking Google Maps at a Japan train station",
+        gtagLabel: "esim",
+      },
+      {
         category: "SIM",
         title: "Do You Need a SIM in Japan?",
         description: "When you need your own data and when you can skip it.",
         href: "/guides/do-you-need-sim-japan",
         imageSrc: IMAGES.guides.esim,
         imageAlt: "Mobile data for Japan travel",
+        gtagLabel: "esim",
+      },
+      {
+        category: "SIM",
+        title: "Public WiFi in Japan: What Works",
+        description:
+          "Airports, stations, konbini, hotels: where free WiFi helps, where it fails underground, and why most travelers still want eSIM or SIM.",
+        href: "/guides/japan-public-wifi",
+        imageSrc: IMAGES.guides.esim,
+        imageAlt: "Traveler connecting to WiFi on a phone in Japan",
         gtagLabel: "esim",
       },
       {
@@ -371,6 +441,16 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
       },
       {
         category: "Money",
+        title: "How to Withdraw Cash in Japan (ATMs and Fees)",
+        description:
+          "Seven Bank, Japan Post, foreign card failures, DCC traps, rural cash, and how much yen to carry without fee shock.",
+        href: "/guides/japan-cash-withdrawal-guide",
+        imageSrc: IMAGES.hero.suica,
+        imageAlt: "Tourist using an ATM at a Japan convenience store",
+        gtagLabel: "budget",
+      },
+      {
+        category: "Money",
         title: "Japan Trip Cost Breakdown",
         description: "Real yen ranges for food, trains, and lodging in 2026.",
         href: "/guides/japan-budget-breakdown",
@@ -406,6 +486,16 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         href: "/guides/japan-convenience-store-guide",
         imageSrc: IMAGES.hero.primary,
         imageAlt: "Japan convenience store shelves",
+        gtagLabel: "budget",
+      },
+      {
+        category: "Daily life",
+        title: "7-Eleven vs Lawson vs FamilyMart",
+        description:
+          "Which konbini chain is best for food, coffee, ATMs, late-night meals, and what tourists notice after using all three.",
+        href: "/guides/japan-familymart-lawson-7eleven-comparison",
+        imageSrc: IMAGES.hero.primary,
+        imageAlt: "Japanese convenience store storefront at night",
         gtagLabel: "budget",
       },
       {
@@ -450,6 +540,16 @@ export const TOURIST_GUIDE_SECTIONS: GuideCardSection[] = [
         href: "/guides/where-to-stay-japan",
         imageSrc: IMAGES.guides.maps,
         imageAlt: "Japan lodging planning map",
+        gtagLabel: "hotel",
+      },
+      {
+        category: "Lodging",
+        title: "Japanese Hotel Room Size: What to Expect",
+        description:
+          "Business hotels, bathrooms, beds, luggage on the floor, Tokyo space, and how travelers adapt after the first-night shock.",
+        href: "/guides/japan-hotel-room-size",
+        imageSrc: IMAGES.guides.maps,
+        imageAlt: "Compact Japanese hotel room layout",
         gtagLabel: "hotel",
       },
       {

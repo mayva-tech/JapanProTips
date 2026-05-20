@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
+import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 
 export const metadata: Metadata = {
   title:
@@ -173,6 +175,8 @@ export default function WhereToStayTokyoPage() {
             </p>
           </div>
         </section>
+
+        <RecommendedServicesBox serviceId="where-to-stay-tokyo" />
         </>
       }
       afterComparison={
@@ -278,6 +282,8 @@ export default function WhereToStayTokyoPage() {
             </li>
           </ul>
         </section>
+
+        <NextStepGuides guideId="where-to-stay-tokyo" />
 
         <GuideEndCta
           parentHref="/guides/where-to-stay-japan"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
 
 export const metadata: Metadata = {
   title: "Haneda to Tokyo: Best Way to Get to Your Hotel",
@@ -216,6 +217,8 @@ export default function HanedaToTokyoPage() {
               </li>
             </ul>
           </section>
+
+          <NextStepGuides guideId="haneda-to-tokyo" />
 
           <GuideEndCta
             parentHref="/guides/japan-airport-to-city"

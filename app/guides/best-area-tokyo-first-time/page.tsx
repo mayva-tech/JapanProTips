@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
 
 export const metadata: Metadata = {
   title: "Best Area to Stay in Tokyo for First-Time Visitors",
@@ -222,6 +223,8 @@ export default function BestAreaTokyoFirstTimePage() {
               </li>
             </ul>
           </section>
+
+          <NextStepGuides guideId="best-area-tokyo-first-time" />
 
           <GuideEndCta
             parentHref="/guides/where-to-stay-tokyo"

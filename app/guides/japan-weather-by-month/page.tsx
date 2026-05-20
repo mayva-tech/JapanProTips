@@ -3,6 +3,8 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
+import { RecommendedGearBox } from "@/components/RecommendedGearBox";
 
 export const metadata: Metadata = {
   title: "Japan Weather by Month (What to Expect Before You Go)",
@@ -146,6 +148,12 @@ function MainMonths() {
           </table>
         </div>
       </section>
+
+      <RecommendedGearBox
+        gearId="japan-weather-by-month"
+        title="Recommended gear for Japan weather by season"
+        intro="These are practical items that solve common heat, rain, and walking problems tied to each season."
+      />
 
       <MonthJanuary />
       <MonthFebruary />
@@ -549,6 +557,8 @@ function FooterSections() {
           </li>
         </ul>
       </section>
+
+      <NextStepGuides guideId="japan-weather-by-month" />
 
       <GuideEndCta
         parentHref="/guides/japan-packing-list"

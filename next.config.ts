@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const RESIDENT_GUIDE_REDIRECTS = [
-  "japan-phone-plans",
+  "japan-mobile-phone-plans",
   "japan-living-cost",
   "japan-bank-account",
   "renting-apartment-japan",

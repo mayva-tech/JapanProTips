@@ -1,4 +1,4 @@
-import { TrackedCtaLink } from "@/components/TrackedCtaLink";
+﻿import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
 import { conversionLabelForHref } from "@/lib/gtag-events";
 
@@ -24,7 +24,7 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
     label: "How Japanese addresses work →",
   },
   {
-    href: "/residents/japan-mail-documents-guide",
+    href: "/residents/japan-official-mail-guide",
     label: "Important mail and official documents in Japan →",
   },
   {
@@ -44,7 +44,7 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
     label: "Furniture and large trash disposal in Japan →",
   },
   {
-    href: "/residents/japan-internet-setup",
+    href: "/residents/japan-apartment-internet",
     label: "Home internet and Wi-Fi setup →",
   },
   {
@@ -84,6 +84,10 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
     label: "Online shopping in Japan for foreign residents →",
   },
   {
+    href: "/residents/japan-amazon-rakuten-yahoo",
+    label: "Amazon Japan vs Rakuten vs Yahoo Shopping →",
+  },
+  {
     href: "/residents/japan-package-delivery-guide",
     label: "Package deliveries in Japan for residents →",
   },
@@ -100,7 +104,7 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
     label: "Choose a long-term SIM as a resident →",
   },
   {
-    href: "/residents/japan-phone-plans",
+    href: "/residents/japan-mobile-phone-plans",
     label: "Phone plans in Japan (Rakuten, UQ, IIJmio) →",
   },
   {
@@ -112,7 +116,7 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
     label: "Convenience store services for residents →",
   },
   {
-    href: "/residents/japan-utilities-guide",
+    href: "/residents/japan-utilities-setup",
     label: "Utilities in Japan (electricity, gas, water) →",
   },
   {
@@ -132,6 +136,10 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
     label: "Seasonal home products residents eventually buy →",
   },
   {
+    href: "/residents/japan-household-items",
+    label: "Household items foreign residents always buy →",
+  },
+  {
     href: "/residents/japan-household-cleaning-guide",
     label: "Cleaning and apartment maintenance in Japan →",
   },
@@ -142,6 +150,10 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
   {
     href: "/residents/japan-rainy-day-lifestyle-guide",
     label: "Rainy day life in Japan for residents →",
+  },
+  {
+    href: "/residents/japan-first-winter",
+    label: "Your first winter living in Japan →",
   },
   {
     href: "/residents/japan-holidays-long-weekends-guide",
@@ -197,10 +209,14 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
   },
   {
     href: "/residents/japan-apartment-viewing-guide",
-    label: "Apartment viewings: what to check before renting →",
+    label: "Apartment viewings in Japan for foreign residents →",
   },
   {
-    href: "/residents/japan-furnished-vs-unfurnished-guide",
+    href: "/residents/japan-room-measurements",
+    label: "Japanese room sizes, tatami, and layout terms →",
+  },
+  {
+    href: "/residents/furnished-vs-unfurnished-apartments-in-japan",
     label: "Furnished vs unfurnished apartments in Japan →",
   },
   {
@@ -222,6 +238,10 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
   {
     href: "/residents/japan-noise-neighbor-etiquette-guide",
     label: "Noise, neighbors, and apartment etiquette →",
+  },
+  {
+    href: "/residents/japan-noise-complaints",
+    label: "Noise complaints and quiet hours in Japan →",
   },
   {
     href: "/residents/japan-apartment-sounds-guide",
@@ -276,6 +296,10 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
     label: "Grocery shopping in Japan for foreign residents →",
   },
   {
+    href: "/residents/japan-beginner-grocery-list",
+    label: "Your first grocery list in Japan →",
+  },
+  {
     href: "/residents/japan-self-checkout-guide",
     label: "Self-checkout and everyday machines in Japan →",
   },
@@ -304,11 +328,11 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
     label: "National Health Insurance (NHI) in Japan →",
   },
   {
-    href: "/residents/japan-healthcare-cost-guide",
+    href: "/residents/japan-healthcare-costs",
     label: "Healthcare costs in Japan for foreign residents →",
   },
   {
-    href: "/residents/japan-clinics-hospitals",
+    href: "/residents/clinics-vs-hospitals-in-japan",
     label: "Clinics and hospitals in Japan →",
   },
   {
@@ -344,6 +368,14 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
     label: "Finding jobs in Japan as a foreign resident →",
   },
   {
+    href: "/residents/japan-salary-system",
+    label: "Salaries, deductions, and payday culture in Japan →",
+  },
+  {
+    href: "/residents/japan-work-contracts",
+    label: "Japanese work contracts for foreign residents →",
+  },
+  {
     href: "/residents/japan-work-culture-guide",
     label: "Japanese work culture for foreign employees →",
   },
@@ -364,7 +396,7 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
     label: "Learning Japanese while living in Japan →",
   },
   {
-    href: "/residents/japan-friendship-social-life-guide",
+    href: "/residents/japan-social-life-guide",
     label: "Making friends and social life in Japan →",
   },
   {

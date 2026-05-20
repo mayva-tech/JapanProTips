@@ -3,6 +3,9 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { RecommendedGearBox } from "@/components/RecommendedGearBox";
+import { resolveAffiliateLink } from "@/lib/affiliate-links";
+import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 
 export const metadata: Metadata = {
   title: "Luggage Delivery in Japan (Yamato, Airport Shipping, Hotels)",
@@ -94,6 +97,48 @@ function IntroBlock() {
 function MainContent() {
   return (
     <>
+      <RecommendedGearBox
+        title="Recommended gear for luggage forwarding in Japan"
+        intro="These are practical items that solve common problems travelers run into when shipping bags between hotels or to the airport."
+        items={[
+          {
+            name: "Luggage tags with clear label window",
+            reason:
+              "Courier staff read printed Japanese addresses. A visible tag reduces mix-ups at hotel desks.",
+            linkId: "gear-luggage-tags",
+            href: resolveAffiliateLink("gear-luggage-tags"),
+          },
+          {
+            name: "Packing tape and zip ties",
+            reason:
+              "Handles and zippers take abuse in freight. A quick field repair avoids a mid-trip scramble.",
+            linkId: "gear-packing-tape",
+            href: resolveAffiliateLink("gear-packing-tape"),
+          },
+          {
+            name: "Foldable duffel or tote",
+            reason:
+              "Gives you an extra bag for souvenirs on the return leg while main luggage ships ahead.",
+            linkId: "gear-foldable-duffel",
+            href: resolveAffiliateLink("gear-foldable-duffel"),
+          },
+          {
+            name: "Portable luggage scale",
+            reason:
+              "Airport overweight fees hurt more when you already paid forwarding. Weigh before you ship.",
+            linkId: "gear-luggage-scale",
+            href: resolveAffiliateLink("gear-luggage-scale"),
+          },
+          {
+            name: "Small daypack for train days",
+            reason:
+              "You still need tickets, meds, and a change of shirt when the big suitcase is in transit.",
+            linkId: "gear-lightweight-daypack",
+            href: resolveAffiliateLink("gear-lightweight-daypack"),
+          },
+        ]}
+      />
+
       <section className="mb-12">
         <H2>What luggage forwarding is</H2>
         <p className="article-body max-w-2xl">
@@ -210,6 +255,8 @@ function MainContent() {
           </table>
         </div>
       </section>
+
+      <RecommendedServicesBox serviceId="japan-luggage-shipping" />
 
       <section className="mb-12">
         <H2>Why Japanese travelers swear by it</H2>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { NextStepGuides } from "@/components/NextStepGuides";
+import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 
 export const metadata: Metadata = {
   title:
@@ -74,6 +76,8 @@ export default function MoneyPaymentsJapanPage() {
               handles transport and small purchases quickly.
             </p>
           </div>
+
+          <RecommendedServicesBox serviceId="money-payments-japan" />
 
           <div>
             <h3 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
@@ -196,6 +200,8 @@ export default function MoneyPaymentsJapanPage() {
               </li>
             </ul>
           </div>
+
+          <NextStepGuides guideId="money-payments-japan" />
 
           <GuideEndCta
             parentHref="/guides/japan-itinerary"

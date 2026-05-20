@@ -1,13 +1,5 @@
-import { MdxGuidePage } from "@/components/guides/MdxGuidePage";
-import { createMdxGuideMetadata } from "@/lib/content/mdx-guide-route";
+import { permanentRedirect } from "next/navigation";
 
-const SLUG = "japan-mail-documents-guide";
-const COLLECTION = "residents" as const;
-
-export const generateMetadata = () => createMdxGuideMetadata(SLUG, COLLECTION);
-
-export default function JapanMailDocumentsGuidePage() {
-  return (
-    <MdxGuidePage slug={SLUG} collection={COLLECTION} layout="resident" />
-  );
+export default function JapanMailDocumentsGuideRedirect() {
+  permanentRedirect("/residents/japan-official-mail-guide");
 }
