@@ -43,6 +43,7 @@ export const RESIDENT_GUIDE_SECTIONS = [
     label: "Daily Life",
     slugs: [
       "japan-living-cost",
+      "japan-resident-tax",
       "japan-mistakes-new-residents",
       "japan-savings-budgeting-guide",
       "japan-grocery-shopping-guide",
@@ -72,6 +73,7 @@ export const RESIDENT_GUIDE_SECTIONS = [
       "japan-social-life-guide",
       "japan-customer-service-culture-guide",
       "japan-mental-health-adjustment-guide",
+      "garbage-separation-japan",
       "japan-garbage-rules",
       "japan-trash-recycling-guide",
       "japan-furniture-disposal-guide",

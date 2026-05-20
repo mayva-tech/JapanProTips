@@ -93,6 +93,8 @@ const STATIC_PATHS = [
   "/residents/japan-moving-out-guide",
   "/residents/japan-mobile-phone-plans",
   "/residents/japan-living-cost",
+  "/residents/japan-resident-tax",
+  "/residents/garbage-separation-japan",
   "/residents/japan-mistakes-new-residents",
   "/residents/japan-grocery-shopping-guide",
   "/residents/japan-beginner-grocery-list",

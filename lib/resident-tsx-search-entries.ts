@@ -23,13 +23,55 @@ export const RESIDENT_TSX_SEARCH_ENTRIES: GuideSearchEntry[] = [
     ],
   },
   {
-    title: "How to Open a Bank Account in Japan as a Foreigner",
+    title: "Opening a Bank Account in Japan as a Foreign Resident",
     description:
-      "Documents, banks that still open accounts for foreigners, realistic timelines, common rejection reasons, and a blunt first move if you are new in Japan.",
+      "Practical steps to open a Japanese bank account: documents, address registration, phone number, hanko vs signature, online vs branch banks, salary use, and common rejection reasons.",
     href: "/residents/japan-bank-account",
     category: "Residents",
     section: RESIDENT_SLUG_SECTION["japan-bank-account"] ?? "Start Here",
-    keywords: ["bank", "account", "foreigner", "atm", "transfer", "yen", "resident"],
+    keywords: [
+      "bank",
+      "account",
+      "foreigner",
+      "residence card",
+      "japan post bank",
+      "salary",
+      "resident",
+    ],
+  },
+  {
+    title: "Japan Resident Tax Explained for Foreign Residents",
+    description:
+      "Practical orientation to resident tax (juminzei): who usually pays, why bills surprise newcomers, payment slips, payroll withholding, moving cities, and common mistakes.",
+    href: "/residents/japan-resident-tax",
+    category: "Residents",
+    section: RESIDENT_SLUG_SECTION["japan-resident-tax"] ?? "Daily Life",
+    keywords: [
+      "resident tax",
+      "juminzei",
+      "municipal tax",
+      "payment slip",
+      "payroll",
+      "ward",
+      "resident",
+    ],
+  },
+  {
+    title: "Garbage Separation in Japan for New Residents",
+    description:
+      "Daily-life garbage rules by city: burnable, non-burnable, plastic, PET, oversized trash, collection days, apartment garbage rooms, and common foreigner mistakes.",
+    href: "/residents/garbage-separation-japan",
+    category: "Residents",
+    section: RESIDENT_SLUG_SECTION["garbage-separation-japan"] ?? "Daily Life",
+    keywords: [
+      "garbage",
+      "trash",
+      "recycling",
+      "sorting",
+      "burnable",
+      "collection day",
+      "resident",
+    ],
   },
   {
     title: "National Health Insurance in Japan Explained for Foreigners",

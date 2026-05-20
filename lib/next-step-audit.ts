@@ -50,6 +50,8 @@ export const NEXT_STEP_HIGH_VALUE_RESIDENT_ROUTES = [
   "/residents/japan-utilities-setup",
   "/residents/japan-apartment-internet",
   "/residents/japan-garbage-rules",
+  "/residents/garbage-separation-japan",
+  "/residents/japan-resident-tax",
 ] as const;
 
 export const NEXT_STEP_HIGH_VALUE_ROUTES = [

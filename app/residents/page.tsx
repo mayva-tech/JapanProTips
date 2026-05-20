@@ -261,6 +261,11 @@ export default function ResidentsPage() {
               </TrackedResidentLink>
             </li>
             <li>
+              <TrackedResidentLink href="/residents/japan-resident-tax" className={linkClass}>
+                Resident tax explained for foreign residents →
+              </TrackedResidentLink>
+            </li>
+            <li>
               <TrackedResidentLink href="/residents/japan-mistakes-new-residents" className={linkClass}>
                 Japan mistakes new residents make →
               </TrackedResidentLink>
@@ -403,6 +408,11 @@ export default function ResidentsPage() {
             <li>
               <TrackedResidentLink href="/residents/japan-mental-health-adjustment-guide" className={linkClass}>
                 Mental health and culture adjustment in Japan →
+              </TrackedResidentLink>
+            </li>
+            <li>
+              <TrackedResidentLink href="/residents/garbage-separation-japan" className={linkClass}>
+                Garbage separation for new residents →
               </TrackedResidentLink>
             </li>
             <li>

@@ -981,6 +981,52 @@ export const nextStepGuidePresetItems: Record<string, NextStepGuideItem[]> = {
       label: "Resident setup",
     },
   ],
+  "garbage-separation-japan": [
+    {
+      title: "Japan Garbage Rules",
+      href: "/residents/japan-garbage-rules",
+      reason:
+        "Ward charts and bag colors go deeper once you know the daily separation buckets.",
+      label: "Next",
+    },
+    {
+      title: "Renting an Apartment in Japan",
+      href: "/residents/renting-apartment-japan",
+      reason:
+        "Building garbage rooms and management notices often override what the city chart says.",
+      label: "Related",
+    },
+    {
+      title: "Japanese Address Formatter",
+      href: "/tools/japanese-address-formatter",
+      reason:
+        "Oversized pickup forms and ward mail expect Japanese address order on the label.",
+      label: "Tool",
+    },
+  ],
+  "japan-resident-tax": [
+    {
+      title: "Monthly Cost of Living in Japan",
+      href: "/residents/japan-living-cost",
+      reason:
+        "Resident tax is often a lump sum. Compare it against rent and utility bands first.",
+      label: "Next",
+    },
+    {
+      title: "Pay Bills in Japan",
+      href: "/residents/pay-bills-japan",
+      reason:
+        "Payment slips and konbini deadlines feel similar once municipal tax arrives.",
+      label: "Related",
+    },
+    {
+      title: "Japan Monthly Cost Calculator",
+      href: "/tools/japan-monthly-cost-calculator",
+      reason:
+        "Stress-test monthly cash before tax season hits your savings buffer.",
+      label: "Tool",
+    },
+  ],
   "japan-mistakes-first-time-visitors": [
     {
       title: "SIM and eSIM in Japan",
