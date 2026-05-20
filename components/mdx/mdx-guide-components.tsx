@@ -68,11 +68,7 @@ function MdxHeading2({
 }: ComponentPropsWithoutRef<"h2">) {
   const isFaq = isFaqSectionHeading(children);
   return (
-    <h2
-      id={isFaq ? "faq" : undefined}
-      className="font-display text-dark tracking-wide text-4xl mb-5"
-      {...props}
-    >
+    <h2 id={isFaq ? "faq" : undefined} {...props}>
       {children}
     </h2>
   );
@@ -82,14 +78,7 @@ function MdxHeading3({
   children,
   ...props
 }: ComponentPropsWithoutRef<"h3">) {
-  return (
-    <h3
-      className="font-display text-dark tracking-wide text-2xl mb-4"
-      {...props}
-    >
-      {children}
-    </h3>
-  );
+  return <h3 {...props}>{children}</h3>;
 }
 
 function MdxParagraph({
@@ -97,7 +86,7 @@ function MdxParagraph({
   ...props
 }: ComponentPropsWithoutRef<"p">) {
   return (
-    <p className="article-body mb-4 last:mb-0" {...props}>
+    <p className="article-body mb-3 last:mb-0" {...props}>
       {children}
     </p>
   );
@@ -109,7 +98,7 @@ function MdxUnorderedList({
 }: ComponentPropsWithoutRef<"ul">) {
   return (
     <ul
-      className="article-body list-none space-y-3.5 pl-0 mb-0"
+      className="article-body mb-3 list-none space-y-2.5 pl-0 last:mb-0"
       {...props}
     >
       {children}
@@ -123,7 +112,7 @@ function MdxOrderedList({
 }: ComponentPropsWithoutRef<"ol">) {
   return (
     <ol
-      className="article-body list-decimal space-y-3.5 pl-6 mb-0"
+      className="article-body mb-3 list-decimal space-y-2.5 pl-6 last:mb-0"
       {...props}
     >
       {children}

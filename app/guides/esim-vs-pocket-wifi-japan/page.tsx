@@ -18,8 +18,7 @@ export default function EsimVsPocketWifiJapanPage() {
     <GuideArticleShell
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           eSIM vs Pocket WiFi in Japan (Which Should You Choose)
         </h1>
@@ -55,7 +54,7 @@ export default function EsimVsPocketWifiJapanPage() {
       beforeComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             What is eSIM
           </h2>
           <div className="article-body space-y-4">
@@ -74,7 +73,7 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             What is Pocket WiFi
           </h2>
           <div className="article-body space-y-4">
@@ -93,7 +92,7 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Speed Comparison
           </h2>
           <div className="article-body space-y-4">
@@ -112,7 +111,7 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Price Comparison
           </h2>
           <div className="article-body space-y-4">
@@ -130,7 +129,7 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Battery and Convenience
           </h2>
           <div className="article-body space-y-4">
@@ -148,7 +147,7 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Best for Solo Travelers
           </h2>
           <div className="article-body space-y-4">
@@ -165,7 +164,7 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Best for Groups
           </h2>
           <div className="article-body space-y-4">
@@ -206,7 +205,7 @@ export default function EsimVsPocketWifiJapanPage() {
         </div>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Common Mistakes
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0">
@@ -227,7 +226,7 @@ export default function EsimVsPocketWifiJapanPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Final Recommendation (Simple)
           </h2>
           <div className="article-body space-y-4">

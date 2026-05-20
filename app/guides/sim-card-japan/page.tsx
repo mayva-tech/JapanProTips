@@ -29,8 +29,7 @@ export default function SimCardJapanGuidePage() {
             TRIP PREP ///
           </p>
           <h1
-            className="font-display text-dark tracking-wide leading-tight mb-8"
-            style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+            className="guide-page-title"
           >
             BEST SIM CARD FOR JAPAN (2026)
             <br />

@@ -6,10 +6,13 @@
   html {
     scroll-behavior: smooth;
     font-size: 17px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
     @apply bg-paper font-sans text-body text-ink antialiased;
+    overflow-x: clip;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   }
 
@@ -29,6 +32,12 @@
   /* AoM: Vollkorn 24px italic bold (36px on large screens) */
   .editorial-heading {
     @apply font-heading text-h2 font-bold italic text-ink sm:text-h2-lg;
+  }
+
+  /* Guide article H1: scales down on narrow phones (28px–56px) */
+  .guide-page-title {
+    @apply font-heading font-bold italic leading-tight text-ink mb-6 sm:mb-8;
+    font-size: clamp(1.75rem, 5.5vw, 3.5rem);
   }
 
   .editorial-heading-hero {
@@ -135,6 +144,18 @@
 
   .mdx-guide-body > * + h2 {
     @apply mt-12;
+  }
+
+  .mdx-guide-body h2 {
+    @apply mb-4 border-t border-paper-edge pt-8 font-heading text-h2 font-bold italic text-ink sm:text-h2-lg;
+  }
+
+  .mdx-guide-body h2:first-of-type {
+    @apply mt-0 border-t-0 pt-0;
+  }
+
+  .mdx-guide-body h3 {
+    @apply mb-3 mt-8 inline-block border-b-2 border-rust pb-1.5 font-sans text-lg font-black uppercase tracking-[0.08em] text-maroon sm:text-xl;
   }
 
   /* FAQ: maroon questions vs muted answers for scanability while scrolling */

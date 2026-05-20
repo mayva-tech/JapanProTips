@@ -12,8 +12,7 @@ export default function MovingToJapanSystemPage() {
     <main className="bg-cream min-h-screen font-sans">
       <article className="max-w-3xl mx-auto px-6 pt-12 pb-16">
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Moving to Japan: First 30 Days System
         </h1>

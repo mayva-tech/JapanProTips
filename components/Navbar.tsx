@@ -8,7 +8,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 px-6 py-4">
         <Link
           href="/"
-          className="font-sans text-lead font-black uppercase tracking-[0.05em] text-maroon"
+          className="font-sans text-lg font-black uppercase tracking-[0.05em] text-maroon sm:text-lead"
         >
           JapanProTips
         </Link>

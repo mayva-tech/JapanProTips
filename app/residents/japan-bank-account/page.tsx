@@ -16,8 +16,7 @@ export default function JapanBankAccountGuidePage() {
       showHotelConversion={false}
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           How to Open a Bank Account in Japan as a Foreigner
         </h1>
@@ -39,7 +38,7 @@ export default function JapanBankAccountGuidePage() {
       beforeComparison={
         <>
           <section className="mb-12 max-w-2xl">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Required documents
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0">
@@ -69,7 +68,7 @@ export default function JapanBankAccountGuidePage() {
           </section>
 
           <section className="mb-12 max-w-2xl">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Which banks accept foreigners
             </h2>
             <div className="article-body space-y-4">
@@ -103,7 +102,7 @@ export default function JapanBankAccountGuidePage() {
       afterComparison={
         <>
           <section className="mb-12 max-w-2xl">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Timeline reality
             </h2>
             <div className="article-body space-y-4">
@@ -125,7 +124,7 @@ export default function JapanBankAccountGuidePage() {
           </section>
 
           <section className="mb-12 max-w-2xl">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Common rejection reasons
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0">
@@ -150,7 +149,7 @@ export default function JapanBankAccountGuidePage() {
           </section>
 
           <section className="mb-12 max-w-2xl">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Final recommendation
             </h2>
             <div className="article-body space-y-4">

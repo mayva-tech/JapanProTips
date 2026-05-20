@@ -14,8 +14,7 @@ export default function DoYouNeedSimJapanPage() {
     <GuideArticleShell
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Do You Need a SIM Card in Japan?
         </h1>
@@ -34,7 +33,7 @@ export default function DoYouNeedSimJapanPage() {
       beforeComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Quick Answer
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
@@ -75,7 +74,7 @@ export default function DoYouNeedSimJapanPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               When You Need a SIM
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -95,7 +94,7 @@ export default function DoYouNeedSimJapanPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               When You Might Not Need One
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -115,7 +114,7 @@ export default function DoYouNeedSimJapanPage() {
       afterComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Reality Check
             </h2>
             <div className="article-body space-y-4 max-w-2xl">
@@ -125,7 +124,7 @@ export default function DoYouNeedSimJapanPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Bottom Line
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">

@@ -15,8 +15,7 @@ export default function JapanTrainsPage() {
     <GuideArticleShell
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           How to Use Trains in Japan Without Getting Lost
         </h1>
@@ -37,7 +36,7 @@ export default function JapanTrainsPage() {
       beforeComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Quick Answer
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
@@ -63,7 +62,7 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               What You Actually Need to Know
             </h2>
             <div className="article-body space-y-4 max-w-2xl">
@@ -101,7 +100,7 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Local, Rapid, and Express
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
@@ -121,7 +120,7 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               JR vs Metro
             </h2>
             <div className="article-body space-y-4 max-w-2xl">
@@ -139,7 +138,7 @@ export default function JapanTrainsPage() {
       afterComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               How to Ride a Train Step by Step
             </h2>
             <ol className="article-body list-decimal space-y-3 pl-6 max-w-2xl">
@@ -155,7 +154,7 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               IC Cards
             </h2>
             <div className="article-body space-y-4 max-w-2xl">
@@ -196,7 +195,7 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Common Mistakes
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -222,7 +221,7 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Rush Hour and Last Train
             </h2>
             <div className="article-body space-y-4 max-w-2xl">
@@ -234,7 +233,7 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Shinkansen Is Different
             </h2>
             <div className="article-body space-y-4 max-w-2xl">
@@ -248,7 +247,7 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Reality Check
             </h2>
             <div className="article-body space-y-4 max-w-2xl">
@@ -260,7 +259,7 @@ export default function JapanTrainsPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Bottom Line
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">

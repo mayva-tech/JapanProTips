@@ -15,8 +15,7 @@ export default function OpenBankAccountJapanPage() {
     <main className="bg-cream min-h-screen font-sans">
       <article className="max-w-3xl mx-auto px-6 pt-12 pb-16">
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           How to Open a Bank Account in Japan (What Actually Works)
         </h1>
@@ -54,7 +53,7 @@ export default function OpenBankAccountJapanPage() {
         </div>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Quick Answer
           </h2>
           <p className="article-body mb-4 max-w-2xl">
@@ -78,7 +77,7 @@ export default function OpenBankAccountJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Best Banks for Foreigners
           </h2>
           <div className="article-body space-y-6 max-w-2xl">
@@ -115,7 +114,7 @@ export default function OpenBankAccountJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             What You Need
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -139,7 +138,7 @@ export default function OpenBankAccountJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Common Problems
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -156,7 +155,7 @@ export default function OpenBankAccountJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             What Actually Works
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -189,7 +188,7 @@ export default function OpenBankAccountJapanPage() {
         </div>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Reality Check
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -206,7 +205,7 @@ export default function OpenBankAccountJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Bottom Line
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">

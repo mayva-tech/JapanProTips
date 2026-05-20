@@ -14,8 +14,7 @@ export default function JapanTransportationPage() {
     <GuideArticleShell
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Japan Transportation for Visitors
         </h1>

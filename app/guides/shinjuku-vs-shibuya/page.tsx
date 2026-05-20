@@ -15,8 +15,7 @@ export default function ShinjukuVsShibuyaPage() {
       comparisonItems={null}
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Shinjuku vs Shibuya: Where to Stay in Tokyo?
         </h1>
@@ -47,7 +46,7 @@ export default function ShinjukuVsShibuyaPage() {
       beforeComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Quick Answer
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
@@ -67,7 +66,7 @@ export default function ShinjukuVsShibuyaPage() {
       afterComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Comparison
             </h2>
             <div className="overflow-x-auto">
@@ -124,7 +123,7 @@ export default function ShinjukuVsShibuyaPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Shinjuku
             </h2>
             <p className="font-sans font-bold text-dark text-base uppercase tracking-widest mb-2">
@@ -149,7 +148,7 @@ export default function ShinjukuVsShibuyaPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Shibuya
             </h2>
             <p className="font-sans font-bold text-dark text-base uppercase tracking-widest mb-2">
@@ -174,7 +173,7 @@ export default function ShinjukuVsShibuyaPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               What You Should Choose
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -188,7 +187,7 @@ export default function ShinjukuVsShibuyaPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Bottom Line
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">

@@ -33,7 +33,7 @@ const inlineLink =
 
 function H2({ children }: { children: ReactNode }) {
   return (
-    <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+    <h2 className="editorial-heading mb-4">
       {children}
     </h2>
   );
@@ -86,8 +86,7 @@ export default function JapanConvenienceStoreGuidePage() {
       showHotelConversion={false}
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Japanese Convenience Stores Explained (7-Eleven, Lawson, FamilyMart)
         </h1>

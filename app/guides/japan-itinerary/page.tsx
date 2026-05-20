@@ -15,8 +15,7 @@ export default function JapanItineraryPage() {
     <GuideArticleShell
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Japan Itinerary (7, 10, and 14 Days for First-Time Visitors)
         </h1>
@@ -45,7 +44,7 @@ export default function JapanItineraryPage() {
       beforeComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Quick Answer (Don&apos;t Overplan)
           </h2>
           <ul className="article-body list-none space-y-3 pl-0 mb-6 max-w-2xl">
@@ -72,7 +71,7 @@ export default function JapanItineraryPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             How to Plan Your Route (Simple Rule)
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
@@ -95,7 +94,7 @@ export default function JapanItineraryPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-6">
+          <h2 className="editorial-heading mb-4">
             7-Day Itinerary (Simple and Realistic)
           </h2>
 
@@ -135,7 +134,7 @@ export default function JapanItineraryPage() {
       afterComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-6">
+          <h2 className="editorial-heading mb-4">
             10-Day Itinerary (Better Balance)
           </h2>
 
@@ -169,7 +168,7 @@ export default function JapanItineraryPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-6">
+          <h2 className="editorial-heading mb-4">
             14-Day Itinerary (Best Experience)
           </h2>
 
@@ -203,7 +202,7 @@ export default function JapanItineraryPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Common Mistakes
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -223,7 +222,7 @@ export default function JapanItineraryPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Where This Connects (Important)
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
@@ -260,7 +259,7 @@ export default function JapanItineraryPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Reality Check
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
@@ -271,7 +270,7 @@ export default function JapanItineraryPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Bottom Line
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">

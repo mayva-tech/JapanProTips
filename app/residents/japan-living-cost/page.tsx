@@ -16,8 +16,7 @@ export default function JapanLivingCostGuidePage() {
       showHotelConversion={false}
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Monthly Cost of Living in Japan (Real Numbers)
         </h1>
@@ -51,7 +50,7 @@ export default function JapanLivingCostGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Rent
           </h2>
           <div className="article-body space-y-4">
@@ -85,7 +84,7 @@ export default function JapanLivingCostGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Food
           </h2>
           <div className="article-body space-y-4">
@@ -123,7 +122,7 @@ export default function JapanLivingCostGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Transport
           </h2>
           <div className="article-body space-y-4">
@@ -155,7 +154,7 @@ export default function JapanLivingCostGuidePage() {
       afterComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Utilities
           </h2>
           <div className="article-body space-y-4">
@@ -200,7 +199,7 @@ export default function JapanLivingCostGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Real monthly estimate
           </h2>
           <p className="article-body mb-6">

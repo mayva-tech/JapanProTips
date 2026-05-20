@@ -16,8 +16,7 @@ export default function PartTimeJobsJapanGuidePage() {
       showHotelConversion={false}
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Best Part-Time Jobs in Japan for Foreigners
         </h1>
@@ -41,7 +40,7 @@ export default function PartTimeJobsJapanGuidePage() {
       beforeComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Convenience store
           </h2>
           <div className="article-body space-y-4">
@@ -61,7 +60,7 @@ export default function PartTimeJobsJapanGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Restaurants
           </h2>
           <div className="article-body space-y-4">
@@ -83,7 +82,7 @@ export default function PartTimeJobsJapanGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             English teaching
           </h2>
           <div className="article-body space-y-4">
@@ -109,7 +108,7 @@ export default function PartTimeJobsJapanGuidePage() {
       afterComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Expected pay
           </h2>
           <p className="article-body mb-4">
@@ -141,7 +140,7 @@ export default function PartTimeJobsJapanGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Requirements
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0">

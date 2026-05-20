@@ -19,8 +19,7 @@ export default function WhereToStayTokyoPage() {
       showHotelConversion={false}
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Where to Stay in Tokyo (Best Areas for First-Time Visitors)
         </h1>
@@ -50,7 +49,7 @@ export default function WhereToStayTokyoPage() {
       beforeComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-6">
+          <h2 className="editorial-heading mb-4">
             Best Areas for First-Time Visitors
           </h2>
 
@@ -137,7 +136,7 @@ export default function WhereToStayTokyoPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             If You Only Stay 3 to 5 Days
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
@@ -154,7 +153,7 @@ export default function WhereToStayTokyoPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Where NOT to Stay (For First Trip)
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
@@ -179,7 +178,7 @@ export default function WhereToStayTokyoPage() {
       afterComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Hotel vs Airbnb in Japan
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
@@ -236,7 +235,7 @@ export default function WhereToStayTokyoPage() {
         </div>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Final Recommendation (Simple)
           </h2>
           <div className="article-body space-y-4 max-w-2xl">

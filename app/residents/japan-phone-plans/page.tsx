@@ -16,8 +16,7 @@ export default function JapanPhonePlansGuidePage() {
       showHotelConversion={false}
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Best Phone Plans in Japan (Cheap vs Big Carriers)
         </h1>
@@ -63,7 +62,7 @@ export default function JapanPhonePlansGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Rakuten Mobile
           </h2>
           <div className="article-body space-y-4">
@@ -82,7 +81,7 @@ export default function JapanPhonePlansGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             UQ mobile
           </h2>
           <div className="article-body space-y-4">
@@ -100,7 +99,7 @@ export default function JapanPhonePlansGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             IIJmio
           </h2>
           <div className="article-body space-y-4">
@@ -122,7 +121,7 @@ export default function JapanPhonePlansGuidePage() {
       afterComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Cost comparison
           </h2>
           <p className="article-body mb-4">
@@ -162,7 +161,7 @@ export default function JapanPhonePlansGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Contract vs prepaid
           </h2>
           <div className="article-body space-y-4">
@@ -196,7 +195,7 @@ export default function JapanPhonePlansGuidePage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Recommendation
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0">

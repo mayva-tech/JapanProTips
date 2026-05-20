@@ -14,8 +14,7 @@ export default function SuicaVsPasmoPage() {
       comparisonItems={null}
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Suica vs PASMO: Which IC Card Should You Use in Japan?
         </h1>
@@ -35,7 +34,7 @@ export default function SuicaVsPasmoPage() {
       beforeComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Quick Answer
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -55,7 +54,7 @@ export default function SuicaVsPasmoPage() {
       afterComparison={
         <>
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Comparison
             </h2>
             <div className="overflow-x-auto">
@@ -120,7 +119,7 @@ export default function SuicaVsPasmoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               What Suica is
             </h2>
             <div className="article-body space-y-3 max-w-2xl">
@@ -134,7 +133,7 @@ export default function SuicaVsPasmoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               What PASMO is
             </h2>
             <div className="article-body space-y-3 max-w-2xl">
@@ -147,7 +146,7 @@ export default function SuicaVsPasmoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Where they work
             </h2>
             <div className="article-body space-y-3 max-w-2xl">
@@ -164,7 +163,7 @@ export default function SuicaVsPasmoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Common Mistakes
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -181,7 +180,7 @@ export default function SuicaVsPasmoPage() {
           </section>
 
           <section className="mb-12">
-            <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+            <h2 className="editorial-heading mb-4">
               Bottom Line
             </h2>
             <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">

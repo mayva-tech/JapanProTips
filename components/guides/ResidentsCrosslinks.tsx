@@ -401,7 +401,7 @@ export function ResidentsCrosslinks({ currentHref }: ResidentsCrosslinksProps) {
     >
       <h2
         id="residents-crosslinks-heading"
-        className="font-display text-dark tracking-wide text-4xl mb-6"
+        className="editorial-heading mb-4"
       >
         {heading}
       </h2>

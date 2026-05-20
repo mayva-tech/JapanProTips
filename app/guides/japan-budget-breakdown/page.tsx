@@ -18,8 +18,7 @@ export default function JapanBudgetBreakdownPage() {
     <GuideArticleShell
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           How Much Does a Japan Trip Cost in 2026 (Real Breakdown)
         </h1>
@@ -41,7 +40,7 @@ export default function JapanBudgetBreakdownPage() {
       beforeComparison={
         <>
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Daily Budget Overview
           </h2>
           <p className="article-body mb-6">
@@ -71,7 +70,7 @@ export default function JapanBudgetBreakdownPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Accommodation Costs
           </h2>
           <ul className="font-serif text-muted list-none pl-0 space-y-4">
@@ -103,7 +102,7 @@ export default function JapanBudgetBreakdownPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Food Costs
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0">
@@ -131,7 +130,7 @@ export default function JapanBudgetBreakdownPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Transportation Costs
           </h2>
           <div className="article-body space-y-4">
@@ -155,7 +154,7 @@ export default function JapanBudgetBreakdownPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Internet Costs
           </h2>
           <div className="article-body space-y-4">
@@ -194,7 +193,7 @@ export default function JapanBudgetBreakdownPage() {
         </div>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Sample 5-Day Budget (Real Numbers)
           </h2>
           <p className="article-body mb-4">
@@ -226,7 +225,7 @@ export default function JapanBudgetBreakdownPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Ways to Save Money
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0">
@@ -249,7 +248,7 @@ export default function JapanBudgetBreakdownPage() {
         </section>
 
         <section className="mb-12 max-w-2xl">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Final Estimated Total
           </h2>
           <div className="article-body space-y-4">

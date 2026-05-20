@@ -18,8 +18,7 @@ export default function JapanAirportFirstStepsPage() {
     <GuideArticleShell
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Landing in Japan: What to Do in Your First 60 Minutes (Narita and
           Haneda)
@@ -51,7 +50,7 @@ export default function JapanAirportFirstStepsPage() {
       beforeComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Step 1: Immigration (What Actually Happens)
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
@@ -74,7 +73,7 @@ export default function JapanAirportFirstStepsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Step 2: Baggage Claim and Customs
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
@@ -98,7 +97,7 @@ export default function JapanAirportFirstStepsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Step 3: Get Internet Immediately
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
@@ -142,7 +141,7 @@ export default function JapanAirportFirstStepsPage() {
         </div>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Step 4: Get a Transport Card (Suica or PASMO)
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
@@ -170,7 +169,7 @@ export default function JapanAirportFirstStepsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Step 5: How to Get to Tokyo (Train vs Taxi)
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
@@ -210,7 +209,7 @@ export default function JapanAirportFirstStepsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Common Mistakes at the Airport
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -230,7 +229,7 @@ export default function JapanAirportFirstStepsPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Quick Checklist Before You Leave the Airport
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">

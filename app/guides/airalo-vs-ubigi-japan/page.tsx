@@ -23,8 +23,7 @@ export default function AiraloVsUbigiJapanPage() {
       comparisonItems={null}
       title={
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Airalo vs Ubigi Japan (Which eSIM Is Better in 2026?)
         </h1>
@@ -56,7 +55,7 @@ export default function AiraloVsUbigiJapanPage() {
       beforeComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Quick Answer (Don&apos;t Overthink It)
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
@@ -93,7 +92,7 @@ export default function AiraloVsUbigiJapanPage() {
       afterComparison={
         <>
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Comparison (Simple and Practical)
           </h2>
           <div className="overflow-x-auto">
@@ -168,7 +167,7 @@ export default function AiraloVsUbigiJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             What Actually Matters
           </h2>
           <div className="space-y-8 max-w-2xl">
@@ -203,7 +202,7 @@ export default function AiraloVsUbigiJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Common Mistakes
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -220,7 +219,7 @@ export default function AiraloVsUbigiJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             What You Should Actually Choose
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -237,7 +236,7 @@ export default function AiraloVsUbigiJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Reality Check
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
@@ -248,7 +247,7 @@ export default function AiraloVsUbigiJapanPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Bottom Line
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">

@@ -20,7 +20,7 @@ export function GuideEndCta({ parentHref, parentLabel }: GuideEndCtaProps) {
     >
       <h2
         id="guide-end-cta-heading"
-        className="font-display text-dark tracking-wide text-4xl mb-6"
+        className="editorial-heading mb-4"
       >
         Next steps
       </h2>

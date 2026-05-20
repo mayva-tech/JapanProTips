@@ -41,8 +41,7 @@ export default function ResidentsPage() {
     <main className="bg-cream min-h-screen font-sans">
       <article className="max-w-3xl mx-auto px-6 pt-12 pb-16">
         <h1
-          className="font-display text-dark tracking-wide leading-tight mb-8"
-          style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
+          className="guide-page-title"
         >
           Living in Japan: Practical Guides for Daily Life
         </h1>
@@ -58,7 +57,7 @@ export default function ResidentsPage() {
         <div className="border-t-2 border-dark mb-12" />
 
         <section className="mb-14">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Start Here
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl mb-8">
@@ -182,7 +181,7 @@ export default function ResidentsPage() {
         </section>
 
         <section className="mb-14">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Families
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -233,7 +232,7 @@ export default function ResidentsPage() {
         </section>
 
         <section className="mb-14">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Daily Life
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -467,7 +466,7 @@ export default function ResidentsPage() {
         </section>
 
         <section className="mb-14">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Work and Systems
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
@@ -611,7 +610,7 @@ export default function ResidentsPage() {
         </section>
 
         <section className="mb-14">
-          <h2 className="font-display text-dark tracking-wide text-4xl mb-5">
+          <h2 className="editorial-heading mb-4">
             Reality
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">

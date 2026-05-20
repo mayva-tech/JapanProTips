@@ -38,14 +38,7 @@ export async function MdxGuidePage({
   const { frontmatter } = guide;
   const { beforeComparison, afterComparison } = splitGuideContent(guide.content);
 
-  const title = (
-    <h1
-      className="font-display text-dark tracking-wide leading-tight mb-8"
-      style={{ fontSize: "clamp(36px, 5.5vw, 56px)" }}
-    >
-      {frontmatter.title}
-    </h1>
-  );
+  const title = <h1 className="guide-page-title">{frontmatter.title}</h1>;
 
   const intro = frontmatter.intro?.length ? (
     <div className="article-body space-y-4 max-w-2xl">
