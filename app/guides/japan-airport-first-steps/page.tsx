@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { ItineraryGuideCta } from "@/components/itinerary/ItineraryGuideCta";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
 import { RecommendedGearBox } from "@/components/RecommendedGearBox";
 import { resolveAffiliateLink } from "@/lib/affiliate-links";
@@ -353,6 +354,8 @@ export default function JapanAirportFirstStepsPage() {
             Start here: trip planning checklist →
           </Link>
         </section>
+
+        <ItineraryGuideCta className="my-10" />
 
         <DownloadChecklistBox downloadId="japan-arrival-checklist" />
 

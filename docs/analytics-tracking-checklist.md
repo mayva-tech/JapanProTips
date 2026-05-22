@@ -120,6 +120,72 @@ Inspect the element in DevTools before clicking.
 
 ---
 
+## 4b. How to verify `itinerary_guide_cta_click` labels
+
+Guide pages with `ItineraryGuideCta` call `trackItineraryGuideCtaClick` from `lib/itinerary/itinerary-analytics.ts`.
+
+**Label format:**
+
+```text
+itinerary_guide_cta_click
+```
+
+**GA4 event:** `click` with parameter **`label`** set to `itinerary_guide_cta_click`, plus params such as `source_page`, `cta_variant`, `target_type` (`planner` | `template`), and `target_path`.
+
+### Quick test
+
+1. Open a guide with the itinerary CTA (e.g. `/guides/japan-itinerary`).
+2. Click **Open itinerary planner** or the templates link.
+3. In GA4 Realtime (or DebugView), confirm event name **`click`** and label **`itinerary_guide_cta_click`**.
+
+---
+
+## 4c. How to verify `itinerary_hub_cta_click` labels
+
+Hub pages with `ItineraryHubCta` (`/`, `/start-here`, `/tourists`) call `trackItineraryHubCtaClick` from `lib/itinerary/itinerary-analytics.ts`.
+
+**Label format:**
+
+```text
+itinerary_hub_cta_click
+```
+
+**GA4 event:** `click` with parameter **`label`** set to `itinerary_hub_cta_click`, plus `source_page`, `target_type` (`planner` | `templates` | `template`), `target_path`, and optional `cta_position`.
+
+### Quick test
+
+1. Open `/start-here` or `/tourists`.
+2. Click **Open itinerary planner**, **Browse curated templates**, or a featured template link.
+3. Confirm **`click`** with label **`itinerary_hub_cta_click`**.
+
+---
+
+## 4d. Itinerary planner event inventory (GA4)
+
+Implementation: `lib/itinerary/itinerary-analytics.ts`. All labels below use event name **`click`** unless noted.
+
+| Label | When |
+| --- | --- |
+| `itinerary_generate_start` | User clicks Generate |
+| `itinerary_generate_success` | Generate succeeded |
+| `itinerary_generate_error` | Generate failed |
+| `itinerary_save_success` | Share link saved |
+| `itinerary_save_error` | Save failed |
+| `itinerary_copy_link` | Share URL copied |
+| `itinerary_pdf_download` | PDF downloaded |
+| `itinerary_edit_action` | Stop moved or removed |
+| `itinerary_template_view` | Curated template page viewed |
+| `itinerary_template_planner_cta_click` | Template page CTA to planner |
+| `itinerary_planner_template_card_click` | Featured template card on planner |
+| `itinerary_guide_cta_click` | Guide page itinerary CTA |
+| `itinerary_hub_cta_click` | Hub page itinerary CTA |
+| `itinerary_gear_box_view` | Gear box shown |
+| `itinerary_gear_link_click` | Gear recommendation link clicked |
+
+MVP launch sign-off: [Itinerary planner launch checklist](./itinerary-planner-launch-checklist.md) section F.
+
+---
+
 ## 5. How to verify `recommendation_click` labels
 
 Editorial gear and service picks from `RecommendationGrid` / `RecommendationBox` use `TrackedRecommendationLink`.
@@ -270,6 +336,7 @@ When editing tracking, also check:
 - [ ] New tool added to `lib/site-tools.ts` and `/tools/[slug]` route
 - [ ] New starter-path item in `lib/resident-starter-path.ts` if funnel order changes
 - [ ] `components/dev/conversion-observability` (if used) still documents new labels
+- [ ] `lib/itinerary/itinerary-analytics.ts` if itinerary planner or guide CTA labels change
 
 ---
 

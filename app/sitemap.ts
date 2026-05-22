@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { CURATED_ITINERARY_TEMPLATE_SLUGS } from "@/lib/itinerary/curated-itinerary-templates";
 import { siteUrl } from "@/lib/site";
 
 const STATIC_PATHS = [
@@ -129,6 +130,7 @@ const STATIC_PATHS = [
   "/guides/japan-transportation",
   "/guides/japan-budget-breakdown",
   "/tools/japan-trip-budget-calculator",
+  "/tools/japan-itinerary-planner",
   "/tools/japan-packing-generator",
   "/tools/can-i-bring-this-to-japan",
   "/tools/japanese-address-formatter",
@@ -181,10 +183,17 @@ const STATIC_PATHS = [
   "/guides/japan-cash-withdrawal-guide",
 ];
 
+const TEMPLATE_PATHS = [
+  "/itinerary-templates",
+  ...CURATED_ITINERARY_TEMPLATE_SLUGS.map(
+    (slug) => `/itinerary-templates/${slug}`,
+  ),
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteUrl();
   const now = new Date();
-  return STATIC_PATHS.map((path) => ({
+  return [...STATIC_PATHS, ...TEMPLATE_PATHS].map((path) => ({
     url: `${base}${path}`,
     lastModified: now,
     changeFrequency: path === "/" ? "weekly" : "monthly",
@@ -197,6 +206,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
             ? 0.8
             : path.startsWith("/tools/")
               ? 0.75
-              : 0.7,
+              : path.startsWith("/itinerary-templates")
+                ? 0.72
+                : 0.7,
   }));
 }

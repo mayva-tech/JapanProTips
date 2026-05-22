@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ESimConversionBlock, HotelConversionBlock } from "@/components/conversion";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
+import { ItineraryHubCta } from "@/components/itinerary/ItineraryHubCta";
+import { EDITORIAL_COPY } from "@/lib/editorial-copy";
 
 export const metadata: Metadata = {
   title: "Start Here",
@@ -10,6 +12,10 @@ export const metadata: Metadata = {
 
 const ctaClass =
   "inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150";
+
+const sectionH2Class =
+  "font-display text-dark tracking-wide mb-4";
+const sectionH2Style = { fontSize: "clamp(28px, 3.5vw, 40px)" };
 
 const GUIDE_HREFS = {
   sim: "/guides/sim-card-japan",
@@ -21,42 +27,44 @@ const GUIDE_HREFS = {
 export default function StartHerePage() {
   return (
     <main className="bg-cream min-h-screen font-sans">
-      <div className="max-w-3xl mx-auto px-6 pt-14 pb-20">
-        <section className="pb-14">
-          <h1
-            className="font-display text-dark tracking-wide leading-tight mb-5"
-            style={{ fontSize: "clamp(40px, 6.5vw, 60px)" }}
-          >
-            {`Start here if you're planning a trip to Japan`}
+      <article className="mx-auto max-w-4xl min-w-0 px-6 pt-12 pb-16">
+        <header>
+          <p className="font-display text-rust text-2xl tracking-widest mb-2">
+            TRIP PLANNING ///
+          </p>
+          <h1 className="guide-page-title">
+            START HERE
+            <br />
+            <span className="text-rust">PLAN YOUR TRIP TO JAPAN</span>
           </h1>
-          <p className="article-body text-xl max-w-xl">
+        </header>
+
+        <div className="article-body mb-10 max-w-2xl space-y-4">
+          <p>
             This is the simplest way to plan your trip without getting
             overwhelmed.
           </p>
-          <p className="font-sans text-muted text-sm font-bold tracking-widest uppercase mt-5 max-w-xl">
-            Independent. Engineer based in Japan—not a travel agency.
+          <p className="font-sans text-muted text-sm font-bold tracking-widest uppercase pt-1">
+            {EDITORIAL_COPY.trustLine}
           </p>
-        </section>
+        </div>
 
-        <div className="border-t-2 border-dark mb-14" />
+        <div className="border-t-2 border-dark mb-10" />
 
-        <section className="mb-16">
-          <h2
-            className="font-display text-dark tracking-wide mb-3"
-            style={{ fontSize: "clamp(32px, 4.5vw, 44px)" }}
-          >
+        <section className="mb-12">
+          <h2 className={sectionH2Class} style={sectionH2Style}>
             Follow this order
           </h2>
-          <p className="article-body mb-12 max-w-xl">
+          <p className="article-body mb-10 max-w-2xl">
             {`Don't try to plan everything at once. Do this step by step:`}
           </p>
 
-          <ol className="space-y-0 list-none pl-0">
+          <ol className="list-none space-y-0 pl-0">
             <li className="border-t border-tan pt-10 first:border-t-0 first:pt-0">
-              <h3 className="font-sans font-bold text-dark text-lg mb-3 tracking-wide">
+              <h3 className="font-sans font-bold text-dark text-lg mb-3">
                 1. SIM / Internet
               </h3>
-              <p className="article-body mb-6 max-w-xl">
+              <p className="article-body mb-6 max-w-2xl">
                 Your phone is your map, translator, and train guide. If this
                 doesn&apos;t work, everything becomes harder. If you skip this,
                 your trip becomes harder immediately.
@@ -65,10 +73,10 @@ export default function StartHerePage() {
             </li>
 
             <li className="border-t border-tan pt-10">
-              <h3 className="font-sans font-bold text-dark text-lg mb-3 tracking-wide">
+              <h3 className="font-sans font-bold text-dark text-lg mb-3">
                 {`2. Understand How You'll Get Around`}
               </h3>
-              <p className="article-body mb-6 max-w-xl">
+              <p className="article-body mb-6 max-w-2xl">
                 Japan&apos;s train system is efficient, but confusing at first.
                 You don&apos;t need to understand everything, just the basics.
               </p>
@@ -92,10 +100,10 @@ export default function StartHerePage() {
             </li>
 
             <li className="border-t border-tan pt-10">
-              <h3 className="font-sans font-bold text-dark text-lg mb-3 tracking-wide">
+              <h3 className="font-sans font-bold text-dark text-lg mb-3">
                 3. Decide where you&apos;re staying
               </h3>
-              <p className="article-body mb-6 max-w-xl">
+              <p className="article-body mb-6 max-w-2xl">
                 Location matters more than the hotel itself. Being near the
                 right station will save you time and stress.
               </p>
@@ -106,10 +114,10 @@ export default function StartHerePage() {
             </li>
 
             <li className="border-t border-tan pt-10">
-              <h3 className="font-sans font-bold text-dark text-lg mb-3 tracking-wide">
+              <h3 className="font-sans font-bold text-dark text-lg mb-3">
                 4. Money, Cards, and Cash in Japan
               </h3>
-              <p className="article-body mb-6 max-w-xl">
+              <p className="article-body mb-6 max-w-2xl">
                 Cash vs card confuses many first-time visitors, but it gets
                 easy fast. Use a simple mix of card, cash, and IC card so you
                 never get stuck.
@@ -128,13 +136,20 @@ export default function StartHerePage() {
           </ol>
         </section>
 
-        <div className="border-t border-tan mb-16" />
+        <section className="mb-12">
+          <ItineraryHubCta
+            sourcePage="/start-here"
+            ctaPosition="after-planning-steps"
+          />
+        </section>
 
-        <section className="mb-16">
+        <div className="border-t border-tan mb-12" />
+
+        <section className="mb-12">
           <div className="bg-dark px-8 py-10">
             <h2
               className="font-display text-cream tracking-wide mb-5"
-              style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
+              style={sectionH2Style}
             >
               Most people overcomplicate this
             </h2>
@@ -145,8 +160,8 @@ export default function StartHerePage() {
           </div>
         </section>
 
-        <div className="border-t border-tan mb-14" />
-      </div>
+        <div className="border-t border-tan" />
+      </article>
     </main>
   );
 }

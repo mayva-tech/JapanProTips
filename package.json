@@ -15,11 +15,15 @@
     "generate:checklist-pdfs": "npx tsx scripts/generate-checklist-pdfs.ts"
   },
   "dependencies": {
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.38.0",
     "clsx": "^2.1.1",
     "geist": "^1.3.0",
     "gray-matter": "^4.0.3",
+    "jspdf": "^4.2.1",
     "next": "15.0.0",
     "next-mdx-remote": "^6.0.0",
+    "openai": "^6.39.0",
     "react": "^18",
     "react-dom": "^18",
     "remark-gfm": "^4.0.1",

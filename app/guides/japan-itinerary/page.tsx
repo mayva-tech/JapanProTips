@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { ItineraryGuideCta } from "@/components/itinerary/ItineraryGuideCta";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
+import { buildPlannerUrl } from "@/lib/itinerary/build-planner-url";
 
 export const metadata: Metadata = {
   title:
@@ -291,6 +293,12 @@ export default function JapanItineraryPage() {
             </li>
           </ul>
         </section>
+
+        <ItineraryGuideCta
+          className="my-10"
+          plannerHref={buildPlannerUrl({ duration: 7 })}
+          templateLinkLabel="Browse curated itinerary templates"
+        />
 
         <GuideEndCta
           parentHref="/guides/where-to-stay-tokyo"

@@ -3,7 +3,9 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { ItineraryGuideCta } from "@/components/itinerary/ItineraryGuideCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
+import { buildPlannerUrl } from "@/lib/itinerary/build-planner-url";
 
 export const metadata: Metadata = {
   title: "Where to Stay in Osaka for First-Time Visitors",
@@ -524,6 +526,13 @@ function FooterContent() {
           </li>
         </ul>
       </section>
+
+      <ItineraryGuideCta
+        className="my-10"
+        plannerHref={buildPlannerUrl({ startCity: "Osaka" })}
+        templateHref="/itinerary-templates/3-day-osaka-itinerary"
+        templateLinkLabel="3-day Osaka itinerary template"
+      />
 
       <NextStepGuides guideId="where-to-stay-osaka" />
 

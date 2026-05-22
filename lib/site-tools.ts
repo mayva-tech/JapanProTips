@@ -24,6 +24,14 @@ export const SITE_TOOLS: SiteToolDefinition[] = [
     group: "travel-planning",
   },
   {
+    slug: "japan-itinerary-planner",
+    href: "/tools/japan-itinerary-planner",
+    title: "Japan Itinerary Planner",
+    description:
+      "Set length, start city, theme, style, and pace for a day-by-day route outline.",
+    group: "travel-planning",
+  },
+  {
     slug: "japan-packing-generator",
     href: "/tools/japan-packing-generator",
     title: "Japan Packing Generator",

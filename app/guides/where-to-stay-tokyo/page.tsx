@@ -3,7 +3,9 @@ import Link from "next/link";
 import { LocalTip, OperationalWarning } from "@/components/editorial/field-notes";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { ItineraryGuideCta } from "@/components/itinerary/ItineraryGuideCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
+import { buildPlannerUrl } from "@/lib/itinerary/build-planner-url";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 
 export const metadata: Metadata = {
@@ -299,6 +301,13 @@ export default function WhereToStayTokyoPage() {
             </li>
           </ul>
         </section>
+
+        <ItineraryGuideCta
+          className="my-10"
+          plannerHref={buildPlannerUrl({ startCity: "Tokyo" })}
+          templateHref="/itinerary-templates/3-day-tokyo-itinerary"
+          templateLinkLabel="3-day Tokyo itinerary template"
+        />
 
         <NextStepGuides guideId="where-to-stay-tokyo" />
 

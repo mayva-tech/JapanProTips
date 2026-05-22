@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ESimConversionBlock } from "@/components/conversion";
 import { SectionLabel } from "@/components/editorial/SectionLabel";
 import { TouristGuidesIndex } from "@/components/editorial/TouristGuidesIndex";
+import { ItineraryHubCta } from "@/components/itinerary/ItineraryHubCta";
 import { ALL_TOURIST_GUIDES } from "@/lib/tourist-guides";
 import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
 
@@ -50,6 +51,12 @@ export default function TouristsPage() {
 
       <div className="mx-auto max-w-6xl px-6 py-10">
         <ESimConversionBlock />
+        <div className="mt-10">
+          <ItineraryHubCta
+            sourcePage="/tourists"
+            ctaPosition="before-guide-index"
+          />
+        </div>
       </div>
 
       <TouristGuidesIndex />

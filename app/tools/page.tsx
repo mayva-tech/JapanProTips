@@ -70,7 +70,7 @@ const jsonLd = {
       mainEntity: {
         "@type": "ItemList",
         name: "JapanProTips travel tools",
-        numberOfItems: 5,
+        numberOfItems: 6,
         itemListElement: [
           {
             "@type": "ListItem",
@@ -95,6 +95,24 @@ const jsonLd = {
             position: 2,
             item: {
               "@type": "SoftwareApplication",
+              name: "Japan Itinerary Planner",
+              description:
+                "Set trip length, start city, theme, travel style, and pace for a day-by-day route outline.",
+              url: `${siteUrl()}/tools/japan-itinerary-planner`,
+              applicationCategory: "TravelApplication",
+              operatingSystem: "Web",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+              },
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            item: {
+              "@type": "SoftwareApplication",
               name: "Japan Packing Generator",
               description:
                 "Build a practical packing checklist from month, trip length, cities, laundry, activities, and rain risk.",
@@ -110,7 +128,7 @@ const jsonLd = {
           },
           {
             "@type": "ListItem",
-            position: 3,
+            position: 4,
             item: {
               "@type": "SoftwareApplication",
               name: "Can I Bring This to Japan? Checker",
@@ -128,7 +146,7 @@ const jsonLd = {
           },
           {
             "@type": "ListItem",
-            position: 4,
+            position: 5,
             item: {
               "@type": "SoftwareApplication",
               name: "Japanese Address Formatter",
@@ -146,7 +164,7 @@ const jsonLd = {
           },
           {
             "@type": "ListItem",
-            position: 5,
+            position: 6,
             item: {
               "@type": "SoftwareApplication",
               name: "Japan Monthly Cost Calculator",

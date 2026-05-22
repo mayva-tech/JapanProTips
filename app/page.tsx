@@ -9,6 +9,7 @@ import { buildGuideSearchIndex } from "@/lib/guide-search-index.server";
 import { SITE_TOOLS, toRecommendationCard } from "@/lib/site-tools";
 import { HomeResidentCta } from "@/components/editorial/HomeResidentCta";
 import { PopularStartHereGuides } from "@/components/editorial/PopularStartHereGuides";
+import { ItineraryHubCta } from "@/components/itinerary/ItineraryHubCta";
 import { SectionLabel } from "@/components/editorial/SectionLabel";
 import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
 import { DEFAULT_DESCRIPTION, DEFAULT_TITLE } from "@/lib/site";
@@ -51,6 +52,12 @@ export default function HomePage() {
       <GuideSearch entries={guideSearchIndex} />
 
       <PopularStartHereGuides />
+
+      <section className="border-b border-paper-edge bg-paper py-10 sm:py-12">
+        <div className="mx-auto max-w-6xl px-6">
+          <ItineraryHubCta sourcePage="/" ctaPosition="after-popular-guides" />
+        </div>
+      </section>
 
       <section className="border-b border-paper-edge bg-paper py-14 sm:py-16">
         <div className="mx-auto max-w-6xl px-6">

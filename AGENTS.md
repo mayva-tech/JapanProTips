@@ -29,3 +29,4 @@ Not implemented yet. Follow `.cursor/rules/mdx-content-roadmap.mdc` when adding 
 | Regenerate checklist PDFs | `npm run generate:checklist-pdfs` (needs network for fonts) |
 | Field Note blocks (MDX + TSX) | `components/editorial/field-notes/`, `lib/field-notes.ts` |
 | Field Note coverage audit | `npm run audit:field-notes`, `lib/field-note-audit.ts`, `/dev/field-note-audit` |
+| Itinerary planner launch | `docs/itinerary-planner-launch-checklist.md` |

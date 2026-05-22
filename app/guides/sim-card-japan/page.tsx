@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { ItineraryGuideCta } from "@/components/itinerary/ItineraryGuideCta";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
 import { RecommendationGrid } from "@/components/recommendations";
 import { RecommendedGearBox } from "@/components/RecommendedGearBox";
@@ -678,6 +679,8 @@ export default function SimCardJapanGuidePage() {
             </div>
           </dl>
         </section>
+
+        <ItineraryGuideCta className="my-10" />
 
         <NextStepGuides guideId="sim-card-japan" />
 

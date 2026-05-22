@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { ItineraryGuideCta } from "@/components/itinerary/ItineraryGuideCta";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RecommendationGrid } from "@/components/recommendations";
@@ -578,6 +579,8 @@ function FooterSections() {
           </li>
         </ul>
       </section>
+
+      <ItineraryGuideCta className="my-10" />
 
       <NextStepGuides guideId="japan-weather-by-month" />
 

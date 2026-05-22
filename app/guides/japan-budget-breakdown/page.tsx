@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { ItineraryGuideCta } from "@/components/itinerary/ItineraryGuideCta";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
+import { buildPlannerUrl } from "@/lib/itinerary/build-planner-url";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 
 export const metadata: Metadata = {
@@ -325,6 +327,11 @@ export default function JapanBudgetBreakdownPage() {
             </li>
           </ul>
         </section>
+
+        <ItineraryGuideCta
+          className="my-10"
+          plannerHref={buildPlannerUrl({ travelStyle: "budget" })}
+        />
 
         <GuideEndCta
           parentHref="/guides/japan-itinerary"
