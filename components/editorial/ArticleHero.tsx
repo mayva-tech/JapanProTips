@@ -46,7 +46,7 @@ export function ArticleHero({
   }
 
   return (
-    <header className={cn("mb-10", className)}>
+    <header className={cn("mb-6", className)}>
       {title}
       {intro ? (
         <div className="editorial-deck mt-6 max-w-2xl space-y-4">{intro}</div>

@@ -41,7 +41,7 @@ const categories: Category[] = [
 
 export function Categories() {
   return (
-    <section className="border-b border-stone-200 py-12">
+    <section className="border-b border-stone-200 py-8">
       <Container>
         <SectionLabel>Who is this for?</SectionLabel>
         <div className="flex flex-col gap-3">

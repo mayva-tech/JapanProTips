@@ -38,7 +38,7 @@ export default function JapanTrainMistakesPage() {
       }
       beforeComparison={
         <>
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Most Common Mistakes
             </h2>
@@ -61,7 +61,7 @@ export default function JapanTrainMistakesPage() {
             </ul>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Why These Happen
             </h2>
@@ -81,11 +81,11 @@ export default function JapanTrainMistakesPage() {
       }
       afterComparison={
         <>
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               How to Avoid Them
             </h2>
-            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Use Google Maps
               </li>
@@ -98,7 +98,7 @@ export default function JapanTrainMistakesPage() {
             </ul>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Reality Check
             </h2>
@@ -108,11 +108,11 @@ export default function JapanTrainMistakesPage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Bottom Line
             </h2>
-            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Don&apos;t panic
               </li>

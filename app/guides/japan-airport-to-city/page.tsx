@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import Link from "next/link";
 import { OperationalWarning, RealityCheck } from "@/components/editorial/field-notes";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
@@ -33,7 +34,7 @@ export default function JapanAirportToCityPage() {
       }
       beforeComparison={
         <>
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Quick Answer (Don&apos;t Overthink It)
           </h2>
@@ -80,7 +81,7 @@ export default function JapanAirportToCityPage() {
           </OperationalWarning>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Before You Leave the Airport
           </h2>
@@ -115,7 +116,7 @@ export default function JapanAirportToCityPage() {
 
         <RecommendedServicesBox serviceId="japan-airport-to-city" />
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Narita Airport → Tokyo
           </h2>
@@ -185,7 +186,7 @@ export default function JapanAirportToCityPage() {
       }
       afterComparison={
         <>
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Haneda Airport → Tokyo
           </h2>
@@ -229,7 +230,7 @@ export default function JapanAirportToCityPage() {
           </p>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Kansai Airport → Osaka
           </h2>
@@ -264,7 +265,7 @@ export default function JapanAirportToCityPage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             What Option Should You Choose?
           </h2>
@@ -284,7 +285,7 @@ export default function JapanAirportToCityPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Common Mistakes
           </h2>
@@ -304,7 +305,7 @@ export default function JapanAirportToCityPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Reality Check
           </h2>
@@ -316,11 +317,11 @@ export default function JapanAirportToCityPage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Bottom Line
           </h2>
-          <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Use train for most cases
             </li>
@@ -343,15 +344,7 @@ export default function JapanAirportToCityPage() {
           parentHref="/guides/japan-itinerary"
           parentLabel="Japan trip itinerary →"
         />
-
-        <div className="border-t border-tan pt-8 mt-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
-          >
-            JapanProTips homepage <span className="text-lg">‹‹‹</span>
-          </Link>
-        </div>
+        <SiteBrandFooter />
         </>
       }
     />

@@ -34,11 +34,11 @@ export default function DoYouNeedSimJapanPage() {
       }
       beforeComparison={
         <>
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Quick Answer
             </h2>
-            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Yes, you need internet in Japan
               </li>
@@ -82,7 +82,7 @@ export default function DoYouNeedSimJapanPage() {
             </ul>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               When You Need a SIM
             </h2>
@@ -110,7 +110,7 @@ export default function DoYouNeedSimJapanPage() {
             </p>
           </LocalTip>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               When You Might Not Need One
             </h2>
@@ -130,7 +130,7 @@ export default function DoYouNeedSimJapanPage() {
       }
       afterComparison={
         <>
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Reality Check
             </h2>
@@ -140,11 +140,11 @@ export default function DoYouNeedSimJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Bottom Line
             </h2>
-            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Get a SIM
               </li>

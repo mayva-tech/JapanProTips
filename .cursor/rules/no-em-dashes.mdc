@@ -15,6 +15,4 @@ Use instead:
 - **Hyphen** for numeric ranges: `3-7 days`, `$$-$$$`
 - **"N/A"** or **"Varies"** for empty table cells, never `—`
 
-Shared trust line: import from `@/lib/editorial-copy` (`EDITORIAL_COPY.trustLine`).
-
 Code comments should also avoid em/en dashes; use commas or periods.

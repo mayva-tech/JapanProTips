@@ -3,7 +3,7 @@ import Link from "next/link";
 export function GuideBreadcrumbs({ current }: { current: string }) {
   return (
     <nav
-      className="mb-8 max-w-2xl font-sans text-sm font-semibold text-muted"
+      className="mb-6 max-w-2xl font-sans text-sm font-semibold text-muted"
       aria-label="Breadcrumb"
     >
       <Link href="/" className="text-rust hover:text-maroon">

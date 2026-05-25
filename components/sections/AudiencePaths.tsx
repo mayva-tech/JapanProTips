@@ -43,7 +43,7 @@ const categories: Category[] = [
 
 export function AudiencePaths() {
   return (
-    <section className="border-b border-stone-200 py-12">
+    <section className="border-b border-stone-200 py-8">
       <Container>
         <SectionLabel>Where do you need help?</SectionLabel>
         <div className="flex flex-col gap-3">

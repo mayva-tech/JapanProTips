@@ -31,7 +31,7 @@ export function ItineraryTemplatePage({
     <>
       <ItineraryTemplateViewTracker payload={viewPayload} />
 
-      <header className="mb-8 max-w-3xl">
+      <header className="mb-6 max-w-3xl">
         <p className="editorial-kicker mb-3">Curated itinerary</p>
         <h1 className="guide-page-title text-balance">{template.title}</h1>
         <p className="editorial-deck mt-4 max-w-2xl text-pretty">
@@ -42,7 +42,7 @@ export function ItineraryTemplatePage({
         </p>
       </header>
 
-      <section className="mb-10 max-w-3xl rounded-lg border border-paper-edge bg-paper-card/90 p-5 sm:p-6">
+      <section className="mb-6 max-w-3xl rounded-lg border border-paper-edge bg-paper-card/90 p-5 sm:p-6">
         <h2 className="font-display text-xl font-bold text-dark sm:text-2xl">
           Quick trip summary
         </h2>
@@ -95,7 +95,7 @@ export function ItineraryTemplatePage({
         </p>
       </section>
 
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-6 max-w-3xl">
         <h2 className="font-display text-xl font-bold text-dark sm:text-2xl">
           Who this is for
         </h2>
@@ -112,7 +112,7 @@ export function ItineraryTemplatePage({
         </p>
       ) : null}
 
-      <section className="mb-10 max-w-3xl">
+      <section className="mb-6 max-w-3xl">
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
           <ItineraryTemplatePlannerCta template={template} />
           <Link
@@ -124,7 +124,7 @@ export function ItineraryTemplatePage({
         </div>
       </section>
 
-      <section className="mb-10 max-w-3xl space-y-4">
+      <section className="mb-6 max-w-3xl space-y-4">
         <h2 className="font-display text-xl font-bold text-dark sm:text-2xl">
           Day-by-day outline
         </h2>
@@ -134,7 +134,7 @@ export function ItineraryTemplatePage({
       </section>
 
       {template.practicalNotes.length > 0 ? (
-        <section className="mb-10 max-w-3xl">
+        <section className="mb-6 max-w-3xl">
           <h2 className="font-display text-xl font-bold text-dark sm:text-2xl">
             Practical notes
           </h2>
@@ -147,7 +147,7 @@ export function ItineraryTemplatePage({
       ) : null}
 
       {template.relatedGuideLinks.length > 0 ? (
-        <section className="mb-10 max-w-3xl rounded-lg border border-paper-edge bg-paper/80 p-5 sm:p-6">
+        <section className="mb-6 max-w-3xl rounded-lg border border-paper-edge bg-paper/80 p-5 sm:p-6">
           <h2 className="font-display text-lg font-bold text-dark">
             Related guides
           </h2>

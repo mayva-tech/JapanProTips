@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 export default function OpenBankAccountJapanPage() {
   return (
     <main className="bg-cream min-h-screen font-sans">
-      <article className="max-w-3xl mx-auto px-6 pt-12 pb-16">
+      <article className="page-x max-w-3xl mx-auto pt-10 pb-14">
         <h1
           className="guide-page-title"
         >
           How to Open a Bank Account in Japan (What Actually Works)
         </h1>
 
-        <div className="article-body mb-12 max-w-2xl space-y-4">
+        <div className="article-body mb-6 max-w-2xl space-y-4">
           <p>
             Opening a bank account in Japan is not straightforward. Branches
             follow internal rules you will not see written on a single English
@@ -52,7 +52,7 @@ export default function OpenBankAccountJapanPage() {
           </p>
         </div>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Quick Answer
           </h2>
@@ -76,7 +76,7 @@ export default function OpenBankAccountJapanPage() {
           </p>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Best Banks for Foreigners
           </h2>
@@ -113,7 +113,7 @@ export default function OpenBankAccountJapanPage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             What You Need
           </h2>
@@ -137,7 +137,7 @@ export default function OpenBankAccountJapanPage() {
           </p>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Common Problems
           </h2>
@@ -154,7 +154,7 @@ export default function OpenBankAccountJapanPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             What Actually Works
           </h2>
@@ -171,7 +171,7 @@ export default function OpenBankAccountJapanPage() {
           </ul>
         </section>
 
-        <div className="mb-12 max-w-2xl">
+        <div className="mb-6 max-w-2xl">
           <p className="article-body mb-4">
             If you want to move yen without a full local stack yet, do this:
           </p>
@@ -187,7 +187,7 @@ export default function OpenBankAccountJapanPage() {
           />
         </div>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Reality Check
           </h2>
@@ -204,7 +204,7 @@ export default function OpenBankAccountJapanPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Bottom Line
           </h2>

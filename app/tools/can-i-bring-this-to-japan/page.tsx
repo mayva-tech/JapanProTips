@@ -126,8 +126,8 @@ export default function CanIBringThisToJapanPage() {
           </div>
         </div>
 
-        <article className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
-          <header className="mb-10 max-w-3xl lg:mb-12">
+        <article className="mx-auto max-w-6xl px-4 pb-8 pt-8 sm:px-6 sm:pb-8 sm:pt-8">
+          <header className="mb-6 max-w-3xl lg:mb-6">
             <p className="editorial-kicker mb-3">Tool</p>
             <h1 className="guide-page-title text-balance">
               Can I Bring This to Japan?

@@ -93,7 +93,7 @@ export default function JapanPackingListPage() {
       }
       beforeComparison={
         <>
-          <div className="mb-12 max-w-full">
+          <div className="mb-6 max-w-full">
             <ToolRecommendationStrip
               headingId="packing-tools-strip"
               title="Plan the bag with the tools"
@@ -122,7 +122,7 @@ export default function JapanPackingListPage() {
             intro="If you want the simplest options before you fly, these solve the problems we see most on walking-heavy, train-first trips."
           />
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Quick rules before you pack</H2>
             <ol className="article-body list-decimal space-y-3 pl-6 max-w-2xl">
               <li>
@@ -169,7 +169,7 @@ export default function JapanPackingListPage() {
             </TouristMistakeNote>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Universal packing list</H2>
             <H3>Documents and money basics</H3>
             <CheckList
@@ -214,7 +214,7 @@ export default function JapanPackingListPage() {
             </p>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Shoes: the real MVP</H2>
             <div className="article-body space-y-4 max-w-2xl">
               <p>
@@ -235,7 +235,7 @@ export default function JapanPackingListPage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Spring (March to May)</H2>
             <div className="article-body space-y-4 max-w-2xl">
               <p>
@@ -262,7 +262,7 @@ export default function JapanPackingListPage() {
             />
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Summer (June to August)</H2>
             <div className="article-body space-y-4 max-w-2xl">
               <p>
@@ -294,7 +294,7 @@ export default function JapanPackingListPage() {
             </p>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Rainy season (often June)</H2>
             <div className="article-body space-y-4 max-w-2xl">
               <p>
@@ -323,7 +323,7 @@ export default function JapanPackingListPage() {
             />
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Autumn (September to November)</H2>
             <div className="article-body space-y-4 max-w-2xl">
               <p>
@@ -341,7 +341,7 @@ export default function JapanPackingListPage() {
             />
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Winter (December to February)</H2>
             <div className="article-body space-y-4 max-w-2xl">
               <p>
@@ -373,7 +373,7 @@ export default function JapanPackingListPage() {
             />
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Luggage size that works</H2>
             <div className="article-body space-y-4 max-w-2xl">
               <p>
@@ -391,7 +391,7 @@ export default function JapanPackingListPage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Hotel reality check</H2>
             <div className="article-body space-y-4 max-w-2xl">
               <p>
@@ -414,7 +414,7 @@ export default function JapanPackingListPage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Medicine and toiletries</H2>
             <div className="article-body space-y-4 max-w-2xl">
               <p>
@@ -432,7 +432,7 @@ export default function JapanPackingListPage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Cash and wallet setup</H2>
             <div className="article-body space-y-4 max-w-2xl">
               <p>
@@ -453,7 +453,7 @@ export default function JapanPackingListPage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Things you usually do not need</H2>
             <CheckList
               items={[
@@ -465,7 +465,7 @@ export default function JapanPackingListPage() {
             />
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Smart packing strategy</H2>
             <div className="article-body space-y-4 max-w-2xl">
               <p>
@@ -485,7 +485,7 @@ export default function JapanPackingListPage() {
       }
       afterComparison={
         <>
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Final advice: three priorities</H2>
             <CheckList
               items={[
@@ -496,7 +496,7 @@ export default function JapanPackingListPage() {
             />
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <H2>Related guides</H2>
             <ul className="article-body list-none space-y-3 pl-0 max-w-2xl">
               <li>

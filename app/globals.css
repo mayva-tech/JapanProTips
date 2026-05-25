@@ -24,6 +24,20 @@
 }
 
 @layer components {
+  /* Horizontal page gutters: tighter on phones so body copy uses more width */
+  .page-x {
+    @apply px-4 sm:px-6;
+  }
+
+  @media (max-width: 1023px) {
+    article .max-w-xl,
+    article .max-w-2xl,
+    article .max-w-3xl,
+    main .mdx-guide-body.max-w-2xl {
+      max-width: none;
+    }
+  }
+
   /* AoM: Barlow 12px / 900 / uppercase section labels */
   .editorial-kicker {
     @apply font-sans text-kicker font-black uppercase text-maroon;
@@ -36,7 +50,7 @@
 
   /* Guide article H1: scales down on narrow phones (28px–56px) */
   .guide-page-title {
-    @apply font-heading font-bold italic leading-tight text-ink mb-6 sm:mb-8;
+    @apply font-heading font-bold italic leading-tight text-ink mb-4 sm:mb-6;
     font-size: clamp(1.75rem, 5.5vw, 3.5rem);
   }
 
@@ -88,7 +102,7 @@
   }
 
   .editorial-cta-block {
-    @apply border border-paper-edge bg-paper-elevated px-8 py-8 shadow-editorial sm:px-10 sm:py-10;
+    @apply border border-paper-edge bg-paper-elevated px-8 py-6 shadow-editorial sm:px-10 sm:py-8;
   }
 
   .editorial-btn-primary {
@@ -105,7 +119,7 @@
 
   /* Guide article prose */
   .guide-prose h2 {
-    @apply mb-4 mt-12 border-t border-paper-edge pt-8 font-heading text-h2 font-bold italic text-ink;
+    @apply mb-4 mt-6 border-t border-paper-edge pt-6 font-heading text-h2 font-bold italic text-ink;
   }
 
   .guide-prose h2:first-child {
@@ -114,7 +128,7 @@
 
   /* AoM h3: Barlow 24px black uppercase with rust underline */
   .guide-prose h3 {
-    @apply mb-3 mt-8 inline-block border-b-2 border-rust pb-1.5 font-sans text-h2 font-black uppercase tracking-[0.08em] text-maroon;
+    @apply mb-3 mt-6 inline-block border-b-2 border-rust pb-1.5 font-sans text-h2 font-black uppercase tracking-[0.08em] text-maroon;
   }
 
   .guide-prose p {
@@ -137,17 +151,17 @@
     @apply font-sans font-bold text-ink;
   }
 
-  /* MDX guide body: match TSX section spacing (mb-12 between h2 blocks) */
+  /* MDX guide body: match TSX section spacing (mb-6 between h2 blocks) */
   .mdx-guide-body {
     min-width: 0;
   }
 
   .mdx-guide-body > * + h2 {
-    @apply mt-12;
+    @apply mt-6;
   }
 
   .mdx-guide-body h2 {
-    @apply mb-4 border-t border-paper-edge pt-8 font-heading text-h2 font-bold italic text-ink sm:text-h2-lg;
+    @apply mb-4 border-t border-paper-edge pt-6 font-heading text-h2 font-bold italic text-ink sm:text-h2-lg;
   }
 
   .mdx-guide-body h2:first-of-type {
@@ -155,16 +169,16 @@
   }
 
   .mdx-guide-body h3 {
-    @apply mb-3 mt-8 inline-block border-b-2 border-rust pb-1.5 font-sans text-lg font-black uppercase tracking-[0.08em] text-maroon sm:text-xl;
+    @apply mb-3 mt-6 inline-block border-b-2 border-rust pb-1.5 font-sans text-lg font-black uppercase tracking-[0.08em] text-maroon sm:text-xl;
   }
 
   /* FAQ: maroon questions vs muted answers for scanability while scrolling */
   .mdx-guide-body h2#faq ~ h3 {
-    @apply mb-2 mt-8 font-sans text-lg font-bold leading-snug tracking-normal text-maroon;
+    @apply mb-2 mt-6 font-sans text-lg font-bold leading-snug tracking-normal text-maroon;
   }
 
   .mdx-guide-body h2#faq + h3 {
-    @apply mt-6;
+    @apply mt-4;
   }
 
   .mdx-guide-body h2#faq ~ p {
@@ -314,6 +328,89 @@
 
   .hero-image {
     @apply object-cover object-center saturate-[0.82] contrast-[1.05];
+  }
+
+  /* AoM magazine layout: section titles, latest list, thumbnails */
+  .aom-section-title {
+    @apply font-heading text-2xl font-bold italic leading-tight text-ink sm:text-h2-lg;
+  }
+
+  .aom-latest-row {
+    @apply flex gap-4 no-underline sm:gap-6;
+  }
+
+  .editorial-thumb {
+    @apply relative h-24 w-32 shrink-0 sm:h-28 sm:w-36;
+  }
+
+  .magazine-sidebar-card {
+    @apply rounded-lg border border-paper-edge bg-paper-card/90 p-5 shadow-editorial sm:p-6;
+  }
+
+  /* Art of Manliness header (https://www.artofmanliness.com/) */
+  .aom-site-header {
+    @apply bg-paper;
+  }
+
+  .aom-nav-link {
+    @apply font-nav text-[0.8rem] font-black uppercase tracking-[0.06em] text-oxblood no-underline;
+    border-bottom: 2px solid #5c2112;
+    padding-bottom: 2px;
+  }
+
+  .aom-nav-link:hover,
+  .aom-nav-dropdown.group:hover .aom-nav-link,
+  .aom-nav-search-trigger:hover {
+    @apply text-oxblood;
+    border-bottom-color: #5c2112;
+  }
+
+  .aom-nav-logo {
+    @apply flex items-center;
+  }
+
+  /* pt-2 bridges the gap under the trigger so hover stays open while moving into the menu */
+  .aom-nav-dropdown-panel {
+    @apply pointer-events-none invisible absolute left-0 top-full z-50 min-w-[240px] pt-2 opacity-0 transition-opacity duration-150;
+  }
+
+  .aom-nav-dropdown-panel > ul {
+    @apply list-none border border-paper-edge bg-paper p-0 py-2 shadow-editorial;
+  }
+
+  .aom-nav-dropdown-panel--open,
+  .aom-nav-dropdown.group:hover .aom-nav-dropdown-panel {
+    @apply pointer-events-auto visible opacity-100;
+  }
+
+  .aom-nav-dropdown.group:hover button svg,
+  .aom-nav-dropdown button[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+  }
+
+  .aom-nav-dropdown-link {
+    @apply block px-4 py-2 font-serif text-sm font-semibold text-oxblood no-underline transition-colors hover:bg-paper-elevated;
+  }
+
+  .aom-nav-search-panel {
+    @apply pointer-events-none invisible absolute right-0 top-full z-50 w-[min(100vw-2rem,22rem)] pt-2 opacity-0 transition-opacity duration-150;
+  }
+
+  .aom-nav-search-panel-box {
+    @apply border border-paper-edge bg-paper p-4 shadow-editorial;
+  }
+
+  .aom-nav-search-panel--open {
+    @apply pointer-events-auto visible opacity-100;
+  }
+
+  .aom-nav-mobile-panel {
+    @apply absolute inset-x-0 top-full z-[60] max-h-[min(70vh,24rem)] overflow-y-auto border-t border-paper-edge bg-paper px-4 py-3 shadow-editorial;
+  }
+
+  .sr-only {
+    @apply absolute -m-px h-px w-px overflow-hidden whitespace-nowrap border-0 p-0;
+    clip: rect(0, 0, 0, 0);
   }
 }
 

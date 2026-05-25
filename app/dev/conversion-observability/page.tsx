@@ -75,7 +75,7 @@ function ConversionPageTable({
   if (rows.length === 0) return null;
 
   return (
-    <section className="mb-10">
+    <section className="mb-6">
       <h2 className="editorial-heading mb-2 text-xl">{title}</h2>
       {description ? (
         <p className="article-body-sm mb-4 text-muted">{description}</p>
@@ -199,7 +199,7 @@ export default function ConversionObservabilityPage() {
         Not available in production.
       </p>
 
-      <nav className="article-body-sm mb-8 flex flex-wrap gap-4">
+      <nav className="article-body-sm mb-6 flex flex-wrap gap-4">
         <Link href="/dev" className="text-rust hover:text-maroon">
           Dev hub
         </Link>
@@ -220,7 +220,7 @@ export default function ConversionObservabilityPage() {
         <HealthBadge label="Checklists" ok={report.health.checklistOk} />
       </div>
 
-      <div className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {[
           { label: "Articles scanned", value: summary.articleRoutes },
           { label: "Affiliate gear pages", value: summary.affiliateGearRoutes },
@@ -262,7 +262,7 @@ export default function ConversionObservabilityPage() {
         ))}
       </div>
 
-      <section className="mb-10 rounded-lg border border-[#d4c9b0] bg-paper-elevated px-4 py-4">
+      <section className="mb-6 rounded-lg border border-[#d4c9b0] bg-paper-elevated px-4 py-4">
         <h2 className="editorial-heading mb-3 text-xl">GA4 event catalog</h2>
         <p className="article-body-sm mb-4 text-muted">
           All systems use{" "}
@@ -308,7 +308,7 @@ export default function ConversionObservabilityPage() {
         </p>
       </section>
 
-      <section className="mb-10">
+      <section className="mb-6">
         <h2 className="editorial-heading mb-3 text-xl">Stack legend</h2>
         <p className="article-body-sm mb-3 text-muted">
           Dots per page: gear, service, next step, checklist PDF, guide end CTA.
@@ -324,7 +324,7 @@ export default function ConversionObservabilityPage() {
         <section
           key={group.id}
           id={group.id}
-          className="mb-8 rounded-lg border border-[#d4c9b0] bg-white px-4 py-4"
+          className="mb-6 rounded-lg border border-[#d4c9b0] bg-white px-4 py-4"
         >
           <h2 className="font-sans text-sm font-bold uppercase tracking-widest text-rust mb-1">
             {group.title} ({group.routes.length})
@@ -362,7 +362,7 @@ export default function ConversionObservabilityPage() {
         rows={fullStack}
       />
 
-      <section className="mb-10">
+      <section className="mb-6">
         <h2 className="editorial-heading mb-3 text-xl">
           Top Next Step hubs (outbound targets)
         </h2>

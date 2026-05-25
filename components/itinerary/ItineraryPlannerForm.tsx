@@ -28,6 +28,11 @@ import { friendlyGenerateErrorMessage } from "@/lib/itinerary/itinerary-user-mes
 import type { GenerateItineraryRequest, GenerateItineraryResponse } from "@/types/itinerary-api";
 import type { GeneratedItinerary } from "@/types/itinerary";
 import type { ItineraryDuration } from "@/types/itinerary";
+import {
+  toolScrollSegmentLayout,
+  toolSegmentClass,
+  toolSegmentScrollWrap,
+} from "@/lib/tool-choice-classes";
 
 const DEFAULTS: GenerateItineraryRequest = {
   duration: 7,
@@ -39,11 +44,7 @@ const DEFAULTS: GenerateItineraryRequest = {
 
 const controlLabel =
   "mb-2 block font-sans text-xs font-bold uppercase tracking-widest text-rust";
-const segmentWrap = "flex flex-wrap gap-2";
-const segmentBtn =
-  "min-h-[44px] min-w-[calc(50%-0.25rem)] flex-1 rounded-md border border-paper-edge bg-paper-card px-2.5 py-2.5 text-left font-sans text-xs font-semibold text-dark transition-colors duration-150 hover:border-rust/40 sm:min-w-0 sm:px-3 sm:text-sm";
-const segmentBtnOn =
-  "border-maroon bg-maroon/10 text-maroon ring-1 ring-maroon/25";
+const segmentWrap = toolSegmentScrollWrap;
 
 const primaryBtn =
   "inline-flex w-full items-center justify-center rounded-md bg-maroon px-6 py-3.5 font-sans text-base font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:min-w-[280px]";
@@ -67,7 +68,7 @@ function Segmented<T extends string>({
           <button
             key={opt.value}
             type="button"
-            className={`${segmentBtn} ${on ? segmentBtnOn : ""}`}
+            className={toolSegmentClass(on, toolScrollSegmentLayout)}
             onClick={() => onChange(opt.value)}
             aria-pressed={on}
           >
@@ -94,7 +95,7 @@ function DurationSegmented({
           <button
             key={opt.value}
             type="button"
-            className={`${segmentBtn} ${on ? segmentBtnOn : ""}`}
+            className={toolSegmentClass(on, toolScrollSegmentLayout)}
             onClick={() => onChange(opt.value)}
             aria-pressed={on}
           >
@@ -315,7 +316,7 @@ export function ItineraryPlannerForm() {
           </fieldset>
         </div>
 
-        <div className="mt-8 border-t border-paper-edge pt-6">
+        <div className="mt-6 border-t border-paper-edge pt-6">
           <button
             type="button"
             className={primaryBtn}

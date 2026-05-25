@@ -33,6 +33,12 @@ import {
   parseJapanPackingGeneratorSearchParams,
   serializeJapanPackingGeneratorQuery,
 } from "@/lib/japan-packing-generator";
+import {
+  toolCheckboxClass,
+  toolCheckboxRowLayoutSm,
+  toolSegmentClass,
+  toolSegmentLayout,
+} from "@/lib/tool-choice-classes";
 
 const TRAVELER_OPTIONS: { value: TravelerType; label: string }[] = [
   { value: "first-timer", label: "First-time tourist" },
@@ -74,10 +80,6 @@ const RAIN_OPTIONS: { value: RainLevel; label: string }[] = [
 const controlLabel =
   "mb-2 block font-sans text-xs font-bold uppercase tracking-widest text-rust";
 const segmentWrap = "flex flex-wrap gap-2";
-const segmentBtn =
-  "rounded-md border border-paper-edge bg-paper-card px-3 py-2.5 text-left font-sans text-sm font-semibold text-dark transition-colors duration-150 hover:border-rust/40 sm:min-w-0 sm:flex-1 sm:px-3 sm:py-2.5";
-const segmentBtnOn =
-  "border-maroon bg-maroon/10 text-maroon ring-1 ring-maroon/25";
 
 const actionBtn =
   "inline-flex min-h-[2.5rem] flex-1 items-center justify-center rounded-md border border-paper-edge bg-paper-elevated/90 px-3 py-2 font-sans text-xs font-bold uppercase tracking-widest text-dark transition-colors duration-150 hover:border-rust/45 hover:bg-paper sm:text-[0.7rem]";
@@ -101,7 +103,7 @@ function Segmented<T extends string>({
           <button
             key={opt.value}
             type="button"
-            className={`${segmentBtn} ${on ? segmentBtnOn : ""}`}
+            className={toolSegmentClass(on, toolSegmentLayout)}
             onClick={() => onChange(opt.value)}
             aria-pressed={on}
           >
@@ -209,7 +211,7 @@ function JapanPackingGeneratorClient() {
 
   return (
     <div className="mx-auto max-w-6xl">
-      <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] lg:items-start lg:gap-10 xl:gap-12">
+      <div className="flex flex-col gap-6 lg:grid lg:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] lg:items-start lg:gap-10 xl:gap-10">
         <div className="min-w-0 space-y-6 lg:sticky lg:top-24 lg:self-start">
           <section
             className="rounded-lg border border-paper-edge bg-paper-card/80 p-5 shadow-editorial sm:p-6"
@@ -290,15 +292,11 @@ function JapanPackingGeneratorClient() {
                     return (
                       <label
                         key={value}
-                        className={`flex cursor-pointer items-center gap-2 rounded-md border px-2.5 py-2 font-sans text-xs font-semibold sm:text-sm ${
-                          on
-                            ? "border-maroon bg-maroon/10 text-maroon"
-                            : "border-paper-edge bg-paper text-dark hover:border-rust/40"
-                        }`}
+                        className={toolCheckboxClass(on, toolCheckboxRowLayoutSm)}
                       >
                         <input
                           type="checkbox"
-                          className="h-4 w-4 accent-maroon"
+                          className="h-4 w-4 accent-tool-ink"
                           checked={on}
                           onChange={() => toggleCity(value)}
                         />
@@ -327,15 +325,11 @@ function JapanPackingGeneratorClient() {
                     return (
                       <label
                         key={value}
-                        className={`flex cursor-pointer items-center gap-2 rounded-md border px-2.5 py-2 font-sans text-xs font-semibold sm:text-sm ${
-                          on
-                            ? "border-maroon bg-maroon/10 text-maroon"
-                            : "border-paper-edge bg-paper text-dark hover:border-rust/40"
-                        }`}
+                        className={toolCheckboxClass(on, toolCheckboxRowLayoutSm)}
                       >
                         <input
                           type="checkbox"
-                          className="h-4 w-4 accent-maroon"
+                          className="h-4 w-4 accent-tool-ink"
                           checked={on}
                           onChange={() => toggleActivity(value)}
                         />

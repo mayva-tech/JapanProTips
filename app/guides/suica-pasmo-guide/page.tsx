@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import Link from "next/link";
 import { OperationalWarning, WhatPeopleMiss } from "@/components/editorial/field-notes";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
@@ -46,7 +47,7 @@ export default function SuicaPasmoGuidePage() {
       }
       beforeComparison={
         <>
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             What is a Suica or PASMO Card
           </h2>
@@ -66,7 +67,7 @@ export default function SuicaPasmoGuidePage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Do You Still Need One in 2026
           </h2>
@@ -97,7 +98,7 @@ export default function SuicaPasmoGuidePage() {
           </p>
         </OperationalWarning>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Mobile Suica (iPhone Users)
           </h2>
@@ -121,7 +122,7 @@ export default function SuicaPasmoGuidePage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Android Situation
           </h2>
@@ -152,7 +153,7 @@ export default function SuicaPasmoGuidePage() {
       }
       afterComparison={
         <>
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Where You Can Use It
           </h2>
@@ -176,7 +177,7 @@ export default function SuicaPasmoGuidePage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             When You Do NOT Need It
           </h2>
@@ -200,7 +201,7 @@ export default function SuicaPasmoGuidePage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Alternatives
           </h2>
@@ -218,7 +219,7 @@ export default function SuicaPasmoGuidePage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Final Recommendation
           </h2>
@@ -240,7 +241,7 @@ export default function SuicaPasmoGuidePage() {
           </div>
         </section>
 
-        <section className="mb-12 max-w-2xl border-t border-tan pt-10">
+        <section className="mb-6 max-w-2xl border-t border-tan pt-8">
           <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             Related guides
           </h2>
@@ -270,15 +271,7 @@ export default function SuicaPasmoGuidePage() {
           parentHref="/guides/japan-trains"
           parentLabel="How to use trains in Japan →"
         />
-
-        <div className="border-t border-tan pt-8 mt-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
-          >
-            JapanProTips homepage <span className="text-lg">‹‹‹</span>
-          </Link>
-        </div>
+        <SiteBrandFooter />
         </>
       }
     />

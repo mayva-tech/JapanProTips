@@ -33,7 +33,7 @@ export default function JapanTransportationPage() {
         </div>
       }
       beforeComparison={
-        <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl mb-12">
+        <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl mb-6">
           <li>
             <Link
               href="/guides/getting-around-japan"

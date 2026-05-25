@@ -52,7 +52,7 @@ export default function AffiliateAuditPage() {
         </Link>
       </p>
 
-      <div className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {[
           { label: "Registered keys", value: summary.registeredLinkIds },
           { label: "Live URLs", value: summary.configuredUrls },
@@ -76,7 +76,7 @@ export default function AffiliateAuditPage() {
       </div>
 
       {summary.unknownLinkIds > 0 ? (
-        <section className="mb-8 rounded-lg border border-rust/40 bg-[#ebe4d8] px-4 py-3">
+        <section className="mb-6 rounded-lg border border-rust/40 bg-[#ebe4d8] px-4 py-3">
           <h2 className="font-sans text-sm font-bold uppercase tracking-widest text-rust mb-2">
             Unknown link IDs
           </h2>
@@ -92,7 +92,7 @@ export default function AffiliateAuditPage() {
         </section>
       ) : null}
 
-      <section className="mb-10">
+      <section className="mb-6">
         <h2 className="editorial-heading mb-3 text-xl">Routes with boxes</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="rounded-lg border border-[#d4c9b0] bg-white px-4 py-3">
@@ -141,7 +141,7 @@ export default function AffiliateAuditPage() {
       </section>
 
       {report.recommendationRows.length > 0 ? (
-        <section className="mb-10">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-3 text-xl">
             Recommendation catalog
           </h2>
@@ -206,7 +206,7 @@ export default function AffiliateAuditPage() {
       ) : null}
 
       {missingUsed.length > 0 ? (
-        <section className="mb-10">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-3 text-xl">
             Missing URLs (in use)
           </h2>
@@ -299,7 +299,7 @@ export default function AffiliateAuditPage() {
         </div>
       </section>
 
-      <p className="article-body-sm mt-8 text-muted">
+      <p className="article-body-sm mt-6 text-muted">
         CLI: <code className="text-dark">npm run audit:affiliate</code>
       </p>
     </div>

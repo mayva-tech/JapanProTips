@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import type { ReactNode } from "react";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideBreadcrumbs } from "@/components/guides/GuideBreadcrumbs";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
 import { NextStepGuides } from "@/components/NextStepGuides";
-import { EDITORIAL_COPY } from "@/lib/editorial-copy";
 import { siteUrl, SITE_NAME } from "@/lib/site";
 
 const PATH = "/guides/japan-money-mistakes";
@@ -121,7 +121,7 @@ function Mistake({
   children: ReactNode;
 }) {
   return (
-    <div className="mb-8 max-w-2xl">
+    <div className="mb-6 max-w-2xl">
       <H3>
         Mistake {n}: {mistakeTitle}
       </H3>
@@ -153,10 +153,7 @@ export default function JapanMoneyMistakesPage() {
               This page focuses on payment mechanics, not investment advice.
               Rules vary by bank and shop. When in doubt, carry a backup method.
             </p>
-            <p className="font-sans text-sm font-bold uppercase tracking-widest text-muted">
-              {EDITORIAL_COPY.trustLine}
-            </p>
-          </div>
+</div>
         }
         beforeComparison={
           <>
@@ -175,7 +172,7 @@ export default function JapanMoneyMistakesPage() {
               ]}
               analyticsSourceSlug="japan-money-mistakes"
             />
-            <section className="mb-12 max-w-2xl">
+            <section className="mb-6 max-w-2xl">
               <H2>Payment mistakes and fixes</H2>
               <Mistake n={1} title="arriving with no yen">
                 <p>
@@ -321,7 +318,7 @@ export default function JapanMoneyMistakesPage() {
         }
         afterComparison={
           <>
-            <section className="mb-12 max-w-2xl">
+            <section className="mb-6 max-w-2xl">
               <H2>Practical money checklist</H2>
               <CheckList
                 items={[
@@ -346,14 +343,7 @@ export default function JapanMoneyMistakesPage() {
               parentHref="/guides/money-payments-japan"
               parentLabel="Money and payments in Japan →"
             />
-            <div className="border-t border-tan pt-8 mt-6 max-w-2xl">
-              <Link
-                href="/"
-                className="inline-flex items-center gap-2 font-sans text-base font-bold uppercase tracking-widest text-rust hover:text-maroon transition-colors duration-150"
-              >
-                JapanProTips homepage
-              </Link>
-            </div>
+            <SiteBrandFooter />
           </>
         }
       />

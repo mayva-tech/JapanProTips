@@ -73,7 +73,7 @@ export function ResidentStarterPath({
   if (variant === "hub") {
     return (
       <section
-        className={`mb-14 ${className}`.trim()}
+        className={`mb-6 ${className}`.trim()}
         aria-labelledby={headingId}
       >
         <p className="editorial-kicker mb-2">New in Japan</p>
@@ -116,7 +116,7 @@ export function ResidentStarterPath({
 
   return (
     <aside
-      className={`mb-12 max-w-2xl rounded-lg border border-paper-edge bg-paper-card px-5 py-5 shadow-editorial sm:px-6 ${className}`.trim()}
+      className={`mb-6 max-w-2xl rounded-lg border border-paper-edge bg-paper-card px-5 py-5 shadow-editorial sm:px-6 ${className}`.trim()}
       aria-labelledby={headingId}
     >
       <h2

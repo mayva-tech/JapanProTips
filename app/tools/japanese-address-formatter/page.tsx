@@ -127,8 +127,8 @@ export default function JapaneseAddressFormatterPage() {
           </div>
         </div>
 
-        <article className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
-          <header className="mb-10 max-w-3xl lg:mb-12">
+        <article className="mx-auto max-w-6xl px-4 pb-8 pt-8 sm:px-6 sm:pb-8 sm:pt-8">
+          <header className="mb-6 max-w-3xl lg:mb-6">
             <p className="editorial-kicker mb-3">Tool</p>
             <h1 className="guide-page-title text-balance">
               Japanese Address Formatter
@@ -144,7 +144,7 @@ export default function JapaneseAddressFormatterPage() {
           <JapaneseAddressFormatter />
 
           <section
-            className="mt-14 max-w-3xl rounded-lg border border-paper-edge bg-paper-card/90 p-6 shadow-editorial sm:p-8"
+            className="mt-6 max-w-3xl rounded-lg border border-paper-edge bg-paper-card/90 p-6 shadow-editorial sm:p-8"
             aria-labelledby="addr-related-heading"
           >
             <h2

@@ -128,7 +128,7 @@ export default function RentingApartmentJapanPage() {
       />
       <main className="min-h-screen bg-cream font-sans">
         <div className="border-b border-paper-edge bg-paper/90">
-          <div className="mx-auto max-w-3xl px-6 py-4">
+          <div className="page-x mx-auto max-w-3xl py-4">
             <nav
               className="font-sans text-sm font-semibold text-muted"
               aria-label="Breadcrumb"
@@ -150,8 +150,8 @@ export default function RentingApartmentJapanPage() {
           </div>
         </div>
 
-        <article className="mx-auto max-w-3xl px-6 pb-16 pt-10 sm:pt-12">
-          <header className="mb-10 max-w-2xl">
+        <article className="page-x mx-auto max-w-3xl pb-8 pt-8 sm:pt-8">
+          <header className="mb-6 max-w-2xl">
             <p className="editorial-kicker mb-3">Residents</p>
             <h1 className="guide-page-title text-balance">{title}</h1>
             <div className="article-body mt-4 space-y-4">
@@ -171,7 +171,7 @@ export default function RentingApartmentJapanPage() {
             </div>
           </header>
 
-          <div className="mb-12">
+          <div className="mb-6">
             <ToolRecommendationStrip
               headingId="renting-tools-strip"
               title="Plan rent and addresses with tools"
@@ -181,7 +181,7 @@ export default function RentingApartmentJapanPage() {
             />
           </div>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Quick overview of the rental process
             </h2>
@@ -228,7 +228,7 @@ export default function RentingApartmentJapanPage() {
             </ResidentLearnedNote>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Common apartment types
             </h2>
@@ -272,7 +272,7 @@ export default function RentingApartmentJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Initial move-in costs</h2>
             <div className="article-body space-y-4">
               <p>
@@ -333,7 +333,7 @@ export default function RentingApartmentJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Monthly costs beyond rent
             </h2>
@@ -365,7 +365,7 @@ export default function RentingApartmentJapanPage() {
             </ul>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Required documents</h2>
             <ul className="article-body list-none space-y-3.5 pl-0">
               <li className="before:mr-3 before:font-bold before:text-rust before:content-['›']">
@@ -395,7 +395,7 @@ export default function RentingApartmentJapanPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Guarantor companies explained
             </h2>
@@ -419,7 +419,7 @@ export default function RentingApartmentJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Why applications get rejected
             </h2>
@@ -448,7 +448,7 @@ export default function RentingApartmentJapanPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">How to read listing terms</h2>
             <div className="article-body space-y-4">
               <ul className="list-none space-y-3.5 pl-0">
@@ -494,7 +494,7 @@ export default function RentingApartmentJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl" aria-labelledby="move-in-checklist-heading">
+          <section className="mb-6 max-w-2xl" aria-labelledby="move-in-checklist-heading">
             <h2 id="move-in-checklist-heading" className="editorial-heading mb-4">
               Move-in checklist
             </h2>
@@ -535,7 +535,7 @@ export default function RentingApartmentJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Common mistakes foreigners make
             </h2>
@@ -558,7 +558,7 @@ export default function RentingApartmentJapanPage() {
             </ul>
           </section>
 
-          <div className="mb-12 max-w-2xl space-y-4">
+          <div className="mb-6 max-w-2xl space-y-4">
             <h2 className="editorial-heading mb-4">
               Foreigner-friendly housing options
             </h2>
@@ -589,7 +589,7 @@ export default function RentingApartmentJapanPage() {
           </div>
 
           <section
-            className="mb-12 max-w-2xl rounded-lg border border-maroon/30 bg-paper-card p-6 shadow-editorial ring-1 ring-maroon/15 sm:p-8"
+            className="mb-6 max-w-2xl rounded-lg border border-maroon/30 bg-paper-card p-6 shadow-editorial ring-1 ring-maroon/15 sm:p-8"
             aria-labelledby="renting-tools-cta-heading"
           >
             <h2
@@ -632,7 +632,7 @@ export default function RentingApartmentJapanPage() {
           </section>
 
           <section
-            className="mb-12 max-w-2xl rounded-lg border border-paper-edge bg-paper-elevated/60 p-5 shadow-inner sm:p-6"
+            className="mb-6 max-w-2xl rounded-lg border border-paper-edge bg-paper-elevated/60 p-5 shadow-inner sm:p-6"
             aria-labelledby="renting-related-heading"
           >
             <h2

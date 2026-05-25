@@ -5,7 +5,6 @@ import { ResidentStarterPath } from "@/components/guides/ResidentStarterPath";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
 import { TrackedToolLink } from "@/components/tools/TrackedToolLink";
-import { EDITORIAL_COPY } from "@/lib/editorial-copy";
 import { siteToolBySlug, toRecommendationCard } from "@/lib/site-tools";
 import { siteUrl, SITE_NAME } from "@/lib/site";
 
@@ -117,7 +116,7 @@ export default function GarbageSeparationJapanPage() {
       />
       <main className="min-h-screen bg-cream font-sans">
         <div className="border-b border-paper-edge bg-paper/90">
-          <div className="mx-auto max-w-3xl px-6 py-4">
+          <div className="page-x mx-auto max-w-3xl py-4">
             <nav
               className="font-sans text-sm font-semibold text-muted"
               aria-label="Breadcrumb"
@@ -139,8 +138,8 @@ export default function GarbageSeparationJapanPage() {
           </div>
         </div>
 
-        <article className="mx-auto max-w-3xl px-6 pb-16 pt-10 sm:pt-12">
-          <header className="mb-10 max-w-2xl">
+        <article className="page-x mx-auto max-w-3xl pb-8 pt-8 sm:pt-8">
+          <header className="mb-6 max-w-2xl">
             <p className="editorial-kicker mb-3">Residents</p>
             <h1 className="guide-page-title text-balance">{title}</h1>
             <div className="article-body mt-4 space-y-4">
@@ -157,13 +156,10 @@ export default function GarbageSeparationJapanPage() {
                 tension. Rules vary by municipality. Treat posters in your lobby as
                 the source of truth.
               </p>
-              <p className="font-sans text-sm font-bold uppercase tracking-widest text-muted">
-                {EDITORIAL_COPY.trustLine}
-              </p>
-            </div>
+</div>
           </header>
 
-          <div className="mb-12">
+          <div className="mb-6">
             <ToolRecommendationStrip
               headingId="garbage-separation-tools"
               title="Format your address for ward mail"
@@ -173,7 +169,7 @@ export default function GarbageSeparationJapanPage() {
             />
           </div>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Why rules differ by city</H2>
             <p className="article-body mb-4">
               Each municipality runs its own collection contracts and sorting
@@ -191,7 +187,7 @@ export default function GarbageSeparationJapanPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Burnable garbage</H2>
             <p className="article-body">
               Food scraps, tissues, small wooden items, and many paper food
@@ -200,7 +196,7 @@ export default function GarbageSeparationJapanPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Non-burnable garbage</H2>
             <p className="article-body">
               Ceramics, glassware, small metal without PET labels, and some
@@ -209,7 +205,7 @@ export default function GarbageSeparationJapanPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Plastic packaging</H2>
             <p className="article-body">
               Wrappers, trays, and film plastic often need rinsing and drying
@@ -218,7 +214,7 @@ export default function GarbageSeparationJapanPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>PET bottles, cans, glass</H2>
             <p className="article-body mb-4">
               Many cities want PET bottles caps removed, labels peeled, and bottles
@@ -231,7 +227,7 @@ export default function GarbageSeparationJapanPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Oversized garbage</H2>
             <p className="article-body">
               Furniture, bicycles, and large appliances usually need a sodai gomi
@@ -240,7 +236,7 @@ export default function GarbageSeparationJapanPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Collection days</H2>
             <p className="article-body">
               Calendars list morning pickup windows. Set bags out the night before
@@ -249,7 +245,7 @@ export default function GarbageSeparationJapanPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Apartment garbage rooms</H2>
             <p className="article-body mb-4">
               Chuo bins, locked rooms, and camera-monitored corners are common in
@@ -268,7 +264,7 @@ export default function GarbageSeparationJapanPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Common mistakes foreigners make</H2>
             <ul className="article-body list-none space-y-3 pl-0">
               <li className="before:mr-3 before:font-bold before:text-rust before:content-['›']">
@@ -289,7 +285,7 @@ export default function GarbageSeparationJapanPage() {
             </ul>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Practical checklist</H2>
             <CheckList
               items={[
@@ -304,7 +300,7 @@ export default function GarbageSeparationJapanPage() {
             />
           </section>
 
-          <section className="mb-12 max-w-2xl rounded-lg border border-paper-edge bg-paper-card px-5 py-5 shadow-editorial sm:px-6">
+          <section className="mb-6 max-w-2xl rounded-lg border border-paper-edge bg-paper-card px-5 py-5 shadow-editorial sm:px-6">
             <H2>Related tools and guides</H2>
             <ul className="article-body list-none space-y-3 pl-0">
               <li>

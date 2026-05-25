@@ -9,7 +9,7 @@ Next.js 15 editorial site: practical Japan travel and resident guides at [japanp
 ## Defaults
 
 - **Tourist guides:** `GuideArticleShell` in `app/guides/<slug>/page.tsx`
-- **Copy:** No em/en dashes; use `EDITORIAL_COPY` from `@/lib/editorial-copy`
+- **Copy:** No em/en dashes; affiliate disclosure from `RECOMMENDATION_AFFILIATE_DISCLOSURE` in `@/lib/editorial-copy`
 - **New visitor guide:** Also update `app/sitemap.ts`, `lib/tourist-guides.ts`, and `lib/tourist-guide-slugs.ts`
 - **Scope:** Small, focused diffs; no full rebuilds unless asked
 

@@ -15,7 +15,7 @@ type GuideEndCtaProps = {
 export function GuideEndCta({ parentHref, parentLabel }: GuideEndCtaProps) {
   return (
     <section
-      className="mt-14 border-t border-tan pt-12"
+      className="mt-6 border-t border-tan pt-8"
       aria-labelledby="guide-end-cta-heading"
     >
       <h2

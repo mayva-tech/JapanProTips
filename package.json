@@ -12,7 +12,8 @@
     "audit:checklists": "node scripts/audit-checklists.mjs",
     "audit:conversion": "node scripts/audit-conversion.mjs",
     "audit:field-notes": "node scripts/audit-field-notes.mjs",
-    "generate:checklist-pdfs": "npx tsx scripts/generate-checklist-pdfs.ts"
+    "generate:checklist-pdfs": "npx tsx scripts/generate-checklist-pdfs.ts",
+    "check:image-paths": "node scripts/check-image-paths.mjs"
   },
   "dependencies": {
     "@upstash/ratelimit": "^2.0.8",

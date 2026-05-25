@@ -39,7 +39,7 @@ export function HotelConversionBlock({
           </li>
         ))}
       </ul>
-      <div className="mt-8">
+      <div className="mt-6">
         <TrackedCtaLink href={href} label="hotel" className="editorial-btn-primary">
           {buttonText}
         </TrackedCtaLink>

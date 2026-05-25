@@ -45,4 +45,4 @@ Root layout adds `| JapanProTips` via title template.
 
 - `Callout` (`components/editorial/Callout.tsx`) for tips/warnings
 - `InlineAffiliate`, `TrackedCtaLink`, `TrackedOutboundSimLink` for links
-- `EDITORIAL_COPY.trustLine` from `@/lib/editorial-copy`
+- `RECOMMENDATION_AFFILIATE_DISCLOSURE` from `@/lib/editorial-copy` where affiliate copy is needed

@@ -8,7 +8,7 @@ export default function GuidesLayout({
 }) {
   return (
     <>
-      <div className="pb-28 md:pb-16">{children}</div>
+      <div className="pb-8 md:pb-8">{children}</div>
       <StickyCTA href={CONVERSION_STICKY_ESIM_HREF} />
     </>
   );

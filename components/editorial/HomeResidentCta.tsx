@@ -43,16 +43,17 @@ function HomeResidentLink({
   );
 }
 
-export function HomeResidentCta() {
+export function HomeResidentCta({ embedded = false }: { embedded?: boolean }) {
   const [checklist, calculator] = HOME_RESIDENT_CTA_LINKS;
 
-  return (
-    <section
-      className="border-b border-paper-edge bg-cream py-10 sm:py-12"
-      aria-labelledby="home-resident-cta-heading"
-    >
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="editorial-card mx-auto max-w-2xl p-6 sm:p-8 lg:max-w-3xl">
+  const card = (
+        <div
+          className={
+            embedded
+              ? "magazine-sidebar-card"
+              : "editorial-card mx-auto max-w-2xl p-6 sm:p-8 lg:max-w-3xl"
+          }
+        >
           <SectionLabel>Residents</SectionLabel>
           <h2
             id="home-resident-cta-heading"
@@ -91,7 +92,20 @@ export function HomeResidentCta() {
             </HomeResidentLink>
           </p>
         </div>
-      </div>
+  );
+
+  if (embedded) {
+    return (
+      <div aria-labelledby="home-resident-cta-heading">{card}</div>
+    );
+  }
+
+  return (
+    <section
+      className="border-b border-paper-edge bg-cream py-8 sm:py-12"
+      aria-labelledby="home-resident-cta-heading"
+    >
+      <div className="page-x mx-auto max-w-6xl">{card}</div>
     </section>
   );
 }

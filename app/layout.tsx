@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Suspense } from "react";
-import { Barlow, Vollkorn } from "next/font/google";
+import { Barlow, Roboto_Slab, Vollkorn } from "next/font/google";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { MicrosoftClarity } from "@/components/MicrosoftClarity";
-import { Navbar } from "@/components/Navbar";
+import { NavbarWithSearch } from "@/components/NavbarWithSearch";
 import { ScrollDepthTracker } from "@/components/ScrollDepthTracker";
 import { SoftExitCta } from "@/components/SoftExitCta";
+import { BRAND_LOGO } from "@/lib/brand";
 import {
   DEFAULT_DESCRIPTION,
   DEFAULT_TITLE,
@@ -27,6 +28,13 @@ const vollkorn = Vollkorn({
   weight: ["400", "600", "700"],
   style: ["normal", "italic"],
   variable: "--font-serif",
+});
+
+/** AoM: primary nav labels (bold caps slab serif) */
+const robotoSlab = Roboto_Slab({
+  subsets: ["latin"],
+  weight: ["700", "900"],
+  variable: "--font-nav",
 });
 
 export const viewport: Viewport = {
@@ -61,6 +69,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
+  icons: {
+    icon: BRAND_LOGO.src,
+    apple: BRAND_LOGO.src,
+  },
 };
 
 export default function RootLayout({
@@ -71,14 +83,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${barlow.variable} ${vollkorn.variable} antialiased`}
+        className={`${barlow.variable} ${vollkorn.variable} ${robotoSlab.variable} antialiased`}
       >
         <GoogleAnalytics />
         <Suspense fallback={null}>
           <ScrollDepthTracker />
         </Suspense>
         <MicrosoftClarity />
-        <Navbar />
+        <NavbarWithSearch />
         {children}
         <SoftExitCta />
       </body>

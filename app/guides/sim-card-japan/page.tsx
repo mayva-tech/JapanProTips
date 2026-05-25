@@ -1,4 +1,5 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
+import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -12,7 +13,6 @@ import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 import { EditorialEsimProviderLinks } from "@/components/conversion/EditorialEsimProviderLinks";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 import { RealityCheck, TouristMistakeNote } from "@/components/editorial/field-notes";
-import { EDITORIAL_COPY } from "@/lib/editorial-copy";
 
 export const metadata: Metadata = {
   title:
@@ -59,14 +59,11 @@ export default function SimCardJapanGuidePage() {
           <p>
             Tested across Tokyo, Osaka, and rural areas.
           </p>
-          <p className="font-sans text-muted text-sm font-bold tracking-widest uppercase pt-1">
-            {EDITORIAL_COPY.trustLine}
-          </p>
-        </div>
+</div>
       }
       beforeComparison={
         <>
-        <div className="mb-12 max-w-full">
+        <div className="mb-6 max-w-full">
           <ToolRecommendationStrip
             headingId="sim-tools-strip"
             title="While you budget the trip"
@@ -82,7 +79,7 @@ export default function SimCardJapanGuidePage() {
           />
         </div>
 
-        <div className="border-t-2 border-dark mb-10" />
+        <div className="border-t-2 border-dark mb-6" />
 
         <RecommendationGrid
           placement="sim-card-japan"
@@ -127,7 +124,7 @@ export default function SimCardJapanGuidePage() {
           ]}
         />
 
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2
             className="font-display text-dark tracking-wide mb-4"
             style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
@@ -171,7 +168,7 @@ export default function SimCardJapanGuidePage() {
         </section>
 
         {/* Quick Answer */}
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2
             className="font-display text-dark tracking-wide mb-6"
             style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
@@ -249,7 +246,7 @@ export default function SimCardJapanGuidePage() {
         <RecommendedServicesBox serviceId="sim-card-japan" showDisclosure={false} />
 
         {/* Comparison */}
-        <section className="mb-12">
+        <section className="mb-6">
           <h2
             className="font-display text-dark tracking-wide mb-6 max-w-2xl"
             style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
@@ -325,7 +322,7 @@ export default function SimCardJapanGuidePage() {
         </section>
 
         {/* What actually matters */}
-        <section className="mb-12 max-w-2xl space-y-10">
+        <section className="mb-6 max-w-2xl space-y-8">
           <h2
             className="font-display text-dark tracking-wide mb-2"
             style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
@@ -337,7 +334,7 @@ export default function SimCardJapanGuidePage() {
           </p>
           <Link
             href="/guides/japan-trains"
-            className="inline-block font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150 mb-10"
+            className="inline-block font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150 mb-6"
           >
             Navigate Japan trains on day one →
           </Link>
@@ -453,7 +450,7 @@ export default function SimCardJapanGuidePage() {
         </TouristMistakeNote>
 
         {/* Common mistakes */}
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2
             className="font-display text-dark tracking-wide mb-6"
             style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
@@ -477,7 +474,7 @@ export default function SimCardJapanGuidePage() {
         </section>
 
         {/* What you should do */}
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2
             className="font-display text-dark tracking-wide mb-6"
             style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
@@ -505,7 +502,7 @@ export default function SimCardJapanGuidePage() {
         </section>
 
         {/* Recommendation */}
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2
             className="font-display text-dark tracking-wide mb-6"
             style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
@@ -526,7 +523,7 @@ export default function SimCardJapanGuidePage() {
               Turn it on when you land
             </li>
           </ul>
-          <p className="font-display text-dark text-3xl tracking-wide mt-8">
+          <p className="font-display text-dark text-3xl tracking-wide mt-6">
             {`That's it. No complicated setup, no wasted time.`}
           </p>
           <p className="article-body mt-6">
@@ -535,7 +532,7 @@ export default function SimCardJapanGuidePage() {
         </section>
 
         {/* Final note */}
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2
             className="font-display text-dark tracking-wide mb-6"
             style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
@@ -559,7 +556,7 @@ export default function SimCardJapanGuidePage() {
               Communication
             </li>
           </ul>
-          <p className="article-body mb-3 mt-12">
+          <p className="article-body mb-3 mt-6">
             This is not a small detail. If this fails, everything else becomes
             harder.
           </p>
@@ -575,8 +572,8 @@ export default function SimCardJapanGuidePage() {
         </section>
 
         {/* Affiliate / price check: swap hrefs for your tracked links */}
-        <section className="mb-12">
-          <div className="bg-dark px-8 py-10 max-w-2xl">
+        <section className="mb-6">
+          <div className="bg-dark px-8 py-8 max-w-2xl">
             <h2
               className="font-display text-tan tracking-widest text-2xl mb-6"
             >
@@ -618,7 +615,7 @@ export default function SimCardJapanGuidePage() {
                 </TrackedCtaLink>
               </li>
             </ul>
-            <div className="border-t border-[#3a3a3a] mt-8 pt-6">
+            <div className="border-t border-[#3a3a3a] mt-6 pt-6">
               <p className="font-sans text-sm font-bold uppercase leading-snug tracking-widest text-[#667788]">
                 If something is recommended here, it&apos;s because it works, not
                 because it&apos;s sponsored.
@@ -628,7 +625,7 @@ export default function SimCardJapanGuidePage() {
         </section>
 
         {/* FAQ */}
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2
             className="font-display text-dark tracking-wide mb-6"
             style={{ fontSize: "clamp(28px, 3.5vw, 40px)" }}
@@ -688,15 +685,7 @@ export default function SimCardJapanGuidePage() {
           parentHref="/guides/japan-itinerary"
           parentLabel="Japan trip itinerary →"
         />
-
-        <div className="border-t border-tan pt-8 mt-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
-          >
-            JapanProTips homepage <span className="text-lg">‹‹‹</span>
-          </Link>
-        </div>
+        <SiteBrandFooter />
         </>
       }
     />

@@ -105,8 +105,8 @@ export default async function SharedItineraryPage({ params }: PageProps) {
         </div>
       </div>
 
-      <article className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
-        <header className="mb-8 max-w-3xl">
+      <article className="mx-auto max-w-6xl px-4 pb-8 pt-8 sm:px-6 sm:pb-8 sm:pt-8">
+        <header className="mb-6 max-w-3xl">
           <p className="editorial-kicker mb-3">Shared itinerary</p>
           <p className="article-body-sm max-w-2xl text-muted">
             Read-only view. Links expire after 30 days unless saved again from
@@ -125,14 +125,14 @@ export default async function SharedItineraryPage({ params }: PageProps) {
 function ItineraryNotFound() {
   return (
     <main className="min-h-screen bg-cream font-sans">
-      <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20">
+      <article className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-8">
         <p className="editorial-kicker mb-3">Shared itinerary</p>
         <h1 className="guide-page-title text-balance">Itinerary not found</h1>
         <p className="article-body mt-4 max-w-2xl text-muted">
           This link may have expired after 30 days, or the itinerary was never
           saved. Build a new outline with the planner and save a fresh link.
         </p>
-        <p className="mt-8">
+        <p className="mt-6">
           <Link
             href="/tools/japan-itinerary-planner"
             className="inline-flex items-center justify-center rounded-md bg-maroon px-6 py-3.5 font-sans text-base font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust"

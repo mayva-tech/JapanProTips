@@ -120,8 +120,8 @@ function JapaneseAddressFormatterClient() {
 
   return (
     <div className="mx-auto max-w-6xl">
-      <div className="flex flex-col gap-10 lg:grid lg:grid-cols-[minmax(0,1fr)_min(100%,22rem)] lg:items-start lg:gap-10 xl:gap-12">
-        <div className="min-w-0 space-y-10">
+      <div className="flex flex-col gap-6 lg:grid lg:grid-cols-[minmax(0,1fr)_min(100%,22rem)] lg:items-start lg:gap-10 xl:gap-10">
+        <div className="min-w-0 space-y-8">
           <section
             className="rounded-lg border border-paper-edge bg-paper-card/80 p-5 shadow-editorial sm:p-7"
             aria-labelledby="addr-inputs-heading"
@@ -305,7 +305,7 @@ function JapaneseAddressFormatterClient() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <button type="button" className={actionBtn} onClick={clearForm}>
                 Clear form
               </button>

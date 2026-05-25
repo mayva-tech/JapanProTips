@@ -10,19 +10,19 @@ export const metadata: Metadata = {
 export default function MovingToJapanSystemPage() {
   return (
     <main className="bg-cream min-h-screen font-sans">
-      <article className="max-w-3xl mx-auto px-6 pt-12 pb-16">
+      <article className="page-x max-w-3xl mx-auto pt-10 pb-14">
         <h1
           className="guide-page-title"
         >
           Moving to Japan: First 30 Days System
         </h1>
 
-        <div className="article-body mb-12 max-w-2xl space-y-4">
+        <div className="article-body mb-6 max-w-2xl space-y-4">
           <p>Moving to Japan is confusing.</p>
           <p>Systems are not always clear.</p>
         </div>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             What this is
           </h2>
@@ -36,7 +36,7 @@ export default function MovingToJapanSystemPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             What&apos;s inside
           </h2>
@@ -56,7 +56,7 @@ export default function MovingToJapanSystemPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             Who it&apos;s for
           </h2>
@@ -73,7 +73,7 @@ export default function MovingToJapanSystemPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             Why it helps
           </h2>
@@ -90,7 +90,7 @@ export default function MovingToJapanSystemPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             What happens if you don&apos;t have this?
           </h2>
@@ -108,7 +108,7 @@ export default function MovingToJapanSystemPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             What happens if you use this?
           </h2>

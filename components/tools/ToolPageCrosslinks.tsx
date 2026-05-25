@@ -8,7 +8,7 @@ const browseClass =
 export function ToolPageCrosslinks({ currentSlug }: { currentSlug: string }) {
   const tools = otherToolStripCards(currentSlug);
   return (
-    <div className="mt-14">
+    <div className="mt-6">
       <ToolRecommendationStrip
         headingId={`cross-tools-${currentSlug}`}
         title="Use another Japan tool"

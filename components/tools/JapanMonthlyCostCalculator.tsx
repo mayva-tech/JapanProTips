@@ -12,6 +12,7 @@ import {
   useState,
 } from "react";
 import { Callout } from "@/components/editorial/Callout";
+import { AllocationBreakdownLegend } from "@/components/tools/AllocationBreakdownLegend";
 import {
   type JapanCityType,
   type JapanCommute,
@@ -31,21 +32,22 @@ import {
   serializeJapanMonthlyCostQuery,
 } from "@/lib/japan-monthly-cost-calculator";
 import { siteUrl } from "@/lib/site";
+import {
+  toolCheckboxAddonLayout,
+  toolCheckboxLabelClass,
+  toolSegmentClass,
+  toolSegmentLayout,
+} from "@/lib/tool-choice-classes";
 
 const controlLabel =
   "mb-2 block font-sans text-xs font-bold uppercase tracking-widest text-rust";
 
 const segmentWrap = "flex flex-wrap gap-2";
-const segmentBtn =
-  "rounded-md border border-paper-edge bg-paper-card px-3 py-2.5 text-left font-sans text-sm font-semibold text-dark transition-colors duration-150 hover:border-rust/40 sm:min-w-0 sm:flex-1 sm:px-3 sm:py-2.5";
-const segmentBtnOn =
-  "border-maroon bg-maroon/10 text-maroon ring-1 ring-maroon/25";
 
 const shareBtnBase =
   "inline-flex min-h-[2.5rem] flex-1 items-center justify-center rounded-md border border-paper-edge bg-paper-elevated/90 px-3 py-2 font-sans text-xs font-bold uppercase tracking-widest text-dark transition-colors duration-150 hover:border-rust/45 hover:bg-paper sm:text-[0.7rem]";
 
-const checkboxLabel =
-  "flex cursor-pointer items-start gap-3 rounded-md border border-paper-edge bg-paper px-3 py-2.5 font-sans text-sm font-semibold text-dark transition-colors duration-150 hover:border-rust/40 has-[:checked]:border-maroon has-[:checked]:bg-maroon/10 has-[:checked]:text-maroon";
+const checkboxLabel = `${toolCheckboxLabelClass} ${toolCheckboxAddonLayout}`;
 
 const CITY_OPTIONS: { value: JapanCityType; label: string }[] = [
   { value: "tokyo-central", label: "Tokyo central" },
@@ -106,7 +108,7 @@ function Segmented<T extends string>({
           <button
             key={opt.value}
             type="button"
-            className={`${segmentBtn} ${on ? segmentBtnOn : ""}`}
+            className={toolSegmentClass(on, toolSegmentLayout)}
             onClick={() => onChange(opt.value)}
             aria-pressed={on}
           >
@@ -256,56 +258,7 @@ function MonthlyBreakdownResults({
         ))}
       </div>
 
-      <div className="mt-4 space-y-3.5 lg:hidden">
-        {rows.map((row) => (
-          <div key={row.key}>
-            <div className="flex flex-wrap items-baseline justify-between gap-x-2 gap-y-1">
-              <span className="flex min-w-0 items-center gap-2 font-sans text-sm font-semibold text-dark">
-                <span
-                  className={`h-2.5 w-2.5 shrink-0 rounded-sm ${row.swatchClass}`}
-                  aria-hidden
-                />
-                <span className="truncate">{row.label}</span>
-              </span>
-              <span className="shrink-0 font-sans text-xs font-bold uppercase tracking-wide text-muted">
-                {row.pct.toFixed(1)}%
-              </span>
-              <span className="w-full shrink-0 text-right font-sans text-sm font-bold tabular-nums text-dark sm:w-auto">
-                {formatYenJpy(row.yen)}
-              </span>
-            </div>
-            <div className="mt-1.5 h-2.5 w-full overflow-hidden rounded-full bg-paper-edge/80">
-              <div
-                className={`h-full max-w-full rounded-full ${row.barClass} transition-[width] duration-500 ease-out`}
-                style={{ width: `${row.pct}%` }}
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <ul className="mt-4 hidden grid-cols-2 gap-x-4 gap-y-2.5 text-sm lg:grid">
-        {rows.map((row) => (
-          <li
-            key={`legend-${row.key}`}
-            className="flex items-start gap-2 font-serif text-muted"
-          >
-            <span
-              className={`mt-1.5 h-2 w-2 shrink-0 rounded-sm ${row.swatchClass}`}
-              aria-hidden
-            />
-            <span>
-              <span className="font-sans font-semibold text-dark">{row.label}</span>
-              <span className="mx-1.5 text-tan">·</span>
-              <span className="tabular-nums">{row.pct.toFixed(1)}%</span>
-              <span className="mx-1.5 text-tan">·</span>
-              <span className="font-sans font-bold tabular-nums text-dark">
-                {formatYenJpy(row.yen)}
-              </span>
-            </span>
-          </li>
-        ))}
-      </ul>
+      <AllocationBreakdownLegend rows={rows} formatYen={formatYenJpy} />
 
       <div className="mt-5 rounded-md border border-maroon/25 bg-maroon/[0.06] px-4 py-3.5">
         <p className="font-sans text-xs font-bold uppercase tracking-widest text-maroon">
@@ -411,8 +364,8 @@ function JapanMonthlyCostCalculatorClient() {
 
   return (
     <div className="mx-auto max-w-6xl">
-      <div className="flex flex-col-reverse gap-10 lg:grid lg:grid-cols-[minmax(0,1fr)_min(100%,22rem)] lg:items-start lg:gap-10 xl:gap-12">
-        <div className="min-w-0 space-y-10">
+      <div className="flex flex-col-reverse gap-6 lg:grid lg:grid-cols-[minmax(0,1fr)_min(100%,22rem)] lg:items-start lg:gap-10 xl:gap-10">
+        <div className="min-w-0 space-y-8">
           <section
             className="rounded-lg border border-paper-edge bg-paper-card/80 p-5 shadow-editorial sm:p-7"
             aria-labelledby="monthly-inputs-heading"
@@ -497,7 +450,7 @@ function JapanMonthlyCostCalculatorClient() {
                   <label className={checkboxLabel}>
                     <input
                       type="checkbox"
-                      className="mt-0.5 h-4 w-4 shrink-0 accent-maroon"
+                      className="mt-0.5 h-4 w-4 shrink-0 accent-tool-ink"
                       checked={form.addonMobile}
                       onChange={(e) =>
                         setForm((f) => ({ ...f, addonMobile: e.target.checked }))
@@ -508,7 +461,7 @@ function JapanMonthlyCostCalculatorClient() {
                   <label className={checkboxLabel}>
                     <input
                       type="checkbox"
-                      className="mt-0.5 h-4 w-4 shrink-0 accent-maroon"
+                      className="mt-0.5 h-4 w-4 shrink-0 accent-tool-ink"
                       checked={form.addonInternet}
                       onChange={(e) =>
                         setForm((f) => ({
@@ -522,7 +475,7 @@ function JapanMonthlyCostCalculatorClient() {
                   <label className={checkboxLabel}>
                     <input
                       type="checkbox"
-                      className="mt-0.5 h-4 w-4 shrink-0 accent-maroon"
+                      className="mt-0.5 h-4 w-4 shrink-0 accent-tool-ink"
                       checked={form.addonInsurance}
                       onChange={(e) =>
                         setForm((f) => ({
@@ -536,7 +489,7 @@ function JapanMonthlyCostCalculatorClient() {
                   <label className={checkboxLabel}>
                     <input
                       type="checkbox"
-                      className="mt-0.5 h-4 w-4 shrink-0 accent-maroon"
+                      className="mt-0.5 h-4 w-4 shrink-0 accent-tool-ink"
                       checked={form.addonSchool}
                       onChange={(e) =>
                         setForm((f) => ({ ...f, addonSchool: e.target.checked }))
@@ -547,7 +500,7 @@ function JapanMonthlyCostCalculatorClient() {
                   <label className={checkboxLabel}>
                     <input
                       type="checkbox"
-                      className="mt-0.5 h-4 w-4 shrink-0 accent-maroon"
+                      className="mt-0.5 h-4 w-4 shrink-0 accent-tool-ink"
                       checked={form.addonCarParking}
                       onChange={(e) =>
                         setForm((f) => ({

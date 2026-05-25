@@ -56,7 +56,7 @@ export default function FieldNoteAuditPage() {
         production.
       </p>
 
-      <nav className="article-body-sm mb-8 flex flex-wrap gap-4">
+      <nav className="article-body-sm mb-6 flex flex-wrap gap-4">
         <Link href="/dev" className="text-rust hover:text-maroon">
           Dev hub
         </Link>
@@ -65,7 +65,7 @@ export default function FieldNoteAuditPage() {
         </Link>
       </nav>
 
-      <div className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {[
           { label: "Articles scanned", value: summary.articleRoutes },
           { label: "Routes with notes", value: summary.routesWithNotes },
@@ -93,7 +93,7 @@ export default function FieldNoteAuditPage() {
       </div>
 
       {report.imbalanceWarnings.length > 0 ? (
-        <section className="mb-8 rounded-lg border border-rust/30 bg-[#ebe4d8] px-4 py-3">
+        <section className="mb-6 rounded-lg border border-rust/30 bg-[#ebe4d8] px-4 py-3">
           <h2 className="font-sans text-sm font-bold uppercase tracking-widest text-rust mb-2">
             Tone balance
           </h2>
@@ -105,7 +105,7 @@ export default function FieldNoteAuditPage() {
         </section>
       ) : null}
 
-      <section className="mb-10">
+      <section className="mb-6">
         <h2 className="editorial-heading mb-3 text-xl">Site-wide tone totals</h2>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[480px] border-collapse border border-[#d4c9b0] bg-white text-left font-sans text-sm">
@@ -142,7 +142,7 @@ export default function FieldNoteAuditPage() {
         </div>
       </section>
 
-      <section className="mb-10">
+      <section className="mb-6">
         <h2 className="editorial-heading mb-3 text-xl">
           High-value catalog routes with zero notes ({highValueZero.length})
         </h2>
@@ -172,7 +172,7 @@ export default function FieldNoteAuditPage() {
       </section>
 
       {overuseRoutes.length > 0 ? (
-        <section className="mb-10">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-3 text-xl">Overuse warnings</h2>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse border border-[#d4c9b0] bg-white text-left font-sans text-sm">
@@ -212,7 +212,7 @@ export default function FieldNoteAuditPage() {
         </section>
       ) : null}
 
-      <section className="mb-10">
+      <section className="mb-6">
         <h2 className="editorial-heading mb-3 text-xl">
           Routes with Field Notes ({withNotes.length})
         </h2>
@@ -259,7 +259,7 @@ export default function FieldNoteAuditPage() {
         </div>
       </section>
 
-      <section className="mb-10">
+      <section className="mb-6">
         <h2 className="editorial-heading mb-3 text-xl">CLI example output</h2>
         <p className="article-body-sm mb-3 text-muted">
           Run <code className="text-dark">npm run audit:field-notes</code> for the full
@@ -276,7 +276,7 @@ export default function FieldNoteAuditPage() {
       </section>
 
       {report.issues.length > 0 ? (
-        <section className="mb-10 rounded-lg border border-rust/40 bg-[#ebe4d8] px-4 py-3">
+        <section className="mb-6 rounded-lg border border-rust/40 bg-[#ebe4d8] px-4 py-3">
           <h2 className="font-sans text-sm font-bold uppercase tracking-widest text-rust mb-2">
             Issues
           </h2>

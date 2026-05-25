@@ -74,7 +74,7 @@ function AreaSection({
   extra,
 }: AreaSectionProps) {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>{name}</H2>
       <p className="article-body mb-4 max-w-2xl">
         <span className="font-sans font-bold text-ink">Best for: </span>
@@ -147,7 +147,7 @@ function IntroBlock() {
 function MainContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Quick recommendation summary</H2>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[480px] border-collapse border border-paper-edge bg-paper-card font-sans text-base text-dark">
@@ -195,7 +195,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Kyoto feels different from Tokyo</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -339,7 +339,7 @@ function MainContent() {
         }
       />
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Kyoto buses vs trains</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -366,7 +366,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Hotel size expectations</H2>
         <p className="article-body max-w-2xl">
           Kyoto hotel rooms are often compact, even at mid-range properties.
@@ -376,7 +376,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Ryokan vs hotel</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -394,7 +394,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Short stays vs longer stays</H2>
         <CheckList
           items={[
@@ -405,7 +405,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Best area by travel style</H2>
         <CheckList
           items={[
@@ -423,7 +423,7 @@ function MainContent() {
 function FooterContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Final advice</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -443,7 +443,7 @@ function FooterContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Related guides</H2>
         <ul className="article-body list-none space-y-3 pl-0 max-w-2xl">
           <li>

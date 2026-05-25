@@ -76,7 +76,7 @@ function AreaSection({
   extra,
 }: AreaSectionProps) {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>{name}</H2>
       <p className="article-body mb-4 max-w-2xl">
         <span className="font-sans font-bold text-ink">Best for: </span>
@@ -150,7 +150,7 @@ function IntroBlock() {
 function MainContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Quick recommendation summary</H2>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[480px] border-collapse border border-paper-edge bg-paper-card font-sans text-base text-dark">
@@ -210,7 +210,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Osaka feels different from Tokyo</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -336,7 +336,7 @@ function MainContent() {
         expectations="Tennoji rewards planners who value calm quarters yet accept quick subway hops for neon evenings. Strong compromise when budgets tighten without sacrificing JR pragmatism."
       />
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Universal Studios Japan stays</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -365,7 +365,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Train convenience matters first</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -388,7 +388,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Hotel room size expectations</H2>
         <p className="article-body max-w-2xl">
           Osaka rooms mirror broader Japanese norms: compact doubles, efficient wet
@@ -399,7 +399,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Kansai International Airport access</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -428,7 +428,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Short stays vs longer stays</H2>
         <CheckList
           items={[
@@ -440,7 +440,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Best area by travel style</H2>
         <CheckList
           items={[
@@ -459,7 +459,7 @@ function MainContent() {
 function FooterContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Final advice</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -481,7 +481,7 @@ function FooterContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Related guides</H2>
         <ul className="article-body list-none space-y-3 pl-0 max-w-2xl">
           <li>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -46,7 +47,7 @@ export default function JapanItineraryPage() {
       }
       beforeComparison={
         <>
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Quick Answer (Don&apos;t Overplan)
           </h2>
@@ -73,7 +74,7 @@ export default function JapanItineraryPage() {
           </Link>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             How to Plan Your Route (Simple Rule)
           </h2>
@@ -98,7 +99,7 @@ export default function JapanItineraryPage() {
 
         <RecommendedServicesBox serviceId="japan-itinerary" />
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             7-Day Itinerary (Simple and Realistic)
           </h2>
@@ -138,7 +139,7 @@ export default function JapanItineraryPage() {
       }
       afterComparison={
         <>
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             10-Day Itinerary (Better Balance)
           </h2>
@@ -172,7 +173,7 @@ export default function JapanItineraryPage() {
           </p>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             14-Day Itinerary (Best Experience)
           </h2>
@@ -206,7 +207,7 @@ export default function JapanItineraryPage() {
           </p>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Common Mistakes
           </h2>
@@ -226,7 +227,7 @@ export default function JapanItineraryPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Where This Connects (Important)
           </h2>
@@ -263,7 +264,7 @@ export default function JapanItineraryPage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Reality Check
           </h2>
@@ -274,11 +275,11 @@ export default function JapanItineraryPage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Bottom Line
           </h2>
-          <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Keep it simple
             </li>
@@ -304,15 +305,7 @@ export default function JapanItineraryPage() {
           parentHref="/guides/where-to-stay-tokyo"
           parentLabel="Where to stay in Tokyo →"
         />
-
-        <div className="border-t border-tan pt-8 mt-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
-          >
-            JapanProTips homepage <span className="text-lg">‹‹‹</span>
-          </Link>
-        </div>
+        <SiteBrandFooter />
         </>
       }
     />

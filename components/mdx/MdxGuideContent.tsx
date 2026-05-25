@@ -10,7 +10,7 @@ export async function MdxGuideContent({ source }: MdxGuideContentProps) {
   if (!source.trim()) return null;
 
   return (
-    <div className="mdx-guide-body max-w-2xl min-w-0">
+    <div className="mdx-guide-body min-w-0 lg:max-w-2xl">
       <MDXRemote
         source={source}
         components={mdxGuideComponents}

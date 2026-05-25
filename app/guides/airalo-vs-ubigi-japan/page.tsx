@@ -55,7 +55,7 @@ export default function AiraloVsUbigiJapanPage() {
       }
       beforeComparison={
         <>
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Quick Answer (Don&apos;t Overthink It)
           </h2>
@@ -92,7 +92,7 @@ export default function AiraloVsUbigiJapanPage() {
       }
       afterComparison={
         <>
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Comparison (Simple and Practical)
           </h2>
@@ -167,7 +167,7 @@ export default function AiraloVsUbigiJapanPage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             What Actually Matters
           </h2>
@@ -202,7 +202,7 @@ export default function AiraloVsUbigiJapanPage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Common Mistakes
           </h2>
@@ -219,7 +219,7 @@ export default function AiraloVsUbigiJapanPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             What You Should Actually Choose
           </h2>
@@ -236,7 +236,7 @@ export default function AiraloVsUbigiJapanPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Reality Check
           </h2>
@@ -247,11 +247,11 @@ export default function AiraloVsUbigiJapanPage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Bottom Line
           </h2>
-          <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
+          <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Use Airalo if unsure
             </li>

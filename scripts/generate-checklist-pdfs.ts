@@ -146,7 +146,7 @@ function drawFooter(
     color: COL.muted,
   });
   const foot =
-    tagline ?? "Independent field notes. Not a travel agency.";
+    tagline ?? "Field notes from JapanProTips.";
   const footLines = wrapLine(foot, fonts.body, 7.5, A4_W - MARGIN * 2);
   let fy = 16;
   for (const fl of footLines.slice(0, 2)) {

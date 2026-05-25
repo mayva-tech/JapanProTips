@@ -139,7 +139,7 @@ function MainContent() {
         ]}
       />
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>What luggage forwarding is</H2>
         <p className="article-body max-w-2xl">
           Forwarding means your suitcase travels as freight that is unrelated to
@@ -151,7 +151,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Why forwarding helps on Japan trains</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -172,7 +172,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Yamato Transport and Kuroneko</H2>
         <p className="article-body max-w-2xl">
           Visitors usually meet{" "}
@@ -189,7 +189,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Common forwarding types</H2>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[560px] border-collapse border border-[#d4c9b0] bg-white font-sans text-base text-dark">
@@ -258,7 +258,7 @@ function MainContent() {
 
       <RecommendedServicesBox serviceId="japan-luggage-shipping" />
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Why Japanese travelers swear by it</H2>
         <p className="article-body max-w-2xl">
           Domestic commuters already minimize rollaboard chaos on commuter lines.
@@ -269,7 +269,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Shinkansen oversized baggage reservations</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -286,7 +286,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Train and station realities with big bags</H2>
         <CheckList
           items={[
@@ -297,7 +297,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Same-day versus next-day expectations</H2>
         <p className="article-body max-w-2xl">
           Airport to central Tokyo hotels often arrives same evening if dropped
@@ -309,7 +309,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Step-by-step: Narita Airport to a Tokyo hotel</H2>
         <H3>Counter flow</H3>
         <CheckList
@@ -323,7 +323,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Step-by-step: Tokyo hotel to Kyoto hotel</H2>
         <H3>Front desk morning batch</H3>
         <CheckList
@@ -336,7 +336,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Step-by-step: Before a domestic flight</H2>
         <p className="article-body max-w-2xl">
           Domestic flights charge steep oversize baggage and sometimes lack belt
@@ -347,7 +347,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Shipping from airports and to airports</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -363,7 +363,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Convenience store Yamato support</H2>
         <p className="article-body max-w-2xl">
           FamilyMart and Lawson locations with attached parcel corners sell boxes,
@@ -380,7 +380,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Hotel participation and planning ahead</H2>
         <p className="article-body max-w-2xl">
           Boutique machiya, mountain huts, and tiny business hotels occasionally
@@ -390,7 +390,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Costs and size limits</H2>
         <H3>Quick reference</H3>
         <div className="overflow-x-auto">
@@ -436,7 +436,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Ski and snowboard deliveries</H2>
         <p className="article-body max-w-2xl">
           Specialty ski bags route from Haneda lockers to Hakuba lodges when snow
@@ -447,7 +447,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Paper forms and English help</H2>
         <p className="article-body max-w-2xl">
           Airport counters usually stock bilingual overlays; hotel staffs often
@@ -457,7 +457,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Keep-on-your-person essentials</H2>
         <CheckList
           items={[
@@ -469,7 +469,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Tracking and photographing receipts</H2>
         <p className="article-body max-w-2xl">
           Receipts duplicate customer and driver halves. Snap QR codes linking to
@@ -479,7 +479,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Fragile items warning</H2>
         <p className="article-body max-w-2xl">
           Courier trucks stack vertically overnight. Wrapped ceramics survive when
@@ -489,7 +489,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Busy seasons deserve earlier shipping</H2>
         <CheckList
           items={[
@@ -500,7 +500,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Coin lockers versus forwarding</H2>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[560px] border-collapse border border-[#d4c9b0] bg-white font-sans text-base text-dark">
@@ -544,7 +544,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Worth it versus skip forwarding</H2>
         <CheckList
           items={[
@@ -556,7 +556,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Common mistakes first-timers repeat</H2>
         <CheckList
           items={[
@@ -567,7 +567,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Plan trains and lodging together</H2>
         <p className="article-body max-w-2xl">
           Courier drop-offs behave better when arrival stations sit near concierge
@@ -591,7 +591,7 @@ function MainContent() {
 function FooterContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Final advice</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -608,7 +608,7 @@ function FooterContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Related guides</H2>
         <ul className="article-body list-none space-y-3 pl-0 max-w-2xl">
           <li>

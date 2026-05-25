@@ -4,7 +4,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export function FinalCTA() {
   return (
-    <section className="bg-stone-100 py-16">
+    <section className="bg-stone-100 py-8">
       <Container>
         <SectionLabel>Before you go further</SectionLabel>
         <h2 className="mb-3 text-2xl font-medium leading-snug text-stone-900">

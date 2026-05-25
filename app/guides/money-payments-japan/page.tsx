@@ -21,7 +21,7 @@ export default function MoneyPaymentsJapanPage() {
             START HERE ///
           </p>
           <h1
-            className="font-display text-dark tracking-wide leading-tight mb-8"
+            className="font-display text-dark tracking-wide leading-tight mb-6"
             style={{ fontSize: "clamp(32px, 4.5vw, 48px)" }}
           >
             4. Money, Cards, and Cash in Japan
@@ -38,7 +38,7 @@ export default function MoneyPaymentsJapanPage() {
         </div>
       }
       beforeComparison={
-        <div className="space-y-10 max-w-xl">
+        <div className="space-y-8 max-w-xl">
           <div>
             <h3 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
               Japan Is Not Fully Cashless
@@ -123,7 +123,7 @@ export default function MoneyPaymentsJapanPage() {
         </div>
       }
       afterComparison={
-        <div className="space-y-10 max-w-xl">
+        <div className="space-y-8 max-w-xl">
           <div>
             <h3 className="font-display text-dark tracking-wide mb-4 text-2xl sm:text-3xl">
               Using Cards in Japan

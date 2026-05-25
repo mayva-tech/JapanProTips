@@ -27,6 +27,7 @@ import {
   parseBringCheckerSearchParams,
   serializeBringCheckerQuery,
 } from "@/lib/can-i-bring-this-to-japan";
+import { toolCardPickerClass } from "@/lib/tool-choice-classes";
 
 const controlLabel =
   "mb-2 block font-sans text-xs font-bold uppercase tracking-widest text-rust";
@@ -136,7 +137,7 @@ function CanIBringThisToJapanCheckerClient() {
         <p className="article-body-sm leading-relaxed">{BRING_CHECKER_DISCLAIMER}</p>
       </Callout>
 
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,22rem)] lg:items-start xl:gap-10">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,22rem)] lg:items-start xl:gap-10">
         <div className="min-w-0 space-y-5">
           <div>
             <label className={controlLabel} htmlFor="bring-search">
@@ -177,13 +178,9 @@ function CanIBringThisToJapanCheckerClient() {
                         type="button"
                         onClick={() => selectCategory(c.id)}
                         aria-pressed={on}
-                        className={`flex w-full flex-col rounded-lg border p-4 text-left shadow-editorial transition-colors duration-150 ${
-                          on
-                            ? "border-maroon bg-maroon/10 ring-1 ring-maroon/25"
-                            : "border-paper-edge bg-paper-card hover:border-rust/40"
-                        }`}
+                        className={toolCardPickerClass(on)}
                       >
-                        <span className="font-display text-base font-bold text-dark sm:text-lg">
+                        <span className={on ? "text-tool-ink" : "text-dark"}>
                           {c.label}
                         </span>
                         <span

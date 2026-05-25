@@ -78,7 +78,7 @@ export default async function CuratedItineraryTemplatePage({ params }: PageProps
         </div>
       </div>
 
-      <article className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
+      <article className="mx-auto max-w-6xl px-4 pb-8 pt-8 sm:px-6 sm:pb-8 sm:pt-8">
         <div className="mx-auto max-w-3xl">
           <ItineraryTemplatePage template={template} />
         </div>

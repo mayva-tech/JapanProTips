@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function DevLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-screen bg-cream px-4 py-10 sm:px-6">
+    <div className="min-h-screen bg-cream px-4 py-8 sm:px-6">
       <div className="mx-auto max-w-6xl">{children}</div>
     </div>
   );

@@ -17,9 +17,9 @@ export function MdxGuideErrorView({
 
   return (
     <main className="bg-cream min-h-screen font-sans">
-      <article className="max-w-3xl mx-auto px-6 pt-12 pb-16">
+      <article className="page-x max-w-3xl mx-auto pt-10 pb-14">
         <h1 className="guide-page-title">{heading}</h1>
-        <div className="article-body max-w-2xl space-y-4 mb-10">
+        <div className="article-body max-w-2xl space-y-4 mb-6">
           <p>{error.message}</p>
           <p className="article-body-sm">
             Slug: <code className="font-sans text-sm text-dark">{error.slug}</code>

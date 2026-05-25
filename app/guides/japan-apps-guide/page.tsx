@@ -77,7 +77,7 @@ function AppBlock({
   mistakes,
 }: AppBlockProps) {
   return (
-    <div className="mb-8 border border-[#d4c9b0] bg-white p-5 max-w-2xl">
+    <div className="mb-6 border border-[#d4c9b0] bg-white p-5 max-w-2xl">
       <H4>{name}</H4>
       <p className="article-body text-sm text-muted mb-2">
         <span className="font-bold text-dark">Best for:</span> {bestFor}
@@ -154,13 +154,13 @@ function IntroBlock() {
 function MainContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Quick picks before the deep blocks</H2>
         <p className="article-body max-w-2xl mb-6">
           Use this table when you want a fast default. Add depth only when your
           trip demands it, not because a forum thread listed twenty icons.
         </p>
-        <div className="overflow-x-auto mb-10">
+        <div className="overflow-x-auto mb-6">
           <table className="w-full min-w-[520px] border-collapse border border-[#d4c9b0] bg-white font-sans text-base text-dark">
             <thead>
               <tr className="border-b border-[#d4c9b0] bg-cream">
@@ -416,7 +416,7 @@ function MainContent() {
           english="Improving, still read screens calmly."
           mistakes="Installing the wrong regional wallet variant, skipping top up before long days, or trusting a dead battery at the gate."
         />
-        <p className="article-body max-w-2xl text-sm text-muted -mt-4 mb-8">
+        <p className="article-body max-w-2xl text-sm text-muted -mt-4 mb-6">
           Need the wallet setup path? Use{" "}
           <Link href="/guides/suica-pasmo-guide" className={inlineLink}>
             Suica and PASMO explained
@@ -552,7 +552,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Internet and SIM dependency</H2>
         <p className="article-body max-w-2xl mb-4">
           Translation packs, map downloads, and IC top ups still love data. Start
@@ -619,7 +619,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Essential before landing checklist</H2>
         <CheckList
           items={[
@@ -642,7 +642,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>What experienced travelers actually use</H2>
         <CheckList
           items={[
@@ -655,7 +655,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Overrated panic installs</H2>
         <H3>Too many apps</H3>
         <p className="article-body max-w-2xl">
@@ -679,7 +679,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Battery reality</H2>
         <p className="article-body max-w-2xl">
           Translation camera, maps, and brightness on summer days drain faster
@@ -690,7 +690,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Scenario field notes</H2>
         <H3>Shinjuku navigation</H3>
         <p className="article-body max-w-2xl">
@@ -735,7 +735,7 @@ function MainContent() {
 function FooterContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Final read</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -757,7 +757,7 @@ function FooterContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Related guides</H2>
         <ul className="article-body list-none space-y-3 pl-0 max-w-2xl">
           <li>

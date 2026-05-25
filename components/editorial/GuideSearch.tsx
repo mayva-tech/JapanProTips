@@ -52,10 +52,10 @@ export function GuideSearch({ entries }: GuideSearchProps) {
 
   return (
     <section
-      className="border-b border-paper-edge bg-paper py-10 sm:py-12"
+      className="border-b border-paper-edge bg-paper py-8 sm:py-12"
       aria-label="Search guides"
     >
-      <div className="mx-auto max-w-2xl px-6">
+      <div className="page-x mx-auto max-w-2xl">
         <label htmlFor={inputId} className="editorial-kicker mb-2 block">
           Find a guide
         </label>

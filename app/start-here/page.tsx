@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ESimConversionBlock, HotelConversionBlock } from "@/components/conversion";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 import { ItineraryHubCta } from "@/components/itinerary/ItineraryHubCta";
-import { EDITORIAL_COPY } from "@/lib/editorial-copy";
 
 export const metadata: Metadata = {
   title: "Start Here",
@@ -27,7 +26,7 @@ const GUIDE_HREFS = {
 export default function StartHerePage() {
   return (
     <main className="bg-cream min-h-screen font-sans">
-      <article className="mx-auto max-w-4xl min-w-0 px-6 pt-12 pb-16">
+      <article className="mx-auto max-w-4xl page-x min-w-0 pt-10 pb-14">
         <header>
           <p className="font-display text-rust text-2xl tracking-widest mb-2">
             TRIP PLANNING ///
@@ -39,28 +38,25 @@ export default function StartHerePage() {
           </h1>
         </header>
 
-        <div className="article-body mb-10 max-w-2xl space-y-4">
+        <div className="article-body mb-6 max-w-2xl space-y-4">
           <p>
             This is the simplest way to plan your trip without getting
             overwhelmed.
           </p>
-          <p className="font-sans text-muted text-sm font-bold tracking-widest uppercase pt-1">
-            {EDITORIAL_COPY.trustLine}
-          </p>
-        </div>
+</div>
 
-        <div className="border-t-2 border-dark mb-10" />
+        <div className="border-t-2 border-dark mb-6" />
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className={sectionH2Class} style={sectionH2Style}>
             Follow this order
           </h2>
-          <p className="article-body mb-10 max-w-2xl">
+          <p className="article-body mb-6 max-w-2xl">
             {`Don't try to plan everything at once. Do this step by step:`}
           </p>
 
           <ol className="list-none space-y-0 pl-0">
-            <li className="border-t border-tan pt-10 first:border-t-0 first:pt-0">
+            <li className="border-t border-tan pt-8 first:border-t-0 first:pt-0">
               <h3 className="font-sans font-bold text-dark text-lg mb-3">
                 1. SIM / Internet
               </h3>
@@ -72,7 +68,7 @@ export default function StartHerePage() {
               <ESimConversionBlock className="max-w-xl" />
             </li>
 
-            <li className="border-t border-tan pt-10">
+            <li className="border-t border-tan pt-8">
               <h3 className="font-sans font-bold text-dark text-lg mb-3">
                 {`2. Understand How You'll Get Around`}
               </h3>
@@ -99,7 +95,7 @@ export default function StartHerePage() {
               </TrackedCtaLink>
             </li>
 
-            <li className="border-t border-tan pt-10">
+            <li className="border-t border-tan pt-8">
               <h3 className="font-sans font-bold text-dark text-lg mb-3">
                 3. Decide where you&apos;re staying
               </h3>
@@ -113,7 +109,7 @@ export default function StartHerePage() {
               </TrackedCtaLink>
             </li>
 
-            <li className="border-t border-tan pt-10">
+            <li className="border-t border-tan pt-8">
               <h3 className="font-sans font-bold text-dark text-lg mb-3">
                 4. Money, Cards, and Cash in Japan
               </h3>
@@ -136,17 +132,17 @@ export default function StartHerePage() {
           </ol>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <ItineraryHubCta
             sourcePage="/start-here"
             ctaPosition="after-planning-steps"
           />
         </section>
 
-        <div className="border-t border-tan mb-12" />
+        <div className="border-t border-tan mb-6" />
 
-        <section className="mb-12">
-          <div className="bg-dark px-8 py-10">
+        <section className="mb-6">
+          <div className="bg-dark px-8 py-8">
             <h2
               className="font-display text-cream tracking-wide mb-5"
               style={sectionH2Style}

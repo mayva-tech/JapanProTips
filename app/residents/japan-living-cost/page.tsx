@@ -121,7 +121,7 @@ export default function JapanLivingCostGuidePage() {
       />
       <main className="min-h-screen bg-cream font-sans">
         <div className="border-b border-paper-edge bg-paper/90">
-          <div className="mx-auto max-w-3xl px-6 py-4">
+          <div className="page-x mx-auto max-w-3xl py-4">
             <nav
               className="font-sans text-sm font-semibold text-muted"
               aria-label="Breadcrumb"
@@ -143,8 +143,8 @@ export default function JapanLivingCostGuidePage() {
           </div>
         </div>
 
-        <article className="mx-auto max-w-3xl px-6 pb-16 pt-10 sm:pt-12">
-          <header className="mb-10 max-w-2xl">
+        <article className="page-x mx-auto max-w-3xl pb-8 pt-8 sm:pt-8">
+          <header className="mb-6 max-w-2xl">
             <p className="editorial-kicker mb-3">Residents</p>
             <h1 className="guide-page-title text-balance">{title}</h1>
             <div className="article-body mt-4 space-y-4">
@@ -163,7 +163,7 @@ export default function JapanLivingCostGuidePage() {
             </div>
           </header>
 
-          <div className="mb-12">
+          <div className="mb-6">
             <ToolRecommendationStrip
               headingId="living-cost-calculator-strip"
               title="Model your own monthly band"
@@ -180,7 +180,7 @@ export default function JapanLivingCostGuidePage() {
             />
           </div>
 
-          <section className="mb-12 max-w-2xl" aria-labelledby="quick-estimate-heading">
+          <section className="mb-6 max-w-2xl" aria-labelledby="quick-estimate-heading">
             <h2 id="quick-estimate-heading" className="editorial-heading mb-4">
               Quick estimate table
             </h2>
@@ -266,7 +266,7 @@ export default function JapanLivingCostGuidePage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Rent</h2>
             <div className="article-body space-y-4">
               <p>
@@ -299,7 +299,7 @@ export default function JapanLivingCostGuidePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Food</h2>
             <div className="article-body space-y-4">
               <p>
@@ -339,7 +339,7 @@ export default function JapanLivingCostGuidePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Utilities</h2>
             <div className="article-body space-y-4">
               <p>
@@ -376,7 +376,7 @@ export default function JapanLivingCostGuidePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Transport</h2>
             <div className="article-body space-y-4">
               <p>
@@ -397,7 +397,7 @@ export default function JapanLivingCostGuidePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Phone and internet</h2>
             <div className="article-body space-y-4">
               <ul className="article-body list-none space-y-3.5 pl-0">
@@ -426,7 +426,7 @@ export default function JapanLivingCostGuidePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Health insurance and pension reminder
             </h2>
@@ -454,7 +454,7 @@ export default function JapanLivingCostGuidePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Move-in costs</h2>
             <div className="article-body space-y-4">
               <p>
@@ -479,7 +479,7 @@ export default function JapanLivingCostGuidePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Emergency savings</h2>
             <div className="article-body space-y-4">
               <p>
@@ -503,7 +503,7 @@ export default function JapanLivingCostGuidePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Common cost shocks for foreigners
             </h2>
@@ -536,7 +536,7 @@ export default function JapanLivingCostGuidePage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               How to reduce monthly costs without making life miserable
             </h2>
@@ -565,7 +565,7 @@ export default function JapanLivingCostGuidePage() {
           </section>
 
           <section
-            className="mb-12 max-w-2xl rounded-lg border border-maroon/30 bg-paper-card p-6 shadow-editorial ring-1 ring-maroon/15 sm:p-8"
+            className="mb-6 max-w-2xl rounded-lg border border-maroon/30 bg-paper-card p-6 shadow-editorial ring-1 ring-maroon/15 sm:p-8"
             aria-labelledby="calculator-cta-heading"
           >
             <h2
@@ -593,7 +593,7 @@ export default function JapanLivingCostGuidePage() {
           </section>
 
           <section
-            className="mb-12 max-w-2xl rounded-lg border border-paper-edge bg-paper-elevated/60 p-5 shadow-inner sm:p-6"
+            className="mb-6 max-w-2xl rounded-lg border border-paper-edge bg-paper-elevated/60 p-5 shadow-inner sm:p-6"
             aria-labelledby="related-links-heading"
           >
             <h2

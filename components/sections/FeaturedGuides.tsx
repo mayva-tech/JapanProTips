@@ -57,7 +57,7 @@ const guides: Guide[] = [
 
 export function FeaturedGuides() {
   return (
-    <section className="border-b border-stone-200 py-12">
+    <section className="border-b border-stone-200 py-8">
       <Container>
         <SectionLabel>Featured guides</SectionLabel>
         <p className="mb-5 text-base text-stone-500">

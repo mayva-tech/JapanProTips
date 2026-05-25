@@ -37,7 +37,7 @@ export default function DevHubPage() {
         Developer only
       </p>
       <h1 className="editorial-heading mb-2 text-3xl">Dev tools</h1>
-      <p className="article-body-sm mb-8 text-muted">
+      <p className="article-body-sm mb-6 text-muted">
         Local dashboards and audits. These routes return 404 in production.
       </p>
 
@@ -59,7 +59,7 @@ export default function DevHubPage() {
         ))}
       </ul>
 
-      <p className="article-body-sm mt-8 text-muted">
+      <p className="article-body-sm mt-6 text-muted">
         CLI:{" "}
         <code className="text-dark">npm run audit:affiliate</code>,{" "}
         <code className="text-dark">npm run audit:next-steps</code>,{" "}

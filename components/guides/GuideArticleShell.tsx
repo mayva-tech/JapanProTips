@@ -30,7 +30,7 @@ export function GuideArticleShell({
   afterComparison,
   comparisonItems = DEFAULT_GUIDE_COMPARISON_ROWS,
   showHotelConversion = true,
-  maxWidthClass = "max-w-3xl",
+  maxWidthClass = "max-w-4xl",
 }: GuideArticleShellProps) {
   const showComparison = comparisonItems !== null;
   const tableRows =
@@ -41,33 +41,33 @@ export function GuideArticleShell({
   return (
     <main className="bg-cream min-h-screen font-sans">
       <article
-        className={`${maxWidthClass} mx-auto min-w-0 px-6 pt-12 pb-16`}
+        className={`${maxWidthClass} page-x mx-auto min-w-0 pt-10 pb-14`}
       >
         {title}
 
-        <div className="mb-10 max-w-2xl">{intro}</div>
+        <div className="mb-6 lg:max-w-2xl">{intro}</div>
 
-        <div className="mb-12 max-w-2xl">
+        <div className="mb-6 lg:max-w-2xl">
           <ESimConversionBlock />
         </div>
 
         {beforeComparison}
 
         {showComparison ? (
-          <div className="mb-12 max-w-full">
+          <div className="mb-6 max-w-full">
             <ComparisonTable items={tableRows} />
           </div>
         ) : null}
 
         {showHotelConversion ? (
-          <div className="mb-12 max-w-2xl">
+          <div className="mb-6 lg:max-w-2xl">
             <HotelConversionBlock />
           </div>
         ) : null}
 
         {afterComparison}
 
-        <div className="mt-12 max-w-2xl border-t border-tan pt-10">
+        <div className="mt-10 border-t border-tan pt-8 lg:max-w-2xl">
           <StartHereFunnelBlock />
         </div>
       </article>

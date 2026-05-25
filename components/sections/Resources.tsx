@@ -60,7 +60,7 @@ const resources: Resource[] = [
 
 export function Resources() {
   return (
-    <section className="border-b border-stone-200 py-12">
+    <section className="border-b border-stone-200 py-8">
       <Container>
         <SectionLabel>Resources & tools</SectionLabel>
         <div className="mt-5 grid grid-cols-2 gap-3">

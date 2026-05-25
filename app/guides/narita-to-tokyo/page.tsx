@@ -49,7 +49,7 @@ export default function NaritaToTokyoPage() {
       }
       beforeComparison={
         <>
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Quick Answer
             </h2>
@@ -76,7 +76,7 @@ export default function NaritaToTokyoPage() {
       }
       afterComparison={
         <>
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Comparison
             </h2>
@@ -160,7 +160,7 @@ export default function NaritaToTokyoPage() {
             </p>
           </WhatPeopleMiss>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Narita Express
             </h2>
@@ -173,7 +173,7 @@ export default function NaritaToTokyoPage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Keisei Skyliner
             </h2>
@@ -186,7 +186,7 @@ export default function NaritaToTokyoPage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Airport bus
             </h2>
@@ -199,7 +199,7 @@ export default function NaritaToTokyoPage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Taxi
             </h2>
@@ -209,7 +209,7 @@ export default function NaritaToTokyoPage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Common Mistakes
             </h2>
@@ -226,11 +226,11 @@ export default function NaritaToTokyoPage() {
             </ul>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Bottom Line
             </h2>
-            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Match train vs bus to your hotel station and luggage
               </li>

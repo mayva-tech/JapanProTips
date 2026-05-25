@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import type { ReactNode } from "react";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideBreadcrumbs } from "@/components/guides/GuideBreadcrumbs";
@@ -7,7 +8,6 @@ import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RecommendationGrid } from "@/components/recommendations";
-import { EDITORIAL_COPY } from "@/lib/editorial-copy";
 import { siteUrl, SITE_NAME } from "@/lib/site";
 
 const PATH = "/guides/japan-mistakes-first-time-visitors";
@@ -121,7 +121,7 @@ function Mistake({
   children: ReactNode;
 }) {
   return (
-    <div className="mb-8 max-w-2xl">
+    <div className="mb-6 max-w-2xl">
       <H3>
         Mistake {n}: {mistakeTitle}
       </H3>
@@ -153,10 +153,7 @@ export default function JapanMistakesFirstTimeVisitorsPage() {
               It pairs with our tools and deeper guides so you can correct one
               problem at a time instead of rereading a generic packing blog.
             </p>
-            <p className="font-sans text-sm font-bold uppercase tracking-widest text-muted">
-              {EDITORIAL_COPY.trustLine}
-            </p>
-          </div>
+</div>
         }
         beforeComparison={
           <>
@@ -187,7 +184,7 @@ export default function JapanMistakesFirstTimeVisitorsPage() {
               ]}
               analyticsSourceSlug="japan-mistakes-first-time-visitors"
             />
-            <section className="mb-12 max-w-2xl">
+            <section className="mb-6 max-w-2xl">
               <H2>Common mistakes and practical fixes</H2>
               <Mistake n={1} title="landing without a SIM or eSIM plan">
                 <p>
@@ -344,7 +341,7 @@ export default function JapanMistakesFirstTimeVisitorsPage() {
         }
         afterComparison={
           <>
-            <section className="mb-12 max-w-2xl">
+            <section className="mb-6 max-w-2xl">
               <H2>Quick recovery checklist</H2>
               <p className="article-body mb-4">
                 If you are mid-trip and something already went wrong, work this
@@ -365,14 +362,7 @@ export default function JapanMistakesFirstTimeVisitorsPage() {
               parentHref="/guides/start-here-japan"
               parentLabel="Japan trip planning start here →"
             />
-            <div className="border-t border-tan pt-8 mt-6 max-w-2xl">
-              <Link
-                href="/"
-                className="inline-flex items-center gap-2 font-sans text-base font-bold uppercase tracking-widest text-rust hover:text-maroon transition-colors duration-150"
-              >
-                JapanProTips homepage
-              </Link>
-            </div>
+            <SiteBrandFooter />
           </>
         }
       />

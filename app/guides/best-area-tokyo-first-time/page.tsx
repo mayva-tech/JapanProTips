@@ -34,7 +34,7 @@ export default function BestAreaTokyoFirstTimePage() {
       }
       beforeComparison={
         <>
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Quick Answer
             </h2>
@@ -57,7 +57,7 @@ export default function BestAreaTokyoFirstTimePage() {
       }
       afterComparison={
         <>
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Comparison
             </h2>
@@ -133,7 +133,7 @@ export default function BestAreaTokyoFirstTimePage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Why station access matters
             </h2>
@@ -149,7 +149,7 @@ export default function BestAreaTokyoFirstTimePage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Area breakdown
             </h2>
@@ -191,7 +191,7 @@ export default function BestAreaTokyoFirstTimePage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Common Mistakes
             </h2>
@@ -209,11 +209,11 @@ export default function BestAreaTokyoFirstTimePage() {
             </ul>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Bottom Line
             </h2>
-            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Start from Shinjuku unless you have a clear reason for another base
               </li>

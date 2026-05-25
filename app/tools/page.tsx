@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MagazinePageHeader } from "@/components/editorial/MagazinePageHeader";
+import { MagazineShell } from "@/components/editorial/MagazineShell";
 import { ToolsHubToolCard } from "@/components/tools/ToolsHubToolCard";
+import { IMAGES } from "@/lib/images";
 import { siteUrl, SITE_NAME } from "@/lib/site";
 import {
   TOOL_GROUP_LABELS,
@@ -213,9 +216,9 @@ export default function ToolsHubPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main className="min-h-screen bg-cream font-sans">
+      <main className="min-h-screen bg-paper font-sans">
         <div className="border-b border-paper-edge bg-paper/90">
-          <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
+          <MagazineShell className="py-4">
             <nav
               className="font-sans text-sm font-semibold text-muted"
               aria-label="Breadcrumb"
@@ -228,28 +231,28 @@ export default function ToolsHubPage() {
               </span>
               <span className="text-dark">Tools</span>
             </nav>
-          </div>
+          </MagazineShell>
         </div>
 
-        <article className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
-          <header className="mb-10 max-w-3xl lg:mb-12">
-            <p className="editorial-kicker mb-3">Tools</p>
-            <h1 className="guide-page-title text-balance">Japan Travel Tools</h1>
-            <p className="editorial-deck mt-4 max-w-2xl text-pretty">
-              Practical calculators and checkers for planning Japan without
-              guessing. Start with what is live, then dig into the guides when
-              you want narrative context.
-            </p>
-          </header>
+        <MagazinePageHeader
+          kicker="Tools"
+          title="Japan Travel Tools"
+          description="Practical calculators and checkers for planning Japan without guessing. Start with what is live, then dig into the guides when you want narrative context."
+          imageSrc={IMAGES.hero.ticketing}
+          imageAlt="Japan train station ticketing area"
+        />
 
-          <section aria-labelledby="tools-live-heading" className="mb-12">
+        <article className="pb-8 pt-8 sm:pb-8 sm:pt-8">
+          <MagazineShell>
+
+          <section aria-labelledby="tools-live-heading" className="mb-6">
             <h2
               id="tools-live-heading"
               className="editorial-heading mb-6 text-xl text-dark sm:text-2xl"
             >
               Available now
             </h2>
-            <div className="space-y-10">
+            <div className="space-y-8">
               {TOOL_GROUP_ORDER.map((groupId) => {
                 const tools = toolsInGroup(groupId);
                 const meta = TOOL_GROUP_LABELS[groupId];
@@ -284,7 +287,7 @@ export default function ToolsHubPage() {
           </section>
 
           {comingSoon.length > 0 ? (
-            <section aria-labelledby="tools-soon-heading" className="mb-14">
+            <section aria-labelledby="tools-soon-heading" className="mb-6">
               <h2
                 id="tools-soon-heading"
                 className="editorial-heading mb-2 text-xl text-dark sm:text-2xl"
@@ -365,6 +368,7 @@ export default function ToolsHubPage() {
               </li>
             </ul>
           </section>
+          </MagazineShell>
         </article>
       </main>
     </>

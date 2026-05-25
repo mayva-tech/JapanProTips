@@ -72,7 +72,7 @@ export const CHECKLIST_PDF_SPECS: Record<string, ChecklistPdfSpec> = {
         ],
       },
     ],
-    tagline: "Field notes from JapanProTips. Independent, not a travel agency.",
+    tagline: "Field notes from JapanProTips.",
   },
 
   "japan-packing-checklist": {
@@ -123,7 +123,7 @@ export const CHECKLIST_PDF_SPECS: Record<string, ChecklistPdfSpec> = {
         ],
       },
     ],
-    tagline: "Field notes from JapanProTips. Independent, not a travel agency.",
+    tagline: "Field notes from JapanProTips.",
   },
 
   "japan-rainy-season-checklist": {
@@ -157,7 +157,7 @@ export const CHECKLIST_PDF_SPECS: Record<string, ChecklistPdfSpec> = {
         ],
       },
     ],
-    tagline: "Field notes from JapanProTips. Independent, not a travel agency.",
+    tagline: "Field notes from JapanProTips.",
   },
 
   "japan-train-cheat-sheet": {
@@ -199,7 +199,7 @@ export const CHECKLIST_PDF_SPECS: Record<string, ChecklistPdfSpec> = {
         ],
       },
     ],
-    tagline: "Field notes from JapanProTips. Independent, not a travel agency.",
+    tagline: "Field notes from JapanProTips.",
   },
 
   "japan-first-7-days-checklist": {
@@ -233,7 +233,7 @@ export const CHECKLIST_PDF_SPECS: Record<string, ChecklistPdfSpec> = {
         ],
       },
     ],
-    tagline: "Field notes from JapanProTips. Independent, not a travel agency.",
+    tagline: "Field notes from JapanProTips.",
   },
 
   "moving-to-japan-30-days": {
@@ -276,7 +276,7 @@ export const CHECKLIST_PDF_SPECS: Record<string, ChecklistPdfSpec> = {
         ],
       },
     ],
-    tagline: "Field notes from JapanProTips. Independent, not a travel agency.",
+    tagline: "Field notes from JapanProTips.",
   },
 
   "apartment-setup-checklist": {
@@ -318,7 +318,7 @@ export const CHECKLIST_PDF_SPECS: Record<string, ChecklistPdfSpec> = {
         ],
       },
     ],
-    tagline: "Field notes from JapanProTips. Independent, not a travel agency.",
+    tagline: "Field notes from JapanProTips.",
   },
 
   "japan-emergency-card": {
@@ -351,7 +351,7 @@ export const CHECKLIST_PDF_SPECS: Record<string, ChecklistPdfSpec> = {
         ],
       },
     ],
-    tagline: "Field notes from JapanProTips. Independent, not a travel agency.",
+    tagline: "Field notes from JapanProTips.",
   },
 };
 

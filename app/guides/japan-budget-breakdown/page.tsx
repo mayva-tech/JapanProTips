@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 const conversionBox =
-  "border border-[#d4c9b0] bg-white px-6 py-5 mb-12 max-w-2xl";
+  "border border-[#d4c9b0] bg-white px-6 py-5 mb-6 max-w-2xl";
 
 export default function JapanBudgetBreakdownPage() {
   return (
@@ -43,7 +44,7 @@ export default function JapanBudgetBreakdownPage() {
       }
       beforeComparison={
         <>
-          <div className="mb-12 max-w-full">
+          <div className="mb-6 max-w-full">
             <ToolRecommendationStrip
               headingId="budget-tools-strip"
               title="Try the numbers in the calculator"
@@ -59,7 +60,7 @@ export default function JapanBudgetBreakdownPage() {
             />
           </div>
 
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Daily Budget Overview
           </h2>
@@ -91,7 +92,7 @@ export default function JapanBudgetBreakdownPage() {
 
         <RecommendedServicesBox serviceId="japan-budget-breakdown" />
 
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Accommodation Costs
           </h2>
@@ -123,7 +124,7 @@ export default function JapanBudgetBreakdownPage() {
           </p>
         </section>
 
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Food Costs
           </h2>
@@ -151,7 +152,7 @@ export default function JapanBudgetBreakdownPage() {
           </ul>
         </section>
 
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Transportation Costs
           </h2>
@@ -175,7 +176,7 @@ export default function JapanBudgetBreakdownPage() {
           </div>
         </section>
 
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Internet Costs
           </h2>
@@ -214,7 +215,7 @@ export default function JapanBudgetBreakdownPage() {
           </Link>
         </div>
 
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Sample 5-Day Budget (Real Numbers)
           </h2>
@@ -246,7 +247,7 @@ export default function JapanBudgetBreakdownPage() {
           </p>
         </section>
 
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Ways to Save Money
           </h2>
@@ -269,7 +270,7 @@ export default function JapanBudgetBreakdownPage() {
           </ul>
         </section>
 
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Final Estimated Total
           </h2>
@@ -296,7 +297,7 @@ export default function JapanBudgetBreakdownPage() {
           </div>
         </section>
 
-        <section className="mb-12 max-w-2xl border-t border-tan pt-10">
+        <section className="mb-6 max-w-2xl border-t border-tan pt-8">
           <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             Related guides
           </h2>
@@ -337,15 +338,7 @@ export default function JapanBudgetBreakdownPage() {
           parentHref="/guides/japan-itinerary"
           parentLabel="Japan itinerary for first-time visitors →"
         />
-
-        <div className="border-t border-tan pt-8 mt-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
-          >
-            JapanProTips homepage <span className="text-lg">‹‹‹</span>
-          </Link>
-        </div>
+        <SiteBrandFooter />
         </>
       }
     />

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ResidentStarterPath } from "@/components/guides/ResidentStarterPath";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
@@ -121,7 +121,7 @@ export default function JapanHealthInsurancePage() {
       />
       <main className="min-h-screen bg-cream font-sans">
         <div className="border-b border-paper-edge bg-paper/90">
-          <div className="mx-auto max-w-3xl px-6 py-4">
+          <div className="page-x mx-auto max-w-3xl py-4">
             <nav
               className="font-sans text-sm font-semibold text-muted"
               aria-label="Breadcrumb"
@@ -143,8 +143,8 @@ export default function JapanHealthInsurancePage() {
           </div>
         </div>
 
-        <article className="mx-auto max-w-3xl px-6 pb-16 pt-10 sm:pt-12">
-          <header className="mb-10 max-w-2xl">
+        <article className="page-x mx-auto max-w-3xl pb-8 pt-8 sm:pt-8">
+          <header className="mb-6 max-w-2xl">
             <p className="editorial-kicker mb-3">Residents</p>
             <h1 className="guide-page-title text-balance">{title}</h1>
             <div className="article-body mt-4 space-y-4">
@@ -185,7 +185,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </header>
 
-          <div className="mb-12">
+          <div className="mb-6">
             <ToolRecommendationStrip
               headingId="health-insurance-cost-strip"
               title="Ballpark monthly life with insurance in the mix"
@@ -195,7 +195,7 @@ export default function JapanHealthInsurancePage() {
             />
           </div>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               The two common systems: employee health insurance and National Health
               Insurance
@@ -244,7 +244,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Who usually needs to enroll</h2>
             <div className="article-body space-y-4">
               <p>
@@ -279,7 +279,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Where to apply</h2>
             <div className="article-body space-y-4">
               <p>
@@ -298,7 +298,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">What documents to bring</h2>
             <div className="article-body space-y-4">
               <p>
@@ -339,7 +339,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Monthly premium reality check
             </h2>
@@ -383,7 +383,7 @@ export default function JapanHealthInsurancePage() {
                 city hall visits after you have an address are common for newcomers
                 who need NHI.
               </p>
-              <h3 className="mb-2 mt-8 font-display text-xl tracking-wide text-dark">
+              <h3 className="mb-2 mt-6 font-display text-xl tracking-wide text-dark">
                 If you fall behind on NHI payments
               </h3>
               <p>
@@ -397,7 +397,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Pension reminder</h2>
             <div className="article-body space-y-4">
               <p>
@@ -418,7 +418,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               What insurance usually covers (high level)
             </h2>
@@ -444,7 +444,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               What insurance may not fully cover
             </h2>
@@ -473,7 +473,7 @@ export default function JapanHealthInsurancePage() {
             </ul>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Common mistakes foreigners make
             </h2>
@@ -502,7 +502,7 @@ export default function JapanHealthInsurancePage() {
             </ul>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               What to do after moving cities or changing jobs
             </h2>
@@ -549,7 +549,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Your card and the copay</h2>
             <div className="article-body space-y-4">
               <p>
@@ -561,7 +561,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Clinic vs hospital, referrals, and appointments
             </h2>
@@ -589,7 +589,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Prescriptions at an outside pharmacy
             </h2>
@@ -604,7 +604,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Emergencies and dental coverage
             </h2>
@@ -624,7 +624,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               My Number (Individual Number)
             </h2>
@@ -642,7 +642,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               How care feels, English support, tourist vs resident pricing
             </h2>
@@ -667,7 +667,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Walkthrough: fever visit at a local clinic
             </h2>
@@ -712,7 +712,7 @@ export default function JapanHealthInsurancePage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Bottom line</h2>
             <ul className="article-body list-none space-y-3.5 pl-0">
               <li className="before:mr-3 before:font-bold before:text-rust before:content-['›']">
@@ -733,7 +733,7 @@ export default function JapanHealthInsurancePage() {
             </ul>
           </section>
 
-          <section className="mb-12 max-w-2xl" aria-labelledby="related-guides-heading">
+          <section className="mb-6 max-w-2xl" aria-labelledby="related-guides-heading">
             <h2 id="related-guides-heading" className="editorial-heading mb-4">
               Related guides
             </h2>

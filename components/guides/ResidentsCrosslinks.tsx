@@ -1,4 +1,4 @@
-﻿import { TrackedCtaLink } from "@/components/TrackedCtaLink";
+import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
 import { conversionLabelForHref } from "@/lib/gtag-events";
 
@@ -428,7 +428,7 @@ export function ResidentsCrosslinks({ currentHref }: ResidentsCrosslinksProps) {
 
   return (
     <section
-      className="mt-14 border-t border-tan pt-12"
+      className="mt-6 border-t border-tan pt-8"
       aria-labelledby="residents-crosslinks-heading"
     >
       <h2
@@ -461,7 +461,7 @@ export function ResidentsCrosslinks({ currentHref }: ResidentsCrosslinksProps) {
           </li>
         ))}
       </ul>
-      <div className="mt-10">
+      <div className="mt-6">
         <TrackedStartHereLink className={startCtaClass}>
           Plan a visit from outside Japan →
         </TrackedStartHereLink>

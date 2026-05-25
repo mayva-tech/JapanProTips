@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 const conversionBox =
-  "border border-[#d4c9b0] bg-white px-6 py-5 mb-12 max-w-2xl";
+  "border border-[#d4c9b0] bg-white px-6 py-5 mb-6 max-w-2xl";
 
 export default function JapanAirportFirstStepsPage() {
   return (
@@ -57,7 +57,7 @@ export default function JapanAirportFirstStepsPage() {
       }
       beforeComparison={
         <>
-        <div className="mb-12 max-w-full">
+        <div className="mb-6 max-w-full">
           <ToolRecommendationStrip
             headingId="airport-tools-strip"
             title="Before you zip the bag"
@@ -121,7 +121,7 @@ export default function JapanAirportFirstStepsPage() {
           ]}
         />
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Step 1: Immigration (What Actually Happens)
           </h2>
@@ -152,7 +152,7 @@ export default function JapanAirportFirstStepsPage() {
           </p>
         </OperationalWarning>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Step 2: Baggage Claim and Customs
           </h2>
@@ -176,7 +176,7 @@ export default function JapanAirportFirstStepsPage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Step 3: Get Internet Immediately
           </h2>
@@ -228,7 +228,7 @@ export default function JapanAirportFirstStepsPage() {
           </Link>
         </div>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Step 4: Get a Transport Card (Suica or PASMO)
           </h2>
@@ -256,7 +256,7 @@ export default function JapanAirportFirstStepsPage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Step 5: How to Get to Tokyo (Train vs Taxi)
           </h2>
@@ -298,7 +298,7 @@ export default function JapanAirportFirstStepsPage() {
 
         <RecommendedServicesBox serviceId="japan-airport-first-steps" />
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Common Mistakes at the Airport
           </h2>
@@ -318,7 +318,7 @@ export default function JapanAirportFirstStepsPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Quick Checklist Before You Leave the Airport
           </h2>
@@ -338,7 +338,7 @@ export default function JapanAirportFirstStepsPage() {
           </ul>
         </section>
 
-        <section className="mb-12 max-w-2xl border-t border-tan pt-10">
+        <section className="mb-6 max-w-2xl border-t border-tan pt-8">
           <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             Next: plan the trip in the right order
           </h2>

@@ -4,7 +4,6 @@ import { ResidentStarterPath } from "@/components/guides/ResidentStarterPath";
 import { DownloadChecklistBox } from "@/components/DownloadChecklistBox";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
 import { TrackedToolLink } from "@/components/tools/TrackedToolLink";
-import { EDITORIAL_COPY } from "@/lib/editorial-copy";
 import { siteToolBySlug, toRecommendationCard } from "@/lib/site-tools";
 import { siteUrl, SITE_NAME } from "@/lib/site";
 
@@ -250,7 +249,7 @@ const checkboxClass =
 
 function ChecklistPrintBlock({ heading, items }: ChecklistGroup) {
   return (
-    <div className="mb-8 break-inside-avoid">
+    <div className="mb-6 break-inside-avoid">
       <h3 className="mb-3 font-display text-xl tracking-wide text-dark">
         {heading}
       </h3>
@@ -275,7 +274,7 @@ export default function MovingToJapanChecklistPage() {
       />
       <main className="min-h-screen bg-cream font-sans">
         <div className="border-b border-paper-edge bg-paper/90">
-          <div className="mx-auto max-w-3xl px-6 py-4">
+          <div className="page-x mx-auto max-w-3xl py-4">
             <nav
               className="font-sans text-sm font-semibold text-muted"
               aria-label="Breadcrumb"
@@ -295,8 +294,8 @@ export default function MovingToJapanChecklistPage() {
           </div>
         </div>
 
-        <article className="mx-auto max-w-3xl px-6 pb-16 pt-10 sm:pt-12">
-          <header className="mb-10 max-w-2xl">
+        <article className="page-x mx-auto max-w-3xl pb-8 pt-8 sm:pt-8">
+          <header className="mb-6 max-w-2xl">
             <p className="editorial-kicker mb-3">Resources</p>
             <h1 className="guide-page-title text-balance">{title}</h1>
             <div className="article-body mt-4 space-y-4">
@@ -315,11 +314,10 @@ export default function MovingToJapanChecklistPage() {
                 <strong>school</strong> because rules shift by municipality and visa
                 type.
               </p>
-              <p className="text-muted">{EDITORIAL_COPY.trustLine}</p>
-            </div>
+</div>
           </header>
 
-          <div className="mb-12">
+          <div className="mb-6">
             <ToolRecommendationStrip
               headingId="moving-checklist-tools-strip"
               title="Format addresses and model monthly cash"
@@ -329,7 +327,7 @@ export default function MovingToJapanChecklistPage() {
             />
           </div>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Before arrival</h2>
             <div className="article-body space-y-4">
               <p>
@@ -356,7 +354,7 @@ export default function MovingToJapanChecklistPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">First 24 hours</h2>
             <div className="article-body space-y-4">
               <p>
@@ -374,7 +372,7 @@ export default function MovingToJapanChecklistPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">First week</h2>
             <div className="article-body space-y-4">
               <p>
@@ -403,7 +401,7 @@ export default function MovingToJapanChecklistPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">First month</h2>
             <div className="article-body space-y-4">
               <p>
@@ -421,7 +419,7 @@ export default function MovingToJapanChecklistPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Housing setup</h2>
             <div className="article-body space-y-4">
               <p>
@@ -442,7 +440,7 @@ export default function MovingToJapanChecklistPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Phone and internet</h2>
             <div className="article-body space-y-4">
               <p>
@@ -459,7 +457,7 @@ export default function MovingToJapanChecklistPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Banking and payments</h2>
             <div className="article-body space-y-4">
               <p>
@@ -472,7 +470,7 @@ export default function MovingToJapanChecklistPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Health insurance and pension
             </h2>
@@ -497,7 +495,7 @@ export default function MovingToJapanChecklistPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Utilities and bills</h2>
             <div className="article-body space-y-4">
               <p>
@@ -514,7 +512,7 @@ export default function MovingToJapanChecklistPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Address registration and mail
             </h2>
@@ -541,7 +539,7 @@ export default function MovingToJapanChecklistPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Work or school setup</h2>
             <div className="article-body space-y-4">
               <p>
@@ -560,7 +558,7 @@ export default function MovingToJapanChecklistPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Emergency documents</h2>
             <div className="article-body space-y-4">
               <p>
@@ -582,7 +580,7 @@ export default function MovingToJapanChecklistPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Common mistakes foreigners make
             </h2>
@@ -608,7 +606,7 @@ export default function MovingToJapanChecklistPage() {
           </section>
 
           <section
-            className="mb-12 max-w-2xl rounded-lg border border-paper-edge bg-paper-card px-5 py-6 shadow-editorial sm:px-6 sm:py-8"
+            className="mb-6 max-w-2xl rounded-lg border border-paper-edge bg-paper-card px-5 py-6 shadow-editorial sm:px-6 sm:py-8"
             aria-labelledby="printable-checklist-heading"
           >
             <h2
@@ -636,7 +634,7 @@ export default function MovingToJapanChecklistPage() {
             currentHref="/resources/moving-to-japan-checklist"
           />
 
-          <section className="mb-12 mt-12 max-w-2xl" aria-labelledby="related-heading">
+          <section className="mb-6 mt-6 max-w-2xl" aria-labelledby="related-heading">
             <h2 id="related-heading" className="editorial-heading mb-4">
               Related guides
             </h2>

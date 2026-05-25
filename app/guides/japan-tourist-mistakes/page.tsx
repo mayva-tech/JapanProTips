@@ -92,7 +92,7 @@ function IntroBlock() {
 function MainContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Common mistakes and practical fixes</H2>
         <p className="article-body max-w-2xl mb-6">
           Each item below is a pattern we see often. The fix is meant to reduce
@@ -320,7 +320,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Harmless mistakes versus genuinely problematic ones</H2>
         <p className="article-body max-w-2xl mb-4">
           Rough categories help you ration stress. Annoying is normal. Fixable is
@@ -347,7 +347,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>What many tourists say they regret afterward</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -364,7 +364,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>What experienced travelers actually do</H2>
         <CheckList
           items={[
@@ -378,7 +378,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Realistic examples</H2>
         <H3>Example: arrival day in Tokyo</H3>
         <p className="article-body max-w-2xl">
@@ -411,7 +411,7 @@ function MainContent() {
 function FooterContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Final advice</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -431,7 +431,7 @@ function FooterContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Related guides</H2>
         <ul className="article-body list-none space-y-3 pl-0 max-w-2xl">
           <li>

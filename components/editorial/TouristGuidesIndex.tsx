@@ -8,12 +8,12 @@ export function TouristGuidesIndex() {
       {TOURIST_GUIDE_SECTIONS.map((section, index) => (
         <section
           key={section.label}
-          className={`border-b border-paper-edge py-12 sm:py-14 ${
+          className={`border-b border-paper-edge py-8 sm:py-12 ${
             index % 2 === 0 ? "bg-paper" : "bg-paper-elevated"
           }`}
         >
-          <div className="mx-auto max-w-6xl px-6">
-            <h2 className="editorial-heading mb-6 text-ink">{section.label}</h2>
+          <div className="page-x mx-auto max-w-6xl">
+            <h2 className="aom-section-title mb-6">{section.label}</h2>
             <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {section.items.map((item) => (
                 <li key={item.href} className="min-h-0">
@@ -26,8 +26,8 @@ export function TouristGuidesIndex() {
       ))}
 
       <section className="bg-ink py-14 sm:py-16">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="border border-paper-edge/20 px-8 py-10 sm:px-10 sm:py-12">
+        <div className="page-x mx-auto max-w-4xl">
+          <div className="border border-paper-edge/20 px-8 py-8 sm:px-10 sm:py-8">
             <p className="editorial-kicker mb-3 text-tan">Before you land</p>
             <h2 className="editorial-heading mb-4 text-paper-card">
               New to Japan? Start with the checklist.
@@ -36,7 +36,7 @@ export function TouristGuidesIndex() {
               The Start Here flow walks through SIM, trains, lodging, and money
               in the order that saves the most headaches on arrival.
             </p>
-            <TrackedStartHereLink className="editorial-btn-primary mt-8">
+            <TrackedStartHereLink className="editorial-btn-primary mt-6">
               Open the trip planning checklist →
             </TrackedStartHereLink>
           </div>

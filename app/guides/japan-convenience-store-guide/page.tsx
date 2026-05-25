@@ -63,7 +63,7 @@ function ChainSection({
   watchFor,
 }: ChainSectionProps) {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>{name}</H2>
       <p className="article-body mb-4 max-w-2xl">
         <span className="font-sans font-bold text-ink">In short: </span>
@@ -125,7 +125,7 @@ function IntroBlock() {
 function MainContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Quick chain comparison</H2>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[480px] border-collapse border border-paper-edge bg-paper-card font-sans text-base text-dark">
@@ -170,7 +170,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Convenience store culture in Japan</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -223,7 +223,7 @@ function MainContent() {
         watchFor="ATM availability can trail 7-Eleven density; scan storefront signage before assuming withdrawals indoors."
       />
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>What tourists actually buy</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -241,7 +241,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Food quality reality</H2>
         <p className="article-body max-w-2xl">
           Chilled chains move inventory quickly, so sandwiches and rice balls often
@@ -252,7 +252,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Best bites and surprisingly good picks</H2>
         <CheckList
           items={[
@@ -265,7 +265,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Healthy options checklist</H2>
         <CheckList
           items={[
@@ -278,7 +278,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Breakfast combinations</H2>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[520px] border-collapse border border-paper-edge bg-paper-card font-sans text-base text-dark">
@@ -323,7 +323,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Onigiri packaging trick</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -339,7 +339,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Hot food counters</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -354,7 +354,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Coffee machines</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -370,7 +370,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Microwaves and staff heating</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -390,7 +390,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Eating areas and etiquette</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -406,7 +406,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>ATMs for foreign cards</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -421,7 +421,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Cashless payments</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -436,7 +436,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Bill payment for residents</H2>
         <p className="article-body max-w-2xl">
           Long-term residents scan barcoded slips at counters or multifunction
@@ -447,7 +447,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Ticket and service kiosks</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -464,7 +464,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Luggage shipping counters</H2>
         <p className="article-body max-w-2xl">
           Yamato or comparable courier desks inside larger konbini forward suitcases
@@ -475,7 +475,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>SIM cards and prepaid phones</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -494,7 +494,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Trash bins etiquette</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -506,7 +506,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Late-night usefulness</H2>
         <p className="article-body max-w-2xl">
           Urban flagship shops stay open around the clock while suburban siblings
@@ -515,7 +515,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Seasonal products</H2>
         <p className="article-body max-w-2xl">
           Sakura sweets, summer citrus coolers, autumn sweet potato desserts, and
@@ -525,7 +525,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Emergency travel uses</H2>
         <CheckList
           items={[
@@ -537,7 +537,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Common tourist mistakes</H2>
         <CheckList
           items={[
@@ -550,7 +550,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Which chain wins your trip</H2>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[520px] border-collapse border border-paper-edge bg-paper-card font-sans text-base text-dark">
@@ -602,7 +602,7 @@ function MainContent() {
 function FooterContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Final advice</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -617,7 +617,7 @@ function FooterContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Related guides</H2>
         <ul className="article-body list-none space-y-3 pl-0 max-w-2xl">
           <li>

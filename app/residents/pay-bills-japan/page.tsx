@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ResidentStarterPath } from "@/components/guides/ResidentStarterPath";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
@@ -124,7 +124,7 @@ export default function PayBillsJapanPage() {
       />
       <main className="min-h-screen bg-cream font-sans">
         <div className="border-b border-paper-edge bg-paper/90">
-          <div className="mx-auto max-w-3xl px-6 py-4">
+          <div className="page-x mx-auto max-w-3xl py-4">
             <nav
               className="font-sans text-sm font-semibold text-muted"
               aria-label="Breadcrumb"
@@ -146,8 +146,8 @@ export default function PayBillsJapanPage() {
           </div>
         </div>
 
-        <article className="mx-auto max-w-3xl px-6 pb-16 pt-10 sm:pt-12">
-          <header className="mb-10 max-w-2xl">
+        <article className="page-x mx-auto max-w-3xl pb-8 pt-8 sm:pt-8">
+          <header className="mb-6 max-w-2xl">
             <p className="editorial-kicker mb-3">Residents</p>
             <h1 className="guide-page-title text-balance">{title}</h1>
             <div className="article-body mt-4 space-y-4">
@@ -184,7 +184,7 @@ export default function PayBillsJapanPage() {
             </div>
           </header>
 
-          <div className="mb-12">
+          <div className="mb-6">
             <ToolRecommendationStrip
               headingId="pay-bills-tools-strip"
               title="Format addresses and stress test monthly cash"
@@ -194,7 +194,7 @@ export default function PayBillsJapanPage() {
             />
           </div>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Common bills residents pay</h2>
             <div className="article-body space-y-6">
               <p>
@@ -256,7 +256,7 @@ export default function PayBillsJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Payment methods</h2>
             <div className="article-body space-y-6">
               <div>
@@ -315,7 +315,7 @@ export default function PayBillsJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               How convenience store bill payment works
             </h2>
@@ -356,7 +356,7 @@ export default function PayBillsJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Reading Japanese bill slips
             </h2>
@@ -395,7 +395,7 @@ export default function PayBillsJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               What happens if you miss a payment
             </h2>
@@ -430,7 +430,7 @@ export default function PayBillsJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Utility setup after moving
             </h2>
@@ -460,7 +460,7 @@ export default function PayBillsJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Why mail and address formatting matter
             </h2>
@@ -498,7 +498,7 @@ export default function PayBillsJapanPage() {
             </div>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">
               Common mistakes foreigners make
             </h2>
@@ -536,7 +536,7 @@ export default function PayBillsJapanPage() {
             </ul>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <h2 className="editorial-heading mb-4">Bottom line</h2>
             <ul className="article-body list-none space-y-3.5 pl-0">
               <li className="before:mr-3 before:font-bold before:text-rust before:content-['›']">
@@ -554,7 +554,7 @@ export default function PayBillsJapanPage() {
             </ul>
           </section>
 
-          <section className="mb-12 max-w-2xl" aria-labelledby="related-guides-heading">
+          <section className="mb-6 max-w-2xl" aria-labelledby="related-guides-heading">
             <h2 id="related-guides-heading" className="editorial-heading mb-4">
               Related guides
             </h2>

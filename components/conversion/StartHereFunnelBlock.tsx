@@ -45,7 +45,7 @@ export function StartHereFunnelBlock({
           </li>
         ))}
       </ul>
-      <div className="mt-8">
+      <div className="mt-6">
         <Link
           href={href}
           className="editorial-btn-primary"

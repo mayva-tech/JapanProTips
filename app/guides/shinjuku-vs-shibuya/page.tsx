@@ -46,7 +46,7 @@ export default function ShinjukuVsShibuyaPage() {
       }
       beforeComparison={
         <>
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Quick Answer
             </h2>
@@ -66,7 +66,7 @@ export default function ShinjukuVsShibuyaPage() {
       }
       afterComparison={
         <>
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Comparison
             </h2>
@@ -123,7 +123,7 @@ export default function ShinjukuVsShibuyaPage() {
             </div>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Shinjuku
             </h2>
@@ -148,7 +148,7 @@ export default function ShinjukuVsShibuyaPage() {
             </ul>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Shibuya
             </h2>
@@ -173,7 +173,7 @@ export default function ShinjukuVsShibuyaPage() {
             </ul>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               What You Should Choose
             </h2>
@@ -187,11 +187,11 @@ export default function ShinjukuVsShibuyaPage() {
             </ul>
           </section>
 
-          <section className="mb-12">
+          <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Bottom Line
             </h2>
-            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
+            <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
               <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
                 Both work
               </li>

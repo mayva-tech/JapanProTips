@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 import { ResidentStarterPath } from "@/components/guides/ResidentStarterPath";
@@ -40,14 +40,14 @@ function TrackedResidentLink({
 export default function ResidentsPage() {
   return (
     <main className="bg-cream min-h-screen font-sans">
-      <article className="max-w-3xl mx-auto px-6 pt-12 pb-16">
+      <article className="page-x max-w-3xl mx-auto pt-10 pb-14">
         <h1
           className="guide-page-title"
         >
           Living in Japan: Practical Guides for Daily Life
         </h1>
 
-        <div className="article-body mb-14 max-w-2xl space-y-4">
+        <div className="article-body mb-6 max-w-2xl space-y-4">
           <p>This section is for people who already live in Japan.</p>
           <p>
             It focuses on daily life, paperwork rhythms, and how things actually
@@ -57,13 +57,13 @@ export default function ResidentsPage() {
 
         <ResidentStarterPath sourceSlug="residents-hub" variant="hub" />
 
-        <div className="border-t-2 border-dark mb-12" />
+        <div className="border-t-2 border-dark mb-6" />
 
-        <section className="mb-14">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Start Here
           </h2>
-          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl mb-8">
+          <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl mb-6">
             <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
               Setting up life basics
             </li>
@@ -71,7 +71,7 @@ export default function ResidentsPage() {
               Bank, phone, transport
             </li>
           </ul>
-          <ul className="article-body list-none space-y-3 pl-0 max-w-2xl mb-8 text-base">
+          <ul className="article-body list-none space-y-3 pl-0 max-w-2xl mb-6 text-base">
             <li>
               <TrackedResidentLink href="/residents/japan-residence-registration" className={linkClass}>
                 Residence registration at the ward office →
@@ -188,7 +188,7 @@ export default function ResidentsPage() {
           </TrackedResidentLink>
         </section>
 
-        <section className="mb-14">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Families
           </h2>
@@ -200,7 +200,7 @@ export default function ResidentsPage() {
               Language and daily rhythm
             </li>
           </ul>
-          <ul className="article-body list-none space-y-3 pl-0 max-w-2xl mt-4 mb-14 text-base">
+          <ul className="article-body list-none space-y-3 pl-0 max-w-2xl mt-4 mb-6 text-base">
             <li>
               <TrackedResidentLink href="/residents/japan-school-system" className={linkClass}>
                 Japanese school system for foreign families →
@@ -239,7 +239,7 @@ export default function ResidentsPage() {
           </ul>
         </section>
 
-        <section className="mb-14">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Daily Life
           </h2>
@@ -508,7 +508,7 @@ export default function ResidentsPage() {
           </ul>
         </section>
 
-        <section className="mb-14">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Work and Systems
           </h2>
@@ -672,7 +672,7 @@ export default function ResidentsPage() {
           </ul>
         </section>
 
-        <section className="mb-14">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Reality
           </h2>
@@ -688,7 +688,7 @@ export default function ResidentsPage() {
 
         <ResidentsCrosslinks />
 
-        <div className="border-t border-tan pt-10 mt-14">
+        <div className="border-t border-tan pt-8 mt-6">
           <TrackedResidentLink href="/residents/ic-card-japan" className={ctaClass}>
             IC cards and everyday train basics →
           </TrackedResidentLink>

@@ -6,7 +6,6 @@ import { ItineraryPlannerFootnotes } from "@/components/itinerary/ItineraryPlann
 import { ItineraryPlannerForm } from "@/components/itinerary/ItineraryPlannerForm";
 import { ItineraryPlannerLimitations } from "@/components/itinerary/ItineraryPlannerLimitations";
 import { ToolPageCrosslinks } from "@/components/tools/ToolPageCrosslinks";
-import { EDITORIAL_COPY } from "@/lib/editorial-copy";
 import { siteUrl, SITE_NAME } from "@/lib/site";
 
 const PATH = "/tools/japan-itinerary-planner";
@@ -143,8 +142,8 @@ export default function JapanItineraryPlannerPage() {
           </div>
         </div>
 
-        <article className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
-          <header className="mb-10 max-w-3xl lg:mb-12">
+        <article className="mx-auto max-w-6xl px-4 pb-8 pt-8 sm:px-6 sm:pb-8 sm:pt-8">
+          <header className="mb-6 max-w-3xl lg:mb-6">
             <p className="editorial-kicker mb-3">Tool</p>
             <h1 className="guide-page-title text-balance">
               Japan Itinerary Planner
@@ -155,12 +154,9 @@ export default function JapanItineraryPlannerPage() {
               pace. The generator will turn that into a day-by-day outline you
               can refine.
             </p>
-            <p className="article-body-sm mt-4 font-sans text-sm font-semibold text-muted">
-              {EDITORIAL_COPY.trustLine}
-            </p>
-          </header>
+</header>
 
-          <section className="mb-10 max-w-3xl">
+          <section className="mb-6 max-w-3xl">
             <p className="article-body leading-relaxed text-muted">
               This planner is for first-time visitors and return travelers who
               want a field-guide style route, not a generic bucket list. You
@@ -193,13 +189,13 @@ export default function JapanItineraryPlannerPage() {
             <ItineraryPlannerForm />
           </Suspense>
 
-          <div className="mx-auto mt-8 space-y-8">
+          <div className="mx-auto mt-6 space-y-8">
             <ItineraryPlannerLimitations />
             <ItineraryPlannerFootnotes />
           </div>
 
           <section
-            className="mx-auto mt-14 max-w-3xl rounded-lg border border-paper-edge bg-paper-card/90 p-6 shadow-editorial sm:p-8"
+            className="mx-auto mt-6 max-w-3xl rounded-lg border border-paper-edge bg-paper-card/90 p-6 shadow-editorial sm:p-8"
             aria-labelledby="itinerary-guides-heading"
           >
             <h2

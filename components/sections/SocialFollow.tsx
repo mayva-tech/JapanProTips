@@ -32,7 +32,7 @@ const channels: Channel[] = [
 
 export function SocialFollow() {
   return (
-    <section className="border-b border-stone-200 py-12">
+    <section className="border-b border-stone-200 py-8">
       <Container>
         <SectionLabel>Follow along</SectionLabel>
         <p className="mb-5 text-base text-stone-500">

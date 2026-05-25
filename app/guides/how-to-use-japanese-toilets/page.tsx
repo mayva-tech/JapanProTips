@@ -90,7 +90,7 @@ function IntroBlock() {
 function MainContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Why these systems exist</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -109,7 +109,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Japanese toilet controls</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -128,7 +128,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Heated seats feel normal by winter</H2>
         <p className="article-body max-w-2xl">
           Heated seats sit on by default indoors when cold nights arrive. If you do
@@ -138,7 +138,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Privacy sound buttons (Otohime)</H2>
         <p className="article-body max-w-2xl">
           Some stalls play gentle water melodies or synthetic stream noise labeled
@@ -148,7 +148,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Squat toilets still appear</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -164,7 +164,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Toilet slippers are not hallway shoes</H2>
         <p className="article-body max-w-2xl">
           Raised floors at older ryokan, clinic restrooms, temple wings, tiny
@@ -174,7 +174,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Public restrooms: what to expect</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -192,7 +192,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Carry pocket tissues and a small towel</H2>
         <p className="article-body max-w-2xl">
           Convenience stores hawk tiny tissue packs beside registers; snag a clip
@@ -202,7 +202,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Trash cans stay scarce outside</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -220,7 +220,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Trash separation basics for tourists</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -238,7 +238,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Convenience store trash etiquette</H2>
         <p className="article-body max-w-2xl">
           Store bins politely accept packaging from purchases you ate or drank on
@@ -254,7 +254,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Eating while walking</H2>
         <p className="article-body max-w-2xl">
           Stations and commuter trains discourage wandering bites because crumbs clog
@@ -264,7 +264,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Train etiquette anchors calm cars</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -286,7 +286,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Backpacks on crowded trains</H2>
         <p className="article-body max-w-2xl">
           Pivot packs to chest height or hoist them overhead when commuters pack
@@ -295,7 +295,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Priority seating awareness</H2>
         <p className="article-body max-w-2xl">
           Mildly tinted seats near doors signal seniors, riders with limb injuries,
@@ -305,7 +305,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Escalator norms shift by metro</H2>
         <p className="article-body max-w-2xl">
           Tokyo commuter belts often anchor standers on left while climbers rush
@@ -315,7 +315,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Queue culture and floor decals</H2>
         <p className="article-body max-w-2xl">
           Stations paint shoe pairs, snack shops tape arrows, ramen lines wrap
@@ -325,7 +325,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Smoking only where marked</H2>
         <p className="article-body max-w-2xl">
           Major cities outlaw walking cigarettes between blocks unless posted
@@ -334,7 +334,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Speaking volume in public</H2>
         <p className="article-body max-w-2xl">
           Sidewalk energy stays conversational, subway cars drop another notch toward
@@ -344,7 +344,7 @@ function MainContent() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Tokyo, Osaka, and rural pockets compared</H2>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[520px] border-collapse border border-paper-edge bg-paper-card font-sans text-base text-dark">
@@ -406,7 +406,7 @@ function MainContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Mistakes people shrug off versus mistakes that sting</H2>
         <H3>Usually forgiven when you apologize once</H3>
         <CheckList
@@ -426,7 +426,7 @@ function MainContent() {
         />
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>What to actually do: quick scenarios</H2>
         <H3>Toilet stalls run out of toilet paper mid-clean</H3>
         <p className="article-body mb-4 max-w-2xl">
@@ -456,7 +456,7 @@ function MainContent() {
 function FooterContent() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Final advice</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -473,7 +473,7 @@ function FooterContent() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Related guides</H2>
         <ul className="article-body list-none space-y-3 pl-0 max-w-2xl">
           <li>

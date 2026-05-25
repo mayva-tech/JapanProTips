@@ -1,10 +1,12 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ESimConversionBlock } from "@/components/conversion";
-import { SectionLabel } from "@/components/editorial/SectionLabel";
+import { MagazinePageHeader } from "@/components/editorial/MagazinePageHeader";
+import { MagazineShell } from "@/components/editorial/MagazineShell";
 import { TouristGuidesIndex } from "@/components/editorial/TouristGuidesIndex";
 import { ItineraryHubCta } from "@/components/itinerary/ItineraryHubCta";
 import { ALL_TOURIST_GUIDES } from "@/lib/tourist-guides";
+import { IMAGES } from "@/lib/images";
 import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
 
 export const metadata: Metadata = {
@@ -18,24 +20,19 @@ export default function TouristsPage() {
 
   return (
     <main className="min-h-screen bg-paper font-sans">
-      <section className="border-b border-paper-edge bg-paper-elevated py-14 sm:py-16">
-        <div className="mx-auto max-w-6xl px-6">
-          <SectionLabel>Visiting Japan</SectionLabel>
-          <h1
-            className="editorial-heading mb-4 max-w-3xl text-ink"
-            style={{ fontSize: "clamp(32px, 5vw, 48px)" }}
-          >
-            Tourist guides for Japan
-          </h1>
-          <p className="article-body mb-4 max-w-2xl">
-            Practical field guides for transport, SIM cards, money, airports, and
-            where to stay. Each card opens the full article. Pick what matches
-            your trip stage.
+      <MagazinePageHeader
+        kicker="Visiting Japan"
+        title="Tourist guides for Japan"
+        description="Practical field guides for transport, SIM cards, money, airports, and where to stay. Each card opens the full article. Pick what matches your trip stage."
+        imageSrc={IMAGES.hero.airport}
+        imageAlt="Travelers at a Japan airport"
+        meta={
+          <p className="font-sans text-kicker font-black uppercase text-muted">
+            {guideCount} guides
           </p>
-          <p className="mb-8 font-sans text-kicker font-black uppercase text-muted">
-            {guideCount} guides · Independent · Engineer based in Japan
-          </p>
-          <div className="flex flex-wrap gap-4">
+        }
+        actions={
+          <>
             <TrackedStartHereLink className="editorial-btn-primary">
               Start with the trip checklist →
             </TrackedStartHereLink>
@@ -45,19 +42,19 @@ export default function TouristsPage() {
             >
               Back to home →
             </Link>
-          </div>
-        </div>
-      </section>
+          </>
+        }
+      />
 
-      <div className="mx-auto max-w-6xl px-6 py-10">
+      <MagazineShell className="py-8">
         <ESimConversionBlock />
-        <div className="mt-10">
+        <div className="mt-6">
           <ItineraryHubCta
             sourcePage="/tourists"
             ctaPosition="before-guide-index"
           />
         </div>
-      </div>
+      </MagazineShell>
 
       <TouristGuidesIndex />
     </main>

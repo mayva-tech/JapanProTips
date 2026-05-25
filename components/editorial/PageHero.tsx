@@ -20,12 +20,12 @@ const variantClass = {
   home: {
     section: "min-h-[min(72vh,640px)]",
     content:
-      "min-h-[min(72vh,640px)] justify-center py-24 text-center sm:py-28",
+      "min-h-[min(72vh,640px)] justify-center py-20 text-center sm:py-24",
     maxWidth: "max-w-4xl",
   },
   article: {
     section: "min-h-[min(44vh,400px)] sm:min-h-[min(48vh,440px)]",
-    content: "min-h-[min(44vh,400px)] justify-end pb-10 pt-20 sm:min-h-[min(48vh,440px)] sm:pb-12 sm:pt-24",
+    content: "min-h-[min(44vh,400px)] justify-end pb-8 pt-16 sm:min-h-[min(48vh,440px)] sm:pb-10 sm:pt-20",
     maxWidth: "max-w-3xl",
   },
 } as const;
@@ -63,7 +63,7 @@ export function PageHero({
       />
       <div
         className={cn(
-          "hero-on-image relative z-10 mx-auto flex flex-col px-6",
+          "hero-on-image page-x relative z-10 mx-auto flex flex-col",
           v.maxWidth,
           v.content,
           centered ? "items-center" : "items-start",
@@ -75,7 +75,7 @@ export function PageHero({
       {caption ? (
         <div
           className={cn(
-            "relative z-10 mx-auto px-6 pb-6",
+            "page-x relative z-10 mx-auto pb-6",
             v.maxWidth,
             centered && "text-center",
           )}

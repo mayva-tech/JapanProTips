@@ -41,7 +41,7 @@ export async function MdxGuidePage({
   const title = <h1 className="guide-page-title">{frontmatter.title}</h1>;
 
   const intro = frontmatter.intro?.length ? (
-    <div className="article-body space-y-4 max-w-2xl">
+    <div className="article-body space-y-4 lg:max-w-2xl">
       {frontmatter.intro.map((paragraph) => (
         <p key={paragraph}>{paragraph}</p>
       ))}
@@ -52,9 +52,9 @@ export async function MdxGuidePage({
     const residentHref = `/residents/${slug}`;
     return (
       <main className="bg-cream min-h-screen font-sans">
-        <article className="mx-auto min-w-0 max-w-3xl px-6 pt-12 pb-16">
+        <article className="page-x mx-auto min-w-0 max-w-3xl pt-10 pb-14">
           {title}
-          {intro ? <div className="mb-12">{intro}</div> : null}
+          {intro ? <div className="mb-6">{intro}</div> : null}
           <MdxGuideContent source={beforeComparison} />
           <MdxGuideContent source={afterComparison} />
           <ResidentsCrosslinks currentHref={residentHref} />

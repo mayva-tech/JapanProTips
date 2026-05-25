@@ -19,6 +19,11 @@ export type ToolRecommendationStripProps = {
   analyticsSourceSlug?: string;
   /** Tighter layout for bottom-of-page crosslinks. */
   variant?: "default" | "compact";
+  /**
+   * `stack`: one tool per row (sidebar / narrow columns).
+   * `responsive`: 1–2 columns by breakpoint (default for compact).
+   */
+  layout?: "stack" | "responsive";
 };
 
 const pillClass =
@@ -33,11 +38,14 @@ const cardClassCompact =
 function gridClassForTools(
   count: number,
   variant: "default" | "compact",
+  layout: "stack" | "responsive",
 ): string {
   if (variant === "compact") {
-    if (count <= 1) return "grid grid-cols-1 gap-3 sm:max-w-xl";
+    if (layout === "stack" || count <= 1) {
+      return "grid grid-cols-1 gap-3";
+    }
     if (count === 2) return "grid grid-cols-1 gap-3 sm:grid-cols-2";
-    return "grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4";
+    return "grid grid-cols-1 gap-3 sm:grid-cols-2";
   }
   if (count === 1) return "grid grid-cols-1 gap-4 sm:max-w-xl";
   if (count === 2) return "grid grid-cols-1 gap-4 sm:grid-cols-2";
@@ -55,8 +63,9 @@ export function ToolRecommendationStrip({
   headingId = "tool-recommendation-strip-heading",
   analyticsSourceSlug,
   variant = "default",
+  layout = "responsive",
 }: ToolRecommendationStripProps) {
-  const gridClass = gridClassForTools(tools.length, variant);
+  const gridClass = gridClassForTools(tools.length, variant, layout);
   const isCompact = variant === "compact";
   const cardClass = isCompact ? cardClassCompact : cardClassDefault;
   const shellClass = isCompact

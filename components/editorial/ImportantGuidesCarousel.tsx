@@ -311,7 +311,7 @@ export function ImportantGuidesCarousel() {
       onMouseEnter={pauseAutoScroll}
       onMouseLeave={scheduleResume}
     >
-      <p className="article-body mb-6 max-w-xl sm:mb-8">
+      <p className="article-body mb-6 max-w-none sm:mb-6 sm:max-w-xl">
         Start with the topics that trip people up most. Each guide opens in one
         click.
       </p>

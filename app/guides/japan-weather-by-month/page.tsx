@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
@@ -65,7 +65,7 @@ export default function JapanWeatherByMonthPage() {
       intro={<Intro />}
       beforeComparison={
         <>
-          <div className="mb-12 max-w-full">
+          <div className="mb-6 max-w-full">
             <ToolRecommendationStrip
               headingId="weather-tools-strip"
               title="Turn weather into a packing list"
@@ -120,7 +120,7 @@ function Intro() {
 function MainMonths() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Quick seasonal overview</H2>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[520px] border-collapse border border-paper-edge bg-paper-card font-sans text-base text-dark">
@@ -196,7 +196,7 @@ function MainMonths() {
 
 function MonthJanuary() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>January in Japan</H2>
       <H3>What it feels like</H3>
       <p className="article-body mb-4 max-w-2xl">
@@ -233,7 +233,7 @@ function MonthJanuary() {
 
 function MonthFebruary() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>February in Japan</H2>
       <p className="article-body mb-4 max-w-2xl">
         February stays cold but is often less crowded than cherry blossom season.
@@ -251,7 +251,7 @@ function MonthFebruary() {
 
 function MonthMarch() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>March in Japan</H2>
       <p className="article-body mb-4 max-w-2xl">
         March is transitional. Early March can still feel cold. Late March warms
@@ -274,7 +274,7 @@ function MonthMarch() {
 
 function MonthApril() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>April in Japan</H2>
       <H3>One of the best months to visit</H3>
       <p className="article-body mb-4 max-w-2xl">
@@ -302,7 +302,7 @@ function MonthApril() {
 
 function MonthMay() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>May in Japan</H2>
       <p className="article-body mb-4 max-w-2xl">
         May is one of the most comfortable travel months. Humidity stays relatively
@@ -324,7 +324,7 @@ function MonthMay() {
 
 function MonthJune() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>June in Japan (rainy season)</H2>
       <p className="article-body mb-4 max-w-2xl">
         June brings rainy season. That does not mean nonstop storms all day. Expect
@@ -351,7 +351,7 @@ function MonthJune() {
 
 function MonthJuly() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>July in Japan</H2>
       <p className="article-body mb-4 max-w-2xl">
         Many first-time visitors underestimate July. Humidity can feel exhausting,
@@ -371,7 +371,7 @@ function MonthJuly() {
 
 function MonthAugust() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>August in Japan</H2>
       <p className="article-body mb-4 max-w-2xl">
         August is peak summer heat. Tourism stays high because of school vacations
@@ -395,7 +395,7 @@ function MonthAugust() {
 
 function MonthSeptember() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>September in Japan</H2>
       <p className="article-body mb-4 max-w-2xl">
         September cools slightly but early weeks still feel humid. This is typhoon
@@ -419,7 +419,7 @@ function MonthSeptember() {
 
 function MonthOctober() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>October in Japan</H2>
       <p className="article-body mb-4 max-w-2xl">
         October offers comfortable temperatures and lower humidity. Walking cities
@@ -438,7 +438,7 @@ function MonthOctober() {
 
 function MonthNovember() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>November in Japan</H2>
       <p className="article-body mb-4 max-w-2xl">
         November is peak autumn foliage season. Kyoto becomes extremely popular for
@@ -455,7 +455,7 @@ function MonthNovember() {
 
 function MonthDecember() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>December in Japan</H2>
       <p className="article-body mb-4 max-w-2xl">
         December feels festive and calm in many cities. Winter illuminations appear
@@ -471,7 +471,7 @@ function MonthDecember() {
 
 function RegionComparison() {
   return (
-    <section className="mb-12">
+    <section className="mb-6">
       <H2>Tokyo vs Kyoto vs Osaka vs Hokkaido</H2>
       <H3>Tokyo</H3>
       <p className="article-body mb-4 max-w-2xl">
@@ -498,7 +498,7 @@ function RegionComparison() {
 function FooterSections() {
   return (
     <>
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Best time to visit Japan</H2>
         <p className="article-body mb-4 max-w-2xl">
           Most travelers prefer April, May, October, and November for comfortable
@@ -506,7 +506,7 @@ function FooterSections() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Cheapest times to visit</H2>
         <p className="article-body mb-4 max-w-2xl">
           January (after New Year), February, and early June often see lower flight
@@ -517,7 +517,7 @@ function FooterSections() {
         </Link>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Most difficult months for some travelers</H2>
         <p className="article-body mb-4 max-w-2xl">
           July and August challenge visitors with humidity, heat exhaustion risk,
@@ -525,7 +525,7 @@ function FooterSections() {
         </p>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Final advice</H2>
         <div className="article-body space-y-4 max-w-2xl">
           <p>
@@ -544,7 +544,7 @@ function FooterSections() {
         </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-6">
         <H2>Related guides</H2>
         <ul className="article-body list-none space-y-3 pl-0 max-w-2xl">
           <li>

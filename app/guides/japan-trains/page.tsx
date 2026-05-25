@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -7,6 +8,9 @@ import { DownloadChecklistBox } from "@/components/DownloadChecklistBox";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 import { OperationalWarning, WhatPeopleMiss } from "@/components/editorial/field-notes";
+
+const inlineLinkClass =
+  "font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150";
 
 export const metadata: Metadata = {
   title:
@@ -19,135 +23,106 @@ export default function JapanTrainsPage() {
   return (
     <GuideArticleShell
       title={
-        <h1
-          className="guide-page-title"
-        >
+        <h1 className="guide-page-title">
           How to Use Trains in Japan Without Getting Lost
         </h1>
       }
       intro={
-        <div className="article-body space-y-4 max-w-2xl">
+        <div className="article-body space-y-4 lg:max-w-2xl">
           <p>Japan trains look confusing at first.</p>
           <p>You do not need to understand the entire system.</p>
           <p>You only need a simple system that works every day.</p>
-          <Link
-            href="/guides/japan-airport-to-city"
-            className="inline-block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 pt-2"
-          >
-            From airport to hotel →
-          </Link>
+          <p>
+            <Link href="/guides/japan-airport-to-city" className={inlineLinkClass}>
+              From airport to hotel →
+            </Link>
+          </p>
         </div>
       }
       beforeComparison={
-        <>
-          <section className="mb-12">
-            <h2 className="editorial-heading mb-4">
-              Quick Answer
-            </h2>
-            <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Use Google Maps or NAVITIME
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Use an IC card
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Follow line name, direction, platform, and transfers
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                If unsure, ask station staff
-              </li>
-            </ul>
-            <OperationalWarning noteId="japan-trains-quick-answer">
-              <p>
-                Your app shows a line name, time, and platform. If any one of
-                those three disagrees with the yellow departure board, trust the
-                board first, then ask staff. Wrong platform is the fastest way to
-                board the right line going the wrong direction.
-              </p>
-            </OperationalWarning>
+        <div className="mdx-guide-body min-w-0 lg:max-w-2xl">
+          <h2>Quick Answer</h2>
+          <ul className="article-body mb-3 list-none space-y-2.5 pl-0 last:mb-0">
+            <li>Use Google Maps or NAVITIME</li>
+            <li>Use an IC card</li>
+            <li>Follow line name, direction, platform, and transfers</li>
+            <li>If unsure, ask station staff</li>
+          </ul>
+          <OperationalWarning noteId="japan-trains-quick-answer">
+            <p>
+              Your app shows a line name, time, and platform. If any one of
+              those three disagrees with the yellow departure board, trust the
+              board first, then ask staff. Wrong platform is the fastest way to
+              board the right line going the wrong direction.
+            </p>
+          </OperationalWarning>
+          <p className="mb-3 last:mb-0">
             <Link
               href="/guides/sim-card-japan"
-              className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150"
+              className="inline-block bg-maroon px-7 py-3.5 font-sans text-base font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust"
             >
               Get your SIM sorted →
             </Link>
-          </section>
+          </p>
 
-          <section className="mb-12">
-            <h2 className="editorial-heading mb-4">
-              What You Actually Need to Know
-            </h2>
-            <div className="article-body space-y-4 max-w-2xl">
-              <p>
-                <strong className="font-sans font-bold text-dark">
-                  Train line name:
-                </strong>{" "}
-                Confirm the exact line shown in your app.
-              </p>
-              <p>
-                <strong className="font-sans font-bold text-dark">
-                  Destination direction:
-                </strong>{" "}
-                Check where the train is heading, not just the line color.
-              </p>
-              <p>
-                <strong className="font-sans font-bold text-dark">
-                  Platform number:
-                </strong>{" "}
-                Match the platform in the app with station signs.
-              </p>
-              <p>
-                <strong className="font-sans font-bold text-dark">
-                  Local vs Rapid vs Express:
-                </strong>{" "}
-                Pick the train type shown in your route.
-              </p>
-              <p>
-                <strong className="font-sans font-bold text-dark">
-                  Transfer stations:
-                </strong>{" "}
-                Know where to switch before you board.
-              </p>
-            </div>
-          </section>
+          <h2>What You Actually Need to Know</h2>
+          <p className="article-body mb-3">
+            <strong className="font-sans font-bold text-dark">
+              Train line name:
+            </strong>{" "}
+            Confirm the exact line shown in your app.
+          </p>
+          <p className="article-body mb-3">
+            <strong className="font-sans font-bold text-dark">
+              Destination direction:
+            </strong>{" "}
+            Check where the train is heading, not just the line color.
+          </p>
+          <p className="article-body mb-3">
+            <strong className="font-sans font-bold text-dark">
+              Platform number:
+            </strong>{" "}
+            Match the platform in the app with station signs.
+          </p>
+          <p className="article-body mb-3">
+            <strong className="font-sans font-bold text-dark">
+              Local vs Rapid vs Express:
+            </strong>{" "}
+            Pick the train type shown in your route.
+          </p>
+          <p className="article-body mb-3 last:mb-0">
+            <strong className="font-sans font-bold text-dark">
+              Transfer stations:
+            </strong>{" "}
+            Know where to switch before you board.
+          </p>
 
           <RecommendedServicesBox serviceId="japan-trains" />
 
-          <section className="mb-12">
-            <h2 className="editorial-heading mb-4">
-              Local, Rapid, and Express
-            </h2>
-            <ul className="article-body list-none space-y-3.5 pl-0 mb-6 max-w-2xl">
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Local stops at every station
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Rapid skips some stations
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Express skips more stations
-              </li>
-            </ul>
-            <p className="font-sans font-bold text-dark text-lg max-w-2xl">
+          <h2>Local, Rapid, and Express</h2>
+          <ul className="article-body mb-3 list-none space-y-2.5 pl-0 last:mb-0">
+            <li>Local stops at every station</li>
+            <li>Rapid skips some stations</li>
+            <li>Express skips more stations</li>
+          </ul>
+          <p className="article-body mb-3 last:mb-0">
+            <strong className="font-sans font-bold text-dark">
               If you are unsure, take Local.
-            </p>
-          </section>
+            </strong>
+          </p>
 
-          <section className="mb-12">
-            <h2 className="editorial-heading mb-4">
-              JR vs Metro
-            </h2>
-            <div className="article-body space-y-4 max-w-2xl">
-              <p>JR is the major rail network.</p>
-              <p>Metro or Subway is the city train system.</p>
-              <p>Private railways also exist and are common.</p>
-              <p className="font-sans font-bold text-dark">
-                You do not need to memorize the companies. Just follow the route
-                shown in your app.
-              </p>
-            </div>
-          </section>
+          <h2>JR vs Metro</h2>
+          <p className="article-body mb-3">JR is the major rail network.</p>
+          <p className="article-body mb-3">Metro or Subway is the city train system.</p>
+          <p className="article-body mb-3">
+            Private railways also exist and are common.
+          </p>
+          <p className="article-body mb-3 last:mb-0">
+            <strong className="font-sans font-bold text-dark">
+              You do not need to memorize the companies. Just follow the route
+              shown in your app.
+            </strong>
+          </p>
 
           <WhatPeopleMiss noteId="japan-trains-jr-metro">
             <p>
@@ -156,15 +131,13 @@ export default function JapanTrainsPage() {
               gate and then assume the IC card is broken.
             </p>
           </WhatPeopleMiss>
-        </>
+        </div>
       }
       afterComparison={
         <>
-          <section className="mb-12">
-            <h2 className="editorial-heading mb-4">
-              How to Ride a Train Step by Step
-            </h2>
-            <ol className="article-body list-decimal space-y-3 pl-6 max-w-2xl">
+          <div className="mdx-guide-body min-w-0 lg:max-w-2xl">
+            <h2>How to Ride a Train Step by Step</h2>
+            <ol className="article-body mb-3 list-decimal space-y-2.5 pl-6 last:mb-0">
               <li>Search destination in Google Maps or NAVITIME</li>
               <li>Check line name</li>
               <li>Check platform number</li>
@@ -174,135 +147,83 @@ export default function JapanTrainsPage() {
               <li>Transfer if needed</li>
               <li>Tap out</li>
             </ol>
-          </section>
 
-          <section className="mb-12">
-            <h2 className="editorial-heading mb-4">
-              IC Cards
-            </h2>
-            <div className="article-body space-y-4 max-w-2xl">
-              <p>
-                The main options are Suica, PASMO, and ICOCA. Any of these works
-                for most visitors.
-              </p>
-              <ul className="list-none pl-0 space-y-2">
-                <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                  Tap in when entering the gate
-                </li>
-                <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                  Tap out when exiting
-                </li>
-                <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                  Recharge when balance is low
-                </li>
-              </ul>
-              <p>
-                IC cards also work for buses, convenience stores, and vending
-                machines.
-              </p>
-              <p className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-6 pt-2">
-                <Link
-                  href="/guides/suica-vs-pasmo"
-                  className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
-                >
-                  Suica vs PASMO →
-                </Link>
-                <Link
-                  href="/guides/japan-train-mistakes"
-                  className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
-                >
-                  Common train mistakes →
-                </Link>
-              </p>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="editorial-heading mb-4">
-              Common Mistakes
-            </h2>
-            <ul className="article-body list-none space-y-3.5 pl-0 max-w-2xl">
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Boarding the wrong train type
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Ignoring platform direction
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Standing in the wrong line
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Forgetting to tap out
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Taking taxis because trains look scary
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Assuming all trains are JR
-              </li>
+            <h2>IC Cards</h2>
+            <p className="article-body mb-3">
+              The main options are Suica, PASMO, and ICOCA. Any of these works
+              for most visitors.
+            </p>
+            <ul className="article-body mb-3 list-none space-y-2.5 pl-0 last:mb-0">
+              <li>Tap in when entering the gate</li>
+              <li>Tap out when exiting</li>
+              <li>Recharge when balance is low</li>
             </ul>
-          </section>
+            <p className="article-body mb-3">
+              IC cards also work for buses, convenience stores, and vending
+              machines.
+            </p>
+            <p className="article-body mb-3 last:mb-0">
+              <Link href="/guides/suica-vs-pasmo" className={inlineLinkClass}>
+                Suica vs PASMO →
+              </Link>
+              {" · "}
+              <Link
+                href="/guides/japan-train-mistakes"
+                className={inlineLinkClass}
+              >
+                Common train mistakes →
+              </Link>
+            </p>
 
-          <section className="mb-12">
-            <h2 className="editorial-heading mb-4">
-              Rush Hour and Last Train
-            </h2>
-            <div className="article-body space-y-4 max-w-2xl">
-              <p>Rush hour is crowded, especially in large cities.</p>
-              <p>Avoid moving large luggage during peak commuting hours.</p>
-              <p>Last trains are usually around midnight.</p>
-              <p>Missing the last train can mean an expensive taxi ride.</p>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="editorial-heading mb-4">
-              Shinkansen Is Different
-            </h2>
-            <div className="article-body space-y-4 max-w-2xl">
-              <p>The Shinkansen is for long-distance travel.</p>
-              <p>It usually needs a separate ticket.</p>
-              <p>
-                Use it for routes like Tokyo to Kyoto, Osaka, or Hiroshima.
-              </p>
-              <p>You do not need it for normal city travel.</p>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="editorial-heading mb-4">
-              Reality Check
-            </h2>
-            <div className="article-body space-y-4 max-w-2xl">
-              <p>You will probably make one small mistake.</p>
-              <p>That is fine.</p>
-              <p>Trains come often, so recovery is easy.</p>
-              <p>Apps make the system manageable.</p>
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="editorial-heading mb-4">
-              Bottom Line
-            </h2>
-            <ul className="article-body list-none space-y-3.5 pl-0 mb-8 max-w-2xl">
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Use maps
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Use IC card
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Follow platform and direction
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Take Local if unsure
-              </li>
-              <li className="before:content-['›'] before:text-rust before:font-bold before:mr-3">
-                Do not overthink it
-              </li>
+            <h2>Common Mistakes</h2>
+            <ul className="article-body mb-3 list-none space-y-2.5 pl-0 last:mb-0">
+              <li>Boarding the wrong train type</li>
+              <li>Ignoring platform direction</li>
+              <li>Standing in the wrong line</li>
+              <li>Forgetting to tap out</li>
+              <li>Taking taxis because trains look scary</li>
+              <li>Assuming all trains are JR</li>
             </ul>
-          </section>
+
+            <h2>Rush Hour and Last Train</h2>
+            <p className="article-body mb-3">
+              Rush hour is crowded, especially in large cities.
+            </p>
+            <p className="article-body mb-3">
+              Avoid moving large luggage during peak commuting hours.
+            </p>
+            <p className="article-body mb-3">Last trains are usually around midnight.</p>
+            <p className="article-body mb-3 last:mb-0">
+              Missing the last train can mean an expensive taxi ride.
+            </p>
+
+            <h2>Shinkansen Is Different</h2>
+            <p className="article-body mb-3">
+              The Shinkansen is for long-distance travel.
+            </p>
+            <p className="article-body mb-3">It usually needs a separate ticket.</p>
+            <p className="article-body mb-3">
+              Use it for routes like Tokyo to Kyoto, Osaka, or Hiroshima.
+            </p>
+            <p className="article-body mb-3 last:mb-0">
+              You do not need it for normal city travel.
+            </p>
+
+            <h2>Reality Check</h2>
+            <p className="article-body mb-3">You will probably make one small mistake.</p>
+            <p className="article-body mb-3">That is fine.</p>
+            <p className="article-body mb-3">Trains come often, so recovery is easy.</p>
+            <p className="article-body mb-3 last:mb-0">Apps make the system manageable.</p>
+
+            <h2>Bottom Line</h2>
+            <ul className="article-body mb-3 list-none space-y-2.5 pl-0 last:mb-0">
+              <li>Use maps</li>
+              <li>Use IC card</li>
+              <li>Follow platform and direction</li>
+              <li>Take Local if unsure</li>
+              <li>Do not overthink it</li>
+            </ul>
+          </div>
 
           <ItineraryGuideCta className="my-10" />
 
@@ -314,15 +235,7 @@ export default function JapanTrainsPage() {
             parentHref="/guides/japan-itinerary"
             parentLabel="Japan trip itinerary →"
           />
-
-          <div className="border-t border-tan pt-8 mt-6">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
-            >
-              JapanProTips homepage <span className="text-lg">‹‹‹</span>
-            </Link>
-          </div>
+          <SiteBrandFooter />
         </>
       }
     />

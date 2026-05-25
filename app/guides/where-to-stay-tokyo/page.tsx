@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import Link from "next/link";
 import { LocalTip, OperationalWarning } from "@/components/editorial/field-notes";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
@@ -16,7 +18,23 @@ export const metadata: Metadata = {
 };
 
 const conversionBox =
-  "border border-[#d4c9b0] bg-white px-6 py-5 mb-12 max-w-2xl";
+  "border border-[#d4c9b0] bg-white px-6 py-5 mb-6 max-w-2xl";
+
+const inlineLinkClass =
+  "font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150";
+
+/** Neighborhood headings and inline area names */
+const areaNameClass =
+  "font-heading text-2xl font-bold italic text-maroon sm:text-3xl";
+
+const labelProsClass = "font-sans font-bold text-rust";
+const labelConsClass = "font-sans font-bold text-maroon";
+
+function AreaName({ children }: { children: ReactNode }) {
+  return (
+    <span className="font-sans font-bold text-maroon">{children}</span>
+  );
+}
 
 export default function WhereToStayTokyoPage() {
   return (
@@ -42,10 +60,7 @@ export default function WhereToStayTokyoPage() {
             could spend doing something else.
           </p>
           <p>
-            <Link
-              href="/guides/shinjuku-vs-shibuya"
-              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
-            >
+            <Link href="/guides/shinjuku-vs-shibuya" className={inlineLinkClass}>
               Shinjuku vs Shibuya (side by side) →
             </Link>
           </p>
@@ -53,25 +68,23 @@ export default function WhereToStayTokyoPage() {
       }
       beforeComparison={
         <>
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Best Areas for First-Time Visitors
           </h2>
 
-          <div className="space-y-10 max-w-2xl">
+          <div className="space-y-8 max-w-2xl">
             <div>
-              <h3 className="font-display text-dark tracking-wide text-3xl mb-3">
-                Shinjuku
-              </h3>
+              <h3 className={`${areaNameClass} mb-3`}>Shinjuku</h3>
               <div className="article-body space-y-3">
                 <p>
-                  <span className="font-sans font-bold text-dark">Pros:</span>{" "}
+                  <span className={labelProsClass}>Pros:</span>{" "}
                   Serious transport hub (JR and metro), late food, dense
                   convenience, easy day trips west. For a first trip, this is the
                   default that works for the most people.
                 </p>
                 <p>
-                  <span className="font-sans font-bold text-dark">Cons:</span>{" "}
+                  <span className={labelConsClass}>Cons:</span>{" "}
                   Crowded, loud at street level, easy to book a “Shinjuku” hotel
                   that is actually a long walk from the station if you do not check
                   the map pin.
@@ -80,18 +93,16 @@ export default function WhereToStayTokyoPage() {
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-3xl mb-3">
-                Shibuya
-              </h3>
+              <h3 className={`${areaNameClass} mb-3`}>Shibuya</h3>
               <div className="article-body space-y-3">
                 <p>
-                  <span className="font-sans font-bold text-dark">Pros:</span>{" "}
+                  <span className={labelProsClass}>Pros:</span>{" "}
                   Modern center, strong nightlife, easy energy if you like busy
                   streets. Good if you want the city to feel “on” when you step
                   outside.
                 </p>
                 <p>
-                  <span className="font-sans font-bold text-dark">Cons:</span>{" "}
+                  <span className={labelConsClass}>Cons:</span>{" "}
                   Often more expensive for the same room class. Slightly less
                   central as a rail hub than Shinjuku for some cross-city routes,
                   depending on your day plan.
@@ -100,18 +111,16 @@ export default function WhereToStayTokyoPage() {
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-3xl mb-3">
-                Asakusa
-              </h3>
+              <h3 className={`${areaNameClass} mb-3`}>Asakusa</h3>
               <div className="article-body space-y-3">
                 <p>
-                  <span className="font-sans font-bold text-dark">Pros:</span>{" "}
+                  <span className={labelProsClass}>Pros:</span>{" "}
                   Often cheaper, more traditional street feel, slower pace than
                   Shinjuku. Good if you want temples and morning walks without
                   pretending you are in a neon cyberpunk movie.
                 </p>
                 <p>
-                  <span className="font-sans font-bold text-dark">Cons:</span>{" "}
+                  <span className={labelConsClass}>Cons:</span>{" "}
                   Quieter at night, fewer “default” dining options after 10 p.m.,
                   more transfer time to west-side day trips.
                 </p>
@@ -119,18 +128,16 @@ export default function WhereToStayTokyoPage() {
             </div>
 
             <div>
-              <h3 className="font-display text-dark tracking-wide text-3xl mb-3">
-                Ueno
-              </h3>
+              <h3 className={`${areaNameClass} mb-3`}>Ueno</h3>
               <div className="article-body space-y-3">
                 <p>
-                  <span className="font-sans font-bold text-dark">Pros:</span>{" "}
+                  <span className={labelProsClass}>Pros:</span>{" "}
                   Budget-friendly hotels, strong train access, park and museum
                   cluster nearby. Practical base if you like north-east Tokyo and
                   Narita-side arrivals.
                 </p>
                 <p>
-                  <span className="font-sans font-bold text-dark">Cons:</span>{" "}
+                  <span className={labelConsClass}>Cons:</span>{" "}
                   Less “exciting” as a postcard center than Shibuya or Shinjuku at
                   night. Fine for sleep and trains, not for wow factor out the
                   window.
@@ -142,13 +149,14 @@ export default function WhereToStayTokyoPage() {
 
         <OperationalWarning noteId="where-tokyo-station-pin">
           <p>
-            Neighborhood names lie by omission. Ten minutes from Shinjuku Station
+            Neighborhood names lie by omission. Ten minutes from{" "}
+            <AreaName>Shinjuku</AreaName> Station
             can mean ten minutes of underpasses you do not want on night one with
             jet lag. Filter maps by walking minutes to a named exit, not vibes.
           </p>
         </OperationalWarning>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             If You Only Stay 3 to 5 Days
           </h2>
@@ -165,7 +173,7 @@ export default function WhereToStayTokyoPage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Where NOT to Stay (For First Trip)
           </h2>
@@ -192,18 +200,18 @@ export default function WhereToStayTokyoPage() {
       }
       afterComparison={
         <>
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Hotel vs Airbnb in Japan
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
             <p>
-              <span className="font-sans font-bold text-dark">Hotels:</span>{" "}
+              <span className={labelProsClass}>Hotels:</span>{" "}
               Straightforward check-in, front desk when something breaks, clearer
               rules for tourists. Many support luggage hold before check-in time.
             </p>
             <p>
-              <span className="font-sans font-bold text-dark">Short-term rentals:</span>{" "}
+              <span className={labelConsClass}>Short-term rentals:</span>{" "}
               Japan tightened minpaku rules. Legal listings exist, but you still
               get more variance: self check-in, building rules, trash sorting,
               neighbor noise expectations. Not impossible, just more admin.
@@ -216,7 +224,7 @@ export default function WhereToStayTokyoPage() {
         </section>
 
         <div className={conversionBox}>
-          <h3 className="font-sans font-bold text-sm tracking-widest uppercase text-dark mb-2">
+          <h3 className="font-sans text-sm font-bold uppercase tracking-widest text-maroon mb-2">
             Find Hotels in Tokyo
           </h3>
           <p className="article-body-sm mb-4">
@@ -239,12 +247,16 @@ export default function WhereToStayTokyoPage() {
               Booking
             </a>{" "}
             and sort by walking time to a named station, not by neighborhood name
-            alone. “Near Shinjuku” can mean fifteen minutes through underpasses
-            you do not want on night one.
+            alone. “Near ”
+            <AreaName>Shinjuku</AreaName>
+            ” can mean fifteen minutes through underpasses you do not want on
+            night one.
           </p>
           <p className="article-body-sm">
-            Filter for major hubs you already picked (Shinjuku, Shibuya, Ueno,
-            Asakusa). Read the map pin. Check the last train reality if you go out
+            Filter for major hubs you already picked (
+            <AreaName>Shinjuku</AreaName>, <AreaName>Shibuya</AreaName>,{" "}
+            <AreaName>Ueno</AreaName>, <AreaName>Asakusa</AreaName>). Read the map
+            pin. Check the last train reality if you go out
             late.
           </p>
         </div>
@@ -257,45 +269,40 @@ export default function WhereToStayTokyoPage() {
           </p>
         </LocalTip>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Final Recommendation (Simple)
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
             <p>
-              If you refuse to overthink it: stay in Shinjuku near the station,
-              accept some crowds, and spend your planning energy on trains and day
-              routes instead of neighborhood fantasy.
+              If you refuse to overthink it: stay in <AreaName>Shinjuku</AreaName>{" "}
+              near the station, accept some crowds, and spend your planning energy
+              on trains and day routes instead of neighborhood fantasy.
             </p>
             <p>
-              If you want traditional mornings and lower spend: Asakusa or Ueno,
-              still pinned to a station you can walk to in ten minutes or less.
+              If you want traditional mornings and lower spend:{" "}
+              <AreaName>Asakusa</AreaName> or <AreaName>Ueno</AreaName>, still
+              pinned to a station you can walk to in ten minutes or less.
             </p>
             <p>
-              If you want nightlife first: Shibuya, with the understanding you
-              are paying for vibe as much as bed quality.
+              If you want nightlife first: <AreaName>Shibuya</AreaName>, with the
+              understanding you are paying for vibe as much as bed quality.
             </p>
           </div>
         </section>
 
-        <section className="mb-12 max-w-2xl border-t border-tan pt-10">
+        <section className="mb-6 max-w-2xl border-t border-tan pt-8">
           <h2 className="font-display text-dark tracking-wide text-3xl mb-4">
             Related planning
           </h2>
           <ul className="article-body list-none space-y-3.5 pl-0">
             <li>
-              <Link
-                href="/guides/japan-transportation"
-                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
-              >
+              <Link href="/guides/japan-transportation" className={inlineLinkClass}>
                 Japan transportation (how to move without drama) →
               </Link>
             </li>
             <li>
-              <Link
-                href="/guides/japan-budget-breakdown"
-                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
-              >
+              <Link href="/guides/japan-budget-breakdown" className={inlineLinkClass}>
                 Japan budget breakdown (rough numbers, no fantasy) →
               </Link>
             </li>
@@ -315,15 +322,7 @@ export default function WhereToStayTokyoPage() {
           parentHref="/guides/where-to-stay-japan"
           parentLabel="Where to stay in Japan →"
         />
-
-        <div className="border-t border-tan pt-8 mt-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
-          >
-            JapanProTips homepage <span className="text-lg">‹‹‹</span>
-          </Link>
-        </div>
+        <SiteBrandFooter />
         </>
       }
     />

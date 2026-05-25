@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceBlock } from "@/components/ServiceBlock";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
 export default function SimCardJapanResidentsPage() {
   return (
     <main className="bg-cream min-h-screen font-sans">
-      <article className="max-w-3xl mx-auto px-6 pt-12 pb-16">
+      <article className="page-x max-w-3xl mx-auto pt-10 pb-14">
         <h1
           className="guide-page-title"
         >
           Best SIM Card for Residents in Japan (Long-Term Options)
         </h1>
 
-        <div className="article-body mb-12 max-w-2xl space-y-4">
+        <div className="article-body mb-6 max-w-2xl space-y-4">
           <p>
             Tourist SIM advice does not apply to residents. Short-trip products
             optimize for easy pickup and fixed days. Living here means contracts,
@@ -38,7 +38,7 @@ export default function SimCardJapanResidentsPage() {
           </p>
         </div>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Quick Answer
           </h2>
@@ -52,7 +52,7 @@ export default function SimCardJapanResidentsPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Options
           </h2>
@@ -90,7 +90,7 @@ export default function SimCardJapanResidentsPage() {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             What Actually Matters
           </h2>
@@ -107,7 +107,7 @@ export default function SimCardJapanResidentsPage() {
           </ul>
         </section>
 
-        <div className="mb-12 max-w-2xl">
+        <div className="mb-6 max-w-2xl">
           <p className="article-body-sm mb-4">
             Porting or canceling gets harder after a contract starts, so read
             terms before you sign.
@@ -120,7 +120,7 @@ export default function SimCardJapanResidentsPage() {
           />
         </div>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Common Mistakes
           </h2>
@@ -137,7 +137,7 @@ export default function SimCardJapanResidentsPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Reality Check
           </h2>
@@ -151,7 +151,7 @@ export default function SimCardJapanResidentsPage() {
           </ul>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Bottom Line
           </h2>

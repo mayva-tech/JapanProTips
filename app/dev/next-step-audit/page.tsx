@@ -49,7 +49,7 @@ function IssuesTable({
   }
 
   return (
-    <section className="mb-10">
+    <section className="mb-6">
       <h2 className="editorial-heading mb-3 text-xl">{title}</h2>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[640px] border-collapse border border-[#d4c9b0] bg-white text-left font-sans text-sm">
@@ -142,7 +142,7 @@ export default function NextStepAuditPage() {
         </Link>
       </p>
 
-      <div className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {[
           { label: "Presets", value: summary.totalPresets },
           { label: "Links checked", value: summary.totalLinksChecked },
@@ -171,7 +171,7 @@ export default function NextStepAuditPage() {
       </div>
 
       {!report.passed ? (
-        <section className="mb-8 rounded-lg border border-rust/40 bg-[#ebe4d8] px-4 py-3">
+        <section className="mb-6 rounded-lg border border-rust/40 bg-[#ebe4d8] px-4 py-3">
           <h2 className="font-sans text-sm font-bold uppercase tracking-widest text-rust mb-2">
             Audit failed
           </h2>
@@ -189,7 +189,7 @@ export default function NextStepAuditPage() {
       <IssuesTable title="Invalid item counts" issues={invalidCount} />
       <IssuesTable title="Suspicious hrefs" issues={suspicious} />
 
-      <section className="mb-10">
+      <section className="mb-6">
         <h2 className="editorial-heading mb-3 text-xl">Preset usage</h2>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[720px] border-collapse border border-[#d4c9b0] bg-white text-left font-sans text-sm">
@@ -259,7 +259,7 @@ export default function NextStepAuditPage() {
       </section>
 
       {report.unusedPresets.length > 0 ? (
-        <section className="mb-10 rounded-lg border border-[#d4c9b0] bg-paper-elevated px-4 py-4">
+        <section className="mb-6 rounded-lg border border-[#d4c9b0] bg-paper-elevated px-4 py-4">
           <h2 className="editorial-heading mb-3 text-xl">
             Unused presets (warning)
           </h2>
@@ -272,7 +272,7 @@ export default function NextStepAuditPage() {
       ) : null}
 
       {report.highValueMissing.length > 0 ? (
-        <section className="mb-10 rounded-lg border border-[#d4c9b0] bg-paper-elevated px-4 py-4">
+        <section className="mb-6 rounded-lg border border-[#d4c9b0] bg-paper-elevated px-4 py-4">
           <h2 className="editorial-heading mb-3 text-xl">
             High-value pages missing NextStepGuides (warning)
           </h2>
@@ -288,7 +288,7 @@ export default function NextStepAuditPage() {
         </section>
       ) : null}
 
-      <p className="article-body-sm mt-8 text-muted">
+      <p className="article-body-sm mt-6 text-muted">
         CLI: <code className="text-dark">npm run audit:next-steps</code>
         {" · "}
         <Link href="/dev/affiliate-audit" className="text-rust hover:text-maroon">

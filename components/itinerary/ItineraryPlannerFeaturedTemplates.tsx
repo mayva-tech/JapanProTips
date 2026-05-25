@@ -20,7 +20,7 @@ export function ItineraryPlannerFeaturedTemplates() {
 
   return (
     <section
-      className="mx-auto mb-8 max-w-3xl rounded-lg border border-paper-edge bg-paper-card/80 p-4 shadow-editorial sm:p-5"
+      className="mx-auto mb-6 max-w-3xl rounded-lg border border-paper-edge bg-paper-card/80 p-4 shadow-editorial sm:p-5"
       aria-labelledby="planner-featured-templates-heading"
     >
       <h2

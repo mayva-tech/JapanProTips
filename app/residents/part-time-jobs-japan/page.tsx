@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -39,7 +40,7 @@ export default function PartTimeJobsJapanGuidePage() {
       }
       beforeComparison={
         <>
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Convenience store
           </h2>
@@ -59,7 +60,7 @@ export default function PartTimeJobsJapanGuidePage() {
           </div>
         </section>
 
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Restaurants
           </h2>
@@ -81,7 +82,7 @@ export default function PartTimeJobsJapanGuidePage() {
           </div>
         </section>
 
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             English teaching
           </h2>
@@ -107,7 +108,7 @@ export default function PartTimeJobsJapanGuidePage() {
       }
       afterComparison={
         <>
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Expected pay
           </h2>
@@ -139,7 +140,7 @@ export default function PartTimeJobsJapanGuidePage() {
           </p>
         </section>
 
-        <section className="mb-12 max-w-2xl">
+        <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Requirements
           </h2>
@@ -177,7 +178,7 @@ export default function PartTimeJobsJapanGuidePage() {
           </ul>
         </section>
 
-        <section className="mb-12 max-w-2xl border border-[#d4c9b0] bg-white px-6 py-5">
+        <section className="mb-6 max-w-2xl border border-[#d4c9b0] bg-white px-6 py-5">
           <p className="article-body-sm">
             Ready for full-time hiring, resumes, and interviews? See the{" "}
             <Link
@@ -213,15 +214,7 @@ export default function PartTimeJobsJapanGuidePage() {
           parentHref="/residents"
           parentLabel="Residents hub →"
         />
-
-        <div className="border-t border-tan pt-8 mt-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
-          >
-            JapanProTips homepage <span className="text-lg">‹‹‹</span>
-          </Link>
-        </div>
+        <SiteBrandFooter />
         </>
       }
     />

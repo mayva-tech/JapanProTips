@@ -5,7 +5,6 @@ import { ResidentStarterPath } from "@/components/guides/ResidentStarterPath";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
 import { TrackedToolLink } from "@/components/tools/TrackedToolLink";
-import { EDITORIAL_COPY } from "@/lib/editorial-copy";
 import { siteToolBySlug, toRecommendationCard } from "@/lib/site-tools";
 import { siteUrl, SITE_NAME } from "@/lib/site";
 
@@ -117,7 +116,7 @@ export default function JapanResidentTaxPage() {
       />
       <main className="min-h-screen bg-cream font-sans">
         <div className="border-b border-paper-edge bg-paper/90">
-          <div className="mx-auto max-w-3xl px-6 py-4">
+          <div className="page-x mx-auto max-w-3xl py-4">
             <nav
               className="font-sans text-sm font-semibold text-muted"
               aria-label="Breadcrumb"
@@ -139,8 +138,8 @@ export default function JapanResidentTaxPage() {
           </div>
         </div>
 
-        <article className="mx-auto max-w-3xl px-6 pb-16 pt-10 sm:pt-12">
-          <header className="mb-10 max-w-2xl">
+        <article className="page-x mx-auto max-w-3xl pb-8 pt-8 sm:pt-8">
+          <header className="mb-6 max-w-2xl">
             <p className="editorial-kicker mb-3">Residents</p>
             <h1 className="guide-page-title text-balance">{title}</h1>
             <div className="article-body mt-4 space-y-4">
@@ -157,13 +156,10 @@ export default function JapanResidentTaxPage() {
                 visa situation. Read your notice, ask your employer HR desk, or
                 confirm with your municipal office when numbers look official.
               </p>
-              <p className="font-sans text-sm font-bold uppercase tracking-widest text-muted">
-                {EDITORIAL_COPY.trustLine}
-              </p>
-            </div>
+</div>
           </header>
 
-          <div className="mb-12">
+          <div className="mb-6">
             <ToolRecommendationStrip
               headingId="resident-tax-tools"
               title="Budget for tax season in monthly cash"
@@ -173,7 +169,7 @@ export default function JapanResidentTaxPage() {
             />
           </div>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>What resident tax is</H2>
             <p className="article-body mb-4">
               Resident tax is a local tax tied to where you were registered on
@@ -189,7 +185,7 @@ export default function JapanResidentTaxPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Who usually pays it</H2>
             <p className="article-body mb-4">
               Most people registered in Japan on January 1 who had Japan-source
@@ -205,7 +201,7 @@ export default function JapanResidentTaxPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Why it can arrive after your first year</H2>
             <p className="article-body mb-4">
               National withholding adjusts through the year. Resident tax for the
@@ -220,7 +216,7 @@ export default function JapanResidentTaxPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>How payment usually works</H2>
             <p className="article-body mb-4">
               Common patterns:
@@ -247,7 +243,7 @@ export default function JapanResidentTaxPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Company payroll vs payment slips</H2>
             <p className="article-body mb-4">
               Employers can withhold resident tax from salary once you file the
@@ -261,7 +257,7 @@ export default function JapanResidentTaxPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>What happens when you move cities</H2>
             <p className="article-body mb-4">
               Your January 1 address drives which city sends the bill. Move in
@@ -280,7 +276,7 @@ export default function JapanResidentTaxPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>What happens when you leave Japan</H2>
             <p className="article-body mb-4">
               Departing residents may still receive a final notice for the year
@@ -295,7 +291,7 @@ export default function JapanResidentTaxPage() {
             </p>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Common mistakes foreigners make</H2>
             <ul className="article-body list-none space-y-3 pl-0">
               <li className="before:mr-3 before:font-bold before:text-rust before:content-['›']">
@@ -319,7 +315,7 @@ export default function JapanResidentTaxPage() {
             </ul>
           </section>
 
-          <section className="mb-12 max-w-2xl">
+          <section className="mb-6 max-w-2xl">
             <H2>Practical checklist</H2>
             <CheckList
               items={[
@@ -334,7 +330,7 @@ export default function JapanResidentTaxPage() {
             />
           </section>
 
-          <section className="mb-12 max-w-2xl rounded-lg border border-paper-edge bg-paper-card px-5 py-5 shadow-editorial sm:px-6">
+          <section className="mb-6 max-w-2xl rounded-lg border border-paper-edge bg-paper-card px-5 py-5 shadow-editorial sm:px-6">
             <H2>Related tools and guides</H2>
             <ul className="article-body list-none space-y-3 pl-0">
               <li>

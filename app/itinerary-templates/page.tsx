@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ItineraryTemplateCard } from "@/components/itinerary/templates/ItineraryTemplateCard";
 import { getAllCuratedItineraryTemplates } from "@/lib/itinerary/curated-itinerary-templates";
 import { buildPlannerUrl } from "@/lib/itinerary/build-planner-url";
-import { EDITORIAL_COPY } from "@/lib/editorial-copy";
 import { pageTitle, siteUrl, SITE_NAME } from "@/lib/site";
 
 const PATH = "/itinerary-templates";
@@ -62,8 +61,8 @@ export default function ItineraryTemplatesIndexPage() {
         </div>
       </div>
 
-      <article className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10">
-        <header className="mb-10 max-w-3xl">
+      <article className="mx-auto max-w-6xl px-4 pb-8 pt-8 sm:px-6 sm:pb-8 sm:pt-8">
+        <header className="mb-6 max-w-3xl">
           <p className="editorial-kicker mb-3">Curated examples</p>
           <h1 className="guide-page-title text-balance">
             Japan Itinerary Templates
@@ -73,10 +72,7 @@ export default function ItineraryTemplatesIndexPage() {
             auto-generated trips. Read the outline, then open the planner to
             generate a version you can edit, save, and export.
           </p>
-          <p className="article-body-sm mt-4 font-sans text-sm font-semibold text-muted">
-            {EDITORIAL_COPY.trustLine}
-          </p>
-          <p className="mt-6">
+<p className="mt-6">
             <Link href={buildPlannerUrl()} className="editorial-btn-primary">
               Open itinerary planner
             </Link>
@@ -90,7 +86,7 @@ export default function ItineraryTemplatesIndexPage() {
         </ul>
 
         <section
-          className="mx-auto mt-14 max-w-3xl rounded-lg border border-paper-edge bg-paper-card/90 p-6 shadow-editorial sm:p-8"
+          className="mx-auto mt-6 max-w-3xl rounded-lg border border-paper-edge bg-paper-card/90 p-6 shadow-editorial sm:p-8"
           aria-labelledby="template-guides-heading"
         >
           <h2
