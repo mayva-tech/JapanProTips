@@ -11,10 +11,8 @@ export function HomeMasthead() {
     <section className="border-b border-paper-edge bg-paper-elevated py-8 sm:py-12">
       <MagazineShell>
         <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-12 lg:gap-10">
-          <div className="col-span-full">
-            <SiteLogo variant="masthead" className="mb-6 lg:mb-6" />
-          </div>
           <div className="lg:col-span-7">
+            <SiteLogo variant="masthead" className="mb-6 lg:mb-6" />
             <p className="editorial-kicker mb-3 sr-only">Field guide · Japan travel & life</p>
             <p className="editorial-deck mb-4 max-w-none text-muted sm:max-w-xl">
               Practical Japan travel and life guides, explained simply.

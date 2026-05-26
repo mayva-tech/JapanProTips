@@ -34,7 +34,7 @@ export type FieldNoteProps = {
 };
 
 const shellClass =
-  "field-note not-prose my-7 max-w-2xl rounded-lg border border-paper-edge bg-paper-elevated/90 px-4 py-3.5 shadow-editorial sm:px-5 sm:py-4";
+  "field-note not-prose my-7 max-w-2xl rounded-lg border border-paper-edge px-4 py-3.5 shadow-editorial sm:px-5 sm:py-4";
 
 const kickerClass =
   "field-note__kicker mb-2 block font-sans text-xs font-bold uppercase tracking-widest text-rust";

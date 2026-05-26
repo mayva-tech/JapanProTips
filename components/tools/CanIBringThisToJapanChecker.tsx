@@ -53,6 +53,8 @@ function CanIBringThisToJapanCheckerClient() {
   const [state, setState] = useState<BringCheckerUrlState>(() => ({
     ...BRING_CHECKER_DEFAULTS,
   }));
+  const resultRef = useRef<HTMLElement>(null);
+  const shouldScrollToResultRef = useRef(false);
 
   const serialized = useMemo(() => serializeBringCheckerQuery(state), [state]);
 
@@ -81,10 +83,14 @@ function CanIBringThisToJapanCheckerClient() {
   );
 
   const selectCategory = useCallback((id: BringCategoryId) => {
-    setState((s) => ({
-      ...s,
-      categoryId: s.categoryId === id ? null : id,
-    }));
+    setState((s) => {
+      const nextCategoryId = s.categoryId === id ? null : id;
+      shouldScrollToResultRef.current = Boolean(nextCategoryId);
+      return {
+        ...s,
+        categoryId: nextCategoryId,
+      };
+    });
   }, []);
 
   const [copied, setCopied] = useState<"summary" | "link" | null>(null);
@@ -130,6 +136,23 @@ function CanIBringThisToJapanCheckerClient() {
       if (copiedTimer.current) clearTimeout(copiedTimer.current);
     };
   }, []);
+
+  useEffect(() => {
+    if (!selected || !shouldScrollToResultRef.current) return;
+    shouldScrollToResultRef.current = false;
+
+    const isMobile =
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 1023px)").matches;
+    if (!isMobile) return;
+
+    window.requestAnimationFrame(() => {
+      resultRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }, [selected]);
 
   return (
     <div className="mx-auto max-w-6xl space-y-8">
@@ -197,7 +220,10 @@ function CanIBringThisToJapanCheckerClient() {
           </section>
         </div>
 
-        <aside className="min-w-0 space-y-4 lg:sticky lg:top-24 lg:self-start">
+        <aside
+          ref={resultRef}
+          className="scroll-mt-24 min-w-0 space-y-4 lg:sticky lg:top-24 lg:self-start"
+        >
           <div className="rounded-lg border border-paper-edge bg-paper-card p-5 shadow-editorial sm:p-6">
             <h2 className="font-display text-lg font-bold italic text-dark sm:text-xl">
               Result

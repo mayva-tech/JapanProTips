@@ -30,8 +30,8 @@ const VARIANTS: Record<
   masthead: {
     width: BRAND_LOGO.width,
     height: BRAND_LOGO.height,
-    className: "block h-auto w-full max-w-6xl",
-    sizes: "(max-width: 640px) 100vw, 1152px",
+    className: "block h-auto w-full max-w-xl",
+    sizes: "(max-width: 640px) 100vw, 576px",
     priority: true,
   },
   sm: {
@@ -73,7 +73,7 @@ export function SiteLogo({
   return (
     <Link
       href="/"
-      className="inline-block shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-maroon/50"
+      className={`${variant === "masthead" ? "block w-full" : "inline-block shrink-0"} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-maroon/50`}
       aria-label="JapanProTips home"
     >
       {image}

@@ -146,7 +146,10 @@ function MdxStrong({
   ...props
 }: ComponentPropsWithoutRef<"strong">) {
   return (
-    <strong className="font-sans font-bold text-dark" {...props}>
+    <strong
+      className="box-decoration-clone rounded-sm bg-rust/10 px-1 py-0.5 font-sans font-bold text-maroon"
+      {...props}
+    >
       {children}
     </strong>
   );

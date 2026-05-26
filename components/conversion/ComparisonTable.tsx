@@ -24,7 +24,7 @@ function isExternalHref(href: string) {
 }
 
 const cellTh =
-  "border-b border-paper-edge bg-paper-elevated px-4 py-3 text-left font-sans text-kicker font-black uppercase text-ink";
+  "border-b border-paper-edge bg-paper-elevated px-4 py-3 text-left font-sans text-kicker font-black uppercase text-maroon";
 const cellTd =
   "border-b border-paper-edge/60 px-4 py-3 align-top font-serif text-body text-muted";
 
@@ -64,7 +64,7 @@ function RowButton({
 export function ComparisonTable({ items, className = "" }: ComparisonTableProps) {
   return (
     <div
-      className={`overflow-x-auto border border-paper-edge bg-paper-card shadow-editorial [-webkit-overflow-scrolling:touch] ${className}`.trim()}
+      className={`overflow-x-auto rounded-xl border border-maroon/20 bg-paper-card shadow-editorial [-webkit-overflow-scrolling:touch] ${className}`.trim()}
     >
       <table className="w-full min-w-[640px] border-collapse text-left">
         <thead>
@@ -79,10 +79,14 @@ export function ComparisonTable({ items, className = "" }: ComparisonTableProps)
         <tbody>
           {items.map((row, index) => (
             <tr key={`${row.link}-${index}`} className="hover:bg-paper-elevated/80">
-              <td className={`${cellTd} font-bold text-ink`}>{row.name}</td>
-              <td className={`${cellTd} text-ink`}>{row.price}</td>
+              <td className={`${cellTd} font-sans font-bold text-maroon`}>
+                {row.name}
+              </td>
+              <td className={`${cellTd} font-sans font-bold text-rust`}>
+                {row.price}
+              </td>
               <td className={cellTd}>{row.pros}</td>
-              <td className={cellTd}>{row.bestFor}</td>
+              <td className={`${cellTd} text-ink`}>{row.bestFor}</td>
               <td className={`${cellTd} text-right`}>
                 <RowButton
                   href={row.link}

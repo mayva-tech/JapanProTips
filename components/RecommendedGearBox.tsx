@@ -35,7 +35,11 @@ const MIN_ITEMS = 4;
 const MAX_ITEMS = 6;
 
 const boxClass =
-  "not-prose my-10 max-w-2xl rounded-lg border border-[#d4c9b0] bg-paper-elevated px-5 py-5 sm:px-6 sm:py-6";
+  "not-prose my-10 max-w-2xl overflow-hidden rounded-xl border border-maroon/25 bg-gradient-to-br from-paper-card via-paper-elevated to-[#efe2d6] px-5 py-5 shadow-editorial sm:px-6 sm:py-6";
+const itemClass =
+  "relative overflow-hidden rounded-lg border border-paper-edge/80 bg-paper-card px-4 py-4 shadow-sm transition-colors duration-150 hover:border-rust/45 sm:px-5";
+const badgeClass =
+  "flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-maroon font-sans text-xs font-black text-paper-card shadow-sm";
 /**
  * Editorial gear list for guides. Use between block elements, not inside a paragraph.
  * Pass 4-6 items with practical reasons; use [affiliate-link-here] until links are live.
@@ -71,21 +75,37 @@ export function RecommendedGearBox({
       className={`${boxClass} ${className}`.trim()}
       aria-label={title}
     >
-      <h2 className="editorial-heading mb-3 text-xl sm:text-2xl">{title}</h2>
+      <p className="mb-2 font-sans text-xs font-black uppercase tracking-widest text-rust">
+        Recommended gear
+      </p>
+      <h2 className="editorial-heading mb-3 text-xl text-maroon sm:text-2xl">
+        {title}
+      </h2>
       <p className="article-body mb-5 text-muted">{intro}</p>
 
-      <ol className="list-none space-y-5 pl-0">
+      <ol className="list-none space-y-4 pl-0">
         {visibleItems.map((item, index) => (
-          <li key={`${item.name}-${index}`} className="border-t border-[#d4c9b0] pt-4 first:border-t-0 first:pt-0">
-            <div className="mb-1.5">
-              <TrackedAffiliateRecommendationLink
-                box="gear"
-                name={item.name}
-                href={item.href}
-                linkId={item.linkId}
-              />
+          <li key={`${item.name}-${index}`} className={itemClass}>
+            <span className="absolute inset-y-0 left-0 w-1 bg-rust" aria-hidden />
+            <div className="flex gap-3">
+              <span className={badgeClass}>{index + 1}</span>
+              <div className="min-w-0">
+                <div className="mb-1.5">
+                  <TrackedAffiliateRecommendationLink
+                    box="gear"
+                    name={item.name}
+                    href={item.href}
+                    linkId={item.linkId}
+                  />
+                </div>
+                <p className="article-body-sm text-muted">
+                  <span className="font-sans font-bold text-maroon">
+                    Why it matters:{" "}
+                  </span>
+                  {item.reason}
+                </p>
+              </div>
             </div>
-            <p className="article-body-sm text-muted">{item.reason}</p>
           </li>
         ))}
       </ol>

@@ -85,6 +85,11 @@
     @apply font-serif text-lg leading-[1.5] text-muted;
   }
 
+  .article-body strong,
+  .article-body-sm strong {
+    @apply box-decoration-clone rounded-sm bg-rust/10 px-1 py-0.5 font-sans font-bold text-maroon;
+  }
+
   .editorial-divider {
     @apply border-t border-paper-edge;
   }
@@ -102,7 +107,12 @@
   }
 
   .editorial-cta-block {
-    @apply border border-paper-edge bg-paper-elevated px-8 py-6 shadow-editorial sm:px-10 sm:py-8;
+    @apply relative overflow-hidden rounded-xl border border-maroon/25 bg-gradient-to-br from-paper-card via-paper-elevated to-[#efe2d6] px-8 py-6 shadow-editorial sm:px-10 sm:py-8;
+  }
+
+  .editorial-cta-block::before {
+    content: "";
+    @apply absolute inset-x-0 top-0 h-1 bg-rust;
   }
 
   .editorial-btn-primary {
@@ -148,7 +158,7 @@
   }
 
   .guide-prose strong {
-    @apply font-sans font-bold text-ink;
+    @apply box-decoration-clone rounded-sm bg-rust/10 px-1 py-0.5 font-sans font-bold text-maroon;
   }
 
   /* MDX guide body: match TSX section spacing (mb-6 between h2 blocks) */
@@ -231,19 +241,19 @@
   }
 
   .callout {
-    @apply my-8 border-l-4 px-5 py-4 font-serif text-body leading-[1.58] lg:leading-[1.62];
+    @apply my-8 rounded-r-xl border border-l-4 px-5 py-4 font-serif text-body leading-[1.58] shadow-editorial lg:leading-[1.62];
   }
 
   .callout-tip {
-    @apply callout border-maroon/50 bg-paper-elevated text-muted;
+    @apply callout border-maroon/40 border-l-maroon bg-gradient-to-r from-paper-elevated to-paper-card text-muted;
   }
 
   .callout-warning {
-    @apply callout border-rust bg-[#ebe4d8] text-ink;
+    @apply callout border-rust/50 border-l-rust bg-gradient-to-r from-[#f4eadb] to-paper-card text-ink;
   }
 
   .callout-mistake {
-    @apply callout border-ink/40 bg-[#e8e2d6] text-ink;
+    @apply callout border-oxblood/35 border-l-oxblood bg-gradient-to-r from-[#eaded2] to-paper-card text-ink;
   }
 
   .callout-label {
@@ -252,39 +262,39 @@
 
   /* Field Note editorial blocks (distinct from TipBox / InfoBox callouts) */
   .field-note {
-    @apply border-l-[3px];
+    @apply border-l-[4px];
   }
 
   .field-note--field {
-    @apply border-l-maroon/70;
+    @apply border-l-maroon/70 bg-gradient-to-r from-paper-elevated to-paper-card;
   }
 
   .field-note--reality-check {
-    @apply border-l-maroon;
+    @apply border-l-maroon bg-gradient-to-r from-[#efe2d6] to-paper-card;
   }
 
   .field-note--local-habit {
-    @apply border-l-tan;
+    @apply border-l-tan bg-gradient-to-r from-[#f1e7d9] to-paper-card;
   }
 
   .field-note--what-people-miss {
-    @apply border-l-ink/35;
+    @apply border-l-ink/35 bg-gradient-to-r from-paper-elevated to-paper-card;
   }
 
   .field-note--operational-warning {
-    @apply border-l-rust bg-[#f5f0e8];
+    @apply border-l-rust bg-gradient-to-r from-[#f5ead9] to-paper-card;
   }
 
   .field-note--seasonal {
-    @apply border-l-tan bg-paper-card/80;
+    @apply border-l-tan bg-gradient-to-r from-[#f3eadc] to-paper-card;
   }
 
   .field-note--tourist-mistake {
-    @apply border-l-rust/80 bg-[#ebe4d8];
+    @apply border-l-rust/80 bg-gradient-to-r from-[#eee2d3] to-paper-card;
   }
 
   .field-note--resident-learned {
-    @apply border-l-muted/50;
+    @apply border-l-muted/50 bg-gradient-to-r from-paper-elevated to-paper-card;
   }
 
   .hero-text-strip {
@@ -353,16 +363,22 @@
   }
 
   .aom-nav-link {
-    @apply font-nav text-[0.8rem] font-black uppercase tracking-[0.06em] text-oxblood no-underline;
+    @apply font-nav text-[0.8rem] font-black uppercase tracking-[0.06em] text-oxblood no-underline transition-colors duration-150;
     border-bottom: 2px solid #5c2112;
     padding-bottom: 2px;
   }
 
   .aom-nav-link:hover,
+  .aom-nav-link:focus-visible,
+  .aom-nav-link:active,
   .aom-nav-dropdown.group:hover .aom-nav-link,
-  .aom-nav-search-trigger:hover {
-    @apply text-oxblood;
-    border-bottom-color: #5c2112;
+  .aom-nav-dropdown button[aria-expanded="true"],
+  .aom-nav-search-trigger:hover,
+  .aom-nav-search-trigger:focus-visible,
+  .aom-nav-search-trigger:active,
+  .aom-nav-search-trigger[aria-expanded="true"] {
+    @apply text-rust;
+    border-bottom-color: #cf4f00;
   }
 
   .aom-nav-logo {

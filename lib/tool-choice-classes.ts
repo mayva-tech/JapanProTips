@@ -5,10 +5,10 @@
  */
 
 const off =
-  "rounded-md border border-tool-border-off bg-tool-off text-dark transition-colors duration-150 hover:border-tool-border-off/80";
+  "rounded-md border border-tool-border-off bg-tool-off text-dark shadow-sm transition-colors duration-150 hover:border-rust/35 hover:bg-paper-card";
 
 const on =
-  "rounded-md border border-tool-ink bg-tool-on text-tool-ink transition-colors duration-150";
+  "rounded-md border border-tool-ink bg-gradient-to-r from-tool-on to-[#f3e7dc] text-tool-ink shadow-editorial transition-colors duration-150";
 
 /** Shared chip label type (Japan trip budget calculator baseline). */
 export const toolChipTypography = "font-sans text-sm font-semibold";
@@ -55,7 +55,7 @@ export function toolCardPickerClass(selected: boolean): string {
     "flex w-full flex-col rounded-lg border p-4 text-left shadow-editorial transition-colors duration-150",
     toolChipTypography,
     selected
-      ? "border-tool-ink bg-tool-on text-tool-ink"
-      : "border-tool-border-off bg-tool-off text-dark hover:border-tool-border-off/80",
+      ? "border-tool-ink bg-gradient-to-r from-tool-on to-[#f3e7dc] text-tool-ink"
+      : "border-tool-border-off bg-tool-off text-dark hover:border-rust/35 hover:bg-paper-card",
   ].join(" ");
 }

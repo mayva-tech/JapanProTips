@@ -27,13 +27,13 @@ export type ToolRecommendationStripProps = {
 };
 
 const pillClass =
-  "inline-flex shrink-0 rounded border border-paper-edge bg-paper-elevated px-2 py-0.5 font-sans text-[0.65rem] font-bold uppercase tracking-widest text-muted";
+  "inline-flex shrink-0 rounded-full border border-rust/30 bg-rust/10 px-2.5 py-0.5 font-sans text-[0.65rem] font-bold uppercase tracking-widest text-rust";
 
 const cardClassDefault =
-  "group flex h-full flex-col rounded-lg border border-paper-edge bg-paper-card p-5 shadow-editorial transition-colors duration-150 hover:border-rust/40 sm:p-6";
+  "group relative flex h-full flex-col overflow-hidden rounded-lg border border-paper-edge bg-paper-card p-5 shadow-editorial transition-colors duration-150 before:absolute before:inset-x-0 before:top-0 before:h-1 before:bg-rust hover:border-rust/45 sm:p-6";
 
 const cardClassCompact =
-  "group flex h-full flex-col rounded-lg border border-paper-edge bg-paper-card p-4 shadow-editorial transition-colors duration-150 hover:border-rust/40 sm:p-5";
+  "group relative flex h-full flex-col overflow-hidden rounded-lg border border-paper-edge bg-paper-card p-4 shadow-editorial transition-colors duration-150 before:absolute before:inset-x-0 before:top-0 before:h-1 before:bg-rust hover:border-rust/45 sm:p-5";
 
 function gridClassForTools(
   count: number,
@@ -69,12 +69,12 @@ export function ToolRecommendationStrip({
   const isCompact = variant === "compact";
   const cardClass = isCompact ? cardClassCompact : cardClassDefault;
   const shellClass = isCompact
-    ? "rounded-lg border border-paper-edge bg-paper-elevated/60 p-4 shadow-inner sm:p-5"
-    : "rounded-lg border border-paper-edge bg-paper-elevated/60 p-5 shadow-inner sm:p-7";
+    ? "rounded-xl border border-maroon/20 bg-gradient-to-br from-paper-card via-paper-elevated to-[#efe2d6] p-4 shadow-inner sm:p-5"
+    : "rounded-xl border border-maroon/20 bg-gradient-to-br from-paper-card via-paper-elevated to-[#efe2d6] p-5 shadow-inner sm:p-7";
 
   const titleClass = isCompact
-    ? "font-display text-lg font-bold italic text-dark sm:text-xl"
-    : "font-display text-xl font-bold italic text-dark sm:text-2xl";
+    ? "font-display text-lg font-bold italic text-maroon sm:text-xl"
+    : "font-display text-xl font-bold italic text-maroon sm:text-2xl";
 
   return (
     <section

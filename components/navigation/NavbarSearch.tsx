@@ -42,7 +42,19 @@ export function NavbarSearch({ entries }: NavbarSearchProps) {
         aria-controls="navbar-search-panel"
         onClick={() => setOpen((v) => !v)}
       >
-        <NavSearchIcon />
+        <svg
+          aria-hidden
+          viewBox="0 0 24 24"
+          className="h-[1.05em] w-[1.05em] shrink-0 text-rust"
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2.4"
+        >
+          <circle cx="11" cy="11" r="6.5" />
+          <path d="m16 16 4.5 4.5" />
+        </svg>
         <span>SEARCH</span>
       </button>
 

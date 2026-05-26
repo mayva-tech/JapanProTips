@@ -41,9 +41,13 @@ const MIN_SERVICES = 3;
 const MAX_SERVICES = 5;
 
 const boxClass =
-  "not-prose my-10 max-w-2xl rounded-lg border border-[#d4c9b0] bg-paper-elevated px-5 py-5 sm:px-6 sm:py-6";
+  "not-prose my-10 max-w-2xl overflow-hidden rounded-xl border border-maroon/25 bg-gradient-to-br from-paper-card via-paper-elevated to-[#efe2d6] px-5 py-5 shadow-editorial sm:px-6 sm:py-6";
 const metaClass =
-  "font-sans text-xs font-bold uppercase tracking-widest text-muted/90";
+  "font-sans text-xs font-bold uppercase tracking-widest text-rust";
+const itemClass =
+  "relative overflow-hidden rounded-lg border border-paper-edge/80 bg-paper-card px-4 py-4 shadow-sm transition-colors duration-150 hover:border-rust/45 sm:px-5";
+const badgeClass =
+  "flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-maroon font-sans text-xs font-black text-paper-card shadow-sm";
 
 /**
  * Editorial service list for guides. Use between block elements, not inside a paragraph.
@@ -95,35 +99,55 @@ export function RecommendedServicesBox({
       className={`${boxClass} ${className}`.trim()}
       aria-label={resolvedTitle}
     >
-      <h2 className="editorial-heading mb-3 text-xl sm:text-2xl">{resolvedTitle}</h2>
+      <p className="mb-2 font-sans text-xs font-black uppercase tracking-widest text-rust">
+        Recommended services
+      </p>
+      <h2 className="editorial-heading mb-3 text-xl text-maroon sm:text-2xl">
+        {resolvedTitle}
+      </h2>
       <p className="article-body mb-5 text-muted">{resolvedIntro}</p>
 
-      <ol className="list-none space-y-6 pl-0">
+      <ol className="list-none space-y-4 pl-0">
         {visibleServices.map((service, index) => (
           <li
             key={`${service.name}-${index}`}
-            className="border-t border-[#d4c9b0] pt-5 first:border-t-0 first:pt-0"
+            className={itemClass}
           >
-            <div className="mb-2">
-              <TrackedAffiliateRecommendationLink
-                box="service"
-                name={service.name}
-                href={service.href}
-                linkId={service.linkId}
-              />
+            <span className="absolute inset-y-0 left-0 w-1 bg-rust" aria-hidden />
+            <div className="flex gap-3">
+              <span className={badgeClass}>{index + 1}</span>
+              <div className="min-w-0">
+                <p className={`${metaClass} mb-1`}>{service.category}</p>
+                <div className="mb-2">
+                  <TrackedAffiliateRecommendationLink
+                    box="service"
+                    name={service.name}
+                    href={service.href}
+                    linkId={service.linkId}
+                  />
+                </div>
+                <p className="article-body-sm mb-2 text-dark">
+                  <span className="font-sans font-bold text-maroon">
+                    Best for:{" "}
+                  </span>
+                  {service.bestFor}
+                </p>
+                <p className="article-body-sm text-muted">
+                  <span className="font-sans font-bold text-rust">
+                    Why it helps:{" "}
+                  </span>
+                  {service.reason}
+                </p>
+                {service.caution ? (
+                  <p className="article-body-sm mt-2 text-muted/90">
+                    <span className="font-sans font-bold text-maroon">
+                      Note:{" "}
+                    </span>
+                    {service.caution}
+                  </p>
+                ) : null}
+              </div>
             </div>
-            <p className={`${metaClass} mb-1`}>{service.category}</p>
-            <p className="article-body-sm mb-2 text-dark">
-              <span className="font-sans font-bold">Best for: </span>
-              {service.bestFor}
-            </p>
-            <p className="article-body-sm text-muted">{service.reason}</p>
-            {service.caution ? (
-              <p className="article-body-sm mt-2 text-muted/90">
-                <span className="font-sans font-bold">Note: </span>
-                {service.caution}
-              </p>
-            ) : null}
           </li>
         ))}
       </ol>
