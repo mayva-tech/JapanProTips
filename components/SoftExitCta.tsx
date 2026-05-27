@@ -6,8 +6,8 @@ export function SoftExitCta() {
     <div className="border-t border-paper-edge bg-paper-elevated">
       <div className="page-x mx-auto flex max-w-4xl flex-col items-center gap-6 py-8">
         <SiteLogo variant="sm" />
-        <TrackedStartHereLink className="editorial-nav-link">
-          Still figuring things out? Start here →
+        <TrackedStartHereLink className="editorial-nav-link editorial-chevron-link">
+          Still figuring things out? Start here
         </TrackedStartHereLink>
       </div>
     </div>

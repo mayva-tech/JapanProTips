@@ -161,41 +161,41 @@ export default function JapaneseAddressFormatterPage() {
               <li>
                 <Link
                   href="/residents/japan-address-system"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  How Japanese addresses work →
+                  How Japanese addresses work
                 </Link>
               </li>
               <li>
                 <Link
                   href="/residents/japan-moving-out-guide"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Japan moving out guide →
+                  Japan moving out guide
                 </Link>
               </li>
               <li>
                 <Link
                   href="/resources/moving-to-japan-checklist"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Moving to Japan checklist →
+                  Moving to Japan checklist
                 </Link>
               </li>
               <li>
                 <Link
                   href="/guides/japan-post-office-guide"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Japan post office guide →
+                  Japan post office guide
                 </Link>
               </li>
               <li>
                 <Link
                   href="/tools"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  All tools →
+                  All tools
                 </Link>
               </li>
             </ul>

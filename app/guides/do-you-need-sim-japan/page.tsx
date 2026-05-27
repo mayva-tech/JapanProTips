@@ -58,9 +58,9 @@ export default function DoYouNeedSimJapanPage() {
             </RealityCheck>
             <Link
               href="/guides/sim-card-japan"
-              className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150"
+              className="editorial-chevron-cta inline-flex rounded-lg bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150"
             >
-              Compare SIM paths for your trip →
+              Compare SIM paths for your trip
             </Link>
             <ul className="article-body list-none space-y-3 pl-0 mt-6 max-w-2xl">
               <li>

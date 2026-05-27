@@ -22,6 +22,10 @@ import {
   RelatedGuides,
   TipBox,
 } from "./mdx-wrappers";
+import {
+  stripTrailingArrowFromNode,
+  withChevronClass,
+} from "@/lib/cta-chevron";
 
 const inlineLinkClass =
   "font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150";
@@ -53,10 +57,16 @@ function MdxLink({
     return <span>{children}</span>;
   }
 
+  const arrow = stripTrailingArrowFromNode(children);
+  const resolvedClassName = withChevronClass(
+    inlineLinkClass,
+    arrow.hadTrailingArrow,
+  );
+
   if (href.startsWith("/")) {
     return (
-      <Link href={href} className={inlineLinkClass} {...props}>
-        {children}
+      <Link href={href} className={resolvedClassName} {...props}>
+        {arrow.children}
       </Link>
     );
   }
@@ -65,13 +75,13 @@ function MdxLink({
   return (
     <a
       href={href}
-      className={inlineLinkClass}
+      className={resolvedClassName}
       {...(isExternal
         ? { target: "_blank", rel: "noopener noreferrer" }
         : undefined)}
       {...props}
     >
-      {children}
+      {arrow.children}
     </a>
   );
 }
@@ -147,7 +157,7 @@ function MdxStrong({
 }: ComponentPropsWithoutRef<"strong">) {
   return (
     <strong
-      className="box-decoration-clone rounded-sm bg-rust/10 px-1 py-0.5 font-sans font-bold text-maroon"
+      className="font-sans font-bold text-ink"
       {...props}
     >
       {children}

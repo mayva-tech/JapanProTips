@@ -103,9 +103,9 @@ export default function ItineraryTemplatesIndexPage() {
               <li key={g.href}>
                 <Link
                   href={g.href}
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  {g.label} →
+                  {g.label}
                 </Link>
               </li>
             ))}

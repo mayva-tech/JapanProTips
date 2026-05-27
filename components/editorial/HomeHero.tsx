@@ -44,9 +44,9 @@ export function HomeHero() {
         <TrackedCtaLink
           href="/residents"
           label="resident_guides"
-          className="font-bold text-tan underline decoration-tan/50 underline-offset-2 transition-colors hover:text-paper-card"
+          className="editorial-chevron-link font-bold text-tan underline decoration-tan/50 underline-offset-2 transition-colors hover:text-paper-card"
         >
-          Residents hub →
+          Residents hub
         </TrackedCtaLink>
       </HeroTextStrip>
     </PageHero>

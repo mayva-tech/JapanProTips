@@ -32,8 +32,8 @@ export function GuideCarouselCard({ item }: GuideCarouselCardProps) {
         <p className="article-body">
           {item.description}
         </p>
-        <span className="mt-4 font-sans text-nav font-bold uppercase tracking-wide text-rust transition-colors group-hover:text-maroon">
-          Read guide →
+        <span className="editorial-chevron-link mt-4 font-sans text-nav font-bold uppercase tracking-wide text-rust transition-colors group-hover:text-maroon">
+          Read guide
         </span>
       </div>
     </TrackedCtaLink>

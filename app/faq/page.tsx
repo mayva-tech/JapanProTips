@@ -47,9 +47,9 @@ export default function FaqPage() {
         actions={
           <Link
             href="/start-here"
-            className="editorial-btn-primary"
+            className="editorial-btn-primary editorial-chevron-cta"
           >
-            Start Here checklist →
+            Start Here checklist
           </Link>
         }
       />
@@ -68,9 +68,9 @@ export default function FaqPage() {
           Still planning a trip?{" "}
           <Link
             href="/tourists"
-            className="font-bold text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+            className="editorial-chevron-link font-bold text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
           >
-            Browse tourist guides →
+            Browse tourist guides
           </Link>
         </p>
       </MagazineShell>

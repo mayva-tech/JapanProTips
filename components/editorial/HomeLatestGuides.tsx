@@ -31,8 +31,8 @@ export function HomeLatestGuides() {
               <p className="article-body-sm mt-2 line-clamp-2 sm:line-clamp-3">
                 {item.description}
               </p>
-              <span className="mt-3 inline-block font-sans text-nav font-bold uppercase tracking-wide text-rust transition-colors group-hover:text-maroon">
-                Read article →
+              <span className="editorial-chevron-link mt-3 font-sans text-nav font-bold uppercase tracking-wide text-rust transition-colors group-hover:text-maroon">
+                Read article
               </span>
             </div>
           </TrackedCtaLink>

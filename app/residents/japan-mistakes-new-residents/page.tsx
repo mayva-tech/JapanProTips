@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
+import fs from "node:fs/promises";
+import path from "node:path";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import guideReadAloudData from "@/data/guide-read-aloud.json";
+import { GuideAudioPlayer } from "@/components/guides/GuideAudioPlayer";
+import { GuideReadAloud } from "@/components/guides/GuideReadAloud";
 import { ResidentStarterPath } from "@/components/guides/ResidentStarterPath";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
@@ -89,6 +94,40 @@ const toolStripTools = [
   .filter((t): t is NonNullable<typeof t> => t != null)
   .map(toRecommendationCard);
 
+const readAloudText = guideReadAloudData["japan-mistakes-new-residents"]?.text ?? "";
+
+type GuideAudioManifest = {
+  slug: string;
+  voiceProvider: "google";
+  voiceTier: "standard";
+  languageCode: string;
+  voiceName: string;
+  audioEncoding: "MP3";
+  speakingRate: number;
+  parts: string[];
+  generatedAt: string;
+};
+
+async function loadGuideAudioManifest(): Promise<GuideAudioManifest | null> {
+  const manifestPath = path.join(
+    process.cwd(),
+    "public",
+    "audio",
+    "residents",
+    "japan-mistakes-new-residents",
+    "manifest.json",
+  );
+
+  try {
+    const raw = await fs.readFile(manifestPath, "utf8");
+    const parsed = JSON.parse(raw) as GuideAudioManifest;
+    if (!Array.isArray(parsed.parts) || parsed.parts.length === 0) return null;
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
 function H2({ children }: { children: ReactNode }) {
   return <h2 className="editorial-heading mb-4">{children}</h2>;
 }
@@ -135,7 +174,9 @@ function Mistake({
   );
 }
 
-export default function JapanMistakesNewResidentsPage() {
+export default async function JapanMistakesNewResidentsPage() {
+  const audioManifest = await loadGuideAudioManifest();
+
   return (
     <>
       <script
@@ -181,8 +222,21 @@ export default function JapanMistakesNewResidentsPage() {
                 municipality and visa status. Use the links and tools to build
                 your own checklist.
               </p>
-</div>
+            </div>
           </header>
+
+          {audioManifest ? (
+            <GuideAudioPlayer
+              guideSlug="japan-mistakes-new-residents"
+              basePath="/audio/residents/japan-mistakes-new-residents"
+              parts={audioManifest.parts}
+            />
+          ) : (
+            <GuideReadAloud
+              text={readAloudText}
+              guideSlug="japan-mistakes-new-residents"
+            />
+          )}
 
           <div className="mb-6">
             <ToolRecommendationStrip

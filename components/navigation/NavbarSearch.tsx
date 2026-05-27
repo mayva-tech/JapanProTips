@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useId, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import { searchGuides, type GuideSearchEntry } from "@/lib/guide-search-index";
 import { conversionLabelForHref, trackGtagClick } from "@/lib/gtag-events";
 import { NavSearchIcon } from "@/components/navigation/NavSearchIcon";
@@ -12,7 +13,9 @@ type NavbarSearchProps = {
 
 export function NavbarSearch({ entries }: NavbarSearchProps) {
   const inputId = useId();
+  const panelId = `${inputId}-panel`;
   const wrapRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
 
@@ -28,19 +31,47 @@ export function NavbarSearch({ entries }: NavbarSearchProps) {
     setQuery("");
   }, []);
 
+  const openSearch = useCallback(() => {
+    flushSync(() => setOpen(true));
+    inputRef.current?.focus({ preventScroll: true });
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const onPointerDown = (event: PointerEvent) => {
+      if (!wrapRef.current?.contains(event.target as Node)) {
+        close();
+      }
+    };
+
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [close, open]);
+
   return (
     <div
       ref={wrapRef}
       className="relative"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onPointerEnter={(event) => {
+        if (event.pointerType === "mouse") setOpen(true);
+      }}
+      onPointerLeave={(event) => {
+        if (event.pointerType === "mouse") close();
+      }}
     >
       <button
         type="button"
         className="aom-nav-link aom-nav-search-trigger inline-flex items-center gap-2 border-0 bg-transparent p-0"
         aria-expanded={open}
-        aria-controls="navbar-search-panel"
-        onClick={() => setOpen((v) => !v)}
+        aria-controls={panelId}
+        onPointerDown={(event) => {
+          if (event.pointerType !== "mouse") {
+            event.preventDefault();
+            openSearch();
+          }
+        }}
+        onClick={openSearch}
       >
         <svg
           aria-hidden
@@ -59,9 +90,12 @@ export function NavbarSearch({ entries }: NavbarSearchProps) {
       </button>
 
       <div
-        id="navbar-search-panel"
+        id={panelId}
         role="region"
         aria-label="Search guides"
+        onKeyDown={(event) => {
+          if (event.key === "Escape") close();
+        }}
         className={`aom-nav-search-panel ${open ? "aom-nav-search-panel--open" : ""}`}
       >
         <div className="aom-nav-search-panel-box">
@@ -71,6 +105,7 @@ export function NavbarSearch({ entries }: NavbarSearchProps) {
         <div className="flex items-center gap-2 border-b border-paper-edge pb-3">
           <NavSearchIcon className="shrink-0 opacity-90" />
           <input
+            ref={inputRef}
             id={inputId}
             type="search"
             value={query}

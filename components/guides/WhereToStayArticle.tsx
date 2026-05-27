@@ -1,11 +1,12 @@
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
+import { GuidePageTitle } from "@/components/guides/GuidePageTitle";
 
 const inlineLinkClass =
   "font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150";
 
 const ctaClass =
-  "inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150";
+  "inline-block rounded-lg bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150";
 
 /** Content from “Pick the Right City First” through “What to Look For”. */
 export function WhereToStayArticleBeforeComparison() {
@@ -180,9 +181,7 @@ export function WhereToStayArticleAfterComparison() {
 export function WhereToStayArticle() {
   return (
     <div className="mdx-guide-body min-w-0 lg:max-w-2xl">
-      <h1 className="guide-page-title">
-        Where to Stay in Japan (Tokyo, Osaka, Kyoto)
-      </h1>
+      <GuidePageTitle title="Where to Stay in Japan (Tokyo, Osaka, Kyoto)" />
 
       <div className="article-body space-y-4 mb-6">
         <p>

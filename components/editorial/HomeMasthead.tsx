@@ -31,9 +31,9 @@ export function HomeMasthead() {
               <TrackedCtaLink
                 href="/tourists"
                 label="start_here"
-                className="inline-flex items-center justify-center border border-paper-edge bg-paper-card px-6 py-3.5 font-sans text-kicker font-black uppercase text-ink transition-colors hover:border-maroon/40"
+                className="editorial-chevron-cta inline-flex items-center justify-center rounded-lg border border-paper-edge bg-paper-card px-6 py-3.5 font-sans text-kicker font-black uppercase text-ink transition-colors hover:border-maroon/40"
               >
-                All tourist guides →
+                All tourist guides
               </TrackedCtaLink>
             </div>
             <p className="article-body-sm mt-6">
@@ -41,9 +41,9 @@ export function HomeMasthead() {
               <TrackedCtaLink
                 href="/residents"
                 label="resident_guides"
-                className="font-bold text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                className="editorial-chevron-link font-bold text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
               >
-                Residents hub →
+                Residents hub
               </TrackedCtaLink>
             </p>
           </div>

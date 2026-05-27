@@ -4,6 +4,7 @@ import { OperationalWarning, ResidentLearnedNote } from "@/components/editorial/
 import { RecommendationBoxFromId } from "@/components/recommendations";
 import { ServiceBlock } from "@/components/ServiceBlock";
 import { DownloadChecklistBox } from "@/components/DownloadChecklistBox";
+import { GuidePageTitle } from "@/components/guides/GuidePageTitle";
 import { ResidentStarterPath } from "@/components/guides/ResidentStarterPath";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
 import { NextStepGuides } from "@/components/NextStepGuides";
@@ -153,7 +154,7 @@ export default function RentingApartmentJapanPage() {
         <article className="page-x mx-auto max-w-3xl pb-8 pt-8 sm:pt-8">
           <header className="mb-6 max-w-2xl">
             <p className="editorial-kicker mb-3">Residents</p>
-            <h1 className="guide-page-title text-balance">{title}</h1>
+            <GuidePageTitle title={title} className="text-balance" />
             <div className="article-body mt-4 space-y-4">
               <p>
                 Renting in Japan feels confusing for foreigners because the fee

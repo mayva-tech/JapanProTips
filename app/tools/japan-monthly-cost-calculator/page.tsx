@@ -160,41 +160,41 @@ export default function JapanMonthlyCostCalculatorPage() {
               <li>
                 <Link
                   href="/residents/japan-living-cost"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Monthly cost of living in Japan →
+                  Monthly cost of living in Japan
                 </Link>
               </li>
               <li>
                 <Link
                   href="/residents/renting-apartment-japan"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Renting an apartment in Japan →
+                  Renting an apartment in Japan
                 </Link>
               </li>
               <li>
                 <Link
                   href="/residents/japan-health-insurance"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Japan health insurance →
+                  Japan health insurance
                 </Link>
               </li>
               <li>
                 <Link
                   href="/residents/pay-bills-japan"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  How to pay bills in Japan →
+                  How to pay bills in Japan
                 </Link>
               </li>
               <li>
                 <Link
                   href="/tools"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  All tools →
+                  All tools
                 </Link>
               </li>
             </ul>

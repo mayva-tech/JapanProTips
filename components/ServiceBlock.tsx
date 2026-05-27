@@ -1,4 +1,8 @@
 import Link from "next/link";
+import {
+  stripTrailingArrowFromNode,
+  withChevronClass,
+} from "@/lib/cta-chevron";
 
 export type ServiceBlockProps = {
   title: string;
@@ -20,6 +24,12 @@ export function ServiceBlock({
   linkText,
   href,
 }: ServiceBlockProps) {
+  const arrow = stripTrailingArrowFromNode(linkText);
+  const resolvedLinkClassName = withChevronClass(
+    linkClassName,
+    arrow.hadTrailingArrow,
+  );
+
   return (
     <div className="border border-[#d4c9b0] bg-white px-6 py-5">
       <h3 className="font-sans font-bold text-sm tracking-widest uppercase text-dark mb-2">
@@ -33,13 +43,13 @@ export function ServiceBlock({
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className={linkClassName}
+          className={resolvedLinkClassName}
         >
-          {linkText}
+          {arrow.children}
         </a>
       ) : (
-        <Link href={href} className={linkClassName}>
-          {linkText}
+        <Link href={href} className={resolvedLinkClassName}>
+          {arrow.children}
         </Link>
       )}
     </div>

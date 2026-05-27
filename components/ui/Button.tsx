@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { stripTrailingArrowFromText } from "@/lib/cta-chevron";
 import type { ConversionGtagLabel } from "@/lib/gtag-events";
 import { trackGtagClick } from "@/lib/gtag-events";
 
@@ -27,24 +28,36 @@ export function Button({
     primary: "bg-stone-900 text-stone-50 hover:bg-stone-700",
     outline: "border border-stone-300 text-stone-800 hover:bg-stone-100",
   };
+  const strippedChildren =
+    typeof children === "string" ? stripTrailingArrowFromText(children) : children;
+  const hasTrailingArrow = strippedChildren !== children;
+  const renderedChildren = hasTrailingArrow
+    ? strippedChildren
+    : children;
+  const resolvedClassName = cn(
+    base,
+    variants[variant],
+    hasTrailingArrow && "editorial-chevron-cta",
+    className,
+  );
 
   if (href) {
     return (
       <a
         href={href}
-        className={cn(base, variants[variant], className)}
+        className={resolvedClassName}
         onClick={() => {
           if (gtagLabel) trackGtagClick(gtagLabel);
         }}
       >
-        {children}
+        {renderedChildren}
       </a>
     );
   }
 
   return (
-    <button className={cn(base, variants[variant], className)}>
-      {children}
+    <button className={resolvedClassName}>
+      {renderedChildren}
     </button>
   );
 }

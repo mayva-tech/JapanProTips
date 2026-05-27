@@ -23,8 +23,8 @@ export function ToolsHubToolCard({
         {title}
       </h3>
       <p className="article-body mt-3 flex-1 text-muted">{description}</p>
-      <span className="mt-4 inline-block font-sans text-xs font-bold uppercase tracking-widest text-rust transition-colors group-hover:text-maroon">
-        Open tool →
+      <span className="editorial-chevron-link mt-4 font-sans text-xs font-bold uppercase tracking-widest text-rust transition-colors group-hover:text-maroon">
+        Open tool
       </span>
     </TrackedToolLink>
   );

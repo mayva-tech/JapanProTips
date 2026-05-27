@@ -1,4 +1,10 @@
-import type { ReactNode } from "react";
+import {
+  Children,
+  cloneElement,
+  isValidElement,
+  type ReactElement,
+  type ReactNode,
+} from "react";
 import {
   ComparisonTable,
   ESimConversionBlock,
@@ -6,6 +12,7 @@ import {
   StartHereFunnelBlock,
   type ComparisonRow,
 } from "@/components/conversion";
+import { GuideTitleText, textFromPlainTitleChildren } from "./GuidePageTitle";
 import { DEFAULT_GUIDE_COMPARISON_ROWS } from "./guide-conversion-defaults";
 
 export type GuideArticleShellProps = {
@@ -22,6 +29,37 @@ export type GuideArticleShellProps = {
   showHotelConversion?: boolean;
   maxWidthClass?: string;
 };
+
+function hasGuideTitleClass(className: unknown) {
+  return typeof className === "string" && className.includes("guide-page-title");
+}
+
+function accentGuideTitleNode(node: ReactNode): ReactNode {
+  if (!isValidElement(node)) return node;
+
+  const element = node as ReactElement<{
+    className?: unknown;
+    children?: ReactNode;
+  }>;
+  const { children, className } = element.props;
+
+  if (hasGuideTitleClass(className)) {
+    const title = textFromPlainTitleChildren(children);
+    if (!title) return node;
+
+    return cloneElement(element, undefined, (
+      <GuideTitleText title={title.replace(/\s+/g, " ")} />
+    ));
+  }
+
+  if (!children) return node;
+
+  return cloneElement(
+    element,
+    undefined,
+    Children.map(children, accentGuideTitleNode),
+  );
+}
 
 export function GuideArticleShell({
   title,
@@ -43,7 +81,7 @@ export function GuideArticleShell({
       <article
         className={`${maxWidthClass} page-x mx-auto min-w-0 pt-10 pb-14`}
       >
-        {title}
+        {accentGuideTitleNode(title)}
 
         <div className="mb-6 lg:max-w-2xl">{intro}</div>
 

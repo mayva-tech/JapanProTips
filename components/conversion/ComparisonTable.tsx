@@ -39,7 +39,7 @@ function RowButton({
 }) {
   const onClick = () => trackGtagClick(gtagLabel);
   const className =
-    "inline-flex shrink-0 items-center justify-center whitespace-nowrap bg-maroon px-4 py-2 font-sans text-kicker font-black uppercase text-white transition-colors duration-150 hover:bg-rust";
+    "inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-lg bg-maroon px-4 py-2 font-sans text-kicker font-black uppercase text-white transition-colors duration-150 hover:bg-rust";
 
   if (isExternalHref(href)) {
     return (

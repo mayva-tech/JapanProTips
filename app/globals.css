@@ -54,6 +54,10 @@
     font-size: clamp(1.75rem, 5.5vw, 3.5rem);
   }
 
+  .guide-title-accent {
+    @apply text-maroon;
+  }
+
   .editorial-heading-hero {
     @apply font-heading text-h1 font-bold italic leading-[1.13] text-ink sm:text-hero;
   }
@@ -85,9 +89,22 @@
     @apply font-serif text-lg leading-[1.5] text-muted;
   }
 
+  @media (min-width: 1024px) {
+    .article-body,
+    .guide-prose p,
+    .guide-prose ul,
+    .guide-prose ol {
+      font-size: 18px;
+    }
+
+    .article-body-sm {
+      font-size: 17px;
+    }
+  }
+
   .article-body strong,
   .article-body-sm strong {
-    @apply box-decoration-clone rounded-sm bg-rust/10 px-1 py-0.5 font-sans font-bold text-maroon;
+    @apply bg-transparent p-0 font-sans font-bold text-ink;
   }
 
   .editorial-divider {
@@ -99,7 +116,7 @@
   }
 
   .editorial-card {
-    @apply border border-paper-edge bg-paper-card shadow-editorial transition-all duration-200 ease-out;
+    @apply rounded-xl border border-paper-edge bg-paper-card shadow-editorial transition-all duration-200 ease-out;
   }
 
   .editorial-card:hover {
@@ -116,11 +133,69 @@
   }
 
   .editorial-btn-primary {
-    @apply inline-flex items-center justify-center bg-maroon px-8 py-3.5 font-sans text-kicker font-black uppercase text-white transition-colors duration-150 hover:bg-rust;
+    @apply inline-flex items-center justify-center rounded-lg bg-maroon px-8 py-3.5 font-sans text-kicker font-black uppercase text-white transition-colors duration-150 hover:bg-rust;
   }
 
   .editorial-btn-card {
-    @apply inline-flex w-full items-center justify-center bg-maroon px-4 py-3 font-sans text-kicker font-black uppercase text-white transition-colors duration-150 group-hover:bg-rust;
+    @apply inline-flex w-full items-center justify-center rounded-lg bg-maroon px-4 py-3 font-sans text-kicker font-black uppercase text-white transition-colors duration-150 group-hover:bg-rust;
+  }
+
+  .editorial-chevron-cta,
+  .editorial-chevron-link {
+    @apply inline-flex items-center;
+  }
+
+  .editorial-chevron-cta {
+    @apply gap-2.5;
+  }
+
+  .editorial-chevron-link {
+    @apply gap-2;
+  }
+
+  .editorial-chevron-cta::after,
+  .editorial-chevron-link::after {
+    content: "";
+    @apply inline-block shrink-0 bg-rust transition-transform duration-150;
+    clip-path: polygon(0 0, 30% 0, 100% 50%, 30% 100%, 0 100%, 70% 50%);
+  }
+
+  .editorial-chevron-cta::after {
+    height: 0.95em;
+    width: 0.68em;
+  }
+
+  .editorial-chevron-link::after {
+    height: 0.88em;
+    width: 0.63em;
+  }
+
+  .editorial-btn-primary.editorial-chevron-cta::after,
+  .editorial-btn-card.editorial-chevron-cta::after,
+  a[class*="bg-maroon"].editorial-chevron-cta::after,
+  button[class*="bg-maroon"].editorial-chevron-cta::after {
+    background-color: #f7b45b;
+  }
+
+  .editorial-chevron-cta:hover::after,
+  .editorial-chevron-cta:focus-visible::after,
+  .editorial-chevron-link:hover::after,
+  .editorial-chevron-link:focus-visible::after,
+  .group:hover .editorial-chevron-link::after {
+    transform: translateX(0.15rem);
+  }
+
+  /*
+   * Safety net for older TSX guides with inline CTA classes.
+   * Keeps tappable button-like links/buttons from rendering with sharp corners.
+   */
+  a[class*="bg-maroon"],
+  button[class*="bg-maroon"],
+  a[class*="bg-rust"],
+  button[class*="bg-rust"],
+  a[class*="border"][class*="px-"][class*="py-"][class*="uppercase"],
+  button[class*="border"][class*="px-"][class*="py-"][class*="uppercase"] {
+    border-radius: 0.5rem;
   }
 
   .editorial-nav-link {
@@ -158,7 +233,7 @@
   }
 
   .guide-prose strong {
-    @apply box-decoration-clone rounded-sm bg-rust/10 px-1 py-0.5 font-sans font-bold text-maroon;
+    @apply bg-transparent p-0 font-sans font-bold text-ink;
   }
 
   /* MDX guide body: match TSX section spacing (mb-6 between h2 blocks) */

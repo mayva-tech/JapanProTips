@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GuidePageTitle } from "@/components/guides/GuidePageTitle";
 import { ResidentStarterPath } from "@/components/guides/ResidentStarterPath";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
@@ -146,7 +147,7 @@ export default function JapanHealthInsurancePage() {
         <article className="page-x mx-auto max-w-3xl pb-8 pt-8 sm:pt-8">
           <header className="mb-6 max-w-2xl">
             <p className="editorial-kicker mb-3">Residents</p>
-            <h1 className="guide-page-title text-balance">{title}</h1>
+            <GuidePageTitle title={title} className="text-balance" />
             <div className="article-body mt-4 space-y-4">
               <p>
                 After you move to Japan on a mid-term or long-term basis,{" "}

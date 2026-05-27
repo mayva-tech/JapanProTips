@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { ConversionGtagLabel } from "@/lib/gtag-events";
+import { stripTrailingArrowFromText } from "@/lib/cta-chevron";
 import { trackGtagClick } from "@/lib/gtag-events";
 
 export type StickyCTAProps = {
@@ -24,12 +25,12 @@ function isExternalHref(href: string) {
 const TOP_THRESHOLD = 64;
 const SCROLL_DELTA = 6;
 
-const btnClass = "editorial-btn-primary w-full shrink-0 py-3 text-sm sm:w-auto sm:min-w-[140px]";
+const btnClass = "editorial-btn-primary editorial-chevron-cta w-full shrink-0 py-3 text-sm sm:w-auto sm:min-w-[140px]";
 
 export function StickyCTA({
   href,
   text = "Get Internet Before You Land",
-  buttonText = "Get an eSIM →",
+  buttonText = "Get an eSIM",
   className = "",
   gtagLabel = "esim",
 }: StickyCTAProps) {
@@ -64,6 +65,7 @@ export function StickyCTA({
   }, [onScroll]);
 
   const onCtaClick = () => trackGtagClick(gtagLabel);
+  const label = stripTrailingArrowFromText(buttonText);
 
   const cta = isExternalHref(href) ? (
     <a
@@ -73,11 +75,11 @@ export function StickyCTA({
       className={btnClass}
       onClick={onCtaClick}
     >
-      {buttonText}
+      {label}
     </a>
   ) : (
     <Link href={href} className={btnClass} onClick={onCtaClick}>
-      {buttonText}
+      {label}
     </Link>
   );
 

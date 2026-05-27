@@ -1,5 +1,6 @@
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { GuidePageTitle } from "@/components/guides/GuidePageTitle";
 import { MdxGuideErrorView } from "@/components/guides/MdxGuideErrorView";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
 import { MdxGuideContent } from "@/components/mdx/MdxGuideContent";
@@ -38,7 +39,7 @@ export async function MdxGuidePage({
   const { frontmatter } = guide;
   const { beforeComparison, afterComparison } = splitGuideContent(guide.content);
 
-  const title = <h1 className="guide-page-title">{frontmatter.title}</h1>;
+  const title = <GuidePageTitle title={frontmatter.title} />;
 
   const intro = frontmatter.intro?.length ? (
     <div className="article-body space-y-4 lg:max-w-2xl">

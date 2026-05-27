@@ -1,4 +1,5 @@
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
+import { stripTrailingArrowFromText } from "@/lib/cta-chevron";
 
 const BULLETS = [
   "Works immediately after landing",
@@ -15,8 +16,10 @@ export type ESimConversionBlockProps = {
 export function ESimConversionBlock({
   className = "",
   href = "/guides/sim-card-japan",
-  buttonText = "Get an eSIM →",
+  buttonText = "Get an eSIM",
 }: ESimConversionBlockProps) {
+  const label = stripTrailingArrowFromText(buttonText);
+
   return (
     <div className={`editorial-cta-block ${className}`.trim()}>
       <p className="editorial-kicker mb-3">Connectivity</p>
@@ -40,8 +43,12 @@ export function ESimConversionBlock({
         ))}
       </ul>
       <div className="mt-6">
-        <TrackedCtaLink href={href} label="esim" className="editorial-btn-primary">
-          {buttonText}
+        <TrackedCtaLink
+          href={href}
+          label="esim"
+          className="editorial-btn-primary editorial-chevron-cta"
+        >
+          {label}
         </TrackedCtaLink>
       </div>
     </div>

@@ -687,8 +687,8 @@ function JapanTripBudgetCalculatorClient() {
                 <p className="article-body-sm mt-2 text-muted">
                   Pick eSIM or plastic before you need maps at the ticket machine.
                 </p>
-                <span className="mt-3 inline-block font-sans text-xs font-bold uppercase tracking-widest text-rust">
-                  Open guide →
+                <span className="editorial-chevron-link mt-3 font-sans text-xs font-bold uppercase tracking-widest text-rust">
+                  Open guide
                 </span>
               </Link>
               <Link
@@ -701,8 +701,8 @@ function JapanTripBudgetCalculatorClient() {
                 <p className="article-body-sm mt-2 text-muted">
                   Cash, IC, and cards: what actually happens at the register.
                 </p>
-                <span className="mt-3 inline-block font-sans text-xs font-bold uppercase tracking-widest text-rust">
-                  Open guide →
+                <span className="editorial-chevron-link mt-3 font-sans text-xs font-bold uppercase tracking-widest text-rust">
+                  Open guide
                 </span>
               </Link>
               <Link
@@ -715,8 +715,8 @@ function JapanTripBudgetCalculatorClient() {
                 <p className="article-body-sm mt-2 text-muted">
                   IC basics, locals vs express, and why your first week feels loud.
                 </p>
-                <span className="mt-3 inline-block font-sans text-xs font-bold uppercase tracking-widest text-rust">
-                  Open guide →
+                <span className="editorial-chevron-link mt-3 font-sans text-xs font-bold uppercase tracking-widest text-rust">
+                  Open guide
                 </span>
               </Link>
             </div>

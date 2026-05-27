@@ -313,33 +313,33 @@ function CanIBringThisToJapanCheckerClient() {
               <li>
                 <Link
                   href="/guides/japan-packing-list"
-                  className="text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Japan packing list →
+                  Japan packing list
                 </Link>
               </li>
               <li>
                 <Link
                   href="/tools/japan-packing-generator"
-                  className="text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Japan packing generator →
+                  Japan packing generator
                 </Link>
               </li>
               <li>
                 <Link
                   href="/guides/japan-airport-first-steps"
-                  className="text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Japan airport first steps →
+                  Japan airport first steps
                 </Link>
               </li>
               <li>
                 <Link
                   href="/guides/japan-convenience-store-guide"
-                  className="text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Japan convenience store guide →
+                  Japan convenience store guide
                 </Link>
               </li>
             </ul>

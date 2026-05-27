@@ -20,8 +20,8 @@ function SearchResultItem({ entry }: { entry: GuideSearchEntry }) {
           {entry.title}
         </p>
         <p className="article-body mt-1 line-clamp-2">{entry.description}</p>
-        <span className="mt-2 inline-block font-sans text-nav font-bold uppercase tracking-wide text-rust group-hover:text-maroon">
-          Read guide →
+        <span className="editorial-chevron-link mt-2 font-sans text-nav font-bold uppercase tracking-wide text-rust group-hover:text-maroon">
+          Read guide
         </span>
       </Link>
     </li>

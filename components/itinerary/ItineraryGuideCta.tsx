@@ -107,17 +107,17 @@ export function ItineraryGuideCta({
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
         <Link
           href={primaryHref}
-          className="editorial-btn-primary text-center"
+          className="editorial-btn-primary editorial-chevron-cta text-center"
           onClick={() => trackClick(primaryType, primaryHref)}
         >
-          {primaryLabel} →
+          {primaryLabel}
         </Link>
         <Link
           href={secondaryHref}
-          className={`${secondaryLinkClass} sm:px-2`}
+          className={`${secondaryLinkClass} editorial-chevron-link sm:px-2`}
           onClick={() => trackClick(secondaryType, secondaryHref)}
         >
-          {secondaryLabel} →
+          {secondaryLabel}
         </Link>
       </div>
     </aside>

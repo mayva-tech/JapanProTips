@@ -1,6 +1,10 @@
 "use client";
 
 import type { ReactNode } from "react";
+import {
+  stripTrailingArrowFromNode,
+  withChevronClass,
+} from "@/lib/cta-chevron";
 import type { ConversionGtagLabel } from "@/lib/gtag-events";
 import { trackGtagClick } from "@/lib/gtag-events";
 
@@ -18,13 +22,16 @@ export function TrackedProductDownloadButton({
   children,
   gtagLabel = "resident_guides",
 }: TrackedProductDownloadButtonProps) {
+  const arrow = stripTrailingArrowFromNode(children);
+  const resolvedClassName = withChevronClass(className, arrow.hadTrailingArrow);
+
   return (
     <a
       href={href}
-      className={className}
+      className={resolvedClassName}
       onClick={() => trackGtagClick(gtagLabel)}
     >
-      {children}
+      {arrow.children}
     </a>
   );
 }

@@ -477,33 +477,33 @@ function JapanPackingGeneratorClient() {
               <li>
                 <Link
                   href="/guides/japan-packing-list"
-                  className="text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Japan packing list →
+                  Japan packing list
                 </Link>
               </li>
               <li>
                 <Link
                   href="/guides/japan-weather-by-month"
-                  className="text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Japan weather by month →
+                  Japan weather by month
                 </Link>
               </li>
               <li>
                 <Link
                   href="/tools/japan-trip-budget-calculator"
-                  className="text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Japan trip budget calculator →
+                  Japan trip budget calculator
                 </Link>
               </li>
               <li>
                 <Link
                   href="/guides/sim-card-japan"
-                  className="text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  SIM card Japan guide →
+                  SIM card Japan guide
                 </Link>
               </li>
             </ul>

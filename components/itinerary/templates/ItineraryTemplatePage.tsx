@@ -156,9 +156,9 @@ export function ItineraryTemplatePage({
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  {link.label} →
+                  {link.label}
                 </Link>
               </li>
             ))}

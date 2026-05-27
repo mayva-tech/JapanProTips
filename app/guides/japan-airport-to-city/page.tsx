@@ -52,15 +52,15 @@ export default function JapanAirportToCityPage() {
           <div className="flex flex-col gap-2 mb-6 max-w-2xl">
             <Link
               href="/guides/narita-to-tokyo"
-              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+              className="editorial-chevron-link font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
             >
-              Narita to Tokyo (detailed) →
+              Narita to Tokyo (detailed)
             </Link>
             <Link
               href="/guides/haneda-to-tokyo"
-              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
+              className="editorial-chevron-link font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 w-fit"
             >
-              Haneda to Tokyo (detailed) →
+              Haneda to Tokyo (detailed)
             </Link>
           </div>
           <p className="font-sans font-bold text-dark text-lg max-w-2xl">
@@ -68,9 +68,9 @@ export default function JapanAirportToCityPage() {
           </p>
           <Link
             href="/guides/japan-trains"
-            className="inline-block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-5"
+            className="editorial-chevron-link inline-flex font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-5"
           >
-            Navigate Japan trains on day one →
+            Navigate Japan trains on day one
           </Link>
           <OperationalWarning noteId="airport-to-city-maps-need-data">
             <p>
@@ -101,9 +101,9 @@ export default function JapanAirportToCityPage() {
           </ul>
           <Link
             href="/guides/sim-card-japan"
-            className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150"
+            className="editorial-chevron-cta inline-flex rounded-lg bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150"
           >
-            Get your SIM ready before arrival →
+            Get your SIM ready before arrival
           </Link>
           <RealityCheck noteId="airport-to-city-order-of-ops">
             <p>
@@ -118,7 +118,7 @@ export default function JapanAirportToCityPage() {
 
         <section className="mb-6">
           <h2 className="editorial-heading mb-4">
-            Narita Airport → Tokyo
+            Narita Airport to Tokyo
           </h2>
 
           <div className="space-y-6 max-w-2xl">
@@ -176,9 +176,9 @@ export default function JapanAirportToCityPage() {
           <p className="article-body mt-6 max-w-2xl">
             <Link
               href="/guides/narita-to-tokyo"
-              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="editorial-chevron-link font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
-              Narita to Tokyo: best way to your hotel →
+              Narita to Tokyo: best way to your hotel
             </Link>
           </p>
         </section>
@@ -188,7 +188,7 @@ export default function JapanAirportToCityPage() {
         <>
         <section className="mb-6">
           <h2 className="editorial-heading mb-4">
-            Haneda Airport → Tokyo
+            Haneda Airport to Tokyo
           </h2>
 
           <div className="space-y-6 max-w-2xl">
@@ -223,16 +223,16 @@ export default function JapanAirportToCityPage() {
           <p className="article-body mt-6 max-w-2xl">
             <Link
               href="/guides/haneda-to-tokyo"
-              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="editorial-chevron-link font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
-              Haneda to Tokyo: best way to your hotel →
+              Haneda to Tokyo: best way to your hotel
             </Link>
           </p>
         </section>
 
         <section className="mb-6">
           <h2 className="editorial-heading mb-4">
-            Kansai Airport → Osaka
+            Kansai Airport to Osaka
           </h2>
 
           <div className="space-y-6 max-w-2xl">

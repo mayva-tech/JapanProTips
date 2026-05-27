@@ -25,14 +25,14 @@ const inlineLinkClass =
 
 /** Neighborhood headings and inline area names */
 const areaNameClass =
-  "font-heading text-2xl font-bold italic text-maroon sm:text-3xl";
+  "font-heading text-2xl font-bold italic text-ink sm:text-3xl";
 
-const labelProsClass = "font-sans font-bold text-rust";
-const labelConsClass = "font-sans font-bold text-maroon";
+const labelProsClass = "font-sans font-bold italic text-ink";
+const labelConsClass = "font-sans font-bold italic text-ink";
 
 function AreaName({ children }: { children: ReactNode }) {
   return (
-    <span className="font-sans font-bold text-maroon">{children}</span>
+    <span className="font-sans font-bold italic text-ink">{children}</span>
   );
 }
 
@@ -44,7 +44,10 @@ export default function WhereToStayTokyoPage() {
         <h1
           className="guide-page-title"
         >
-          Where to Stay in Tokyo (Best Areas for First-Time Visitors)
+          Where to Stay in Tokyo{" "}
+          <span className="guide-title-accent">
+            (Best Areas for First-Time Visitors)
+          </span>
         </h1>
       }
       intro={

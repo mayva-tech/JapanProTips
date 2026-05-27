@@ -104,8 +104,8 @@ export function ToolRecommendationStrip({
               <p className="article-body-sm mt-2 flex-1 leading-relaxed text-muted">
                 {tool.description}
               </p>
-              <span className="mt-3 inline-block font-sans text-xs font-bold uppercase tracking-widest text-rust transition-colors group-hover:text-maroon sm:mt-4">
-                Open tool →
+              <span className="editorial-chevron-link mt-3 font-sans text-xs font-bold uppercase tracking-widest text-rust transition-colors group-hover:text-maroon sm:mt-4">
+                Open tool
               </span>
             </>
           );

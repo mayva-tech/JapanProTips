@@ -430,17 +430,17 @@ function JapaneseAddressFormatterClient() {
               <li>
                 <Link
                   href="/tools"
-                  className="text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  All tools →
+                  All tools
                 </Link>
               </li>
               <li>
                 <Link
                   href="/guides/start-here-japan"
-                  className="text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Start here: Japan trip checklist →
+                  Start here: Japan trip checklist
                 </Link>
               </li>
             </ul>

@@ -1,6 +1,7 @@
 "use client";
 
 import { trackChecklistDownload } from "@/lib/checklist-analytics";
+import { stripTrailingArrowFromText } from "@/lib/cta-chevron";
 
 type ChecklistDirectDownloadProps = {
   downloadId: string;
@@ -9,13 +10,15 @@ type ChecklistDirectDownloadProps = {
 };
 
 const buttonClass =
-  "inline-block bg-maroon px-7 py-3.5 font-sans text-base font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust";
+  "editorial-chevron-cta inline-flex rounded-lg bg-maroon px-7 py-3.5 font-sans text-base font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust";
 
 export function ChecklistDirectDownload({
   downloadId,
   filePath,
   label = "Get the PDF",
 }: ChecklistDirectDownloadProps) {
+  const buttonLabel = stripTrailingArrowFromText(label);
+
   return (
     <a
       href={filePath}
@@ -23,7 +26,7 @@ export function ChecklistDirectDownload({
       className={buttonClass}
       onClick={() => trackChecklistDownload(downloadId)}
     >
-      {label} →
+      {buttonLabel}
     </a>
   );
 }

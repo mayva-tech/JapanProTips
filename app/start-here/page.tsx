@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 };
 
 const ctaClass =
-  "inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150";
+  "editorial-chevron-cta inline-flex rounded-lg bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150";
+const secondaryCtaClass =
+  "editorial-chevron-link inline-flex font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4";
 
 const sectionH2Class =
   "font-display text-dark tracking-wide mb-4";
@@ -77,21 +79,21 @@ export default function StartHerePage() {
                 You don&apos;t need to understand everything, just the basics.
               </p>
               <TrackedCtaLink href={GUIDE_HREFS.transport} label="transport" className={ctaClass}>
-                How to get around Japan (trains & apps) →
+                How to get around Japan (trains & apps)
               </TrackedCtaLink>
               <TrackedCtaLink
                 href="/guides/japan-trains"
                 label="transport"
-                className="block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4"
+                className={secondaryCtaClass}
               >
-                How to use trains in Japan →
+                How to use trains in Japan
               </TrackedCtaLink>
               <TrackedCtaLink
                 href="/guides/japan-airport-to-city"
                 label="transport"
-                className="block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4"
+                className={secondaryCtaClass}
               >
-                Airport to hotel in Japan (Narita, Haneda, Kansai) →
+                Airport to hotel in Japan (Narita, Haneda, Kansai)
               </TrackedCtaLink>
             </li>
 
@@ -104,8 +106,8 @@ export default function StartHerePage() {
                 right station will save you time and stress.
               </p>
               <HotelConversionBlock className="max-w-xl" />
-              <TrackedCtaLink href={GUIDE_HREFS.stay} label="hotel" className={`${ctaClass} mt-6 inline-block`}>
-                Where to stay in Japan (Tokyo, Osaka, Kyoto) →
+              <TrackedCtaLink href={GUIDE_HREFS.stay} label="hotel" className={`${ctaClass} mt-6`}>
+                Where to stay in Japan (Tokyo, Osaka, Kyoto)
               </TrackedCtaLink>
             </li>
 
@@ -119,14 +121,14 @@ export default function StartHerePage() {
                 never get stuck.
               </p>
               <TrackedCtaLink href={GUIDE_HREFS.money} label="budget" className={ctaClass}>
-                Money, cards & cash in Japan →
+                Money, cards & cash in Japan
               </TrackedCtaLink>
               <TrackedCtaLink
                 href="/guides/japan-itinerary"
                 label="transport"
-                className="block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 mt-4"
+                className={secondaryCtaClass}
               >
-                Japan itinerary for first-time visitors →
+                Japan itinerary for first-time visitors
               </TrackedCtaLink>
             </li>
           </ol>

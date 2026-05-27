@@ -13,9 +13,11 @@
     "audit:conversion": "node scripts/audit-conversion.mjs",
     "audit:field-notes": "node scripts/audit-field-notes.mjs",
     "generate:checklist-pdfs": "npx tsx scripts/generate-checklist-pdfs.ts",
-    "check:image-paths": "node scripts/check-image-paths.mjs"
+    "check:image-paths": "node scripts/check-image-paths.mjs",
+    "audio:google:mistakes": "node scripts/generate-google-tts-guide-audio.mjs japan-mistakes-new-residents"
   },
   "dependencies": {
+    "@google-cloud/text-to-speech": "^6.4.1",
     "@upstash/ratelimit": "^2.0.8",
     "@upstash/redis": "^1.38.0",
     "clsx": "^2.1.1",

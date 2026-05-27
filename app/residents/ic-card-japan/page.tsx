@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GuidePageTitle } from "@/components/guides/GuidePageTitle";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
 
 export const metadata: Metadata = {
@@ -12,11 +13,7 @@ export default function IcCardJapanResidentsPage() {
   return (
     <main className="bg-cream min-h-screen font-sans">
       <article className="page-x max-w-3xl mx-auto pt-10 pb-14">
-        <h1
-          className="guide-page-title"
-        >
-          IC Cards in Japan for Daily Life (Suica, PASMO, ICOCA)
-        </h1>
+        <GuidePageTitle title="IC Cards in Japan for Daily Life (Suica, PASMO, ICOCA)" />
 
         <div className="article-body mb-6 max-w-2xl space-y-4">
           <p>

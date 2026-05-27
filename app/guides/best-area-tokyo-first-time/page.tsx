@@ -1,7 +1,18 @@
 import type { Metadata } from "next";
+import { EditorialImage } from "@/components/editorial/EditorialImage";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
+import { pageImagePath } from "@/lib/images";
+
+const GUIDE_SLUG = "best-area-tokyo-first-time";
+
+const guideImages = {
+  hero: pageImagePath("guides", GUIDE_SLUG, "hero.jpg"),
+  section01: pageImagePath("guides", GUIDE_SLUG, "section-01.jpg"),
+  step01: pageImagePath("guides", GUIDE_SLUG, "step-01.jpg"),
+  mainPhoto: pageImagePath("guides", GUIDE_SLUG, "main-photo.jpg"),
+} as const;
 
 export const metadata: Metadata = {
   title: "Best Area to Stay in Tokyo for First-Time Visitors",
@@ -30,6 +41,13 @@ export default function BestAreaTokyoFirstTimePage() {
             Use this page as a fast map of neighborhoods, then read the full guide for
             hotels, tradeoffs, and booking tips.
           </p>
+          <EditorialImage
+            src={guideImages.hero}
+            alt="Traveler with luggage passing through IC card ticket gates at a Tokyo train station"
+            caption="First-time Tokyo stays work best when your hotel sits near a major rail hub."
+            priority
+            className="max-w-2xl"
+          />
         </div>
       }
       beforeComparison={
@@ -53,6 +71,13 @@ export default function BestAreaTokyoFirstTimePage() {
               </li>
             </ul>
           </section>
+
+          <EditorialImage
+            src={guideImages.section01}
+            alt="Row of automated IC card ticket gates inside a major Tokyo train station concourse"
+            caption="The four areas below differ in vibe and price, but all depend on quick station access."
+            className="max-w-2xl"
+          />
         </>
       }
       afterComparison={
@@ -162,6 +187,12 @@ export default function BestAreaTokyoFirstTimePage() {
                   Strong all rounder for first timers. You get dense dining, late options,
                   and straightforward connections west and north.
                 </p>
+                <EditorialImage
+                  src={guideImages.step01}
+                  alt="Ticket gates at a busy Tokyo rail hub, the kind Shinjuku visitors pass through daily"
+                  caption="Shinjuku's edge is the station itself: dense lines west, north, and across the city."
+                  className="max-w-2xl"
+                />
               </div>
               <div>
                 <h3 className="font-display text-dark text-2xl tracking-wide mb-2">
@@ -223,6 +254,13 @@ export default function BestAreaTokyoFirstTimePage() {
               </li>
             </ul>
           </section>
+
+          <EditorialImage
+            src={guideImages.mainPhoto}
+            alt="Traveler with a suitcase at automated ticket gates in a Tokyo station"
+            caption="Choose a base you can reach by train each morning without a long walk to the gates."
+            className="max-w-2xl"
+          />
 
           <NextStepGuides guideId="best-area-tokyo-first-time" />
 

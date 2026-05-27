@@ -171,9 +171,9 @@ export default function HomePage() {
                   <TrackedToolLink
                     href="/tools"
                     sourceSlug="home"
-                    className="font-sans text-sm font-bold uppercase tracking-widest text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                    className="editorial-chevron-link font-sans text-sm font-bold uppercase tracking-widest text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                   >
-                    Browse all tools →
+                    Browse all tools
                   </TrackedToolLink>
                 </p>
               </div>
@@ -197,9 +197,9 @@ export default function HomePage() {
             </p>
             <TrackedStartHereLink
               href="/start-here"
-              className="editorial-btn-primary mt-6"
+              className="editorial-btn-primary editorial-chevron-cta mt-6"
             >
-              Start the full checklist →
+              Start the full checklist
             </TrackedStartHereLink>
           </div>
         </MagazineShell>

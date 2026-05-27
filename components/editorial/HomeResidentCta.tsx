@@ -5,6 +5,10 @@ import Link from "next/link";
 import { SectionLabel } from "@/components/editorial/SectionLabel";
 import { HOME_RESIDENT_CTA_LINKS } from "@/lib/resident-starter-path";
 import {
+  stripTrailingArrowFromNode,
+  withChevronClass,
+} from "@/lib/cta-chevron";
+import {
   residentStarterPathGtagLabel,
   trackResidentStarterPathClick,
   trackToolClick,
@@ -26,11 +30,13 @@ function HomeResidentLink({
   const dataLabel = isTool
     ? toolClickGtagLabel(SOURCE_SLUG, href)
     : residentStarterPathGtagLabel(SOURCE_SLUG, href);
+  const arrow = stripTrailingArrowFromNode(children);
+  const resolvedClassName = withChevronClass(className, arrow.hadTrailingArrow);
 
   return (
     <Link
       href={href}
-      className={className}
+      className={resolvedClassName}
       data-cta-label={dataLabel}
       onClick={() =>
         isTool
@@ -38,7 +44,7 @@ function HomeResidentLink({
           : trackResidentStarterPathClick(SOURCE_SLUG, href)
       }
     >
-      {children}
+      {arrow.children}
     </Link>
   );
 }
@@ -86,9 +92,9 @@ export function HomeResidentCta({ embedded = false }: { embedded?: boolean }) {
           <p className="article-body-sm mt-5">
             <HomeResidentLink
               href="/residents"
-              className="font-sans font-bold text-rust hover:text-maroon"
+              className="editorial-chevron-link font-sans font-bold text-rust hover:text-maroon"
             >
-              Browse all resident guides →
+              Browse all resident guides
             </HomeResidentLink>
           </p>
         </div>

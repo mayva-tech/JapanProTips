@@ -39,9 +39,9 @@ export default function JapanItineraryPage() {
           </p>
           <Link
             href="/guides/japan-airport-to-city"
-            className="inline-block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 pt-2"
+            className="editorial-chevron-link inline-flex font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 pt-2"
           >
-            Landing soon? Here&apos;s how to get to your hotel →
+            Landing soon? Here&apos;s how to get to your hotel
           </Link>
         </div>
       }
@@ -68,9 +68,9 @@ export default function JapanItineraryPage() {
           </p>
           <Link
             href="/guides/where-to-stay-tokyo"
-            className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150"
+            className="editorial-chevron-cta inline-flex rounded-lg bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-7 py-3.5 hover:bg-rust transition-colors duration-150"
           >
-            Where to stay in Tokyo (best areas) →
+            Where to stay in Tokyo (best areas)
           </Link>
         </section>
 
@@ -90,9 +90,9 @@ export default function JapanItineraryPage() {
             </p>
             <Link
               href="/guides/japan-trains"
-              className="block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 pt-1"
+              className="editorial-chevron-link inline-flex font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150 pt-1"
             >
-              Navigate Japan trains on day one →
+              Navigate Japan trains on day one
             </Link>
           </div>
         </section>

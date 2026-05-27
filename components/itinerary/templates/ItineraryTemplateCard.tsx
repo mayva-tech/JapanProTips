@@ -33,8 +33,8 @@ export function ItineraryTemplateCard({
         <p className="article-body-sm mt-3 font-sans text-xs font-semibold text-muted">
           {itineraryThemeLabel(template.theme)} · {travelPaceLabel(template.pace)}
         </p>
-        <span className="mt-4 font-sans text-sm font-bold text-rust">
-          View outline →
+        <span className="editorial-chevron-link mt-4 font-sans text-sm font-bold text-rust">
+          View outline
         </span>
       </Link>
     </li>

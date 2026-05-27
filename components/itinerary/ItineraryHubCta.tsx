@@ -18,7 +18,7 @@ const FEATURED_TEMPLATES = [
 ] as const;
 
 const secondaryLinkClass =
-  "font-sans text-sm font-bold text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon";
+  "editorial-chevron-link font-sans text-sm font-bold text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon";
 
 export type ItineraryHubCtaProps = {
   sourcePage: string;
@@ -65,10 +65,10 @@ export function ItineraryHubCta({
         <div className="mt-6">
           <Link
             href={PLANNER_PATH}
-            className="editorial-btn-primary text-center"
+            className="editorial-btn-primary editorial-chevron-cta text-center"
             onClick={() => trackClick("planner", PLANNER_PATH)}
           >
-            Open itinerary planner →
+            Open itinerary planner
           </Link>
         </div>
       </aside>
@@ -95,17 +95,17 @@ export function ItineraryHubCta({
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
           <Link
             href={TEMPLATES_PATH}
-            className="editorial-btn-primary text-center"
+            className="editorial-btn-primary editorial-chevron-cta text-center"
             onClick={() => trackClick("templates", TEMPLATES_PATH)}
           >
-            View all templates →
+            View all templates
           </Link>
           <Link
             href={PLANNER_PATH}
             className={secondaryLinkClass}
             onClick={() => trackClick("planner", PLANNER_PATH)}
           >
-            Open itinerary planner →
+            Open itinerary planner
           </Link>
         </div>
       </aside>
@@ -133,17 +133,17 @@ export function ItineraryHubCta({
       <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
         <Link
           href={PLANNER_PATH}
-          className="editorial-btn-primary text-center sm:w-auto"
+          className="editorial-btn-primary editorial-chevron-cta text-center sm:w-auto"
           onClick={() => trackClick("planner", PLANNER_PATH)}
         >
-          Open itinerary planner →
+          Open itinerary planner
         </Link>
         <Link
           href={TEMPLATES_PATH}
           className={secondaryLinkClass}
           onClick={() => trackClick("templates", TEMPLATES_PATH)}
         >
-          Browse curated templates →
+          Browse curated templates
         </Link>
       </div>
       <p className="mt-4 flex flex-wrap gap-x-4 gap-y-2 font-sans text-sm font-semibold">
@@ -154,7 +154,7 @@ export function ItineraryHubCta({
             className={secondaryLinkClass}
             onClick={() => trackClick("template", item.path)}
           >
-            {item.label} →
+            {item.label}
           </Link>
         ))}
       </p>

@@ -1,6 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import {
+  stripTrailingArrowFromNode,
+  withChevronClass,
+} from "@/lib/cta-chevron";
 import { trackNextStepGuideClick } from "@/lib/gtag-events";
 
 const linkClass =
@@ -18,18 +22,20 @@ export function TrackedNextStepGuideLink({
   children,
 }: TrackedNextStepGuideLinkProps) {
   const onClick = () => trackNextStepGuideClick(currentGuideId, href);
+  const arrow = stripTrailingArrowFromNode(children);
+  const resolvedClassName = withChevronClass(linkClass, arrow.hadTrailingArrow);
 
   if (href.startsWith("/")) {
     return (
-      <Link href={href} className={linkClass} onClick={onClick}>
-        {children}
+      <Link href={href} className={resolvedClassName} onClick={onClick}>
+        {arrow.children}
       </Link>
     );
   }
 
   return (
-    <a href={href} className={linkClass} onClick={onClick}>
-      {children}
+    <a href={href} className={resolvedClassName} onClick={onClick}>
+      {arrow.children}
     </a>
   );
 }

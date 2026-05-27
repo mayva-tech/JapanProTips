@@ -20,7 +20,7 @@ export function FinalCTA() {
           className="w-full text-center sm:w-auto"
           gtagLabel="start_here"
         >
-          Walk through trip planning in order →
+          Walk through trip planning in order
         </Button>
       </Container>
     </section>

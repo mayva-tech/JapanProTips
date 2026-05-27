@@ -138,9 +138,9 @@ export default function MovingToJapanSystemPage() {
           </p>
           <TrackedProductDownloadButton
             href="#"
-            className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150"
+            className="editorial-chevron-cta inline-flex rounded-lg bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150"
           >
-            Download the system →
+            Download the system
           </TrackedProductDownloadButton>
         </div>
       </article>

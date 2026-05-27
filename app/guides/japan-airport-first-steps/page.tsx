@@ -48,9 +48,9 @@ export default function JapanAirportFirstStepsPage() {
           <p>
             <Link
               href="/guides/japan-airport-to-city"
-              className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+              className="editorial-chevron-link font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
             >
-              Airport to hotel (Narita, Haneda, Kansai) →
+              Airport to hotel (Narita, Haneda, Kansai)
             </Link>
           </p>
         </div>
@@ -222,9 +222,9 @@ export default function JapanAirportFirstStepsPage() {
           </p>
           <Link
             href="/guides/sim-card-japan"
-            className="font-sans text-base font-bold text-rust hover:text-maroon transition-colors duration-150"
+            className="editorial-chevron-link font-sans text-base font-bold text-rust hover:text-maroon transition-colors duration-150"
           >
-            Best SIM and eSIM options for Japan →
+            Best SIM and eSIM options for Japan
           </Link>
         </div>
 
@@ -248,9 +248,9 @@ export default function JapanAirportFirstStepsPage() {
             <p>
               <Link
                 href="/guides/suica-vs-pasmo"
-                className="font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="editorial-chevron-link font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
-                Suica vs PASMO: what to pick →
+                Suica vs PASMO: what to pick
               </Link>
             </p>
           </div>
@@ -282,15 +282,15 @@ export default function JapanAirportFirstStepsPage() {
             <p className="space-y-2">
               <Link
                 href="/guides/narita-to-tokyo"
-                className="block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="editorial-chevron-link inline-flex font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
-                Narita to Tokyo (routes and picks) →
+                Narita to Tokyo (routes and picks)
               </Link>
               <Link
                 href="/guides/haneda-to-tokyo"
-                className="block font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
+                className="editorial-chevron-link inline-flex font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150"
               >
-                Haneda to Tokyo (routes and picks) →
+                Haneda to Tokyo (routes and picks)
               </Link>
             </p>
           </div>
@@ -349,9 +349,9 @@ export default function JapanAirportFirstStepsPage() {
           </p>
           <Link
             href="/start-here"
-            className="inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150"
+            className="editorial-chevron-cta inline-flex rounded-lg bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150"
           >
-            Start here: trip planning checklist →
+            Start here: trip planning checklist
           </Link>
         </section>
 

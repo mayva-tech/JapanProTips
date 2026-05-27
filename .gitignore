@@ -13,6 +13,9 @@
 *.pem
 .env
 .env*.local
+*google*service*account*.json
+*gcp*service*account*.json
+*google-credentials*.json
 
 # debug
 npm-debug.log*

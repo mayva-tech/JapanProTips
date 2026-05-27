@@ -22,9 +22,9 @@ export function MagazineSectionTitle({
       {browseHref ? (
         <Link
           href={browseHref}
-          className="font-sans text-sm font-bold uppercase tracking-widest text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+          className="editorial-chevron-link font-sans text-sm font-bold uppercase tracking-widest text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
         >
-          {browseLabel} →
+          {browseLabel}
         </Link>
       ) : null}
     </div>

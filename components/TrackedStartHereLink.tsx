@@ -2,6 +2,10 @@
 
 import type { ReactNode } from "react";
 import Link from "next/link";
+import {
+  stripTrailingArrowFromNode,
+  withChevronClass,
+} from "@/lib/cta-chevron";
 import { trackGtagClick } from "@/lib/gtag-events";
 
 type TrackedStartHereLinkProps = {
@@ -19,13 +23,16 @@ export function TrackedStartHereLink({
   children,
   href = "/start-here",
 }: TrackedStartHereLinkProps) {
+  const arrow = stripTrailingArrowFromNode(children);
+  const resolvedClassName = withChevronClass(className, arrow.hadTrailingArrow);
+
   return (
     <Link
       href={href}
-      className={className}
+      className={resolvedClassName}
       onClick={() => trackGtagClick("start_here")}
     >
-      {children}
+      {arrow.children}
     </Link>
   );
 }

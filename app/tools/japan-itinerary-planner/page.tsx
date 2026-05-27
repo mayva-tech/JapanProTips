@@ -170,9 +170,9 @@ export default function JapanItineraryPlannerPage() {
             <p className="mt-4">
               <Link
                 href="/itinerary-templates"
-                className="font-sans text-sm font-bold text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                className="editorial-chevron-link font-sans text-sm font-bold text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
               >
-                Browse curated itinerary examples →
+                Browse curated itinerary examples
               </Link>
             </p>
           </section>
@@ -213,9 +213,9 @@ export default function JapanItineraryPlannerPage() {
                 <li key={g.href}>
                   <Link
                     href={g.href}
-                    className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                    className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                   >
-                    {g.label} →
+                    {g.label}
                   </Link>
                 </li>
               ))}

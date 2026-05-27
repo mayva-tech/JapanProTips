@@ -33,14 +33,14 @@ export default function TouristsPage() {
         }
         actions={
           <>
-            <TrackedStartHereLink className="editorial-btn-primary">
-              Start with the trip checklist →
+            <TrackedStartHereLink className="editorial-btn-primary editorial-chevron-cta">
+              Start with the trip checklist
             </TrackedStartHereLink>
             <Link
               href="/"
-              className="inline-flex items-center justify-center border border-paper-edge bg-paper-card px-6 py-3.5 font-sans text-kicker font-black uppercase text-ink transition-colors hover:border-maroon/40"
+              className="editorial-chevron-cta inline-flex items-center justify-center rounded-lg border border-paper-edge bg-paper-card px-6 py-3.5 font-sans text-kicker font-black uppercase text-ink transition-colors hover:border-maroon/40"
             >
-              Back to home →
+              Back to home
             </Link>
           </>
         }

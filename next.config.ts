@@ -11,11 +11,18 @@ const RESIDENT_GUIDE_REDIRECTS = [
 const nextConfig: NextConfig = {
   transpilePackages: ["next-mdx-remote"],
   async redirects() {
-    return RESIDENT_GUIDE_REDIRECTS.map((slug) => ({
-      source: `/guides/${slug}`,
-      destination: `/residents/${slug}`,
-      permanent: true,
-    }));
+    return [
+      {
+        source: "/guides/start-here-japan",
+        destination: "/start-here",
+        permanent: true,
+      },
+      ...RESIDENT_GUIDE_REDIRECTS.map((slug) => ({
+        source: `/guides/${slug}`,
+        destination: `/residents/${slug}`,
+        permanent: true,
+      })),
+    ];
   },
 };
 

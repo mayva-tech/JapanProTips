@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ConversionGtagLabel } from "@/lib/gtag-events";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
+import { stripTrailingArrowFromText } from "@/lib/cta-chevron";
 
 export type FunnelCardProps = {
   eyebrow: string;
@@ -25,6 +26,8 @@ export function FunnelCard({
   imageSrc,
   imageAlt,
 }: FunnelCardProps) {
+  const ctaLabel = stripTrailingArrowFromText(cta);
+
   return (
     <TrackedCtaLink
       href={href}
@@ -72,7 +75,9 @@ export function FunnelCard({
       >
         {description}
       </p>
-      <span className="editorial-btn-card mt-auto">{cta}</span>
+      <span className="editorial-btn-card editorial-chevron-cta mt-auto">
+        {ctaLabel}
+      </span>
       </div>
     </TrackedCtaLink>
   );

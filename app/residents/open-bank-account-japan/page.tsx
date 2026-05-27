@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceBlock } from "@/components/ServiceBlock";
+import { GuidePageTitle } from "@/components/guides/GuidePageTitle";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
 
 export const metadata: Metadata = {
@@ -14,11 +15,7 @@ export default function OpenBankAccountJapanPage() {
   return (
     <main className="bg-cream min-h-screen font-sans">
       <article className="page-x max-w-3xl mx-auto pt-10 pb-14">
-        <h1
-          className="guide-page-title"
-        >
-          How to Open a Bank Account in Japan (What Actually Works)
-        </h1>
+        <GuidePageTitle title="How to Open a Bank Account in Japan (What Actually Works)" />
 
         <div className="article-body mb-6 max-w-2xl space-y-4">
           <p>

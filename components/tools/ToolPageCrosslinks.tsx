@@ -3,7 +3,7 @@ import { TrackedToolLink } from "@/components/tools/TrackedToolLink";
 import { otherToolStripCards } from "@/lib/site-tools";
 
 const browseClass =
-  "font-sans text-sm font-bold uppercase tracking-widest text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon";
+  "editorial-chevron-link font-sans text-sm font-bold uppercase tracking-widest text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon";
 
 export function ToolPageCrosslinks({ currentSlug }: { currentSlug: string }) {
   const tools = otherToolStripCards(currentSlug);
@@ -19,7 +19,7 @@ export function ToolPageCrosslinks({ currentSlug }: { currentSlug: string }) {
       />
       <p className="mt-4 text-center sm:text-left">
         <TrackedToolLink href="/tools" sourceSlug={currentSlug} className={browseClass}>
-          Browse all tools →
+          Browse all tools
         </TrackedToolLink>
       </p>
     </div>

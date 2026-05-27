@@ -337,33 +337,33 @@ export default function ToolsHubPage() {
               <li>
                 <Link
                   href="/guides/start-here-japan"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Start here: Japan trip checklist →
+                  Start here: Japan trip checklist
                 </Link>
               </li>
               <li>
                 <Link
                   href="/guides/japan-budget-breakdown"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Japan budget breakdown →
+                  Japan budget breakdown
                 </Link>
               </li>
               <li>
                 <Link
                   href="/residents/japan-living-cost"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Monthly cost of living in Japan →
+                  Monthly cost of living in Japan
                 </Link>
               </li>
               <li>
                 <Link
                   href="/guides/japan-packing-list"
-                  className="inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+                  className="editorial-chevron-link inline-flex text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
                 >
-                  Japan packing list →
+                  Japan packing list
                 </Link>
               </li>
             </ul>

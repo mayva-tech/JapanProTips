@@ -2,6 +2,10 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { Callout } from "@/components/editorial/Callout";
 import { InlineAffiliate } from "@/components/conversion";
+import {
+  stripTrailingArrowFromNode,
+  withChevronClass,
+} from "@/lib/cta-chevron";
 import type { ConversionGtagLabel } from "@/lib/gtag-events";
 
 type TipBoxProps = {
@@ -93,9 +97,20 @@ export function RelatedGuides({ items = [], children }: RelatedGuidesProps) {
       <ul className="article-body list-none space-y-3 pl-0">
         {items.map((item) => (
           <li key={item.href}>
-            <Link href={item.href} className={relatedLinkClass}>
-              {item.label}
-            </Link>
+            {(() => {
+              const arrow = stripTrailingArrowFromNode(item.label);
+              return (
+                <Link
+                  href={item.href}
+                  className={withChevronClass(
+                    relatedLinkClass,
+                    arrow.hadTrailingArrow,
+                  )}
+                >
+                  {arrow.children}
+                </Link>
+              );
+            })()}
           </li>
         ))}
       </ul>

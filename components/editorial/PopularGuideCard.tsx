@@ -29,8 +29,8 @@ export function PopularGuideCard({ item }: PopularGuideCardProps) {
         <p className="editorial-kicker mb-2">{item.category}</p>
         <h3 className="editorial-heading mb-2 text-ink">{item.title}</h3>
         <p className="article-body flex-1">{item.description}</p>
-        <span className="mt-4 font-sans text-nav font-bold uppercase tracking-wide text-rust transition-colors group-hover:text-maroon">
-          Read guide →
+        <span className="editorial-chevron-link mt-4 font-sans text-nav font-bold uppercase tracking-wide text-rust transition-colors group-hover:text-maroon">
+          Read guide
         </span>
       </div>
     </TrackedCtaLink>

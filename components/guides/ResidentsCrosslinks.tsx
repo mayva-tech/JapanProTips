@@ -1,5 +1,6 @@
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
 import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
+import { stripTrailingArrowFromText } from "@/lib/cta-chevron";
 import { conversionLabelForHref } from "@/lib/gtag-events";
 
 export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
@@ -410,9 +411,13 @@ export const RESIDENT_GUIDE_LINKS: { href: string; label: string }[] = [
 ];
 
 const linkClass =
-  "font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150";
+  "editorial-chevron-link font-sans font-bold text-base tracking-widest uppercase text-rust hover:text-maroon transition-colors duration-150";
 const startCtaClass =
-  "inline-block border-2 border-dark bg-cream px-8 py-4 font-sans text-base font-bold uppercase tracking-widest text-dark transition-colors duration-150 hover:bg-dark hover:text-cream";
+  "editorial-chevron-cta inline-flex rounded-lg border-2 border-dark bg-cream px-8 py-4 font-sans text-base font-bold uppercase tracking-widest text-dark transition-colors duration-150 hover:bg-dark hover:text-cream";
+
+function stripTrailingArrow(label: string) {
+  return stripTrailingArrowFromText(label);
+}
 
 type ResidentsCrosslinksProps = {
   /** Current article path; other guides are listed. Omit on hub to list all guides. */
@@ -444,7 +449,7 @@ export function ResidentsCrosslinks({ currentHref }: ResidentsCrosslinksProps) {
             label="resident_guides"
             className={linkClass}
           >
-            Residents hub →
+            Residents hub
           </TrackedCtaLink>
         </p>
       ) : null}
@@ -456,14 +461,14 @@ export function ResidentsCrosslinks({ currentHref }: ResidentsCrosslinksProps) {
               label={conversionLabelForHref(g.href)}
               className={linkClass}
             >
-              {g.label}
+              {stripTrailingArrow(g.label)}
             </TrackedCtaLink>
           </li>
         ))}
       </ul>
       <div className="mt-6">
         <TrackedStartHereLink className={startCtaClass}>
-          Plan a visit from outside Japan →
+          Plan a visit from outside Japan
         </TrackedStartHereLink>
       </div>
     </section>

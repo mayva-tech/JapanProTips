@@ -10,8 +10,8 @@ export function SiteBrandFooter() {
         className="inline-flex flex-col items-start gap-3 transition-opacity hover:opacity-90 sm:flex-row sm:items-center"
       >
         <SiteLogo variant="sm" linked={false} />
-        <span className="font-sans text-sm font-bold uppercase tracking-widest text-rust">
-          Back to home →
+        <span className="editorial-chevron-link font-sans text-sm font-bold uppercase tracking-widest text-rust">
+          Back to home
         </span>
       </Link>
     </div>

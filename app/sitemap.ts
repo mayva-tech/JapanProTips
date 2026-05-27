@@ -116,7 +116,6 @@ const STATIC_PATHS = [
   "/resources/moving-to-japan-checklist",
   "/tools",
   "/faq",
-  "/guides/start-here-japan",
   "/guides/sim-card-japan",
   "/guides/japan-public-wifi",
   "/guides/do-you-need-sim-japan",

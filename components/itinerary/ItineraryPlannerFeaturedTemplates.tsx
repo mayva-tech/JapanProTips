@@ -69,9 +69,9 @@ export function ItineraryPlannerFeaturedTemplates() {
       <p className="mt-3">
         <Link
           href="/itinerary-templates"
-          className="font-sans text-sm font-bold text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
+          className="editorial-chevron-link font-sans text-sm font-bold text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
         >
-          All curated templates →
+          All curated templates
         </Link>
       </p>
     </section>

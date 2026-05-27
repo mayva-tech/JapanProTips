@@ -2,6 +2,10 @@
 
 import Link from "next/link";
 import type { ReactNode } from "react";
+import {
+  stripTrailingArrowFromNode,
+  withChevronClass,
+} from "@/lib/cta-chevron";
 import type { ConversionGtagLabel } from "@/lib/gtag-events";
 import { trackGtagClick } from "@/lib/gtag-events";
 
@@ -27,24 +31,31 @@ export function TrackedCtaLink({
   rel = "noopener noreferrer nofollow sponsored",
 }: TrackedCtaLinkProps) {
   const onClick = () => trackGtagClick(label);
+  const arrow = stripTrailingArrowFromNode(children);
+  const resolvedClassName = withChevronClass(className, arrow.hadTrailingArrow);
 
   if (/^https?:\/\//i.test(href)) {
     return (
       <a
         href={href}
-        className={className}
+        className={resolvedClassName}
         onClick={onClick}
         target={target}
         rel={rel}
       >
-        {children}
+        {arrow.children}
       </a>
     );
   }
 
   return (
-    <Link href={href} className={className} onClick={onClick} prefetch={prefetch}>
-      {children}
+    <Link
+      href={href}
+      className={resolvedClassName}
+      onClick={onClick}
+      prefetch={prefetch}
+    >
+      {arrow.children}
     </Link>
   );
 }

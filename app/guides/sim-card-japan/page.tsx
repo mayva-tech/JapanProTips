@@ -3,6 +3,7 @@ import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import Link from "next/link";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { GuideTitleText } from "@/components/guides/GuidePageTitle";
 import { ItineraryGuideCta } from "@/components/itinerary/ItineraryGuideCta";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
 import { RecommendationGrid } from "@/components/recommendations";
@@ -37,9 +38,9 @@ export default function SimCardJapanGuidePage() {
           <h1
             className="guide-page-title"
           >
-            BEST SIM CARD FOR JAPAN (2026)
+            <GuideTitleText title="BEST SIM CARD FOR JAPAN (2026)" />
             <br />
-            <span className="text-rust">NO BS GUIDE</span>
+            <span className="guide-title-accent italic">NO BS GUIDE</span>
           </h1>
         </>
       }

@@ -14,8 +14,13 @@ export function Hero() {
           For tourists planning a trip and foreigners building a life here.
           Specific, honest, and written from the inside.
         </p>
-        <Button href="/start-here" variant="primary" gtagLabel="start_here">
-          Open the trip planning checklist →
+        <Button
+          href="/start-here"
+          variant="primary"
+          gtagLabel="start_here"
+          className="editorial-chevron-cta"
+        >
+          Open the trip planning checklist
         </Button>
       </Container>
     </section>

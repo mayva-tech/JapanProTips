@@ -3,6 +3,10 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
+  stripTrailingArrowFromNode,
+  withChevronClass,
+} from "@/lib/cta-chevron";
+import {
   toolClickGtagLabel,
   trackToolClick,
 } from "@/lib/gtag-events";
@@ -24,15 +28,18 @@ export function TrackedToolLink({
   prefetch,
 }: TrackedToolLinkProps) {
   const dataLabel = toolClickGtagLabel(sourceSlug, href);
+  const arrow = stripTrailingArrowFromNode(children);
+  const resolvedClassName = withChevronClass(className, arrow.hadTrailingArrow);
+
   return (
     <Link
       href={href}
-      className={className}
+      className={resolvedClassName}
       prefetch={prefetch}
       data-cta-label={dataLabel}
       onClick={() => trackToolClick(sourceSlug, href)}
     >
-      {children}
+      {arrow.children}
     </Link>
   );
 }

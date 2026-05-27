@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { TrackedCtaLink } from "@/components/TrackedCtaLink";
+import { GuidePageTitle } from "@/components/guides/GuidePageTitle";
 import { ResidentStarterPath } from "@/components/guides/ResidentStarterPath";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
+import { stripTrailingArrowFromText } from "@/lib/cta-chevron";
 import { conversionLabelForHref } from "@/lib/gtag-events";
 
 export const metadata: Metadata = {
@@ -12,10 +14,14 @@ export const metadata: Metadata = {
 };
 
 const ctaClass =
-  "inline-block bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150";
+  "editorial-chevron-cta inline-flex rounded-lg bg-maroon text-white font-sans font-bold text-base tracking-widest uppercase px-8 py-4 hover:bg-rust transition-colors duration-150";
 
 const linkClass =
-  "font-sans font-bold text-rust hover:text-maroon transition-colors duration-150";
+  "editorial-chevron-link font-sans font-bold text-rust hover:text-maroon transition-colors duration-150";
+
+function stripTrailingArrow(label: ReactNode) {
+  return typeof label === "string" ? stripTrailingArrowFromText(label) : label;
+}
 
 function TrackedResidentLink({
   href,
@@ -32,7 +38,7 @@ function TrackedResidentLink({
       label={conversionLabelForHref(href)}
       className={className}
     >
-      {children}
+      {stripTrailingArrow(children)}
     </TrackedCtaLink>
   );
 }
@@ -41,11 +47,7 @@ export default function ResidentsPage() {
   return (
     <main className="bg-cream min-h-screen font-sans">
       <article className="page-x max-w-3xl mx-auto pt-10 pb-14">
-        <h1
-          className="guide-page-title"
-        >
-          Living in Japan: Practical Guides for Daily Life
-        </h1>
+        <GuidePageTitle title="Living in Japan: Practical Guides for Daily Life" />
 
         <div className="article-body mb-6 max-w-2xl space-y-4">
           <p>This section is for people who already live in Japan.</p>

@@ -10,7 +10,7 @@ import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 import { OperationalWarning, WhatPeopleMiss } from "@/components/editorial/field-notes";
 
 const inlineLinkClass =
-  "font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150";
+  "editorial-chevron-link font-sans font-bold text-base text-rust hover:text-maroon transition-colors duration-150";
 
 export const metadata: Metadata = {
   title:
@@ -34,7 +34,7 @@ export default function JapanTrainsPage() {
           <p>You only need a simple system that works every day.</p>
           <p>
             <Link href="/guides/japan-airport-to-city" className={inlineLinkClass}>
-              From airport to hotel →
+              From airport to hotel
             </Link>
           </p>
         </div>
@@ -59,9 +59,9 @@ export default function JapanTrainsPage() {
           <p className="mb-3 last:mb-0">
             <Link
               href="/guides/sim-card-japan"
-              className="inline-block bg-maroon px-7 py-3.5 font-sans text-base font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust"
+              className="editorial-chevron-cta inline-flex rounded-lg bg-maroon px-7 py-3.5 font-sans text-base font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust"
             >
-              Get your SIM sorted →
+              Get your SIM sorted
             </Link>
           </p>
 
@@ -164,14 +164,14 @@ export default function JapanTrainsPage() {
             </p>
             <p className="article-body mb-3 last:mb-0">
               <Link href="/guides/suica-vs-pasmo" className={inlineLinkClass}>
-                Suica vs PASMO →
+                Suica vs PASMO
               </Link>
               {" · "}
               <Link
                 href="/guides/japan-train-mistakes"
                 className={inlineLinkClass}
               >
-                Common train mistakes →
+                Common train mistakes
               </Link>
             </p>
 

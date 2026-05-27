@@ -18,7 +18,7 @@ export type EmailCaptureFormProps = {
 const inputClass =
   "w-full min-w-0 rounded border border-[#d4c9b0] bg-white px-3 py-2.5 font-sans text-base text-dark placeholder:text-muted/70 focus:border-rust focus:outline-none focus:ring-1 focus:ring-rust/30";
 const buttonClass =
-  "inline-block w-full bg-maroon px-6 py-3 font-sans text-base font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto";
+  "inline-block w-full rounded-lg bg-maroon px-6 py-3 font-sans text-base font-bold uppercase tracking-widest text-white transition-colors duration-150 hover:bg-rust disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto";
 
 function triggerDownload(downloadUrl: string) {
   const link = document.createElement("a");

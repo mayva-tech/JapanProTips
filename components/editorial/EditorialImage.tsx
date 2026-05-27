@@ -26,7 +26,7 @@ export function EditorialImage({
   return (
     <figure className={`my-10 ${className}`.trim()}>
       <div
-        className={`relative overflow-hidden border border-paper-edge bg-paper-elevated ${aspectClass[aspect]}`}
+        className={`relative overflow-hidden rounded-xl border border-paper-edge bg-paper-elevated shadow-editorial ${aspectClass[aspect]}`}
       >
         <Image
           src={src}

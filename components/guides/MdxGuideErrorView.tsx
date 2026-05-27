@@ -1,5 +1,9 @@
 import Link from "next/link";
 import type { GuideContentError } from "@/lib/content/errors";
+import {
+  stripTrailingArrowFromNode,
+  withChevronClass,
+} from "@/lib/cta-chevron";
 
 type MdxGuideErrorViewProps = {
   error: GuideContentError;
@@ -14,6 +18,7 @@ export function MdxGuideErrorView({
 }: MdxGuideErrorViewProps) {
   const heading =
     error.code === "NOT_FOUND" ? "Guide not found" : "Guide could not be loaded";
+  const arrow = stripTrailingArrowFromNode(hubLabel);
 
   return (
     <main className="bg-cream min-h-screen font-sans">
@@ -27,9 +32,12 @@ export function MdxGuideErrorView({
         </div>
         <Link
           href={hubHref}
-          className="inline-flex items-center justify-center bg-maroon px-8 py-4 font-sans text-base font-bold uppercase tracking-widest text-white hover:bg-rust transition-colors duration-150"
+          className={withChevronClass(
+            "inline-flex items-center justify-center rounded-lg bg-maroon px-8 py-4 font-sans text-base font-bold uppercase tracking-widest text-white hover:bg-rust transition-colors duration-150",
+            arrow.hadTrailingArrow,
+          )}
         >
-          {hubLabel}
+          {arrow.children}
         </Link>
       </article>
     </main>

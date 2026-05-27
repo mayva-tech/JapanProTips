@@ -36,8 +36,8 @@ export function TouristGuidesIndex() {
               The Start Here flow walks through SIM, trains, lodging, and money
               in the order that saves the most headaches on arrival.
             </p>
-            <TrackedStartHereLink className="editorial-btn-primary mt-6">
-              Open the trip planning checklist →
+            <TrackedStartHereLink className="editorial-btn-primary editorial-chevron-cta mt-6">
+              Open the trip planning checklist
             </TrackedStartHereLink>
           </div>
         </div>
