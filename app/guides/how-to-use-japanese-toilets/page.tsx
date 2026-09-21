@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { EditorialImage } from "@/components/editorial/EditorialImage";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { guidePageImages } from "@/lib/guide-page-images";
+
+const GUIDE_SLUG = "how-to-use-japanese-toilets";
+
+const guideImages = guidePageImages(GUIDE_SLUG);
 
 export const metadata: Metadata = {
   title: "How to Use Japanese Toilets, Trash Rules, and Public Etiquette",
@@ -56,7 +62,8 @@ export default function HowToUseJapaneseToiletsPage() {
         <h1
           className="guide-page-title"
         >
-          How to Use Japanese Toilets, Trash Rules, and Public Etiquette
+          How to Use Japanese Toilets, Trash Rules, and{" "}
+          <span className="guide-title-accent">Public Etiquette</span>
         </h1>
       }
       intro={<IntroBlock />}
@@ -83,6 +90,14 @@ function IntroBlock() {
         so phones, trains, lodging, and money feel sorted before quirks show up at
         a restroom stall.
       </p>
+      <EditorialImage
+        src={guideImages.hero}
+        alt="Clean public restroom and shared space etiquette in Japan"
+        caption="Toilets, trash, and train habits share one goal: keep shared spaces workable for everyone."
+        fit="contain"
+        priority
+        className="max-w-2xl"
+      />
     </div>
   );
 }
@@ -126,6 +141,13 @@ function MainContent() {
             ]}
           />
         </div>
+        <EditorialImage
+          src={guideImages.step01}
+          alt="Japanese washlet control panel with bidet, dryer, and stop buttons"
+          caption="Modern accessible restroom with facilities for wheelchair users, elderly visitors, and baby diaper changing."
+          fit="contain"
+          className="max-w-2xl"
+        />
       </section>
 
       <section className="mb-6">
@@ -190,6 +212,13 @@ function MainContent() {
             ]}
           />
         </div>
+        <EditorialImage
+          src={guideImages.step02}
+          alt="Public restroom supplies including pocket tissues and hand towel in Japan"
+          caption="Carry pocket tissues and a small towel for stations and shops where dryers run empty."
+          fit="contain"
+          className="max-w-2xl"
+        />
       </section>
 
       <section className="mb-6">
@@ -218,6 +247,13 @@ function MainContent() {
             ]}
           />
         </div>
+        <EditorialImage
+          src={guideImages.section01}
+          alt="Sorting trash at a convenience store or station bin in Japan"
+          caption="Hold snack wrappers until a konbini, hotel, or labeled station bin appears."
+          fit="contain"
+          className="max-w-2xl"
+        />
       </section>
 
       <section className="mb-6">
@@ -284,6 +320,13 @@ function MainContent() {
             so IC taps, signage, crowded platforms fuse into muscle memory faster.
           </p>
         </div>
+        <EditorialImage
+          src={guideImages.section02}
+          alt="Commuters on a quiet Japanese train following platform etiquette"
+          caption="Lower your voice, stow the backpack, and yield priority seats when someone needs them."
+          fit="contain"
+          className="max-w-2xl"
+        />
       </section>
 
       <section className="mb-6">
@@ -456,6 +499,14 @@ function MainContent() {
 function FooterContent() {
   return (
     <>
+      <EditorialImage
+        src={guideImages.mainPhoto}
+        alt="Traveler observing local etiquette at a restroom, station, and convenience store in Japan"
+        caption="Copy small habits from the people around you and adjust quickly when you miss one."
+        fit="contain"
+        className="max-w-2xl"
+      />
+
       <section className="mb-6">
         <H2>Final advice</H2>
         <div className="article-body space-y-4 max-w-2xl">

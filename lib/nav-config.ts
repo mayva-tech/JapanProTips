@@ -17,8 +17,32 @@ export type NavPrimaryLink = {
   href: string;
 };
 
-/** Top-level nav links (no dropdown), shown after category menus. */
+/** Single engineering entry for primary navbar (services linked from hub/footer). */
+export const ENGINEERING_PRIMARY_NAV_LINK: NavPrimaryLink = {
+  id: "engineer",
+  label: "Engineer",
+  href: "/engineer",
+};
+
+/** @deprecated Use ENGINEERING_PRIMARY_NAV_LINK for navbar; footer uses ENGINEERING_FOOTER_LINKS. */
+export const ENGINEERING_NAV_LINKS: NavPrimaryLink[] = [
+  ENGINEERING_PRIMARY_NAV_LINK,
+];
+
+/** Engineering vertical footer and soft-exit links. */
+export const ENGINEERING_FOOTER_LINKS: NavPrimaryLink[] = [
+  { id: "engineer", label: "Engineer Hub", href: "/engineer" },
+  {
+    id: "engineering-services",
+    label: "Engineering Services",
+    href: "/engineering-services",
+  },
+  { id: "about-engineer", label: "About the Engineer", href: "/about-engineer" },
+];
+
+/** Top-level nav after category menus: travel/resident first, engineering secondary. */
 export const NAV_PRIMARY_LINKS: NavPrimaryLink[] = [
+  ENGINEERING_PRIMARY_NAV_LINK,
   { id: "faq", label: "FAQ", href: "/faq" },
 ];
 

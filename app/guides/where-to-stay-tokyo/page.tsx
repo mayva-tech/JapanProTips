@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import Link from "next/link";
+import { EditorialImage } from "@/components/editorial/EditorialImage";
 import { LocalTip, OperationalWarning } from "@/components/editorial/field-notes";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
@@ -9,6 +10,12 @@ import { ItineraryGuideCta } from "@/components/itinerary/ItineraryGuideCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { buildPlannerUrl } from "@/lib/itinerary/build-planner-url";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
+import { guidePageImages } from "@/lib/guide-page-images";
+import { TOKYO_STAY_BOOKING_URLS } from "@/lib/tokyo-stay-booking-urls";
+
+const GUIDE_SLUG = "where-to-stay-tokyo";
+
+const guideImages = guidePageImages(GUIDE_SLUG);
 
 export const metadata: Metadata = {
   title:
@@ -40,6 +47,7 @@ export default function WhereToStayTokyoPage() {
   return (
     <GuideArticleShell
       showHotelConversion={false}
+      comparisonItems={null}
       title={
         <h1
           className="guide-page-title"
@@ -67,6 +75,17 @@ export default function WhereToStayTokyoPage() {
               Shinjuku vs Shibuya (side by side) →
             </Link>
           </p>
+          <EditorialImage
+            src={guideImages.hero}
+            alt="Tokyo skyline and train lines connecting major visitor neighborhoods"
+            caption="Tokyo rewards a base near a major station more than a perfect postcard view."
+            href={TOKYO_STAY_BOOKING_URLS.tokyo}
+            hrefAriaLabel="Search stays in Tokyo on Booking.com"
+            gtagLabel="hotel"
+            fit="contain"
+            priority
+            className="max-w-2xl"
+          />
         </div>
       }
       beforeComparison={
@@ -93,6 +112,15 @@ export default function WhereToStayTokyoPage() {
                   the map pin.
                 </p>
               </div>
+              <EditorialImage
+                src={guideImages.step01}
+                alt="Shinjuku station area with dense transit and late-night dining options"
+                caption="Shinjuku stays work when the hotel pin is walking distance to the main station exits."
+                href={TOKYO_STAY_BOOKING_URLS.shinjuku}
+                hrefAriaLabel="Search stays in Shinjuku on Booking.com"
+                gtagLabel="hotel"
+                className="max-w-2xl"
+              />
             </div>
 
             <div>
@@ -111,6 +139,15 @@ export default function WhereToStayTokyoPage() {
                   depending on your day plan.
                 </p>
               </div>
+              <EditorialImage
+                src={guideImages.step02}
+                alt="Shibuya crossing area and nightlife-focused hotel district"
+                caption="Shibuya fits trips built around busy evenings and quick hops to nearby districts."
+                href={TOKYO_STAY_BOOKING_URLS.shibuya}
+                hrefAriaLabel="Search stays in Shibuya on Booking.com"
+                gtagLabel="hotel"
+                className="max-w-2xl"
+              />
             </div>
 
             <div>
@@ -149,6 +186,16 @@ export default function WhereToStayTokyoPage() {
             </div>
           </div>
         </section>
+
+        <EditorialImage
+          src={guideImages.section01}
+          alt="Map-style view of Tokyo stay areas for first-time visitors"
+          caption="Compare Shinjuku, Shibuya, Asakusa, and Ueno by trains first, then by vibe and price."
+          href={TOKYO_STAY_BOOKING_URLS.ueno}
+          hrefAriaLabel="Search stays in Ueno on Booking.com"
+          gtagLabel="hotel"
+          className="max-w-2xl"
+        />
 
         <OperationalWarning noteId="where-tokyo-station-pin">
           <p>
@@ -197,6 +244,16 @@ export default function WhereToStayTokyoPage() {
             </p>
           </div>
         </section>
+
+        <EditorialImage
+          src={guideImages.section02}
+          alt="Tokyo suburban train line reminder to stay near major hubs"
+          caption="Cheap far-out listings often cost more time every morning and night."
+          href={TOKYO_STAY_BOOKING_URLS.asakusa}
+          hrefAriaLabel="Search stays in Asakusa on Booking.com"
+          gtagLabel="hotel"
+          className="max-w-2xl"
+        />
 
         <RecommendedServicesBox serviceId="where-to-stay-tokyo" />
         </>
@@ -293,6 +350,17 @@ export default function WhereToStayTokyoPage() {
             </p>
           </div>
         </section>
+
+        <EditorialImage
+          src={guideImages.mainPhoto}
+          alt="Traveler choosing a Tokyo hotel base near a major rail hub"
+          caption="Pick one base, pin it to a station, and spend your energy on routes instead of hotel hopping."
+          fit="contain"
+          href={TOKYO_STAY_BOOKING_URLS.tokyoStation}
+          hrefAriaLabel="Search stays near Tokyo Station on Booking.com"
+          gtagLabel="hotel"
+          className="max-w-2xl"
+        />
 
         <section className="mb-6 max-w-2xl border-t border-tan pt-8">
           <h2 className="font-display text-dark tracking-wide text-3xl mb-4">

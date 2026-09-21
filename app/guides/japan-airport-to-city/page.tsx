@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import Link from "next/link";
+import { EditorialImage } from "@/components/editorial/EditorialImage";
 import { OperationalWarning, RealityCheck } from "@/components/editorial/field-notes";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
+import { guidePageImages } from "@/lib/guide-page-images";
+
+const GUIDE_SLUG = "japan-airport-to-city";
+
+const guideImages = guidePageImages(GUIDE_SLUG);
 
 export const metadata: Metadata = {
   title:
@@ -17,6 +23,7 @@ export const metadata: Metadata = {
 export default function JapanAirportToCityPage() {
   return (
     <GuideArticleShell
+      comparisonItems={null}
       title={
         <h1
           className="guide-page-title"
@@ -30,6 +37,14 @@ export default function JapanAirportToCityPage() {
           <p>After landing, this is your first real challenge.</p>
           <p>Airport transport options look confusing when you are tired.</p>
           <p>It is straightforward once you know the main choices.</p>
+          <EditorialImage
+            src={guideImages.hero}
+            alt="Travelers leaving Narita, Haneda, or Kansai airport toward their hotel"
+            caption="Narita, Haneda, and Kansai each have a small set of routes that cover most first trips."
+            fit="contain"
+            priority
+            className="max-w-2xl"
+          />
         </div>
       }
       beforeComparison={
@@ -81,6 +96,14 @@ export default function JapanAirportToCityPage() {
           </OperationalWarning>
         </section>
 
+        <EditorialImage
+          src={guideImages.section01}
+          alt="Quick comparison of airport routes from Narita, Haneda, and Kansai to city centers"
+          caption="NEX or Skyliner from Narita, trains from Haneda, Nankai or JR from Kansai cover most stays."
+          fit="contain"
+          className="max-w-2xl"
+        />
+
         <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Before You Leave the Airport
@@ -112,6 +135,13 @@ export default function JapanAirportToCityPage() {
               gate. Get connectivity stable, then optimize the rest in line.
             </p>
           </RealityCheck>
+          <EditorialImage
+            src={guideImages.step01}
+            alt="IC card, eSIM setup, and hotel address ready at a Japanese airport"
+            caption="Get data stable first, then IC card, hotel address, and cash in that order."
+            fit="contain"
+            className="max-w-2xl"
+          />
         </section>
 
         <RecommendedServicesBox serviceId="japan-airport-to-city" />
@@ -181,6 +211,13 @@ export default function JapanAirportToCityPage() {
               Narita to Tokyo: best way to your hotel
             </Link>
           </p>
+          <EditorialImage
+            src={guideImages.step02}
+            alt="Narita Express, Keisei Skyliner, and airport bus options from Narita to Tokyo"
+            caption="NEX suits major JR hubs, Skyliner fits Ueno, and the bus helps with heavy luggage."
+            fit="contain"
+            className="max-w-2xl"
+          />
         </section>
         </>
       }
@@ -228,6 +265,13 @@ export default function JapanAirportToCityPage() {
               Haneda to Tokyo: best way to your hotel
             </Link>
           </p>
+          <EditorialImage
+            src={guideImages.section02}
+            alt="Keikyu Line and Tokyo Monorail from Haneda Airport to central Tokyo"
+            caption="Haneda is close enough that Keikyu or the monorail usually beats a taxi on cost."
+            fit="contain"
+            className="max-w-2xl"
+          />
         </section>
 
         <section className="mb-6">
@@ -337,6 +381,14 @@ export default function JapanAirportToCityPage() {
           </ul>
 
         </section>
+
+        <EditorialImage
+          src={guideImages.mainPhoto}
+          alt="Traveler following Google Maps from a Japanese airport to their hotel"
+          caption="Pick your route, follow maps, and match the platform signs before you board."
+          fit="contain"
+          className="max-w-2xl"
+        />
 
         <NextStepGuides guideId="japan-airport-to-city" />
 

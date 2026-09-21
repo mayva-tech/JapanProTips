@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
 import { SiteBrandFooter } from "@/components/brand/SiteBrandFooter";
 import Link from "next/link";
+import { EditorialImage } from "@/components/editorial/EditorialImage";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RealityCheck, TouristMistakeNote } from "@/components/editorial/field-notes";
+import { guidePageImages } from "@/lib/guide-page-images";
+
+const GUIDE_SLUG = "esim-vs-pocket-wifi-japan";
+
+const guideImages = guidePageImages(GUIDE_SLUG);
+
+const AIRALO_URL = "https://www.airalo.com/";
+const UBIGI_URL = "https://www.ubigi.com/";
 
 export const metadata: Metadata = {
   title:
@@ -19,6 +28,7 @@ const conversionBox =
 export default function EsimVsPocketWifiJapanPage() {
   return (
     <GuideArticleShell
+      comparisonItems={null}
       title={
         <h1
           className="guide-page-title"
@@ -52,6 +62,16 @@ export default function EsimVsPocketWifiJapanPage() {
               Airalo vs Ubigi for Japan →
             </Link>
           </div>
+          <EditorialImage
+            src={guideImages.hero}
+            alt="Traveler comparing eSIM and pocket WiFi options for Japan connectivity"
+            caption="Most solo travelers default to eSIM. Groups sometimes split a pocket WiFi rental instead."
+            href={AIRALO_URL}
+            hrefAriaLabel="Open Airalo eSIM in a new tab"
+            fit="contain"
+            priority
+            className="max-w-2xl"
+          />
         </div>
       }
       beforeComparison={
@@ -73,6 +93,15 @@ export default function EsimVsPocketWifiJapanPage() {
               the airport unless you also buy one for other reasons.
             </p>
           </div>
+          <EditorialImage
+            src={guideImages.step01}
+            alt="Phone screen showing eSIM installation for Japan travel data"
+            caption="Install your eSIM on WiFi before you land when your phone supports it."
+            href={AIRALO_URL}
+            hrefAriaLabel="Open Airalo eSIM in a new tab"
+            fit="contain"
+            className="max-w-2xl"
+          />
         </section>
 
         <RealityCheck noteId="esim-vs-pocket-esim-flow">
@@ -100,6 +129,15 @@ export default function EsimVsPocketWifiJapanPage() {
               more sharing power.
             </p>
           </div>
+          <EditorialImage
+            src={guideImages.step02}
+            alt="Pocket WiFi hotspot device shared between travelers in Japan"
+            caption="Pocket WiFi can win when several phones need data at the same time."
+            href={UBIGI_URL}
+            hrefAriaLabel="Open Ubigi eSIM in a new tab"
+            fit="contain"
+            className="max-w-2xl"
+          />
         </section>
 
         <TouristMistakeNote noteId="esim-vs-pocket-return-friction">
@@ -130,6 +168,16 @@ export default function EsimVsPocketWifiJapanPage() {
           </div>
         </section>
 
+        <EditorialImage
+          src={guideImages.section01}
+          alt="Comparison of eSIM and pocket WiFi speed for Japan travel"
+          caption="For maps and messaging, both formats are usually fast enough in major cities."
+          href={AIRALO_URL}
+          hrefAriaLabel="Open Airalo eSIM in a new tab"
+          fit="contain"
+          className="max-w-2xl"
+        />
+
         <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
             Price Comparison
@@ -147,6 +195,16 @@ export default function EsimVsPocketWifiJapanPage() {
             </p>
           </div>
         </section>
+
+        <EditorialImage
+          src={guideImages.section02}
+          alt="Price tradeoffs between solo eSIM and shared pocket WiFi in Japan"
+          caption="Solo trips usually favor eSIM on price and convenience."
+          href={UBIGI_URL}
+          hrefAriaLabel="Open Ubigi eSIM in a new tab"
+          fit="contain"
+          className="max-w-2xl"
+        />
 
         <section className="mb-6 max-w-2xl">
           <h2 className="editorial-heading mb-4">
@@ -262,6 +320,18 @@ export default function EsimVsPocketWifiJapanPage() {
             </p>
           </div>
         </section>
+
+        <EditorialImage
+          src={guideImages.mainPhoto}
+          alt="Airalo and Ubigi eSIM options compared with pocket WiFi for Japan travel"
+          caption="Tap the left side for Airalo or the right side for Ubigi if eSIM is your path."
+          fit="contain"
+          href={AIRALO_URL}
+          hrefAriaLabel="Open Airalo eSIM in a new tab"
+          secondaryHref={UBIGI_URL}
+          secondaryHrefAriaLabel="Open Ubigi eSIM in a new tab"
+          className="max-w-2xl"
+        />
 
         <NextStepGuides guideId="esim-vs-pocket-wifi-japan" />
 

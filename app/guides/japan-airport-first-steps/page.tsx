@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { EditorialImage } from "@/components/editorial/EditorialImage";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { ItineraryGuideCta } from "@/components/itinerary/ItineraryGuideCta";
@@ -10,6 +11,11 @@ import { DownloadChecklistBox } from "@/components/DownloadChecklistBox";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RecommendedServicesBox } from "@/components/RecommendedServicesBox";
 import { OperationalWarning, RealityCheck } from "@/components/editorial/field-notes";
+import { guidePageImages } from "@/lib/guide-page-images";
+
+const GUIDE_SLUG = "japan-airport-first-steps";
+
+const guideImages = guidePageImages(GUIDE_SLUG);
 
 export const metadata: Metadata = {
   title:
@@ -24,6 +30,7 @@ const conversionBox =
 export default function JapanAirportFirstStepsPage() {
   return (
     <GuideArticleShell
+      comparisonItems={null}
       title={
         <h1
           className="guide-page-title"
@@ -53,6 +60,14 @@ export default function JapanAirportFirstStepsPage() {
               Airport to hotel (Narita, Haneda, Kansai)
             </Link>
           </p>
+          <EditorialImage
+            src={guideImages.hero}
+            alt="Arrivals hall at a Japanese airport after landing at Narita or Haneda"
+            caption="Your first hour is immigration, bags, data, and a train route you already picked."
+            fit="contain"
+            priority
+            className="max-w-2xl"
+          />
         </div>
       }
       beforeComparison={
@@ -152,6 +167,14 @@ export default function JapanAirportFirstStepsPage() {
           </p>
         </OperationalWarning>
 
+        <EditorialImage
+          src={guideImages.step01}
+          alt="Immigration queue and passport control at a Japanese airport"
+          caption="Have passport and arrival paperwork ready before you reach the desk."
+          fit="contain"
+          className="max-w-2xl"
+        />
+
         <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             Step 2: Baggage Claim and Customs
@@ -174,6 +197,13 @@ export default function JapanAirportFirstStepsPage() {
               sign competes for your attention.
             </p>
           </div>
+          <EditorialImage
+            src={guideImages.step02}
+            alt="Baggage claim and customs area at a Japanese airport"
+            caption="Collect your bag, declare honestly if needed, then walk into the arrivals hall."
+            fit="contain"
+            className="max-w-2xl"
+          />
         </section>
 
         <section className="mb-6">
@@ -207,6 +237,14 @@ export default function JapanAirportFirstStepsPage() {
             trains without joining another queue.
           </p>
         </RealityCheck>
+
+        <EditorialImage
+          src={guideImages.section01}
+          alt="Traveler setting up mobile data or eSIM after landing in Japan"
+          caption="Set up eSIM on airport WiFi when you can, then skip the kiosk queue."
+          fit="contain"
+          className="max-w-2xl"
+        />
         </>
       }
       afterComparison={
@@ -294,6 +332,13 @@ export default function JapanAirportFirstStepsPage() {
               </Link>
             </p>
           </div>
+          <EditorialImage
+            src={guideImages.section02}
+            alt="Airport train platform toward Tokyo from Narita or Haneda"
+            caption="Pick your line before you reach the gates: N&apos;EX, Skyliner, monorail, or Keikyu depending on airport."
+            fit="contain"
+            className="max-w-2xl"
+          />
         </section>
 
         <RecommendedServicesBox serviceId="japan-airport-first-steps" />
@@ -337,6 +382,14 @@ export default function JapanAirportFirstStepsPage() {
             </li>
           </ul>
         </section>
+
+        <EditorialImage
+          src={guideImages.mainPhoto}
+          alt="Traveler leaving a Japanese airport with data, IC card, and train route ready"
+          caption="Before you leave: data works, IC tap works, and you know your platform."
+          fit="contain"
+          className="max-w-2xl"
+        />
 
         <section className="mb-6 max-w-2xl border-t border-tan pt-8">
           <h2 className="font-display text-dark tracking-wide text-3xl mb-4">

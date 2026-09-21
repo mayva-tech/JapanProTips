@@ -1,8 +1,15 @@
 /** Local editorial image paths under /public/images */
 
+export type PageImageCategory =
+  | "guides"
+  | "residents"
+  | "tools"
+  | "field-notes"
+  | "articles";
+
 /** Per-page image folder under /public/images/{category}/{slug}/ */
 export function pageImagePath(
-  category: "guides" | "residents" | "tools" | "field-notes" | "articles",
+  category: PageImageCategory,
   slug: string,
   filename: string,
 ): string {

@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { EditorialImage } from "@/components/editorial/EditorialImage";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { TrackedOutboundSimLink } from "@/components/TrackedOutboundSimLink";
+import { guidePageImages } from "@/lib/guide-page-images";
+
+const GUIDE_SLUG = "airalo-vs-ubigi-japan";
+
+const guideImages = guidePageImages(GUIDE_SLUG);
 
 export const metadata: Metadata = {
   title:
@@ -51,6 +57,16 @@ export default function AiraloVsUbigiJapanPage() {
               Do you need a SIM in Japan? →
             </Link>
           </div>
+          <EditorialImage
+            src={guideImages.hero}
+            alt="Traveler checking mobile data on a phone after landing in Japan"
+            caption="Both Airalo and Ubigi get you online in Japan. The real difference is setup feel and stability."
+            href={AIRALO_URL}
+            hrefAriaLabel="Open Airalo eSIM in a new tab"
+            fit="contain"
+            priority
+            className="max-w-2xl"
+          />
         </div>
       }
       beforeComparison={
@@ -88,6 +104,15 @@ export default function AiraloVsUbigiJapanPage() {
             </TrackedOutboundSimLink>
           </div>
         </section>
+
+        <EditorialImage
+          src={guideImages.section01}
+          alt="Side-by-side view of eSIM app setup options for Japan travel"
+          caption="Most travelers only need a quick pick: Airalo for simplicity, Ubigi for slightly more stability."
+          href={AIRALO_URL}
+          hrefAriaLabel="Open Airalo eSIM in a new tab"
+          className="max-w-2xl"
+        />
         </>
       }
       afterComparison={
@@ -167,6 +192,15 @@ export default function AiraloVsUbigiJapanPage() {
           </div>
         </section>
 
+        <EditorialImage
+          src={guideImages.section02}
+          alt="Comparison of Airalo and Ubigi eSIM features for Japan visitors"
+          caption="Setup, app feel, and reliability matter more than small price gaps between the two."
+          href={UBIGI_URL}
+          hrefAriaLabel="Open Ubigi eSIM in a new tab"
+          className="max-w-2xl"
+        />
+
         <section className="mb-6">
           <h2 className="editorial-heading mb-4">
             What Actually Matters
@@ -180,6 +214,14 @@ export default function AiraloVsUbigiJapanPage() {
                 <p>Airalo is faster and easier.</p>
                 <p>Ubigi may need extra steps.</p>
               </div>
+              <EditorialImage
+                src={guideImages.step01}
+                alt="Phone screen showing eSIM installation steps before a Japan trip"
+                caption="Install and activate before you land so maps and transit apps work at the airport."
+                href={AIRALO_URL}
+                hrefAriaLabel="Open Airalo eSIM in a new tab"
+                className="max-w-2xl"
+              />
             </div>
             <div>
               <h3 className="font-sans font-bold text-dark text-lg mb-3">
@@ -189,6 +231,14 @@ export default function AiraloVsUbigiJapanPage() {
                 <p>Both are good in cities.</p>
                 <p>Ubigi is slightly more stable in some cases.</p>
               </div>
+              <EditorialImage
+                src={guideImages.step02}
+                alt="Mobile data connection working on a phone in a busy Japanese city"
+                caption="In Tokyo, Osaka, and Kyoto, both providers usually feel fast enough for maps and messaging."
+                href={UBIGI_URL}
+                hrefAriaLabel="Open Ubigi eSIM in a new tab"
+                className="max-w-2xl"
+              />
             </div>
             <div>
               <h3 className="font-sans font-bold text-dark text-lg mb-3">
@@ -263,6 +313,18 @@ export default function AiraloVsUbigiJapanPage() {
             </li>
           </ul>
         </section>
+
+        <EditorialImage
+          src={guideImages.mainPhoto}
+          alt="Airalo and Ubigi eSIM options compared for Japan travel"
+          caption="Tap the left side for Airalo or the right side for Ubigi, then set up before you land."
+          fit="contain"
+          href={AIRALO_URL}
+          hrefAriaLabel="Open Airalo eSIM in a new tab"
+          secondaryHref={UBIGI_URL}
+          secondaryHrefAriaLabel="Open Ubigi eSIM in a new tab"
+          className="max-w-2xl cursor-pointer"
+        />
 
         <NextStepGuides guideId="airalo-vs-ubigi-japan" />
 

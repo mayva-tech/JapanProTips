@@ -56,8 +56,8 @@ export async function MdxGuidePage({
         <article className="page-x mx-auto min-w-0 max-w-3xl pt-10 pb-14">
           {title}
           {intro ? <div className="mb-6">{intro}</div> : null}
-          <MdxGuideContent source={beforeComparison} />
-          <MdxGuideContent source={afterComparison} />
+          <MdxGuideContent source={beforeComparison} slug={slug} />
+          <MdxGuideContent source={afterComparison} slug={slug} />
           <ResidentsCrosslinks currentHref={residentHref} />
         </article>
       </main>
@@ -73,10 +73,12 @@ export async function MdxGuidePage({
     <GuideArticleShell
       title={title}
       intro={intro}
-      beforeComparison={<MdxGuideContent source={beforeComparison} />}
+      beforeComparison={
+        <MdxGuideContent source={beforeComparison} slug={slug} />
+      }
       afterComparison={
         <>
-          <MdxGuideContent source={afterComparison} />
+          <MdxGuideContent source={afterComparison} slug={slug} />
           {frontmatter.parentHref && frontmatter.parentLabel ? (
             <GuideEndCta
               parentHref={frontmatter.parentHref}

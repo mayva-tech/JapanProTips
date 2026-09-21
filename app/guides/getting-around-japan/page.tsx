@@ -1,9 +1,20 @@
 import type { Metadata } from "next";
+import { EditorialImage } from "@/components/editorial/EditorialImage";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
 import { RecommendedGearBox } from "@/components/RecommendedGearBox";
 import { LocalTip, OperationalWarning } from "@/components/editorial/field-notes";
+import { resolvePageImagePath } from "@/lib/guide-page-images";
+
+const GUIDE_SLUG = "getting-around-japan";
+
+const guideImages = {
+  hero: resolvePageImagePath("guides", GUIDE_SLUG, "hero"),
+  section01: resolvePageImagePath("guides", GUIDE_SLUG, "section-01"),
+  step01: resolvePageImagePath("guides", GUIDE_SLUG, "step-01"),
+  mainPhoto: resolvePageImagePath("guides", GUIDE_SLUG, "main-photo"),
+} as const;
 
 export const metadata: Metadata = {
   title:
@@ -15,6 +26,7 @@ export const metadata: Metadata = {
 export default function GettingAroundJapanGuidePage() {
   return (
     <GuideArticleShell
+      comparisonItems={null}
       title={
         <h1 className="guide-page-title">
           Getting Around Japan: Trains, IC Cards & Apps
@@ -26,6 +38,14 @@ export default function GettingAroundJapanGuidePage() {
             Japan&apos;s train maps look busy. That is normal. You do not need to
             learn the whole network. Learn a few habits and follow your phone.
           </p>
+          <EditorialImage
+            src={guideImages.hero}
+            alt="Travelers using trains and ticket gates to get around Japan"
+            caption="Trains are the default way to move between airports, neighborhoods, and cities."
+            fit="contain"
+            priority
+            className="max-w-2xl"
+          />
         </div>
       }
       beforeComparison={
@@ -95,6 +115,14 @@ export default function GettingAroundJapanGuidePage() {
             </p>
           </LocalTip>
 
+          <EditorialImage
+            src={guideImages.section01}
+            alt="JR and metro lines on a Japan rail map for first-time visitors"
+            caption="JR and metro look different on maps, but your app handles the transfers."
+            fit="contain"
+            className="max-w-2xl"
+          />
+
           <h2>JR vs Metro (Don&apos;t Overthink This)</h2>
           <p className="article-body mb-3">
             <strong className="font-sans font-bold text-dark">JR</strong> runs many
@@ -137,6 +165,14 @@ export default function GettingAroundJapanGuidePage() {
             before you board. If the app and the signs disagree, trust the platform
             signs and station staff.
           </p>
+
+          <EditorialImage
+            src={guideImages.step01}
+            alt="Phone with Google Maps or NAVITIME open for Japan train directions"
+            caption="Open maps, follow the route, and double-check the platform sign before you board."
+            fit="contain"
+            className="max-w-2xl"
+          />
         </div>
       }
       afterComparison={
@@ -182,6 +218,14 @@ export default function GettingAroundJapanGuidePage() {
             <li>Use an IC card and tap in and out.</li>
             <li>Follow Google Maps or NAVITIME and read station signs.</li>
           </ul>
+
+          <EditorialImage
+            src={guideImages.mainPhoto}
+            alt="Japan train platform and IC card gate for everyday travel"
+            caption="IC card in, IC card out, and let the app handle the line changes."
+            fit="contain"
+            className="max-w-2xl"
+          />
 
           <NextStepGuides guideId="getting-around-japan" />
 

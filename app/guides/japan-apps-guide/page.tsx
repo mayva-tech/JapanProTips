@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { EditorialImage } from "@/components/editorial/EditorialImage";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { guidePageImages } from "@/lib/guide-page-images";
+
+const GUIDE_SLUG = "japan-apps-guide";
+
+const guideImages = guidePageImages(GUIDE_SLUG);
 
 export const metadata: Metadata = {
   title: "Best Apps for Japan Travel (Navigation, Trains, Translation, Food)",
@@ -147,6 +153,14 @@ function IntroBlock() {
         </Link>{" "}
         before you debate which train icon looks prettiest.
       </p>
+      <EditorialImage
+        src={guideImages.hero}
+        alt="Smartphone home screen with Japan travel apps for maps, trains, and translation"
+        caption="Stack maps, one train app, and translation before you install twenty icons you never open."
+        fit="contain"
+        priority
+        className="max-w-2xl"
+      />
     </div>
   );
 }
@@ -235,6 +249,14 @@ function MainContent() {
           </table>
         </div>
 
+        <EditorialImage
+          src={guideImages.section01}
+          alt="Quick reference table of essential Japan travel apps by task"
+          caption="Google Maps, NAVITIME or Yahoo, Google Translate, and IC cover most first trips without app overload."
+          fit="contain"
+          className="max-w-2xl"
+        />
+
         <H3>Train and navigation</H3>
         <p className="article-body max-w-2xl mb-4">
           Pair{" "}
@@ -296,6 +318,14 @@ function MainContent() {
           offline="Assume data for fresh cancellations or delays."
           english="Mixed. Pair with patience or a backup app."
           mistakes="Skipping the on platform board when a last train is non negotiable."
+        />
+
+        <EditorialImage
+          src={guideImages.step01}
+          alt="Google Maps, NAVITIME, and Yahoo Transit apps used for Japan train navigation"
+          caption="Pair Google Maps with one Japan-first train app and verify platform signs at the gate."
+          fit="contain"
+          className="max-w-2xl"
         />
 
         <H3>Translation</H3>
@@ -423,6 +453,14 @@ function MainContent() {
           </Link>{" "}
           and set IC before you pretend you can ride on screenshots alone.
         </p>
+
+        <EditorialImage
+          src={guideImages.step02}
+          alt="PayPay and mobile Suica apps for payments and train gates in Japan"
+          caption="Set up IC before day one; add PayPay only if you see the pink logo often in your neighborhood."
+          fit="contain"
+          className="max-w-2xl"
+        />
 
         <H3>Taxi</H3>
         <AppBlock
@@ -617,6 +655,14 @@ function MainContent() {
             </tbody>
           </table>
         </div>
+
+        <EditorialImage
+          src={guideImages.section02}
+          alt="Phone showing data usage for maps, translation, and IC top-up in Japan"
+          caption="Download offline maps and translation packs before you fly; treat live routing as data hungry."
+          fit="contain"
+          className="max-w-2xl"
+        />
       </section>
 
       <section className="mb-6">
@@ -735,6 +781,14 @@ function MainContent() {
 function FooterContent() {
   return (
     <>
+      <EditorialImage
+        src={guideImages.mainPhoto}
+        alt="Traveler using phone for maps and translation at a Japanese train station"
+        caption="Keep the home screen boring: maps, translate, IC, and screenshots beat twenty panic installs."
+        fit="contain"
+        className="max-w-2xl"
+      />
+
       <section className="mb-6">
         <H2>Final read</H2>
         <div className="article-body space-y-4 max-w-2xl">

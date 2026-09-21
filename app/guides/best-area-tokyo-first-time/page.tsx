@@ -2,17 +2,14 @@ import type { Metadata } from "next";
 import { EditorialImage } from "@/components/editorial/EditorialImage";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { StayAreaAffiliateCards } from "@/components/guides/StayAreaAffiliateCards";
 import { NextStepGuides } from "@/components/NextStepGuides";
-import { pageImagePath } from "@/lib/images";
+import { guidePageImages } from "@/lib/guide-page-images";
+import { TOKYO_STAY_BOOKING_URLS } from "@/lib/tokyo-stay-booking-urls";
 
 const GUIDE_SLUG = "best-area-tokyo-first-time";
 
-const guideImages = {
-  hero: pageImagePath("guides", GUIDE_SLUG, "hero.jpg"),
-  section01: pageImagePath("guides", GUIDE_SLUG, "section-01.jpg"),
-  step01: pageImagePath("guides", GUIDE_SLUG, "step-01.jpg"),
-  mainPhoto: pageImagePath("guides", GUIDE_SLUG, "main-photo.jpg"),
-} as const;
+const guideImages = guidePageImages(GUIDE_SLUG);
 
 export const metadata: Metadata = {
   title: "Best Area to Stay in Tokyo for First-Time Visitors",
@@ -45,6 +42,9 @@ export default function BestAreaTokyoFirstTimePage() {
             src={guideImages.hero}
             alt="Traveler with luggage passing through IC card ticket gates at a Tokyo train station"
             caption="First-time Tokyo stays work best when your hotel sits near a major rail hub."
+            href={TOKYO_STAY_BOOKING_URLS.tokyo}
+            hrefAriaLabel="Search stays in Tokyo on Booking.com"
+            gtagLabel="hotel"
             priority
             className="max-w-2xl"
           />
@@ -76,6 +76,9 @@ export default function BestAreaTokyoFirstTimePage() {
             src={guideImages.section01}
             alt="Row of automated IC card ticket gates inside a major Tokyo train station concourse"
             caption="The four areas below differ in vibe and price, but all depend on quick station access."
+            href={TOKYO_STAY_BOOKING_URLS.ginza}
+            hrefAriaLabel="Search stays in Ginza on Booking.com"
+            gtagLabel="hotel"
             className="max-w-2xl"
           />
         </>
@@ -158,6 +161,18 @@ export default function BestAreaTokyoFirstTimePage() {
             </div>
           </section>
 
+          <EditorialImage
+            src={guideImages.section02}
+            alt="Tokyo neighborhood streets and transit access between major visitor districts"
+            caption="Compare areas by how you want mornings, evenings, and train rides to feel."
+            href={TOKYO_STAY_BOOKING_URLS.shinjuku}
+            hrefAriaLabel="Search stays in Shinjuku on Booking.com"
+            gtagLabel="hotel"
+            className="max-w-2xl"
+          />
+
+          <StayAreaAffiliateCards />
+
           <section className="mb-6">
             <h2 className="editorial-heading mb-4">
               Why station access matters
@@ -191,6 +206,9 @@ export default function BestAreaTokyoFirstTimePage() {
                   src={guideImages.step01}
                   alt="Ticket gates at a busy Tokyo rail hub, the kind Shinjuku visitors pass through daily"
                   caption="Shinjuku's edge is the station itself: dense lines west, north, and across the city."
+                  href={TOKYO_STAY_BOOKING_URLS.shinjuku}
+                  hrefAriaLabel="Search stays in Shinjuku on Booking.com"
+                  gtagLabel="hotel"
                   className="max-w-2xl"
                 />
               </div>
@@ -202,6 +220,15 @@ export default function BestAreaTokyoFirstTimePage() {
                   Pick when you want the trip centered on nights out, music, and crossing
                   town to Harajuku or Daikanyama without thinking too hard.
                 </p>
+                <EditorialImage
+                  src={guideImages.step02}
+                  alt="Shibuya area street scene and transit links for nightlife-focused stays"
+                  caption="Shibuya suits trips built around evenings out and quick hops to nearby districts."
+                  href={TOKYO_STAY_BOOKING_URLS.shibuya}
+                  hrefAriaLabel="Search stays in Shibuya on Booking.com"
+                  gtagLabel="hotel"
+                  className="max-w-2xl"
+                />
               </div>
               <div>
                 <h3 className="font-display text-dark text-2xl tracking-wide mb-2">Ueno</h3>
@@ -259,6 +286,10 @@ export default function BestAreaTokyoFirstTimePage() {
             src={guideImages.mainPhoto}
             alt="Traveler with a suitcase at automated ticket gates in a Tokyo station"
             caption="Choose a base you can reach by train each morning without a long walk to the gates."
+            fit="contain"
+            href={TOKYO_STAY_BOOKING_URLS.tokyoStation}
+            hrefAriaLabel="Search stays near Tokyo Station on Booking.com"
+            gtagLabel="hotel"
             className="max-w-2xl"
           />
 

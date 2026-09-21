@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { EditorialImage } from "@/components/editorial/EditorialImage";
 import { OperationalWarning, RealityCheck } from "@/components/editorial/field-notes";
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
 import { NextStepGuides } from "@/components/NextStepGuides";
+import { guidePageImages } from "@/lib/guide-page-images";
+
+const GUIDE_SLUG = "haneda-to-tokyo";
+
+const guideImages = guidePageImages(GUIDE_SLUG);
 
 export const metadata: Metadata = {
   title: "Haneda to Tokyo: Best Way to Get to Your Hotel",
@@ -45,6 +51,14 @@ export default function HanedaToTokyoPage() {
               Full Japan airport to hotel guide (Narita, Haneda, Kansai) →
             </Link>
           </p>
+          <EditorialImage
+            src={guideImages.hero}
+            alt="Haneda Airport transit options toward central Tokyo"
+            caption="Haneda sits close to the city, so trains usually beat taxis on time and cost."
+            fit="contain"
+            priority
+            className="max-w-2xl"
+          />
         </div>
       }
       beforeComparison={
@@ -69,6 +83,14 @@ export default function HanedaToTokyoPage() {
               </p>
             </RealityCheck>
           </section>
+
+          <EditorialImage
+            src={guideImages.section01}
+            alt="Keikyu and monorail signs at Haneda Airport for Tokyo-bound travelers"
+            caption="Most first-time visitors start with Keikyu or the Tokyo Monorail, then transfer once if needed."
+            fit="contain"
+            className="max-w-2xl"
+          />
         </>
       }
       afterComparison={
@@ -149,6 +171,14 @@ export default function HanedaToTokyoPage() {
             </div>
           </section>
 
+          <EditorialImage
+            src={guideImages.section02}
+            alt="Comparison of Haneda to Tokyo transport options by train, bus, and taxi"
+            caption="Keikyu and the monorail cover most hotel areas with one transfer or less."
+            fit="contain"
+            className="max-w-2xl"
+          />
+
           <OperationalWarning noteId="haneda-keikyu-peak-crowd">
             <p>
               Keikyu can feel fine on paper and still be a shoulder-to-shoulder
@@ -168,6 +198,13 @@ export default function HanedaToTokyoPage() {
               </p>
               <p>Follow your map app for the exact line and platform.</p>
             </div>
+            <EditorialImage
+              src={guideImages.step01}
+              alt="Keikyu Line platform at Haneda Airport heading toward Shinagawa and Tokyo"
+              caption="Keikyu is often the simplest rail path toward south Tokyo and JR connections."
+              fit="contain"
+              className="max-w-2xl"
+            />
           </section>
 
           <section className="mb-6">
@@ -181,6 +218,13 @@ export default function HanedaToTokyoPage() {
               </p>
               <p>Good when your route already lines up with that transfer pattern.</p>
             </div>
+            <EditorialImage
+              src={guideImages.step02}
+              alt="Tokyo Monorail departing Haneda Airport toward Hamamatsucho"
+              caption="The monorail works well when your hotel route already passes Hamamatsucho."
+              fit="contain"
+              className="max-w-2xl"
+            />
           </section>
 
           <section className="mb-6">
@@ -233,6 +277,14 @@ export default function HanedaToTokyoPage() {
               </li>
             </ul>
           </section>
+
+          <EditorialImage
+            src={guideImages.mainPhoto}
+            alt="Traveler leaving Haneda Airport toward a Tokyo hotel by train"
+            caption="Pick one route before you land, then follow signs and your map app at the station."
+            fit="contain"
+            className="max-w-2xl"
+          />
 
           <NextStepGuides guideId="haneda-to-tokyo" />
 

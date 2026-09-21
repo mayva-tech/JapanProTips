@@ -1,41 +1,155 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { MagazinePageHeader } from "@/components/editorial/MagazinePageHeader";
 import { MagazineShell } from "@/components/editorial/MagazineShell";
 
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Frequently asked questions about JapanProTips: who we are, how guides work, and how to plan your trip or life in Japan.",
+    "Frequently asked questions about JapanProTips: travel and resident guides, engineering career resources, and engineering communication services for Japan.",
 };
 
-const faqItems = [
+type FaqItem = {
+  question: string;
+  answer: ReactNode;
+};
+
+const inlineLink =
+  "font-bold text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon";
+
+const faqItems: FaqItem[] = [
   {
     question: "What is JapanProTips?",
-    answer:
-      "JapanProTips is a field guide for Japan travel and daily life. We publish practical guides and tools written for visitors and residents, not package tours or generic listicles.",
+    answer: (
+      <>
+        JapanProTips is a practical field guide for Japan. We publish visitor
+        guides and tools for travel planning, resident guides for daily life
+        after you move, and engineering resources for foreign engineers working
+        inside Japanese manufacturing and product development organizations. It
+        is not a travel agency, package tour seller, or generic consulting site.
+      </>
+    ),
   },
   {
     question: "Are you a travel agency?",
-    answer:
-      "No. We do not sell trips, visas, or bookings. Some pages link to third-party services we use ourselves; those may include affiliate links where noted.",
+    answer: (
+      <>
+        No. We do not sell trips, visas, or bookings. Some travel pages link to
+        third-party services we use ourselves; those may include affiliate links
+        where noted. Engineering services are separate and focus on technical
+        communication and documentation support, not travel sales.
+      </>
+    ),
   },
   {
     question: "Where should I start for a first trip?",
-    answer:
-      "Use the Start Here checklist, then open guides for SIM cards, trains, and where to stay. The tourist guides hub lists every visitor article in one place.",
+    answer: (
+      <>
+        Use the{" "}
+        <Link href="/start-here" className={inlineLink}>
+          Start Here checklist
+        </Link>
+        , then open guides for SIM cards, trains, and where to stay. The{" "}
+        <Link href="/tourists" className={inlineLink}>
+          tourist guides hub
+        </Link>{" "}
+        lists every visitor article in one place.
+      </>
+    ),
   },
   {
     question: "Do you cover living in Japan?",
-    answer:
-      "Yes. The Living hub and resident guides cover apartments, banks, health insurance, utilities, and day-to-day systems after you move.",
+    answer: (
+      <>
+        Yes. The{" "}
+        <Link href="/residents" className={inlineLink}>
+          Living hub
+        </Link>{" "}
+        and resident guides cover apartments, banks, health insurance,
+        utilities, and day-to-day systems after you move.
+      </>
+    ),
+  },
+  {
+    question: "Do you offer engineering services?",
+    answer: (
+      <>
+        Yes.{" "}
+        <Link href="/engineering-services" className={inlineLink}>
+          Engineering Services
+        </Link>{" "}
+        covers engineering documentation review, technical communication
+        support, engineer career positioning, and product development
+        documentation. Work is grounded in more than 25 years of experience
+        inside Japanese manufacturing and product development organizations.
+        You can request a free sample review to start; there is no payment
+        system on the site yet.
+      </>
+    ),
+  },
+  {
+    question: "What is the Engineer hub?",
+    answer: (
+      <>
+        The{" "}
+        <Link href="/engineer" className={inlineLink}>
+          Engineer hub
+        </Link>{" "}
+        is a long-term authority section for foreign engineers in Japan. It
+        covers career topics such as visas, job hunting, manufacturing culture,
+        product development, CAD and CAE paths, supplier coordination, and
+        cross-cultural engineering communication. Featured guides are being
+        added over time; placeholder cards mark topics planned for publication.
+      </>
+    ),
+  },
+  {
+    question: "Is this automation consulting or influencer content?",
+    answer: (
+      <>
+        No. The engineering vertical is not positioned as automation consulting,
+        generic English editing, or expat lifestyle blogging. Authority comes from
+        manufacturing, automotive, and product development experience inside
+        Japanese organizations, plus practical lessons on engineering
+        communication and documentation.
+      </>
+    ),
+  },
+  {
+    question: "Can you review engineering reports or supplier emails?",
+    answer: (
+      <>
+        Yes, that is a core use case for{" "}
+        <Link href="/engineering-services" className={inlineLink}>
+          Engineering Services
+        </Link>
+        . Typical requests include validation reports, test reports, supplier
+        communication, technical presentations, and engineering change
+        documentation. NDAs are available. See the services page FAQ for scope
+        details.
+      </>
+    ),
   },
   {
     question: "Will this FAQ grow?",
-    answer:
-      "Yes. We are adding common questions as readers ask them. For now, browse guides and tools for step-by-step answers.",
+    answer: (
+      <>
+        Yes. We add questions as readers ask them. For step-by-step travel and
+        resident answers, browse guides and tools. For engineering career topics,
+        start at the{" "}
+        <Link href="/engineer" className={inlineLink}>
+          Engineer hub
+        </Link>
+        . For documentation or communication support, see{" "}
+        <Link href="/engineering-services" className={inlineLink}>
+          Engineering Services
+        </Link>
+        .
+      </>
+    ),
   },
-] as const;
+];
 
 export default function FaqPage() {
   return (
@@ -43,7 +157,7 @@ export default function FaqPage() {
       <MagazinePageHeader
         kicker="Help"
         title="Frequently asked questions"
-        description="Quick answers about JapanProTips and how to use the site. More questions will be added here over time."
+        description="Quick answers about JapanProTips: travel and resident guides, the Engineer hub, and engineering communication services. More questions will be added here over time."
         actions={
           <Link
             href="/start-here"
@@ -64,15 +178,29 @@ export default function FaqPage() {
           ))}
         </div>
 
-        <p className="article-body mt-10 max-w-3xl">
-          Still planning a trip?{" "}
-          <Link
-            href="/tourists"
-            className="editorial-chevron-link font-bold text-rust underline decoration-rust/35 underline-offset-2 hover:text-maroon"
-          >
-            Browse tourist guides
-          </Link>
-        </p>
+        <div className="article-body mt-10 max-w-3xl space-y-3">
+          <p>
+            Planning a trip?{" "}
+            <Link href="/tourists" className={`editorial-chevron-link ${inlineLink}`}>
+              Browse tourist guides
+            </Link>
+          </p>
+          <p>
+            Working in Japan as an engineer?{" "}
+            <Link href="/engineer" className={`editorial-chevron-link ${inlineLink}`}>
+              Visit the Engineer hub
+            </Link>
+          </p>
+          <p>
+            Need documentation or communication support?{" "}
+            <Link
+              href="/engineering-services"
+              className={`editorial-chevron-link ${inlineLink}`}
+            >
+              Explore Engineering Services
+            </Link>
+          </p>
+        </div>
       </MagazineShell>
     </main>
   );

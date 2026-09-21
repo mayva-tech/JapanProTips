@@ -44,6 +44,9 @@ export function Navbar({ searchEntries }: NavbarProps) {
           <Link href="/tools" className="aom-nav-link text-[0.7rem]">
             TOOLS
           </Link>
+          <Link href="/engineer" className="aom-nav-link text-[0.7rem]">
+            ENGINEER
+          </Link>
           <NavbarSearch entries={searchEntries} />
         </div>
       </div>

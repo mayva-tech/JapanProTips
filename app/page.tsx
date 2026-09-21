@@ -12,11 +12,12 @@ import { TrackedToolLink } from "@/components/tools/TrackedToolLink";
 import { buildGuideSearchIndex } from "@/lib/guide-search-index.server";
 import { IMAGES } from "@/lib/images";
 import { SITE_TOOLS, toRecommendationCard } from "@/lib/site-tools";
+import { HomeEngineeringCta } from "@/components/editorial/HomeEngineeringCta";
 import { HomeResidentCta } from "@/components/editorial/HomeResidentCta";
 import { PopularStartHereGuides } from "@/components/editorial/PopularStartHereGuides";
 import { ItineraryHubCta } from "@/components/itinerary/ItineraryHubCta";
 import { TrackedStartHereLink } from "@/components/TrackedStartHereLink";
-import { SiteLogo } from "@/components/brand/SiteLogo";
+import { HomePageFooter } from "@/components/brand/HomePageFooter";
 import { DEFAULT_DESCRIPTION, DEFAULT_TITLE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -184,6 +185,8 @@ export default function HomePage() {
         </MagazineShell>
       </section>
 
+      <HomeEngineeringCta />
+
       <section className="bg-ink py-14 sm:py-16">
         <MagazineShell>
           <div className="border border-paper-edge/20 px-8 py-8 sm:px-10 sm:py-8">
@@ -205,14 +208,7 @@ export default function HomePage() {
         </MagazineShell>
       </section>
 
-      <footer className="border-t-2 border-ink bg-paper">
-        <MagazineShell className="flex flex-wrap items-center justify-between gap-4 py-8">
-          <SiteLogo variant="footer" />
-          <span className="article-body max-w-md italic sm:text-right">
-            Practical Japan explained simply.
-          </span>
-        </MagazineShell>
-      </footer>
+      <HomePageFooter />
     </main>
   );
 }
