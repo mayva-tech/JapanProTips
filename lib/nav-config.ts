@@ -42,6 +42,7 @@ export const ENGINEERING_FOOTER_LINKS: NavPrimaryLink[] = [
 
 /** Top-level nav after category menus: travel/resident first, engineering secondary. */
 export const NAV_PRIMARY_LINKS: NavPrimaryLink[] = [
+  { id: "learn", label: "Learn", href: "/learn-japanese" },
   ENGINEERING_PRIMARY_NAV_LINK,
   { id: "faq", label: "FAQ", href: "/faq" },
 ];
