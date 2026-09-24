@@ -413,6 +413,10 @@ function expandSpokenClockTimes(text: string): string {
 }
 
 export function buildEnglishSpeakText(text: string): string {
+  // A lone list number ("1.") is read as "one", not "first" or "number one".
+  const listNumber = /^\s*(\d{1,3})[.)]?\s*$/.exec(text);
+  if (listNumber) return integerToWords(Number(listNumber[1]));
+
   let out = expandMountAbbreviation(
     appendSlashSpeakPause(
       appendWaveDashSpeakPause(

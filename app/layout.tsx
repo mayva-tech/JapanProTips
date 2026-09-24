@@ -6,6 +6,7 @@ import { MicrosoftClarity } from "@/components/MicrosoftClarity";
 import { NavbarWithSearch } from "@/components/NavbarWithSearch";
 import { ScrollDepthTracker } from "@/components/ScrollDepthTracker";
 import { SoftExitCta } from "@/components/SoftExitCta";
+import { SiteTalkingHeads } from "@/components/SiteTalkingHeads";
 import { BRAND_LOGO } from "@/lib/brand";
 import {
   DEFAULT_DESCRIPTION,
@@ -93,6 +94,7 @@ export default function RootLayout({
         <NavbarWithSearch />
         {children}
         <SoftExitCta />
+        <SiteTalkingHeads />
       </body>
     </html>
   );

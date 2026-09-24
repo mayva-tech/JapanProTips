@@ -12,6 +12,7 @@ import {
   StartHereFunnelBlock,
   type ComparisonRow,
 } from "@/components/conversion";
+import { GuidePageReadAloud } from "@/components/guides/GuidePageReadAloud";
 import { GuideTitleText, textFromPlainTitleChildren } from "./GuidePageTitle";
 import { DEFAULT_GUIDE_COMPARISON_ROWS } from "./guide-conversion-defaults";
 
@@ -28,6 +29,8 @@ export type GuideArticleShellProps = {
   /** Pass `false` to hide the hotel conversion block (for example on resident-only guides). */
   showHotelConversion?: boolean;
   maxWidthClass?: string;
+  /** Optional slug for read-aloud analytics; defaults to the URL path segment. */
+  guideSlug?: string;
 };
 
 function hasGuideTitleClass(className: unknown) {
@@ -69,6 +72,7 @@ export function GuideArticleShell({
   comparisonItems = DEFAULT_GUIDE_COMPARISON_ROWS,
   showHotelConversion = true,
   maxWidthClass = "max-w-4xl",
+  guideSlug,
 }: GuideArticleShellProps) {
   const showComparison = comparisonItems !== null;
   const tableRows =
@@ -79,33 +83,39 @@ export function GuideArticleShell({
   return (
     <main className="bg-cream min-h-screen font-sans">
       <article
+        data-guide-read-aloud-root
         className={`${maxWidthClass} page-x mx-auto min-w-0 pt-10 pb-14`}
       >
         {accentGuideTitleNode(title)}
 
+        <GuidePageReadAloud guideSlug={guideSlug} />
+
         <div className="mb-6 lg:max-w-2xl">{intro}</div>
 
-        <div className="mb-6 lg:max-w-2xl">
+        <div className="mb-6 lg:max-w-2xl" data-guide-read-aloud-skip>
           <ESimConversionBlock />
         </div>
 
-        {beforeComparison}
+        <div>{beforeComparison}</div>
 
         {showComparison ? (
-          <div className="mb-6 max-w-full">
+          <div className="mb-6 max-w-full" data-guide-read-aloud-skip>
             <ComparisonTable items={tableRows} />
           </div>
         ) : null}
 
         {showHotelConversion ? (
-          <div className="mb-6 lg:max-w-2xl">
+          <div className="mb-6 lg:max-w-2xl" data-guide-read-aloud-skip>
             <HotelConversionBlock />
           </div>
         ) : null}
 
-        {afterComparison}
+        <div>{afterComparison}</div>
 
-        <div className="mt-10 border-t border-tan pt-8 lg:max-w-2xl">
+        <div
+          className="mt-10 border-t border-tan pt-8 lg:max-w-2xl"
+          data-guide-read-aloud-skip
+        >
           <StartHereFunnelBlock />
         </div>
       </article>

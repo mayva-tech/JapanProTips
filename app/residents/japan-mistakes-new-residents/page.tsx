@@ -3,9 +3,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import guideReadAloudData from "@/data/guide-read-aloud.json";
 import { GuideAudioPlayer } from "@/components/guides/GuideAudioPlayer";
-import { GuideReadAloud } from "@/components/guides/GuideReadAloud";
+import { GuidePageReadAloud } from "@/components/guides/GuidePageReadAloud";
 import { ResidentStarterPath } from "@/components/guides/ResidentStarterPath";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
 import { ToolRecommendationStrip } from "@/components/tools/ToolRecommendationStrip";
@@ -93,8 +92,6 @@ const toolStripTools = [
 ]
   .filter((t): t is NonNullable<typeof t> => t != null)
   .map(toRecommendationCard);
-
-const readAloudText = guideReadAloudData["japan-mistakes-new-residents"]?.text ?? "";
 
 type GuideAudioManifest = {
   slug: string;
@@ -207,7 +204,10 @@ export default async function JapanMistakesNewResidentsPage() {
           </div>
         </div>
 
-        <article className="page-x mx-auto max-w-3xl pb-8 pt-8 sm:pt-8">
+        <article
+          data-guide-read-aloud-root
+          className="page-x mx-auto max-w-3xl pb-8 pt-8 sm:pt-8"
+        >
           <header className="mb-6 max-w-2xl">
             <p className="editorial-kicker mb-3">Residents</p>
             <h1 className="guide-page-title text-balance">{title}</h1>
@@ -225,20 +225,17 @@ export default async function JapanMistakesNewResidentsPage() {
             </div>
           </header>
 
+          <GuidePageReadAloud guideSlug="japan-mistakes-new-residents" />
+
           {audioManifest ? (
             <GuideAudioPlayer
               guideSlug="japan-mistakes-new-residents"
               basePath="/audio/residents/japan-mistakes-new-residents"
               parts={audioManifest.parts}
             />
-          ) : (
-            <GuideReadAloud
-              text={readAloudText}
-              guideSlug="japan-mistakes-new-residents"
-            />
-          )}
+          ) : null}
 
-          <div className="mb-6">
+          <div className="mb-6" data-guide-read-aloud-skip>
             <ToolRecommendationStrip
               headingId="resident-mistakes-tools"
               title="Resident tools for month one"
@@ -443,11 +440,13 @@ export default async function JapanMistakesNewResidentsPage() {
             </ul>
           </section>
 
-          <ResidentStarterPath
-            sourceSlug="resident-starter-path"
-            currentHref="/residents/japan-mistakes-new-residents"
-          />
-          <ResidentsCrosslinks currentHref="/residents/japan-mistakes-new-residents" />
+          <div data-guide-read-aloud-skip>
+            <ResidentStarterPath
+              sourceSlug="resident-starter-path"
+              currentHref="/residents/japan-mistakes-new-residents"
+            />
+            <ResidentsCrosslinks currentHref="/residents/japan-mistakes-new-residents" />
+          </div>
         </article>
       </main>
     </>

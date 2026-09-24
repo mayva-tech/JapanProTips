@@ -71,6 +71,7 @@ export function NextStepGuides({
 
   return (
     <nav
+      data-guide-read-aloud-skip
       className={`${boxClass} ${className}`.trim()}
       aria-label={title}
     >

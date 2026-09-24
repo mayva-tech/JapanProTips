@@ -20,6 +20,7 @@ type GuideEndCtaProps = {
 export function GuideEndCta({ parentHref, parentLabel }: GuideEndCtaProps) {
   return (
     <section
+      data-guide-read-aloud-skip
       className="mt-6 border-t border-tan pt-8"
       aria-labelledby="guide-end-cta-heading"
     >

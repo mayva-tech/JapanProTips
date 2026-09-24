@@ -1,6 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  emitGuideAudioBus,
+  subscribeGuideAudioBus,
+} from "@/lib/guide-read-aloud/guideAudioBus";
 import { trackReadAloudEvent } from "@/lib/read-aloud-analytics";
 
 type GuideAudioPlayerProps = {
@@ -92,9 +96,19 @@ export function GuideAudioPlayer({
     };
   }, [stopWithoutTracking]);
 
+  // Browser TTS (guide control or global talking-head dock) wins.
+  useEffect(() => {
+    return subscribeGuideAudioBus((event) => {
+      if (event.type === "tts-start") {
+        stopWithoutTracking();
+      }
+    });
+  }, [stopWithoutTracking]);
+
   const play = () => {
     if (!parts.length || status !== "idle") return;
     sessionRef.current += 1;
+    emitGuideAudioBus({ type: "prerecorded-start", guideSlug });
     playPart(0, sessionRef.current);
     trackReadAloudEvent("read_aloud_play", {
       guideSlug,
@@ -142,6 +156,8 @@ export function GuideAudioPlayer({
 
   return (
     <section
+      data-guide-audio-player
+      data-guide-read-aloud-skip
       className="mb-6 max-w-2xl rounded-lg border border-paper-edge bg-paper/80 p-4 sm:p-5"
       aria-label="Listen to this guide"
     >

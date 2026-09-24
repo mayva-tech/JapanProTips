@@ -1,5 +1,6 @@
 import { GuideArticleShell } from "@/components/guides/GuideArticleShell";
 import { GuideEndCta } from "@/components/guides/GuideEndCta";
+import { GuidePageReadAloud } from "@/components/guides/GuidePageReadAloud";
 import { GuidePageTitle } from "@/components/guides/GuidePageTitle";
 import { MdxGuideErrorView } from "@/components/guides/MdxGuideErrorView";
 import { ResidentsCrosslinks } from "@/components/guides/ResidentsCrosslinks";
@@ -53,12 +54,18 @@ export async function MdxGuidePage({
     const residentHref = `/residents/${slug}`;
     return (
       <main className="bg-cream min-h-screen font-sans">
-        <article className="page-x mx-auto min-w-0 max-w-3xl pt-10 pb-14">
+        <article
+          data-guide-read-aloud-root
+          className="page-x mx-auto min-w-0 max-w-3xl pt-10 pb-14"
+        >
           {title}
+          <GuidePageReadAloud guideSlug={slug} />
           {intro ? <div className="mb-6">{intro}</div> : null}
           <MdxGuideContent source={beforeComparison} slug={slug} />
           <MdxGuideContent source={afterComparison} slug={slug} />
-          <ResidentsCrosslinks currentHref={residentHref} />
+          <div data-guide-read-aloud-skip>
+            <ResidentsCrosslinks currentHref={residentHref} />
+          </div>
         </article>
       </main>
     );
@@ -71,6 +78,7 @@ export async function MdxGuidePage({
 
   return (
     <GuideArticleShell
+      guideSlug={slug}
       title={title}
       intro={intro}
       beforeComparison={

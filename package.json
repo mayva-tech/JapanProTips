@@ -14,7 +14,9 @@
     "audit:field-notes": "node scripts/audit-field-notes.mjs",
     "generate:checklist-pdfs": "npx tsx scripts/generate-checklist-pdfs.ts",
     "check:image-paths": "node scripts/check-image-paths.mjs",
-    "audio:google:mistakes": "node scripts/generate-google-tts-guide-audio.mjs japan-mistakes-new-residents"
+    "audio:google:mistakes": "node scripts/generate-google-tts-guide-audio.mjs japan-mistakes-new-residents",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@google-cloud/text-to-speech": "^6.4.1",
@@ -40,10 +42,12 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8.57.1",
     "eslint-config-next": "^15.0.0",
+    "jsdom": "^26.1.0",
     "pdf-lib": "^1.17.1",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "tsx": "^4.22.3",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^3.2.7"
   }
 }

@@ -60,11 +60,22 @@ function expandChoonpu(kana: string): string {
   return out;
 }
 
+/**
+ * Expanding ー→あ turns カード into かあど, which Nanami spells as "ka-a-do".
+ * Speak the loanword as カド / かど ("ka-do"). Display text stays カード.
+ */
+function applyLoanwordTtsFixes(text: string): string {
+  return text
+    .replace(/カード/g, "カド")
+    .replace(/かーど/g, "かど")
+    .replace(/かあど/g, "かど");
+}
+
 function speakParticleKana(kana: string): string {
   if (!kana) return kana;
 
   // Normalize katakana (カード) to hiragana before particle rewrite / ー expand
-  // so TTS audio and karaoke spokenText share one script (かあど, not カあド).
+  // so TTS audio and karaoke spokenText share one script.
   let out = [...kana]
     .map((ch) => {
       const code = ch.codePointAt(0)!;
@@ -126,7 +137,7 @@ function speakParticleKana(kana: string): string {
   // often voiced as particle "e" by ja-JP synthesis; katakana ヘ keeps "he".
   out = out.replace(/へ/g, "ヘ");
 
-  return expandChoonpu(out);
+  return applyLoanwordTtsFixes(expandChoonpu(out));
 }
 
 /**
@@ -569,7 +580,13 @@ export function buildJapaneseSpeakText(
   spacedReading?: string | null
 ): string {
   const reading = spacedReading?.trim();
-  if (!reading) return splitDigitsForTTS(normalizePlaceholderCircles(appendWaveDashSpeakPause(surface)));
+  if (!reading) {
+    return applyLoanwordTtsFixes(
+      splitDigitsForTTS(
+        normalizePlaceholderCircles(appendWaveDashSpeakPause(surface)),
+      ),
+    );
+  }
 
   // Speak from spaced reading tokens so particles like は can be remapped to わ.
   // Keep spaces between tokens so TTS does not glue the particle into the next
@@ -586,7 +603,16 @@ export function buildJapaneseSpeakText(
     .join(" ")
     .trim();
 
-  return splitDigitsForTTS(normalizePlaceholderCircles(spoken)) || splitDigitsForTTS(normalizePlaceholderCircles(appendWaveDashSpeakPause(surface)));
+  return (
+    applyLoanwordTtsFixes(
+      splitDigitsForTTS(normalizePlaceholderCircles(spoken)),
+    ) ||
+    applyLoanwordTtsFixes(
+      splitDigitsForTTS(
+        normalizePlaceholderCircles(appendWaveDashSpeakPause(surface)),
+      ),
+    )
+  );
 }
 
 /**
@@ -594,7 +620,11 @@ export function buildJapaneseSpeakText(
  * Used for karaoke duration so timing matches what Nanami actually speaks.
  */
 export function buildJapaneseSpeakToken(token: string): string {
-  return splitDigitsForTTS(normalizePlaceholderCircles(appendWaveDashSpeakPause(speakReadingToken(token))));
+  return applyLoanwordTtsFixes(
+    splitDigitsForTTS(
+      normalizePlaceholderCircles(appendWaveDashSpeakPause(speakReadingToken(token))),
+    ),
+  );
 }
 
 /**

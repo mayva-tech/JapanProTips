@@ -503,6 +503,18 @@
     @apply absolute -m-px h-px w-px overflow-hidden whitespace-nowrap border-0 p-0;
     clip: rect(0, 0, 0, 0);
   }
+
+  /* Guide page read-aloud karaoke (DOM mark spans; does not replace article nodes). */
+  .guide-speech-spoken {
+    /* Keep the author’s text color after a unit has been spoken. */
+    color: inherit;
+  }
+
+  .guide-speech-active {
+    @apply rounded-sm bg-rust/20;
+    color: inherit;
+    box-decoration-break: clone;
+  }
 }
 
 @layer utilities {

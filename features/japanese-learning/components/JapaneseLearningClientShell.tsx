@@ -17,7 +17,8 @@ import { speechService } from "../services/speechService";
  * `pagehide` covers full page unloads (refresh, external links), where some
  * Chromium builds keep speaking otherwise.
  *
- * Later phases can mount shared section UI (e.g. TalkingHead) here.
+ * Site-wide TalkingHeads (Nanami / Andrew) live in the root layout and share
+ * this same speech bus for karaoke-aligned lip-sync.
  */
 export function JapaneseLearningClientShell({
   children,

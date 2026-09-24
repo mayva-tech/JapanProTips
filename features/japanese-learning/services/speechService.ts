@@ -6,7 +6,8 @@
  * `performance.now()`. Browser `onboundary` events do not switch modes: a
  * useful forward boundary snaps the highlight to the reported unit and rebases
  * the timeline origin so every later deadline is corrected. Stale/backward
- * boundaries are ignored, and skipped units are never visually replayed.
+ * boundaries are ignored. Timers advance one unit at a time (no catch-up
+ * jumps) so a delayed tick cannot race the highlight ahead of the voice.
  */
 
 import {
@@ -77,18 +78,18 @@ export type SpeakJapaneseOptions = {
   reading?: string | null;
 };
 
-export const SPEECH_RATE_NORMAL = 0.80;
-export const SPEECH_RATE_SLOW = 0.68;
-/** Chapter 5 "natural" — slightly faster than RPG default, still clear. */
-export const SPEECH_RATE_NATURAL = 0.92;
+export const SPEECH_RATE_NORMAL = 0.95;
+export const SPEECH_RATE_SLOW = 0.75;
+/** Chapter 5 "natural" — same as normal, still clear. */
+export const SPEECH_RATE_NATURAL = 0.95;
 /** Chapter 5 "fast" — modest bump only (accessibility). UI label: 1.25×. */
-export const SPEECH_RATE_FAST = 1.0;
-/** Slightly faster normal used only for the shadowing listen pass. */
-export const SPEECH_RATE_SHADOWING = 0.85;
+export const SPEECH_RATE_FAST = 1.2;
+/** Used only for the shadowing listen pass. */
+export const SPEECH_RATE_SHADOWING = 0.90;
 /** Faster Andrew English used only for interview practice. */
-export const SPEECH_RATE_INTERVIEW_EN = 1.05;
-/** Nanami rate for N3 JP+EN mix interview (raised from 0.85). */
-export const SPEECH_RATE_INTERVIEW_MIX = 0.88;
+export const SPEECH_RATE_INTERVIEW_EN = 1.15;
+/** Nanami rate for N3 JP+EN mix interview. */
+export const SPEECH_RATE_INTERVIEW_MIX = 0.95;
 
 /** True when the UI rate is the 1.25× fast preset. */
 export function isFastSpeechRate(rate: number): boolean {
@@ -118,7 +119,7 @@ const DEBUG_SPEECH = false;
 const FALLBACK_START_OFFSET_MS = 0;
 /**
  * Shared estimate scale (Andrew + Nanami).
- * Neural voices at SPEECH_RATE_NORMAL (0.80) do not slow linearly — dividing
+ * Neural voices below 1.0 do not slow linearly — dividing
  * by the raw rate stretches karaoke past the voice. Keep a mild stretch above
  * 1.0 so Game Mode / Quest karaoke does not race ahead of the utterance;
  * browser word boundaries still rebase when present (EN always; JA via spoken
@@ -126,7 +127,7 @@ const FALLBACK_START_OFFSET_MS = 0;
  * (Play/Quiz historically used ~1.35; 0.88 overshot the other way. JA briefly
  * used 0.80 estimate-only and raced Nanami whenever readings forced fallback.)
  */
-const FALLBACK_TIMING_SCALE_EN = 1.08;
+const FALLBACK_TIMING_SCALE_EN = 1.32;
 const FALLBACK_TIMING_SCALE_JA = 1.08;
 /** @deprecated alias — tests / callers that expect a single scale get JA. */
 const FALLBACK_TIMING_SCALE = FALLBACK_TIMING_SCALE_JA;
@@ -635,10 +636,10 @@ function runUtterance(
   const timingScale =
     unitLang === "en" ? FALLBACK_TIMING_SCALE_EN : FALLBACK_TIMING_SCALE_JA;
   // Andrew/Nanami neural rates are nonlinear near SPEECH_RATE_NORMAL —
-  // don't stretch karaoke as if 0.80 were a true 20% slowdown.
+  // don't stretch karaoke as if a sub-1.0 rate were a true linear slowdown.
   // Shared floor 0.88 at normal (and faster) rates.
-  // At SPEECH_RATE_SLOW (0.75× UI → 0.68), use the real rate so karaoke
-  // does not keep racing ahead at ~0.88 while the voice is at 0.68.
+  // Below SPEECH_RATE_NORMAL (e.g. slow 0.75), use the real rate so karaoke
+  // does not race ahead of the slower voice.
   const rateDivisor = karaokeRateDivisor(unitLang, rate);
 
   const plannedStart: number[] = [];
@@ -661,37 +662,67 @@ function runUtterance(
   let emittedIndex = -1;
   /** Index of the next unit awaiting its deadline. */
   let nextIndex = 0;
+  /** Wall clock of the last highlight emit (estimate or boundary). */
+  let lastEmitWallMs = 0;
+  /** How many useful EN word boundaries have rebased this utterance. */
+  let enBoundaryCount = 0;
 
   const emitUnitAt = (index: number) => {
     const unit = units[index];
     if (!unit) return;
     emitHighlight({ start: unit.start, end: unit.end });
     if (index > emittedIndex) emittedIndex = index;
+    lastEmitWallMs = nowMs();
   };
 
   const armTimer = () => {
     clearFallbackTimer();
     if (!alive() || !timelineRunning || pausedAt !== null) return;
     if (nextIndex >= units.length) return;
-    const delay = Math.max(
+    let delay = Math.max(
       0,
       timelineOrigin + plannedStart[nextIndex]! - nowMs()
     );
+    // Once Andrew has started sending word boundaries, keep estimate ticks
+    // slightly behind so a late timer cannot leapfrog the voice.
+    if (unitLang === "en" && enBoundaryCount > 0) {
+      delay = Math.max(delay, 90);
+    }
     fallbackTimer = window.setTimeout(onTimelineTick, delay);
   };
 
   function onTimelineTick() {
     fallbackTimer = null;
     if (!alive() || !timelineRunning || pausedAt !== null) return;
-    // Catch-up without replay: if several deadlines already elapsed (a late
-    // timer, a backgrounded tab), jump straight to the latest due unit.
-    const t = nowMs();
-    let index = nextIndex;
-    while (index + 1 < units.length && timelineOrigin + plannedStart[index + 1]! <= t) {
-      index += 1;
+    if (nextIndex >= units.length) return;
+
+    // Advance exactly one unit per tick. The old catch-up loop jumped to the
+    // latest overdue deadline after a delayed timer (tab throttle / GC), which
+    // made karaoke visibly "speed up" and run ahead of Andrew/Nanami.
+    //
+    // For EN after boundaries have been seen: also require a minimum hold on
+    // the current unit so estimate-led advances cannot outrun the voice when
+    // a boundary is momentarily late.
+    if (unitLang === "en" && enBoundaryCount > 0 && emittedIndex >= 0) {
+      const current = units[emittedIndex]!;
+      const minHold =
+        ((estimateUnitDurationMs(
+          current,
+          unitLang,
+          units[emittedIndex + 1] ?? null
+        ) /
+          rateDivisor) *
+          timingScale) *
+        0.75;
+      const held = nowMs() - lastEmitWallMs;
+      if (held < minHold) {
+        fallbackTimer = window.setTimeout(onTimelineTick, minHold - held);
+        return;
+      }
     }
-    emitUnitAt(index);
-    nextIndex = index + 1;
+
+    emitUnitAt(nextIndex);
+    nextIndex += 1;
     armTimer();
   }
 
@@ -728,6 +759,8 @@ function runUtterance(
     const index = timelineIndexFor(range);
     if (index < 0) return;
     if (index < emittedIndex) return; // stale boundary — never move backwards
+    if (unitLang === "en") enBoundaryCount += 1;
+    // Ground truth from the voice: snap + rebase so later estimates track Andrew.
     timelineOrigin = nowMs() - plannedStart[index]!;
     if (index > emittedIndex) {
       emitUnitAt(index);

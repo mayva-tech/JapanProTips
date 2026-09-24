@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 export default function SuicaPasmoGuidePage() {
   return (
     <GuideArticleShell
+      guideSlug="suica-pasmo-guide"
       title={
         <h1
           className="guide-page-title"
@@ -53,10 +54,10 @@ export default function SuicaPasmoGuidePage() {
           </h2>
           <div className="article-body space-y-4 max-w-2xl">
             <p>
-              Both are IC transit cards issued under Japan&apos;s nationwide IC
-              standard. You charge yen onto the card (or digital wallet pass),
-              then tap in and out at train gates. You also tap at many convenience
-              store registers and vending machines.
+              Both are IC transit cards (ICカード) issued under Japan&apos;s
+              nationwide IC standard. You charge yen onto the card (or digital
+              wallet pass), then tap in and out at train gates (改札). You also
+              tap at many convenience store registers and vending machines.
             </p>
             <p>
               Suica is the JR East flavored name. PASMO is the Tokyo region private

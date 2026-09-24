@@ -1162,8 +1162,10 @@ const JA_MORA_MS = 135;
 const JA_MIN_UNIT_MS = 110;
 /** Extra dwell after grammar-slot 〜 before the next pattern piece. */
 const WAVE_DASH_PAUSE = 0.9;
-/** English ms weight multiplier at speech rate 1 — tuned for Andrew karaoke. */
-const EN_WEIGHT_MS = 315;
+/** English ms weight multiplier at speech rate 1 — tuned for Andrew karaoke.
+ * Slightly slower than the voice so estimate-led ticks lag and word boundaries
+ * pull the highlight forward (never race ahead of Andrew on long guide prose). */
+const EN_WEIGHT_MS = 355;
 /**
  * Punctuation / clause breath weight for English karaoke.
  * × EN_WEIGHT_MS ≈ SPEECH_EN_CHAIN_PAUSE_MS at rate 1.
